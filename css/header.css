@@ -1,0 +1,217 @@
+@import url(//hello.myfonts.net/count/394097);body {
+  margin: 0;
+  padding: 0;
+  font-family: "Geometria";
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  outline: none;
+}
+
+.master-class p:before {
+  background-color: #b26329;
+}
+
+.master-class div {
+  background-color: #b26329;
+}
+
+.intens p:before {
+  background-color: #7f1a40;
+}
+
+.intens div {
+  background-color: #7f1a40;
+}
+
+.curs p:before {
+  background-color: #f8b400;
+}
+
+.curs div {
+  background-color: #f8b400;
+}
+
+.live:before {
+  background: #99b976;
+}
+
+.marafon:before {
+  background: #0092ba;
+}
+
+.vebinar:before {
+  background: #ee003e;
+}
+
+.mast-class:before {
+  background: #b26329;
+}
+
+.none-before:before {
+  display: none;
+}
+
+.head {
+  width: 100%;
+}
+
+.head__wrap, .head__account {
+  width: 100%;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+}
+
+.head__container {
+  width: 100%;
+  max-width: 1300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.head__navigate {
+  width: 50%;
+  max-width: 477px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+.head__navigate-item {
+  font: 500 15px/18px "Geometria";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+  cursor: pointer;
+}
+
+.head__navigate-item:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 1px 0;
+}
+
+.head__navigate-item:hover {
+  opacity: .7;
+}
+
+.head__login {
+  list-style-type: none;
+  padding: 0;
+}
+
+.head__login-item {
+  font: 500 15px/18px "Geometria";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  cursor: pointer;
+}
+
+.head__account {
+  background-color: #fff;
+  height: 56px;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+.head__account_hide {
+  display: none;
+}
+
+.head__point-user, .head__point-bloger {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font: 16px/18px "Geometria";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+
+.head__point-user-counter, .head__point-bloger-counter {
+  position: absolute;
+  right: -12px;
+  top: -5px;
+  font: 14px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+  opacity: .6;
+}
+
+.head__point-user-counter_active, .head__point-bloger-counter_active {
+  color: #d6712b;
+  opacity: 1 !important;
+}
+
+.head__point-user-item, .head__point-bloger-item {
+  margin: 0 35px 0 0;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+}
+
+.head__point-user-item:last-child, .head__point-bloger-item:last-child {
+  margin: 0;
+}
+
+.head__point-user-item:hover, .head__point-bloger-item:hover {
+  opacity: .7;
+}
+
+.head__point-user-item button, .head__point-bloger-item button {
+  width: 180px;
+  height: 36px;
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  color: #d6712b;
+  border-radius: 4px;
+  font: 500 15px/18px "Geometria";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  cursor: pointer;
+}
+
+.head__point-user-item button:hover, .head__point-bloger-item button:hover {
+  background-color: #d6712b;
+  color: #fff;
+  border-color: #d6712b;
+}

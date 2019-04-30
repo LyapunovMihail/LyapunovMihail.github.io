@@ -1,0 +1,15 @@
+@import url(//hello.myfonts.net/count/394097);@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/Geometria-Medium.eot") format("embedded-opentype");
+  src: local("Geometria-medium"), local("Geometria-medium"), url("../fonts/Geometria-Medium.woff") format("woff"), url("../fonts/Geometria-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/Geometria-Regular.eot") format("embedded-opentype");
+  src: local("Geometria"), local("Geometria"), url("../fonts/Geometria-Regular.woff") format("woff"), url("../fonts/Geometria-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
