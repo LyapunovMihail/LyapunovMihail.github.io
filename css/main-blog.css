@@ -346,7 +346,7 @@ button {
   cursor: default;
 }
 
-.main__nav-content-path * {
+.main__nav-content-path h1 {
   font: 30px/30px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -356,12 +356,12 @@ button {
   transition: opacity 0.2s linear;
 }
 
-.main__nav-content-path *:not(.active) {
+.main__nav-content-path h1:not(.active) {
   cursor: pointer;
   opacity: .7;
 }
 
-.main__nav-content-path *:not(.active):hover {
+.main__nav-content-path h1:not(.active):hover {
   opacity: .5;
 }
 
