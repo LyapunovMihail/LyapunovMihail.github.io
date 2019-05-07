@@ -81,16 +81,7 @@ module.exports = __webpack_require__(8);
 /* 1 */
 /***/ (function(module, exports) {
 
-// Меню для мобилок
-$(document).on('click', '.head__navigate-menu', function () {
-  $('.head__mobile').toggleClass('head__mobile-menu_no-login');
 
-  if ($('.head__mobile').hasClass('head__mobile-menu_no-login')) {
-    $('body').css('overflow', 'hidden');
-  } else {
-    $('body').css('overflow', 'visible');
-  }
-});
 
 /***/ }),
 /* 2 */
