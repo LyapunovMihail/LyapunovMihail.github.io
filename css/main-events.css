@@ -700,7 +700,9 @@ button {
   margin: 0;
 }
 
-.main__filter-wrapper li {
+.main__filter-wrapper .main__filter_free,
+.main__filter-wrapper .main__filter-date-wrap,
+.main__filter-wrapper .main__filter-main-sub {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -708,12 +710,20 @@ button {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+}
+
+.main__filter-wrapper .main__filter_free label:not(.main__filter-date-wrap),
+.main__filter-wrapper .main__filter-date-wrap label:not(.main__filter-date-wrap),
+.main__filter-wrapper .main__filter-main-sub label:not(.main__filter-date-wrap) {
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
 
-.main__filter-wrapper li:hover {
+.main__filter-wrapper .main__filter_free:hover:not(.main__filter-date-wrap) label,
+.main__filter-wrapper .main__filter-date-wrap:hover:not(.main__filter-date-wrap) label,
+.main__filter-wrapper .main__filter-main-sub:hover:not(.main__filter-date-wrap) label {
   opacity: .7;
+  cursor: pointer;
 }
 
 .main__filter-wrapper_find {
@@ -798,13 +808,15 @@ button {
 .main__filter-immediate li:last-child:before {
   content: '';
   width: 20px;
-  height: 21px;
+  height: 22px;
   position: absolute;
-  background: url("../img/kalendar.svg");
+  background: url("../img/kalendar.svg") no-repeat;
   left: -28px;
   top: 0;
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .main__filter-immediate li:last-child:hover {

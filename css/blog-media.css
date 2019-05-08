@@ -540,6 +540,9 @@ button {
   .main__show-more-wrap .main__settings-btn:hover, .main__show-more-wrap .main__settings-btn_fixed:hover {
     background-color: #e8e8e8;
   }
+  .main__list-snippet-item .list-snippet__subcr-wrap *:nth-child(2):hover, .main__list-snippet-item .list-snippet__subcr-wrap_media *:nth-child(2):hover {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 425px) {

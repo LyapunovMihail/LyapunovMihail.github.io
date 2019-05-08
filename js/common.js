@@ -13,22 +13,20 @@ $(document).on('click', '.head__navigate-menu', function() {
 // Закрепление кнопки настроек
 
 var $width = $(window).width();
-    $height = $(window).height(); // Получаю высоту экрана
-    $sum = $height - 108;  // 108 = ( Высота экрана ) - ( (координаты кнопки "показать еще") - (координаты скролла) )
+    $height = $(window).height();
 
-    // console.log($height)
+    console.log($height)
 
 $(window).on('scroll', function() {
 
-    var $button = $('.main__show-more-wrap').offset().top;
+    var $button = $('.main__show-more-wrap').offset().top + 110; // Где 110 это высота элемента + bottom кнопки с настройками
+        $buttonFix = $('.main__show-more-wrap').children().last().offset().top
 
-    if($button < ( $(this).scrollTop() + $sum ) ) {
+    if($button < ( $height + ( $(this).scrollTop() ) ) ) {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn');
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn_fixed');
     } else { 
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn_fixed')
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn');
     }
-    // console.log($('.main__show-more-wrap').offset().top)
-    // console.log($(this).scrollTop())
 });
