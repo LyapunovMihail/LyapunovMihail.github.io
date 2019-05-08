@@ -362,8 +362,9 @@ button {
   }
   .main__list-snippet {
     max-width: none;
-    width: calc(100% - 92px);
+    width: calc(100% - (92px));
     max-height: 850px;
+    padding: 0 10px;
   }
   .main__list-snippet-item {
     width: 100%;
@@ -411,6 +412,7 @@ button {
     margin: 15px 0 0;
   }
   .main__list-snippet-item .list-snippet__descr-wrap .list-snippet__text .list-snippet__subcr-wrap_media {
+    width: 100%;
     margin: 17px 0 0;
     display: -webkit-box;
     display: -ms-flexbox;

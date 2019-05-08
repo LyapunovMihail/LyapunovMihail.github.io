@@ -1010,6 +1010,7 @@ button {
   color: #666666;
   line-height: 1.5;
   margin: 0 0 2px 0;
+  font-weight: normal;
 }
 
 .main__list-snippet-item .snippet-item__time-price-date span {
