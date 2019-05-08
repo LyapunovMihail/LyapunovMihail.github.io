@@ -363,7 +363,8 @@ button {
   .main__list-snippet {
     max-width: none;
     width: calc(100% - (92px));
-    max-height: 850px;
+    height: 870px;
+    max-height: none;
     padding: 0 10px;
   }
   .main__list-snippet-item {
@@ -559,6 +560,7 @@ button {
   }
   .main__list-snippet {
     width: calc(100% - 40px);
+    height: 870px;
   }
   .main__recomend-wrap .main__recomend-slider {
     margin-left: 20px;
