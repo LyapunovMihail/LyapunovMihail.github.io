@@ -560,6 +560,8 @@ button {
   }
   .main__list-snippet {
     width: calc(100% - 40px);
+  }
+  _::-webkit-full-page-media, _:future, :root .safari_only {
     height: 890px;
   }
   .main__recomend-wrap .main__recomend-slider {
