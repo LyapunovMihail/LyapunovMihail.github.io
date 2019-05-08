@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/main-blog.css">
+    <link rel="stylesheet" href="css/blog-media.css">
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/blog.js"></script>
 </head>
 <body>
     <header class="head">
@@ -43,6 +47,45 @@
             </div>
         </div>
     </header>
+    <header class="head head__mobile"> <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item head__navigate-menu">
+                    </li>
+                    <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
+                </ul>
+                <ul class="head__login">
+                    <li class="head__login-item">Войти</li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="head__modal-menu">
+            <div class="head__wrap">
+                <div class="head__container head__modal-container">
+                    <ul class="modal-menu__list modal-menu__list_user">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active">3</span></li>
+                        <li class="modal-menu__list-item"><a href="#">Настройки</a></li>
+                    </ul>
+                    <ul class="modal-menu__list modal-menu__list_bloger">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active"><sup>2</sup></span></li>
+                        <li class="modal-menu__list-item">Настройки</li>
+                        <li class="modal-menu__list-item">Опубликованные <span><sup>0</sup></span></li>
+                        <li class="modal-menu__list-item">Черновики <span class="modal-menu__list-item_active"><sup>3</sup></span></li>
+                        <li class="modal-menu__list-item">
+                            <button>Добавить событие</button>
+                        </li>
+                    </ul>
+                    <ul class="modal-menu__list_no-login modal-menu__list">
+                        <li class="modal-menu__list-item"><a href="#">О проекте</a></li>
+                        <li class="modal-menu__list-item"><a href="#">Как добавить событие?</a></li>
+                        <li class="modal-menu__list-item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <main class="main">
         <div class="main__container">
@@ -50,61 +93,69 @@
                 <h1 class="main__title-item">
                     Blogpoint — все самые интересные онлайн-события на одном сайте. Быстрый и удобный поиск по событиям и блогам.
                 </h1>
+                <p class="main__expected-title">Самые ожидаемые</p>
             </div>
         </div>
         <hr class="main__expected_line">
-        <div class="main__container">
+        <div class="main__container main__container-expected">
             <div class="main__expected">
-                <p class="main__expected-title">Самые ожидаемые</p>
                 <button class="main__expected-button main__expected-button_back"><!--back--></button>
                 <button class="main__expected-button main__expected-button_next"><!--next--></button>
-                <div class="main__expected-slider">
-                    <a class="main__expected-slider-item">
-                        <div class="main__snippet main__snippet_1">
-                            <div class="main__snippet-style master-class">
-                                <p>мастер-класс</p>
-                                <div>22 689</div>
+                <div class="main__expected-slider-wrap">
+                    <div class="main__expected-slider">
+                        <a class="main__expected-slider-item">
+                            <div class="main__snippet main__snippet_1">
+                                <div class="main__snippet-style master-class">
+                                    <p>мастер-класс</p>
+                                    <div>22 689</div>
+                                </div>
+                                <div class="main__snippet-descr">
+                                    <div class="main__snippet-title">
+                                        Учимся делать керамические штуки с нуля до уровня профессионала за две н…
+                                    </div>
+                                    <div class="main__snippet-tags">
+                                        <p>Авто и транспорт</p>
+                                        <p>Дети и родители</p>
+                                        <p>Социальные сети и медиа</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="main__snippet-title">
-                                Учимся делать керамические штуки с нуля до уровня профессионала за две н…
+                        </a>
+                        <a class="main__expected-slider-item">
+                            <div class="main__snippet main__snippet_2">
+                                <div class="main__snippet-style intens">
+                                    <p>интенсив</p>
+                                    <div>5 163</div>
+                                </div>
+                                <div class="main__snippet-descr">
+                                    <div class="main__snippet-title">
+                                        Реализация простейшего веб-сервера, развернутого на базе Docker
+                                    </div>
+                                    <div class="main__snippet-tags">
+                                        <p>Дизайн</p>
+                                        <p>Бизнес</p>
+                                        <p>Танцы</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="main__snippet-tags">
-                                <p>Авто и транспорт</p>
-                                <p>Дети и родители</p>
-                                <p>Социальные сети и медиа</p>
+                        </a>
+                        <a class="main__expected-slider-item">
+                            <div class="main__snippet main__snippet_3">
+                                <div class="main__snippet-style curs">
+                                    <p>курс</p>
+                                    <div>528</div>
+                                </div>
+                                <div class="main__snippet-descr">
+                                    <div class="main__snippet-title">
+                                        Как подготовиться к собеседованию и получить работу мечты?
+                                    </div>
+                                    <div class="main__snippet-tags">
+                                        <p>Город</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    <a class="main__expected-slider-item">
-                        <div class="main__snippet main__snippet_2">
-                            <div class="main__snippet-style intens">
-                                <p>интенсив</p>
-                                <div>5 163</div>
-                            </div>
-                            <div class="main__snippet-title">
-                                Реализация простейшего веб-сервера, развернутого на базе Docker
-                            </div>
-                            <div class="main__snippet-tags">
-                                <p>Дизайн</p>
-                                <p>Бизнес</p>
-                                <p>Танцы</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="main__expected-slider-item">
-                        <div class="main__snippet main__snippet_3">
-                            <div class="main__snippet-style curs">
-                                <p>курс</p>
-                                <div>528</div>
-                            </div>
-                            <div class="main__snippet-title">
-                                Как подготовиться к собеседованию и получить работу мечты?
-                            </div>
-                            <div class="main__snippet-tags">
-                                <p>Город</p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,6 +169,25 @@
                     <div class="main__nav-content-search-item">
                         <input type="text" placeholder="Поиск по событиям">
                     </div>
+                </div>
+                <div class="main__nav-content-filter">
+                    <p class="main__nav-content-filter-item">Темы</p>
+                    <ul class="main__filter-wrapper">
+                        <li class="main__filter-wrapper-item main__filter_free">
+                            <input type="checkbox" value="free" id="free">
+                            <div class="main__filter-checkbox"></div>
+                            <label for="free">
+                                Есть запланированные события
+                            </label>
+                        </li>
+                        <li class="main__filter-wrapper-item main__filter-main-sub">
+                            <input type="checkbox" value="onlySub" id="subscr">
+                            <div class="main__filter-checkbox"></div>
+                            <label for="subscr">
+                                Только мои подписки
+                            </label>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -183,6 +253,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>13 015</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -199,6 +273,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>242</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -215,6 +293,10 @@
                             <p>The Village</p>
                             <p>@villagemsk</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -231,6 +313,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>5 478</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -247,6 +333,10 @@
                             <p>The Village</p>
                             <p>@villagemsk</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>12 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -263,6 +353,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -279,6 +373,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -295,6 +393,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -311,6 +413,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -327,6 +433,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -343,6 +453,10 @@
                             <p>The Village</p>
                             <p>@villagemsk</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -359,6 +473,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -375,6 +493,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -391,6 +513,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -407,6 +533,10 @@
                             <p>The Village</p>
                             <p>@villagemsk</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -423,6 +553,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -439,6 +573,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -455,6 +593,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -471,6 +613,10 @@
                             <p>The Village</p>
                             <p>@villagemsk</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -487,6 +633,10 @@
                             <p>Meduza Project</p>
                             <p>@meduza</p>
                             <p>Информационый портал</p>
+                            <div class="list-snippet__subcr-wrap_media">
+                                <p>234 636</p>
+                                <p>Подписаться</p>
+                            </div>
                         </div>
                     </div>
                     <div class="list-snippet__subcr-wrap">
@@ -500,7 +650,7 @@
             <button class="main__show-more">
                 Показать еще
             </button>
-            <button class="main__settings-btn"></button>
+            <button class="main__settings-btn_fixed"></button>
         </div>
         <div class="main__recomend">
             <hr class="main__recomend-line">

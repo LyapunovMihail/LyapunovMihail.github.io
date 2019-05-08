@@ -212,8 +212,17 @@ button {
     width: 100%;
     margin: 20px 0 0;
   }
+  .footer__link-item:nth-child(1) a:hover, .footer__link-item:nth-child(2) a:hover, .footer__link-item:nth-child(3) a:hover {
+    color: #666666;
+  }
   .footer__link-item:nth-child(4), .footer__link-item:nth-child(5) {
     margin: 20px 20px 0 0;
+  }
+  .footer__link-item:nth-child(4) a:hover, .footer__link-item:nth-child(5) a:hover {
+    color: #666666;
+  }
+  .footer__background-link:hover {
+    opacity: 1;
   }
 }
 

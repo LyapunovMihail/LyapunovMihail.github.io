@@ -379,6 +379,9 @@ button {
     width: calc(100% - 90px);
     max-width: none;
   }
+  .main__nav-content-path h1:not(.active):hover, .head__navigate-item:hover {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 425px) {

@@ -100,6 +100,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .main__title-item {
@@ -134,7 +135,7 @@ button {
   text-transform: uppercase;
   color: #333333;
   position: absolute;
-  top: -16px;
+  bottom: -18px;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -142,6 +143,7 @@ button {
   padding: 0 9px;
   margin: 0;
   white-space: nowrap;
+  z-index: 1;
 }
 
 .main__expected-slider {
@@ -698,32 +700,19 @@ button {
   margin: 0;
 }
 
-.main__filter-wrapper * {
+.main__filter-wrapper li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.main__filter-wrapper li:first-child {
   cursor: pointer;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
 
-.main__filter-wrapper li:first-child:hover {
-  opacity: .7;
-}
-
-.main__filter-wrapper li:last-child {
-  cursor: pointer;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-
-.main__filter-wrapper li:last-child:hover {
+.main__filter-wrapper li:hover {
   opacity: .7;
 }
 
@@ -1080,7 +1069,7 @@ button {
   color: #333333;
 }
 
-.main__show-more-wrap .main__settings-btn {
+.main__show-more-wrap .main__settings-btn, .main__show-more-wrap .main__settings-btn_fixed {
   border: none;
   outline: none;
   border-radius: 50%;
@@ -1095,7 +1084,18 @@ button {
   cursor: pointer;
 }
 
-.main__show-more-wrap .main__settings-btn:hover {
+.main__show-more-wrap .main__settings-btn:hover, .main__show-more-wrap .main__settings-btn_fixed:hover {
+  background-color: #d8d8d8;
+}
+
+.main__show-more-wrap .main__settings-btn_fixed {
+  position: fixed;
+  right: 30px;
+  top: auto;
+  bottom: 60px;
+}
+
+.main__show-more-wrap .main__settings-btn_fixed:hover {
   background-color: #d8d8d8;
 }
 
