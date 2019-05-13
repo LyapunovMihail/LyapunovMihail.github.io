@@ -60,6 +60,10 @@ button {
   background: #b26329;
 }
 
+.lect:before {
+  background: #007f60;
+}
+
 .none-before:before {
   display: none;
 }
