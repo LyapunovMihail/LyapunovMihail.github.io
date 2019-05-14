@@ -13,12 +13,13 @@ $(document).on('click', '.head__navigate-menu', function() {
 // Закрепление кнопки настроек
 
 var $width = $(window).width();
-    $height = $(window).height();
+    $height = '';
 
     console.log($height)
 
 $(window).on('scroll', function() {
 
+    $height = $(window).height();  // Динамично получаем высоту для правильной фиксации на мобилках
     var $button = $('.main__show-more-wrap').offset().top + 110; // Где 110 это высота элемента + bottom кнопки с настройками
         $buttonFix = $('.main__show-more-wrap').children().last().offset().top
 
@@ -29,4 +30,5 @@ $(window).on('scroll', function() {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn_fixed')
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn');
     }
+    console.log($height)
 });
