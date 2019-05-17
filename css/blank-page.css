@@ -608,6 +608,13 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 10px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main__theme-wrap:nth-child(16), .main__theme-wrap:last-child {
+  margin: 0;
 }
 
 .main__theme-checkbox {

@@ -219,7 +219,7 @@ button {
     border-top: 1px solid #d8d8d8;
   }
   .main__content-nav {
-    position: initial;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -345,7 +345,7 @@ button {
   }
 }
 
-@media (max-width: 729px) {
+@media (max-width: 425px) {
   .head {
     margin-bottom: 50px;
   }
