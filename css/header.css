@@ -64,6 +64,10 @@ button {
   background: #007f60;
 }
 
+.curs:before {
+  background: #f8b400;
+}
+
 .none-before:before {
   display: none;
 }
@@ -136,6 +140,55 @@ button {
   }
 }
 
+.checkbox {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #666;
+  border-radius: 2px;
+  opacity: .7;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d8d8d8;
+  border-radius: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  max-width: 750px;
+  height: 60px;
+  font: 16px/26px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+}
+
+.input:hover, .input:focus {
+  border-color: #7f7f7f;
+}
+
 .head__mobile {
   display: none;
 }
@@ -192,11 +245,11 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0;
+  padding: 2px 0 0;
 }
 
 .head__navigate-item {
-  font: 500 15px/18px "Geometria";
+  font: 500 15px/1 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
@@ -240,7 +293,7 @@ button {
 }
 
 .head__account_hide {
-  display: none;
+  display: none !important;
 }
 
 .head__point-user, .head__point-bloger {

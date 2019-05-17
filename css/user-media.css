@@ -1,4 +1,4 @@
-body {
+@import url(//hello.myfonts.net/count/394097);body {
   margin: 0;
   padding: 0;
   font-family: "Geometria";
@@ -189,173 +189,133 @@ button {
   border-color: #7f7f7f;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer__container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.footer__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  max-width: 1300px;
-}
-
-.footer__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  list-style-type: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.footer__link-item {
-  font: 15px/15px 'Geometria';
-  color: #666666;
-  margin: 0 20px 0 0;
-  height: 15px;
-  white-space: nowrap;
-}
-
-.footer__link-item a {
-  color: inherit;
-  border-bottom: 1px solid #d8d8d8;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-
-.footer__link-item a:hover {
-  opacity: .7;
-}
-
-.footer__link-item:nth-child(5) {
-  padding: 0 0 0 27px;
-  position: relative;
-}
-
-.footer__link-item:nth-child(5):before {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 19px;
-  left: 0;
-  top: -2px;
-  background: url("../img/insta-bp-ic.svg") center no-repeat;
-}
-
-.footer__background-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-  position: absolute;
-  right: 0;
-  bottom: -2px;
-}
-
-.footer__background-link:hover {
-  opacity: .7;
-}
-
 @media (max-width: 1399px) {
-  .footer__wrap {
+  .main__head,
+  .main__acc,
+  .main__notice,
+  .main__mytape,
+  .main__del {
     max-width: 970px;
+  }
+  .main__acc-form .acc-form__wrap {
+    max-width: 475px;
   }
 }
 
 @media (max-width: 1069px) {
-  .footer__wrap {
+  .main__head,
+  .main__acc,
+  .main__notice,
+  .main__mytape,
+  .main__del {
     max-width: 640px;
   }
-  .footer__link {
-    width: 100%;
-    -ms-flex-flow: wrap;
-        flex-flow: wrap;
+  .main__acc-form .acc-form__wrap {
+    max-width: none;
   }
-  .footer__link-item:first-child {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
-    margin: 25px 0 0;
+  .main__notice-wrap {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .main__notice-text {
+    padding: 2px 0 0;
+  }
+  .main__mytape {
+    margin-bottom: 69px;
+  }
+  .main__mytape-text {
+    line-height: 24px;
+  }
+  .main__mytape-theme {
+    max-width: 640px;
+    height: 594px;
   }
 }
 
 @media (max-width: 729px) {
-  .footer {
-    height: auto;
-    padding: 0 0 17px 0;
+  .main__head,
+  .main__acc,
+  .main__notice,
+  .main__mytape,
+  .main__del {
+    max-width: calc(100% - 92px);
   }
-  .footer__wrap {
-    width: calc(100% - 92px);
-    max-width: none;
+  .main__head-title {
+    font-size: 22px;
+    line-height: normal;
+    margin: 25px 0 15px;
+  }
+  .main__acc-title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    margin: 15px 0 30px;
   }
-  .footer__link {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  .main__acc-title-item:first-child {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
-  .footer__link-item:nth-child(1), .footer__link-item:nth-child(2), .footer__link-item:nth-child(3) {
-    width: 100%;
-    margin: 20px 0 0;
+  .main__acc-title-item:last-child {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 0 0 30px;
+    width: 280px;
   }
-  .footer__link-item:nth-child(1) a:hover, .footer__link-item:nth-child(2) a:hover, .footer__link-item:nth-child(3) a:hover {
-    color: #666666;
+  .main__acc-form .acc-form__title,
+  .main__acc-pass,
+  .main__notice-text,
+  .main__mytape-text,
+  .main__mytape-descr {
+    font-size: 14px;
+    line-height: 1.43;
   }
-  .footer__link-item:nth-child(1) {
-    margin: 25px 0 0;
+  .main__notice-text,
+  .main__mytape-descr {
+    padding: 0;
   }
-  .footer__link-item:nth-child(4), .footer__link-item:nth-child(5) {
-    margin: 20px 20px 0 0;
+  .main__mytape {
+    margin-bottom: 47px;
   }
-  .footer__link-item:nth-child(4) a:hover, .footer__link-item:nth-child(5) a:hover {
-    color: #666666;
+  .main__mytape-theme {
+    height: auto;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
   }
-  .footer__background-link:hover {
-    opacity: 1;
+  .main__mytape-wrap {
+    width: 50%;
+    padding: 0 10px 0 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    max-width: none;
   }
 }
 
 @media (max-width: 425px) {
-  .footer__wrap {
-    width: calc(100% - 40px);
+  .main__head,
+  .main__acc,
+  .main__notice,
+  .main__mytape,
+  .main__del {
+    max-width: calc(100% - 40px);
+  }
+  .main__acc,
+  .main__notice {
+    margin-bottom: 45px;
+  }
+  .main__acc-title,
+  .main__mytape-title,
+  .main__notice-title,
+  .main__mytape-text {
+    margin-bottom: 20px;
   }
 }

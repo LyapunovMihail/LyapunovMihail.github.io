@@ -32,3 +32,7 @@ $(window).on('scroll', function() {
     }
     console.log($height)
 });
+
+$(document).on('click', '.main__del-title', function() {
+    $('.main__del').toggleClass('main__del_open');
+});

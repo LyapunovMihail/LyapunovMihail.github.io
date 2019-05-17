@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogpoint</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/user-page.css">
+    <link rel="stylesheet" href="css/user-media.css">
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header class="head">
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item"><a href="index.html"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></a></li>
+                    <li class="head__navigate-item"><a href="#">О проекте</a></li>
+                    <li class="head__navigate-item"><a href="#">Как добавить событие?</a></li>
+                    <li class="head__navigate-item"><a href="#">Контакты</a></li>
+                </ul>
+                <ul class="head__login">
+                    <li class="head__login-item">Войти</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="head__account">
+            <div class="head__container">
+                <ul class="head__point-user">
+                    <li class="head__point-user-item">
+                        <a href="my_event-page.html">
+                            Мне интересно <span class="head__point-user-counter head__point-user-counter_active">3</span><!--head__point-user-counter_active-->
+                        </a>
+                    </li> 
+                    <li class="head__point-user-item">Настройки</li>
+                </ul>
+                <ul class="head__point-bloger head__account_hide">
+                    <li class="head__point-bloger-item">Опубликованные<span class="head__point-bloger-counter">0</span></li> <!--head__point-bloger-counter_active-->
+                    <li class="head__point-bloger-item">Черновики<span class="head__point-bloger-counter head__point-bloger-counter_active">3</span></li>
+                    <li class="head__point-bloger-item">
+                        <button>Добавить событие</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <header class="head head__mobile"> <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item head__navigate-menu">
+                    </li>
+                    <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
+                </ul>
+                <ul class="head__login">
+                    <li class="head__login-item">Войти</li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="head__modal-menu">
+            <div class="head__wrap">
+                <div class="head__container head__modal-container">
+                    <ul class="modal-menu__list modal-menu__list_user">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active">3</span></li>
+                        <li class="modal-menu__list-item"><a href="#">Настройки</a></li>
+                    </ul>
+                    <ul class="modal-menu__list modal-menu__list_bloger">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active"><sup>2</sup></span></li>
+                        <li class="modal-menu__list-item">Настройки</li>
+                        <li class="modal-menu__list-item">Опубликованные <span><sup>0</sup></span></li>
+                        <li class="modal-menu__list-item">Черновики <span class="modal-menu__list-item_active"><sup>3</sup></span></li>
+                        <li class="modal-menu__list-item">
+                            <button>Добавить событие</button>
+                        </li>
+                    </ul>
+                    <ul class="modal-menu__list_no-login modal-menu__list">
+                        <li class="modal-menu__list-item"><a href="#">О проекте</a></li>
+                        <li class="modal-menu__list-item"><a href="#">Как добавить событие?</a></li>
+                        <li class="modal-menu__list-item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <div class="main__head">
+                <h1 class="main__head-title">Настройки</h1>
+            </div>
+        </div>
+        <hr class="main__line">
+        <div class="main__container">
+            <div class="main__acc">
+                <div class="main__acc-title">
+                    <h1 class="main__acc-title-item">Мой аккаунт</h1>
+                    <button class="main__acc-title-item">Перейти в режим блогера</button>
+                </div>
+                <form action="url" class="main__acc-form">
+                    <label for="name" class="acc-form__title">Имя или ник</label>
+                    <div class="acc-form__wrap"><input id="name" type="text" value="Василиса" class="acc-form__item"></div>
+
+                    <label for="email" class="acc-form__title">E-mail</label>
+                    <div class="acc-form__wrap"><input id="email" type="email" value="hello@background.digital" class="acc-form__item"></div>
+                </form>
+                <button class="main__acc-pass">Изменить пароль</button>
+            </div>
+        </div>
+        <div class="main__container">
+            <div class="main__notice">
+                <h1 class="main__notice-title">E-mail уведомления</h1>
+
+                <div class="main__notice-wrap">
+                    <input class="main__notice-checkbox" id="eventToDay" type="checkbox">
+                    <label for="eventToDay" class="checkbox"><!--  --></label>
+                    <label class="main__notice-text" for="eventToDay">Получать напоминания о событиях в день их проведения</label>
+                </div>
+                <div class="main__notice-wrap">
+                    <input class="main__notice-checkbox" id="newEvent" type="checkbox">
+                    <label for="newEvent" class="checkbox"><!--  --></label>
+                    <label class="main__notice-text" for="newEvent">Получать уведомления о новых событиях от интересных мне профилей</label>
+                </div>
+                <div class="main__notice-wrap">
+                    <input class="main__notice-checkbox" id="eventDate" type="checkbox">
+                    <label for="eventDate" class="checkbox"><!--  --></label>
+                    <label class="main__notice-text" for="eventDate">Получать уведомления об изменениях в дате и времени проведения события</label>
+                </div>
+            </div>
+        </div>
+        <div class="main__container">
+            <div class="main__mytape">
+                <h1 class="main__mytape-title">Моя лента</h1>
+                <p class="main__mytape-text">
+                    Отметьте интересные для вас темы – события по ним будут отображаться на главной странице.
+                </p>
+                <div class="main__mytape-theme">
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="alltheme" type="checkbox">
+                        <label for="alltheme" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr main__mytape-descr_bold" for="alltheme">Все темы</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="arh" type="checkbox">
+                        <label for="arh" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="arh">Архитектура</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="aut" type="checkbox">
+                        <label for="aut" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="aut">Авто и транспорт</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="bis" type="checkbox">
+                        <label for="bis" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="bis">Бизнес</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="vid" type="checkbox">
+                        <label for="vid" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="vid">Видео</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="city" type="checkbox">
+                        <label for="city" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="city">Город</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="money" type="checkbox">
+                        <label for="money" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="money">Деньги</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="child" type="checkbox">
+                        <label for="child" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="child">Дети и родители</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="dis" type="checkbox">
+                        <label for="dis" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="dis">Дизайн</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="house" type="checkbox">
+                        <label for="house" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="house">Дом</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="food" type="checkbox">
+                        <label for="food" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="food">Еда и напитки</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="anim" type="checkbox">
+                        <label for="anim" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="anim">Животные</label>
+                    </div>
+                <!-- 2 -->
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="zog" type="checkbox">
+                        <label for="zog" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="zog">ЗОЖ</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="eng" type="checkbox">
+                        <label for="eng" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="eng">Иностранные языки</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="int" type="checkbox">
+                        <label for="int" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="int">Интерьер</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="isk" type="checkbox">
+                        <label for="isk" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="isk">Искусство</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="his" type="checkbox">
+                        <label for="his" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="his">История</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="lit" type="checkbox">
+                        <label for="lit" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="lit">Литература</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="sin" type="checkbox">
+                        <label for="sin" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="sin">Кино и сериалы</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="beut" type="checkbox">
+                        <label for="beut" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="beut">Красота</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="kult" type="checkbox">
+                        <label for="kult" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="kult">Культура и общество</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="med" type="checkbox">
+                        <label for="med" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="med">Медицина</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="mist" type="checkbox">
+                        <label for="mist" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="mist">Мистика и эзотерика</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="mod" type="checkbox">
+                        <label for="mod" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="mod">Мода и стиль</label>
+                    </div>
+                <!-- 3 -->
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="mus" type="checkbox">
+                        <label for="mus" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="mus">Музыка</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="sic" type="checkbox">
+                        <label for="sic" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="sic">Наука</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="obr" type="checkbox">
+                        <label for="obr" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="obr">Образование</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="love" type="checkbox">
+                        <label for="love" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="love">Отношения</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="copy" type="checkbox">
+                        <label for="copy" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="copy">Писательство и копирайтинг</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="buy" type="checkbox">
+                        <label for="buy" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="buy">Покупки</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="pol" type="checkbox">
+                        <label for="pol" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="pol">Политика</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="prav" type="checkbox">
+                        <label for="prav" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="prav">Право</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="psi" type="checkbox">
+                        <label for="psi" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="psi">Психология</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="way" type="checkbox">
+                        <label for="way" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="way">Путешествия</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="work" type="checkbox">
+                        <label for="work" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="work">Работа</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="radio" type="checkbox">
+                        <label for="radio" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="radio">Радио и телевидение</label>
+                    </div>
+                <!-- 4 -->
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="raz" type="checkbox">
+                        <label for="raz" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="raz">Развлечения</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="ras" type="checkbox">
+                        <label for="ras" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="ras">Растения</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="rek" type="checkbox">
+                        <label for="rek" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="rek">Реклама и маркетинг</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="sam" type="checkbox">
+                        <label for="sam" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="sam">Саморазвитие</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="soc" type="checkbox">
+                        <label for="soc" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="soc">Соцсети и медиа</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="sport" type="checkbox">
+                        <label for="sport" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="sport">Спорт</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="dance" type="checkbox">
+                        <label for="dance" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="dance">Танцы</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="tvo" type="checkbox">
+                        <label for="tvo" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="tvo">Творчество</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="teat" type="checkbox">
+                        <label for="teat" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="teat">Театр</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="tec" type="checkbox">
+                        <label for="tec" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="tec">Техника</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="tech" type="checkbox">
+                        <label for="tech" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="tech">Технологии</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="photo" type="checkbox">
+                        <label for="photo" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="photo">Фотография</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__del-wrap">
+            <div class="main__container">
+                <div class="main__del"> <!-- main__del_open -->
+                    <button class="main__del-title">Удаление аккаунта</button>
+                    <p class="main__del-text">
+                        Все настройки, сохраненные мероприятия и подписки будут удалены. Восстановить аккаунт невозможно.
+                    </p>
+                    <button class="main__del-btn">Удалить мой аккаунт</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__wrap">
+                <ul class="footer__link">
+                    <li class="footer__link-item">© Blogpoint, 2019</li>
+                    <li class="footer__link-item"><a href="#">Правила ресурса</a></li>
+                    <li class="footer__link-item"><a href="#">Политика конфиденциальности</a></li>
+                    <li class="footer__link-item"><a href="#">Контакты</a></li>
+                    <li class="footer__link-item"><a href="#">blogpoint</a></li>
+                    <li>
+                        <a href="#" class="footer__background-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="18" viewBox="0 0 100 18">
+                                <defs>
+                                    <path id="a" d="M0 18h99.707V0H0z"/>
+                                </defs>
+                                <g fill="none" fill-rule="evenodd" opacity=".795">
+                                    <path fill="#666" d="M5.227 11.67c1.33 0 2.412-1.312 2.412-2.817 0-1.561-1.081-2.816-2.412-2.816S2.816 7.292 2.816 8.853c0 1.505 1.08 2.817 2.41 2.817zM2.816 0v5.44c1.003-1.1 2.276-1.447 3.163-1.447 2.489 0 4.475 2.238 4.475 4.86 0 2.644-2.006 4.861-4.475 4.861-.887 0-2.16-.346-3.163-1.447v1.236H0V0h2.816zM16.42 10.474c0-.752-.656-1.234-1.273-1.234a1.21 1.21 0 0 0-1.234 1.195c0 .599.463 1.235 1.234 1.235.713 0 1.273-.501 1.273-1.196zm-4.456-5.979a7.434 7.434 0 0 1 2.759-.502c2.41 0 4.513.887 4.513 3.8v5.71H16.42v-.81c-.617.636-1.466 1.022-2.218 1.022-1.562 0-3.105-1.428-3.105-3.203 0-1.833 1.408-3.318 3.124-3.318.81 0 1.543.271 2.2.888.057-2.006-1.737-2.025-2.257-2.025-.887 0-1.485.116-2.2.386V4.495zM26.872 6.501c-.502-.29-.984-.463-1.524-.463-1.544 0-2.527 1.06-2.527 2.893 0 1.466.733 2.74 2.45 2.74.54 0 1.061-.116 1.601-.386l1.1 1.659c-.83.405-1.95.77-2.991.77-1.736 0-4.976-1.002-4.976-4.763 0-2.817 1.755-4.958 4.976-4.958 1.505 0 2.431.52 2.99.868L26.872 6.5zM28.63 4.184h2.816v4.053l2.566-4.032h2.932L33.78 8.16l3.491 5.342h-2.913l-1.986-3.586-.926 1.079v2.507H28.63zM48.504 4.205h2.814V5.69c.618-1.427 1.931-1.679 2.644-1.697v2.141c-1.292.038-2.218.83-2.644 1.813v5.556h-2.814V4.205zM58.787 11.67c1.331 0 2.392-1.293 2.392-2.817 0-1.58-1.06-2.816-2.392-2.816-1.35 0-2.412 1.255-2.412 2.816 0 1.505 1.043 2.817 2.412 2.817m0-7.677c2.816 0 5.208 2.161 5.208 4.86 0 2.701-2.392 4.861-5.208 4.861-2.854 0-5.226-2.18-5.226-4.86 0-2.682 2.372-4.86 5.226-4.86M73.14 13.503h-2.816v-1.1c-.521.772-1.332 1.311-2.508 1.311-2.912 0-3.01-2.584-3.01-3.915V4.204h2.818V9.51c0 .81.038 2.16 1.292 2.16 1.06 0 1.408-.675 1.408-1.774V4.204h2.815v9.299zM74.742 4.205h2.814v1.12c.832-1.236 2.123-1.332 2.489-1.332 1.487 0 3.03.772 3.03 3.936v5.574h-2.816V8.217c0-1.64-.367-2.18-1.293-2.18-1.39 0-1.41.966-1.41 2.489v4.977h-2.814V4.205zM89.114 6.037c-1.333 0-2.413 1.255-2.413 2.816 0 1.505 1.08 2.817 2.413 2.817 1.33 0 2.41-1.312 2.41-2.817 0-1.561-1.08-2.816-2.41-2.816zm2.41 6.23c-1.003 1.1-2.275 1.447-3.163 1.447-2.468 0-4.475-2.217-4.475-4.86 0-2.623 1.986-4.86 4.475-4.86.888 0 2.16.346 3.163 1.446V0h2.816v13.503h-2.816v-1.235z"/>
+                                    <mask id="b" fill="#fff">
+                                        <use xlink:href="#a"/>
+                                    </mask>
+                                    <path fill="#666" d="M95.766 13.514h3.94v-2.59h-3.94zM41.73 11.67c-1.33 0-2.411-1.312-2.411-2.817 0-1.561 1.08-2.816 2.412-2.816 1.33 0 2.41 1.255 2.41 2.816 0 1.505-1.08 2.817-2.41 2.817zm5.227-7.465h-2.815V5.44c-1.004-1.1-2.276-1.447-3.164-1.447-2.488 0-4.474 2.238-4.474 4.86 0 2.644 2.006 4.861 4.474 4.861.888 0 2.16-.346 3.164-1.447 0 0 .002.605 0 .807l-.002.087c0 1.482-.86 2.596-2.548 2.596-.986 0-2.147-.227-2.992-.977l-1.288 1.828C38.49 17.5 40.286 18 41.817 18c3.115 0 5.144-1.59 5.144-5.073l-.004-8.722z" mask="url(#b)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<!-- 
+    Развлечения
+    Растения
+    Реклама и маркетинг
+    Саморазвитие
+    Соцсети и медиа
+    Спорт
+    Танцы
+    Творчество
+    Театр
+    Техника
+    Технологии
+    Фотография
+ -->
