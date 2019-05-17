@@ -263,6 +263,15 @@ button {
   width: 251px;
   height: 50px;
   border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 4px;
   background-color: #ff954b;
   font: 500 16px/16px 'Geometria';
@@ -473,8 +482,7 @@ button {
 
 .main__mytape-descr {
   width: calc(100% - 27px);
-  padding: 2px 0 0;
-  font: 16px/16px 'Geometria';
+  font: 16px/22px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;

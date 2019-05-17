@@ -274,6 +274,8 @@ button {
   right: 0;
   top: 0;
   font: 14px/22px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #000;
 }
 
@@ -391,6 +393,8 @@ button {
 
 .main__common-radio label:not(.radio) {
   font: 16px/16px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #666;
   padding: 4px 0 0;
   cursor: pointer;
@@ -454,6 +458,8 @@ button {
 
 .main__project-info {
   font: 16px/24px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #666;
   max-width: 350px;
   margin: 0 0 15px;
@@ -479,6 +485,8 @@ button {
 .main__project-item .project-item__wrap label {
   display: block;
   font: 500 16px/24px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #666;
   margin: 0 0 7px;
 }
@@ -521,6 +529,8 @@ button {
       -ms-user-select: none;
           user-select: none;
   font: 500 16px/22px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #d6712b;
   position: relative;
   padding: 0 0 0 31px;
@@ -614,8 +624,7 @@ button {
 
 .main__theme-descr {
   width: calc(100% - 27px);
-  padding: 2px 0 0;
-  font: 16px/16px 'Geometria';
+  font: 16px/22px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333;

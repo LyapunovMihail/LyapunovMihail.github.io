@@ -320,6 +320,9 @@ button {
   .main__about-me-wrap .about-me__info:last-child {
     margin: 0 0 30px;
   }
+  .main__about-me-wrap .about-me__tags-item {
+    margin-bottom: 10px;
+  }
   .main__about-me .about-me__show-more {
     font-size: 14px;
     line-height: 15px;
@@ -332,7 +335,7 @@ button {
   }
   .main__snippet {
     position: relative;
-    margin-bottom: 67px;
+    margin-bottom: 110px;
     height: 45.406vw;
     min-width: 194px;
     min-height: 144px;
@@ -372,12 +375,17 @@ button {
   }
   .main__soon-wrap .main__soon-slider-wrap {
     height: 105%;
-    margin: 0 0 0 45px;
+    margin: 0;
     overflow: scroll;
     position: relative;
   }
   .main__soon-wrap .main__soon-slider {
-    width: 130vw;
+    width: 133vw;
+    min-width: 436px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 45px;
+    margin: 22px 0 25px;
   }
   .main__soon-button {
     display: none;
@@ -514,12 +522,16 @@ button {
   }
   .main__past-wrap .main__past-slider-wrap {
     height: 105%;
-    margin: 0 0 0 45px;
+    margin: 0;
     overflow: scroll;
     position: relative;
   }
   .main__past-wrap .main__past-slider {
     width: 185vw;
+    max-width: 1310px;
+    min-width: 632px;
+    padding: 0 45px;
+    margin: 22px 0 25px;
   }
   .main__past-button {
     display: none;
@@ -565,8 +577,8 @@ button {
   .main__about-me .about-me__show-more {
     margin-top: 9px;
   }
-  .main__soon-wrap .main__soon-slider-wrap {
-    margin-left: 20px;
+  .main__soon-wrap .main__soon-slider {
+    padding: 0 20px;
   }
   .main__project {
     max-width: calc(100% - 40px);
@@ -574,7 +586,7 @@ button {
   .main__connect {
     max-width: calc(100% - 40px);
   }
-  .main__past-wrap .main__past-slider-wrap {
-    margin-left: 20px;
+  .main__past-wrap .main__past-slider {
+    padding: 0 20px;
   }
 }
