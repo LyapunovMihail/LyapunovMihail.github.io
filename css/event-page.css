@@ -287,6 +287,9 @@ button {
   width: auto;
   height: 28px;
   font: 13px/13px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,6 +365,9 @@ button {
 
 .main__head-other-item {
   font: 16px/16px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   margin: 0;
   color: #333333;
 }
@@ -404,13 +410,13 @@ button {
 .main__head-other .head-other__subscr-button {
   width: 296px;
   height: 50px;
+  font: 500 16px/16px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
   border: none;
   border-radius: 4px;
   background: #007f60;
-  font: 500 16px/16px 'Geometria';
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,6 +564,9 @@ button {
 
 .main__description-about .description__article .article__path .article__path-paragraf {
   font: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   margin: 0;
 }
 
@@ -583,6 +592,9 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   font-weight: 500;
   color: #000;
 }
@@ -592,6 +604,9 @@ button {
   padding: 0 0 0 20px;
   font: 20px/32px 'Geometria';
   color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
@@ -616,11 +631,11 @@ button {
 }
 
 .main__price-path-paragraf {
+  font: 20px/32px 'Geometria';
+  color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
-  font: 20px/32px 'Geometria';
-  color: #333;
   margin: 0;
 }
 
@@ -643,11 +658,17 @@ button {
   margin: 40px 0 10px;
   font: 500 20px/32px 'Geometria';
   color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
 }
 
 .main__details-path-paragraf {
   font: 20px/32px 'Geometria';
   color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   max-width: 610px;
   margin: 0;
   position: relative;
@@ -686,6 +707,9 @@ button {
   margin: 40px 0 10px;
   font: 500 20px/32px 'Geometria';
   color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
 }
 
 .main__details-list-wrap {
@@ -698,6 +722,24 @@ button {
   color: #333;
   list-style-type: none;
   padding: 0;
+}
+
+.main__details-list-item a {
+  color: #d6712b;
+  border-bottom: 1px solid #d8d8d8;
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.main__details-list-item a:hover {
+  opacity: .6;
+}
+
+@media (max-width: 729px) {
+  .main__details-list-item a:hover {
+    opacity: 1;
+  }
 }
 
 .main__subscr {

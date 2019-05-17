@@ -196,9 +196,6 @@ button {
   .main__about-me {
     max-width: 970px;
   }
-  .main__about-me-wrap {
-    max-width: 804px;
-  }
   .main__soon-wrap {
     max-width: 970px;
   }
@@ -239,9 +236,6 @@ button {
   }
   .main__about-me {
     max-width: 640px;
-  }
-  .main__about-me-wrap {
-    max-height: 169px;
   }
   .main__soon-wrap {
     max-width: 640px;
@@ -307,20 +301,29 @@ button {
     max-width: calc(100% - 92px);
     margin-bottom: 39px;
   }
-  .main__about-me-wrap {
-    max-height: 94px;
-  }
   .main__about-me-wrap .about-me__title {
+    font-size: 14px;
+    line-height: 1.43;
+    margin-bottom: 10px;
+  }
+  .main__about-me-wrap .about-me__info,
+  .main__about-me-wrap .about-me__info-min {
     font-size: 14px;
     line-height: 1.43;
   }
   .main__about-me-wrap .about-me__info {
-    font-size: 14px;
-    line-height: 1.43;
+    margin: 0 0 20px;
+  }
+  .main__about-me-wrap .about-me__info:first-child {
+    margin: 20px 0 20px;
+  }
+  .main__about-me-wrap .about-me__info:last-child {
+    margin: 0 0 30px;
   }
   .main__about-me .about-me__show-more {
     font-size: 14px;
-    line-height: 1.43;
+    line-height: 15px;
+    margin-top: 19px;
   }
   .main__soon-title {
     font-size: 11px;
@@ -401,6 +404,7 @@ button {
   .main__project-title {
     font-size: 22px;
     line-height: 32px;
+    margin: 30px 0 15px;
   }
   .main__project .project-list__item {
     padding-left: 10px;
@@ -553,9 +557,13 @@ button {
 @media (max-width: 425px) {
   .main__head {
     max-width: calc(100% - 40px);
+    margin-bottom: 25px;
   }
   .main__about-me {
     max-width: calc(100% - 40px);
+  }
+  .main__about-me .about-me__show-more {
+    margin-top: 9px;
   }
   .main__soon-wrap .main__soon-slider-wrap {
     margin-left: 20px;

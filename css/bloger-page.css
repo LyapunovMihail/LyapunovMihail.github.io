@@ -339,14 +339,13 @@ button {
 
 .main__about-me-wrap {
   max-width: 860px;
-  max-height: 139px;
   overflow: hidden;
   -webkit-transition: height 0.2s linear;
   transition: height 0.2s linear;
 }
 
 .main__about-me-wrap .about-me__title {
-  font: 500 20px/31px 'Geometria';
+  font: 500 20px/30px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
@@ -354,8 +353,18 @@ button {
   margin: 0 0 18px;
 }
 
+.main__about-me-wrap .about-me__more-info {
+  overflow: hidden;
+  height: 0;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
 .main__about-me-wrap .about-me__info {
-  font: 20px/31px 'Geometria';
+  font: 20px/30px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
@@ -363,7 +372,19 @@ button {
 }
 
 .main__about-me-wrap .about-me__info:last-child {
-  margin-bottom: 45px;
+  margin: 0 0 45px;
+}
+
+.main__about-me-wrap .about-me__info:first-child {
+  margin: 30px 0 30px;
+}
+
+.main__about-me-wrap .about-me__info-min {
+  font: 20px/30px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  margin: 0;
 }
 
 .main__about-me-wrap .about-me__tags {
@@ -390,7 +411,7 @@ button {
 }
 
 .main__about-me .about-me__show-more {
-  font: 20px/20px 'Geometria';
+  font: 20px/28px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
@@ -768,6 +789,10 @@ button {
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
   color: #333;
+}
+
+.main__connect-item {
+  margin: 0 0 10px;
 }
 
 .main__connect-item a {

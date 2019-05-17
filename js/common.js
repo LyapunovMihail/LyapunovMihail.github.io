@@ -36,3 +36,10 @@ $(window).on('scroll', function() {
 $(document).on('click', '.main__del-title', function() {
     $('.main__del').toggleClass('main__del_open');
 });
+
+$(document).on('click', '.about-me__show-more', function() {
+
+    $('.about-me__more-info').css( 'height', 'auto' );
+    console.log($('.about-me__more-info').length)
+    $('.about-me__show-more').css('display', 'none');
+})
