@@ -338,6 +338,7 @@ button {
 }
 
 .main__acc-pass {
+  height: 22px;
   font: 500 16px/16px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -346,7 +347,7 @@ button {
   border: none;
   background: none;
   outline: none;
-  margin: 0;
+  margin: 5px 0 0;
   padding: 0;
   cursor: pointer;
   -webkit-transition: opacity 0.2s linear;
@@ -404,14 +405,17 @@ button {
 }
 
 .main__notice-text {
+  display: inline-block;
   width: calc(100% - 25px);
-  font: 16px/16px 'Geometria';
+  max-width: 624px;
+  font: 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
   color: #333;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
+  cursor: pointer;
 }
 
 .main__notice-text:hover {
@@ -489,6 +493,7 @@ button {
   color: #333;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
+  cursor: pointer;
 }
 
 .main__mytape-descr:hover {

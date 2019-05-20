@@ -343,10 +343,16 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #666;
+  max-width: 210px;
+  white-space: nowrap;
 }
 
 .main__common-text span {
   color: #d6712b;
+}
+
+.main__common-text[for="spec"] {
+  max-width: 142px;
 }
 
 .main__common-text_sex {
@@ -360,7 +366,7 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 10px 0 25px;
-  padding: 0 0 0 20px;
+  padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
@@ -391,7 +397,8 @@ button {
   margin: 0 10px 0 0;
 }
 
-.main__common-radio label:not(.radio) {
+.main__common-radio .main__common-radio-male,
+.main__common-radio .main__common-radio-female {
   font: 16px/16px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -400,14 +407,20 @@ button {
   cursor: pointer;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.main__common-radio label:not(.radio):hover {
+.main__common-radio .main__common-radio-male:hover,
+.main__common-radio .main__common-radio-female:hover {
   opacity: .7;
 }
 
 @media (max-width: 729px) {
-  .main__common-radio label:not(.radio):hover {
+  .main__common-radio .main__common-radio-male:hover,
+  .main__common-radio .main__common-radio-female:hover {
     opacity: 1;
   }
 }
@@ -440,6 +453,20 @@ button {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   background-color: #fff;
+}
+
+.main__common-sex:checked ~ .main__common-radio-male {
+  color: #000;
+}
+
+.main__common-sex:checked ~ .main__common-radio-female {
+  color: #000;
+}
+
+.main__common-spec {
+  resize: none;
+  padding: 16px 20px;
+  overflow: hidden;
 }
 
 .main__project {
@@ -762,7 +789,7 @@ button {
   font: 14px/20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #333;
+  color: #666;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
   cursor: pointer;

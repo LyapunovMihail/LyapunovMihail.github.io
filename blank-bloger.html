@@ -48,26 +48,26 @@
 
                 <div class="main__common-item">
                     <label class="main__common-text" for="name">Ваше имя или название<span> *</span></label>
-                    <input type="text" id="name" class="main__common-name">
+                    <input type="text" id="name" class="main__common-name" required>
                 </div>
                 <div class="main__common-item main__common-item_sex">
                     <span class="main__common-text main__common-text_sex" for="#">Пол</span>
                     <div class="main__common-radio-wrap">
                         <div class="main__common-radio">
-                            <input type="radio" id="male" name="sex" value="male" class="main__common-sex">
+                            <input type="radio" id="male" name="sex" value="male" class="main__common-sex" required>
                             <label for="male" class="radio"></label>
-                            <label for="male">Мужской</label>
+                            <label class="main__common-radio-male" for="male">Мужской</label>
                         </div>
                         <div class="main__common-radio">
-                            <input type="radio" id="female" name="sex" value="female" class="main__common-sex">
+                            <input type="radio" id="female" name="sex" value="female" class="main__common-sex" required>
                             <label for="female" class="radio"></label>
-                            <label for="female">Женский</label>
+                            <label class="main__common-radio-female" for="female">Женский</label>
                         </div>
                     </div>
                 </div>
                 <div class="main__common-item">
                     <label class="main__common-text" for="spec">Специальность<span> *</span></label>
-                    <input type="text" id="spec" class="main__common-spec main__common-spec_input" placeholder="Психолог, психотерапевт...">
+                    <textarea id="spec" class="main__common-spec main__common-spec_input" placeholder="Психолог, психотерапевт..." required></textarea>
                 </div>
             </div>
         </div>

@@ -218,9 +218,6 @@ button {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .main__notice-text {
-    padding: 2px 0 0;
-  }
   .main__mytape {
     margin-bottom: 69px;
   }
@@ -271,6 +268,21 @@ button {
     margin: 0 0 30px;
     width: 280px;
   }
+  .main__acc {
+    margin-bottom: 45px;
+  }
+  .main__acc-pass {
+    margin: 0;
+  }
+  .main__acc-title {
+    margin-bottom: 20px;
+  }
+  .main__notice {
+    margin-bottom: 42px;
+  }
+  .main__notice-title {
+    margin-bottom: 20px;
+  }
   .main__acc-form .acc-form__title,
   .main__acc-pass,
   .main__notice-text,
@@ -286,6 +298,9 @@ button {
   .main__mytape {
     margin-bottom: 47px;
   }
+  .main__mytape-title {
+    margin-bottom: 20px;
+  }
   .main__mytape-theme {
     height: auto;
     -ms-flex-flow: wrap;
@@ -297,6 +312,9 @@ button {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     max-width: none;
+  }
+  .main__mytape-text {
+    margin-bottom: 20px;
   }
 }
 

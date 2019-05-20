@@ -33,9 +33,13 @@ $(window).on('scroll', function() {
     console.log($height)
 });
 
+// Открытие поля "Удалить аккаунт" на стр юзера/блогера
+
 $(document).on('click', '.main__del-title', function() {
     $('.main__del').toggleClass('main__del_open');
 });
+
+// ОТкрытие поля "Узнать больше обо мне" на стр блогера
 
 $(document).on('click', '.about-me__show-more', function() {
 
@@ -43,3 +47,4 @@ $(document).on('click', '.about-me__show-more', function() {
     console.log($('.about-me__more-info').length)
     $('.about-me__show-more').css('display', 'none');
 })
+
