@@ -4,6 +4,23 @@ body {
   font-family: "Geometria";
 }
 
+textarea {
+  display: block;
+  background-color: transparent;
+  outline: none;
+  font: 16px/26px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+@media (max-width: 729px) {
+  textarea {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 a {
   text-decoration: none;
   font: inherit;
@@ -14,6 +31,22 @@ sup {
   vertical-align: baseline;
   position: relative;
   top: -0.5em;
+}
+
+input {
+  background-color: #fff;
+  outline: none;
+  font: 16px/26px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+@media (max-width: 729px) {
+  input {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 button {
@@ -140,13 +173,80 @@ button {
   }
 }
 
+.viber {
+  font: 500 20px/30px 'Geometria';
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  padding: 0 0 0 35px;
+  position: relative;
+}
+
+.viber:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/viber-ic.svg") no-repeat;
+}
+
+@media (max-width: 729px) {
+  .viber {
+    font-size: 14px;
+    line-height: 1.43;
+    padding: 0 0 0 30px;
+  }
+  .viber:before {
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    background-size: 100%;
+  }
+}
+
+.skype {
+  font: 500 20px/30px 'Geometria';
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  padding: 0 0 0 35px;
+  position: relative;
+}
+
+.skype:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/skype-ic.svg") no-repeat;
+}
+
+@media (max-width: 729px) {
+  .skype {
+    font-size: 14px;
+    line-height: 1.43;
+    padding: 0 0 0 30px;
+  }
+  .skype:before {
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    background-size: 100%;
+  }
+}
+
 .checkbox {
   display: inline-block;
   width: 15px;
   height: 15px;
-  border: 1px solid #666;
+  border: 1px solid rgba(102, 102, 102, 0.7);
   border-radius: 2px;
-  opacity: .7;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -244,17 +344,17 @@ button {
   margin: 0 20px 0 0;
   height: 15px;
   white-space: nowrap;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+.footer__link-item:hover {
+  opacity: .7;
 }
 
 .footer__link-item a {
   color: inherit;
   border-bottom: 1px solid #d8d8d8;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-
-.footer__link-item a:hover {
-  opacity: .7;
 }
 
 .footer__link-item:nth-child(5) {
@@ -351,6 +451,13 @@ button {
   }
   .footer__background-link:hover {
     opacity: 1;
+  }
+  .footer__link-item {
+    font-size: 13px;
+    font-weight: 18px;
+  }
+  .footer__background-link svg {
+    height: 16px;
   }
 }
 

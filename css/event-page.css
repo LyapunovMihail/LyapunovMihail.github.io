@@ -4,6 +4,23 @@
   font-family: "Geometria";
 }
 
+textarea {
+  display: block;
+  background-color: transparent;
+  outline: none;
+  font: 16px/26px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+@media (max-width: 729px) {
+  textarea {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 a {
   text-decoration: none;
   font: inherit;
@@ -14,6 +31,22 @@ sup {
   vertical-align: baseline;
   position: relative;
   top: -0.5em;
+}
+
+input {
+  background-color: #fff;
+  outline: none;
+  font: 16px/26px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+@media (max-width: 729px) {
+  input {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 button {
@@ -140,13 +173,80 @@ button {
   }
 }
 
+.viber {
+  font: 500 20px/30px 'Geometria';
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  padding: 0 0 0 35px;
+  position: relative;
+}
+
+.viber:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/viber-ic.svg") no-repeat;
+}
+
+@media (max-width: 729px) {
+  .viber {
+    font-size: 14px;
+    line-height: 1.43;
+    padding: 0 0 0 30px;
+  }
+  .viber:before {
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    background-size: 100%;
+  }
+}
+
+.skype {
+  font: 500 20px/30px 'Geometria';
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  padding: 0 0 0 35px;
+  position: relative;
+}
+
+.skype:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/skype-ic.svg") no-repeat;
+}
+
+@media (max-width: 729px) {
+  .skype {
+    font-size: 14px;
+    line-height: 1.43;
+    padding: 0 0 0 30px;
+  }
+  .skype:before {
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    background-size: 100%;
+  }
+}
+
 .checkbox {
   display: inline-block;
   width: 15px;
   height: 15px;
-  border: 1px solid #666;
+  border: 1px solid rgba(102, 102, 102, 0.7);
   border-radius: 2px;
-  opacity: .7;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -316,7 +416,7 @@ button {
   top: 0;
   width: 100%;
   max-width: 300px;
-  margin: 40px 0 0;
+  margin: 46px 0 0;
 }
 
 .main__head-author-wrap {
@@ -357,7 +457,7 @@ button {
 
 .main__head-other {
   position: absolute;
-  top: 129px;
+  top: 135px;
   right: 0;
   width: 100%;
   max-width: 300px;
@@ -405,10 +505,10 @@ button {
   display: inline;
   text-decoration: none;
   color: #d6712b;
+  font-weight: 500;
 }
 
 .main__head-other .head-other__subscr-button {
-  width: 296px;
   height: 50px;
   font: 500 16px/16px 'Geometria';
   -webkit-font-smoothing: antialiased;
@@ -421,9 +521,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -434,20 +534,22 @@ button {
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   outline: none;
+  white-space: nowrap;
 }
 
 .main__head-other .head-other__subscr-button .line-button {
   height: 50px;
   width: 1px;
   background: #fff;
+  margin: 0 25px;
 }
 
-.main__head-other .head-other__subscr-button *:last-child {
+.main__head-other .head-other__subscr-button div:last-child p {
   padding: 0 0 0 23px;
   position: relative;
 }
 
-.main__head-other .head-other__subscr-button *:last-child:before {
+.main__head-other .head-other__subscr-button div:last-child p:before {
   content: '';
   position: absolute;
   top: 0;
@@ -505,10 +607,22 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .main__description-nav li:last-child {
   margin: 0;
+}
+
+.main__description-nav li:hover:not(.active) {
+  opacity: 1;
+}
+
+@media (max-width: 729px) {
+  .main__description-nav li:hover:not(.active) {
+    opacity: .6;
+  }
 }
 
 .main__description .active {
@@ -543,6 +657,10 @@ button {
   -o-font-smoothing: antialiased;
 }
 
+.main__description-about .description__article p:nth-child(2) {
+  margin: 30px 0 0;
+}
+
 .main__description-about .description__article .article__list-title, .main__description-about .description__article .article__path .article__path-title {
   margin: 40px 0 10px;
   font: 500 20px/32px 'Geometria';
@@ -560,6 +678,10 @@ button {
   -o-font-smoothing: antialiased;
   font: 20px/1.5 'Geometria';
   color: #333;
+}
+
+.main__description-about .description__article .article__list-wrap .article__list-item {
+  margin-bottom: 2px;
 }
 
 .main__description-about .description__article .article__path .article__path-paragraf {
@@ -599,6 +721,10 @@ button {
   color: #000;
 }
 
+.main__price-list-item {
+  margin-bottom: 2px;
+}
+
 .main__price-list-wrap {
   margin: 0;
   padding: 0 0 0 20px;
@@ -619,6 +745,7 @@ button {
 .main__price-list-wrap .main__price-list-item_sale span:last-child {
   text-decoration: none;
   color: #d6712b;
+  font-weight: 500;
 }
 
 .main__price-path-title {
@@ -724,6 +851,10 @@ button {
   padding: 0;
 }
 
+.main__details-list-item {
+  margin-bottom: 10px;
+}
+
 .main__details-list-item a {
   color: #d6712b;
   border-bottom: 1px solid #d8d8d8;
@@ -749,7 +880,6 @@ button {
 }
 
 .main__subscr-button {
-  width: 296px;
   height: 60px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -762,9 +892,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -775,20 +905,22 @@ button {
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   outline: none;
+  white-space: nowrap;
 }
 
 .main__subscr-button .line-button {
   height: 60px;
   width: 1px;
   background: #fff;
+  margin: 0 25px;
 }
 
-.main__subscr-button *:last-child {
+.main__subscr-button div:last-child p {
   padding: 0 0 0 23px;
   position: relative;
 }
 
-.main__subscr-button *:last-child:before {
+.main__subscr-button div:last-child p:before {
   content: '';
   position: absolute;
   top: 0;

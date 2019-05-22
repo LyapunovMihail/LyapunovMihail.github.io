@@ -4,6 +4,23 @@
   font-family: "Geometria";
 }
 
+textarea {
+  display: block;
+  background-color: transparent;
+  outline: none;
+  font: 16px/26px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+@media (max-width: 729px) {
+  textarea {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 a {
   text-decoration: none;
   font: inherit;
@@ -14,6 +31,22 @@ sup {
   vertical-align: baseline;
   position: relative;
   top: -0.5em;
+}
+
+input {
+  background-color: #fff;
+  outline: none;
+  font: 16px/26px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+@media (max-width: 729px) {
+  input {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 button {
@@ -140,13 +173,80 @@ button {
   }
 }
 
+.viber {
+  font: 500 20px/30px 'Geometria';
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  padding: 0 0 0 35px;
+  position: relative;
+}
+
+.viber:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/viber-ic.svg") no-repeat;
+}
+
+@media (max-width: 729px) {
+  .viber {
+    font-size: 14px;
+    line-height: 1.43;
+    padding: 0 0 0 30px;
+  }
+  .viber:before {
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    background-size: 100%;
+  }
+}
+
+.skype {
+  font: 500 20px/30px 'Geometria';
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  padding: 0 0 0 35px;
+  position: relative;
+}
+
+.skype:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/skype-ic.svg") no-repeat;
+}
+
+@media (max-width: 729px) {
+  .skype {
+    font-size: 14px;
+    line-height: 1.43;
+    padding: 0 0 0 30px;
+  }
+  .skype:before {
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    background-size: 100%;
+  }
+}
+
 .checkbox {
   display: inline-block;
   width: 15px;
   height: 15px;
-  border: 1px solid #666;
+  border: 1px solid rgba(102, 102, 102, 0.7);
   border-radius: 2px;
-  opacity: .7;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -241,6 +341,9 @@ button {
     right: auto;
     top: auto;
     margin: 0 0 55px;
+  }
+  .main__head .main__head-title .head-title__tags {
+    margin-bottom: 32px;
   }
   .event-page__line_media {
     display: block;
@@ -344,6 +447,19 @@ button {
   }
   .main__head .main__head-other .head-other__subscr-button {
     width: 280px;
+    padding-right: 0;
+  }
+  .main__head .main__head-other .head-other__subscr-button .line-button {
+    margin-right: 0;
+  }
+  .main__head .main__head-other .head-other__subscr-button div:last-child {
+    width: calc(100% - (25px + 104px));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main__head .main__head-other .head-other__subscr-button:hover {
     background-color: #007f60;
@@ -354,6 +470,12 @@ button {
   .main__description .description__article {
     font-size: 14px;
     line-height: 1.43;
+  }
+  .main__description .main__description-about .description__article > p:nth-child(2) {
+    margin-top: 19px;
+  }
+  .main__description .main__description-about .description__article {
+    padding-bottom: 50px;
   }
   .main__description .main__description-about .description__article p {
     margin-top: 25px;
@@ -433,9 +555,20 @@ button {
   .main__subscr-button {
     width: 280px;
     height: 50px;
+    padding-right: 0;
   }
   .main__subscr-button .line-button {
     height: inherit;
+    margin-right: 1px;
+  }
+  .main__subscr-button div:last-child {
+    width: calc(100% - (25px + 104px));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main__subscr-button:hover {
     background-color: #007f60;

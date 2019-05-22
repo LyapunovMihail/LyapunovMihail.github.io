@@ -290,43 +290,63 @@ button {
 }
 
 @media (max-width: 1399px) {
-  .head__wrap,
+  .main__head,
+  .main__face,
+  .main__content-nav-wrap,
   .main__common,
+  .main__about,
   .main__project,
-  .main__theme,
-  .footer__about,
-  .footer__submit {
+  .main__contact,
+  .main__theme {
     max-width: 970px;
   }
-  .main__common-name,
-  .main__common-spec {
-    max-width: 723px;
+  .main__content-nav {
+    right: 32px;
   }
-  .main__project-item {
-    max-width: 750px;
+  .main__common-name,
+  .main__common-spec,
+  .main__about-messg,
+  .main__about-info-wrap,
+  .main__project-item,
+  .main__contact-name {
+    max-width: 723px;
   }
 }
 
 @media (max-width: 1069px) {
-  .head {
-    margin-bottom: 50px;
-  }
-  .head__descr {
-    margin: 0;
-  }
-  .head__wrap,
+  .main__head,
+  .main__face,
   .main__common,
+  .main__content-nav-wrap,
+  .main__about,
   .main__project,
-  .main__theme,
-  .footer__about,
-  .footer__submit {
+  .main__contact,
+  .main__theme {
     max-width: 640px;
   }
-  .head__logo {
+  .main__line:nth-of-type(2) {
+    display: block;
+  }
+  .main__face {
     border-bottom: none;
   }
-  .main {
-    border-top: 1px solid #d8d8d8;
+  .main__face-descr {
+    max-width: 410px;
+  }
+  .main__face-descr .face-descr__photo {
+    max-width: 90px;
+  }
+  .main__face-descr .face-descr__photo-wrap {
+    height: 90px;
+  }
+  .main__face-descr .face-descr__photo-change {
+    top: 50%;
+  }
+  .main__face-descr .face-descr__name-insta {
+    margin: 10px 0 6px;
+  }
+  .main__content-nav-wrap {
+    margin: 10px 0 0;
   }
   .main__content-nav {
     position: unset;
@@ -334,7 +354,7 @@ button {
     display: -ms-flexbox;
     display: flex;
     white-space: nowrap;
-    margin: 10px 0 55px;
+    width: 660px;
   }
   .main__content-nav-item {
     margin: 0 15px 0 0;
@@ -344,13 +364,96 @@ button {
   }
   .main__content-nav-item_active:before {
     width: 100%;
-    height: 3px;
-    left: 0;
+    height: 2px;
     top: auto;
+    left: 0;
     bottom: -5px;
   }
-  .main__content-nav-wrap:after,
-  .main__content-nav-wrap:before {
+  .main__common {
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 729px) {
+  .main__head,
+  .main__face,
+  .main__common,
+  .main__about,
+  .main__project,
+  .main__contact,
+  .main__theme {
+    max-width: calc(100% - 92px);
+  }
+  .main__head .active:before {
+    bottom: -16px;
+  }
+  .main__head-title {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 25px 0 15px;
+  }
+  .main__head-title:first-child {
+    margin-right: 18px;
+  }
+  .main__face {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    padding: 25px 0 40px;
+  }
+  .main__face-descr {
+    max-width: none;
+  }
+  .main__face-descr .face-descr__name {
+    width: calc(100% - 100px);
+    max-width: none;
+  }
+  .main__face-descr .face-descr__name-title {
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .main__face-descr .face-descr__name-insta {
+    margin: 5px 0 4px;
+    padding-left: 24px;
+  }
+  .main__face-descr .face-descr__name-insta:before {
+    top: 0.5px;
+  }
+  .main__face-descr .face-descr__name-btn {
+    width: 174px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .main__face-descr .face-descr__photo {
+    max-width: 80px;
+  }
+  .main__face-descr .face-descr__photo-wrap {
+    height: 80px;
+  }
+  .main__face-descr .face-descr__photo-change {
+    width: 34px;
+    height: 34px;
+    background-size: calc(100% - 12px);
+    top: 67px;
+  }
+  .main__face-subscr {
+    margin: 35px 0 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .main__face-subscr .face-subscr__btn {
+    margin-bottom: 7px;
+  }
+  .main__content-nav-wrap {
+    width: 100vw;
+    height: 30px;
+    max-width: none;
+    position: relative;
+    overflow: hidden;
+  }
+  .main__content-nav-wrap:before, .main__content-nav-wrap:after {
     content: '';
     width: 45px;
     height: 40px;
@@ -368,178 +471,132 @@ button {
     background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#ffffff));
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
   }
-}
-
-@media (max-width: 729px) {
-  .head {
-    margin-bottom: 50px;
-  }
-  .head__wrap,
-  .main__common,
-  .main__project,
-  .main__theme,
-  .footer__about,
-  .footer__submit {
-    max-width: calc(100% - 92px);
-  }
-  .main__container:first-child {
-    overflow: hidden;
-  }
-  .main__common-name,
-  .main__common-spec {
-    font-size: 14px;
-    line-height: 24px;
-    padding: 0 15px;
-  }
-  .main__common-spec {
-    padding: 17px 15px;
-  }
-  .main__content-nav:after {
-    right: -46px;
-  }
-  .main__content-nav-wrap {
-    position: relative;
-    left: -45px;
-    width: 100vw;
-    overflow: hidden;
-    height: 72px;
-    z-index: 1;
-  }
-  .main__content-nav-scrll {
+  .main__content-nav-wrap .main__content-nav-scrll {
     overflow: scroll;
     position: relative;
     padding: 0 45px;
+    height: 50px;
   }
-  .main__content-nav {
-    min-width: 433px;
+  .main__content-nav-wrap .main__content-nav-scrll .main__content-nav {
     padding: 0 45px 0 0;
   }
-  .head__logo {
-    position: initial;
-    padding-top: 20px;
-  }
-  .head__descr {
-    margin: 0;
-  }
-  .head__logo-cls-btn {
-    top: 10px;
-    right: 10px;
-  }
-  .head__logo-img {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-  }
-  .main__common-title,
-  .main__project-title,
-  .main__theme-title,
-  .main__common-item_sex {
-    margin-bottom: 20px;
-  }
-  .main__common-text_sex {
-    margin-bottom: 16px;
-  }
-  .main__project-title {
-    margin-top: 20px;
-  }
-  .head__descr,
+  .main__face-descr .face-descr__name-insta,
   .main__common-text,
   .main__common-name,
+  .main__common-spec,
+  .main__about-info,
+  .main__about-messg,
   .main__project-info,
+  .main__project-item .project-item__wrap label,
   .input,
-  .main__theme-info,
-  .main__theme-descr,
-  .footer__about-info,
-  .footer__about-messg {
+  .main__contact-text,
+  .main__contact-info,
+  .main__contact-messng-item .telegramm,
+  .main__contact-messng-item .whatsapp,
+  .main__contact-messng-item .skype,
+  .main__contact-messng-item .viber {
     font-size: 14px;
-    line-height: 1.43;
+    line-height: 22px;
   }
-  .main__theme-info {
-    margin-bottom: 15px;
+  .main__common {
+    margin-top: 47px;
   }
-  .main__project {
-    margin-bottom: 49px;
-  }
-  .footer__about {
-    margin-bottom: 45px;
-  }
-  .main__project-item {
-    padding: 0 15px;
-  }
-  .main__project-item .project-item__wrap:not(:last-child) {
-    margin: 10px 0 10px;
-  }
-  .main__project-item .project-item__wrap:last-child {
+  .main__common-title {
     margin-bottom: 20px;
   }
-  .main__theme {
-    padding-bottom: 42px;
+  .main__common-name {
+    margin: 11px 0 16px;
+  }
+  .main__about {
+    margin-top: 45px;
+  }
+  .main__about-title {
+    margin-bottom: 20px;
+  }
+  .main__about-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .main__about-more {
+    margin-top: 20px;
+  }
+  .main__project-title {
+    margin: 45px 0 20px;
+  }
+  .main__project-info {
+    max-width: 310px;
+  }
+  .main__contact-title {
+    margin: 45px 0 20px;
+  }
+  .main__contact-messng {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .main__contact-messng-item:nth-child(1), .main__contact-messng-item:nth-child(2) {
+    margin-bottom: 10px;
+  }
+  .main__contact-messng-item .telegramm {
+    padding-left: 40px;
+  }
+  .main__contact-messng-item .skype,
+  .main__contact-messng-item .whatsapp,
+  .main__contact-messng-item .viber {
+    padding-left: 35px;
+  }
+  .main__contact-messng-item .telegramm:before {
+    width: 28px;
+    height: 24px;
+  }
+  .main__contact-messng-item .skype:before,
+  .main__contact-messng-item .whatsapp:before,
+  .main__contact-messng-item .viber:before {
+    width: 24px;
+    height: 24px;
+  }
+  .main__theme-title {
+    margin: 35px 0 20px;
   }
   .main__theme-item {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: auto;
   }
   .main__theme-wrap {
-    max-width: none;
     width: 50%;
-  }
-  .main__theme-descr {
-    padding: 0;
-  }
-  .footer {
-    margin-bottom: 80px;
-  }
-  .footer__about-info {
-    width: calc(100% - 100px);
-    min-width: 180px;
-  }
-  .footer__submit-btn {
-    width: 280px;
   }
 }
 
 @media (max-width: 425px) {
-  .head {
-    margin-bottom: 50px;
-  }
-  .head__wrap,
+  .main__head,
+  .main__face,
   .main__common,
+  .main__about,
   .main__project,
-  .main__theme,
-  .footer__about,
-  .footer__submit {
+  .main__contact,
+  .main__theme {
     max-width: calc(100% - 40px);
   }
-  .main__content-nav:after {
-    right: -20px;
-  }
-  .main__content-nav-wrap {
-    left: -20px;
-  }
-  .main__content-nav-scrll {
-    padding: 0 20px;
-  }
-  .main__content-nav {
-    padding: 0 20px 0 0;
-  }
-  .main__content-nav-wrap:after,
   .main__content-nav-wrap:before {
     width: 20px;
   }
-  .head__logo {
-    padding-bottom: 25px;
+  .main__content-nav-wrap .main__content-nav-scrll {
+    padding: 0 20px;
   }
-  .main__theme-info,
-  .main__common-name {
-    margin-bottom: 20px;
+  .main__content-nav-wrap .main__content-nav-scrll .main__content-nav {
+    padding-right: 20px;
   }
-  .main__project {
-    margin-bottom: 48px;
+  .main__project-title {
+    line-height: 28px;
   }
-  .footer__about {
-    margin-bottom: 39px;
+  .main__contact-messng-item:nth-child(2) {
+    margin-right: 0;
   }
 }
