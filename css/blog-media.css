@@ -479,7 +479,7 @@ button {
   }
   .main__expected-slider-wrap {
     height: calc(105% + 15px);
-    overflow: scroll;
+    overflow-x: scroll;
     position: relative;
   }
   .main__expected-slider {
@@ -688,7 +688,7 @@ button {
   .main__recomend-wrap .main__recomend-slider-wrap {
     width: 100%;
     height: 105%;
-    overflow: scroll;
+    overflow-x: scroll;
     position: relative;
   }
   .main__recomend-wrap .main__recomend-slider {

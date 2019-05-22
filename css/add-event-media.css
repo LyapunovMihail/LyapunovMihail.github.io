@@ -421,10 +421,12 @@ button {
   .main__content-nav-wrap .main__content-nav-scrll {
     height: 50px;
     padding: 0 45px;
-    overflow: scroll;
+    overflow-x: scroll;
   }
   .main__content-nav-wrap .main__content-nav-scrll .main__content-nav {
+    width: 617px;
     white-space: nowrap;
+    padding: 0 45px 0 0;
   }
   .main__content-nav-wrap:after, .main__content-nav-wrap:before {
     content: '';

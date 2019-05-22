@@ -472,7 +472,7 @@ button {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
   }
   .main__content-nav-wrap .main__content-nav-scrll {
-    overflow: scroll;
+    overflow-x: scroll;
     position: relative;
     padding: 0 45px;
     height: 50px;

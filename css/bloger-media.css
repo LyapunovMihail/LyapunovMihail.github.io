@@ -492,7 +492,7 @@ button {
   .main__soon-wrap .main__soon-slider-wrap {
     height: 105%;
     margin: 0;
-    overflow: scroll;
+    overflow-x: scroll;
     position: relative;
   }
   .main__soon-wrap .main__soon-slider {
@@ -639,7 +639,7 @@ button {
   .main__past-wrap .main__past-slider-wrap {
     height: 105%;
     margin: 0;
-    overflow: scroll;
+    overflow-x: scroll;
     position: relative;
   }
   .main__past-wrap .main__past-slider {
