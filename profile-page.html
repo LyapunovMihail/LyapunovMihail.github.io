@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/profile-media.css">
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/profile.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
     <header class="head">
@@ -41,7 +41,7 @@
                     <li class="head__point-user-item">Настройки</li>
                 </ul>
                 <ul class="head__point-bloger">
-                    <li class="head__point-bloger-item">Опубликованные<span class="head__point-bloger-counter">0</span></li> <!--head__point-bloger-counter_active-->
+                    <li class="head__point-bloger-item"><a href="public-page.html">Опубликованные<span class="head__point-bloger-counter">0</span></a></li> <!--head__point-bloger-counter_active-->
                     <li class="head__point-bloger-item">Черновики<span class="head__point-bloger-counter head__point-bloger-counter_active">3</span></li>
                     <li class="head__point-bloger-item">
                         <button><a href="add-event-page.html">Добавить событие</a></button>
@@ -50,7 +50,7 @@
             </div>
         </div>
     </header>
-    <header class="head head__mobile"> <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+    <header class="head head__mobile"> 
         <div class="head__wrap">
             <nav class="head__container">
                 <ul class="head__navigate">
@@ -63,8 +63,8 @@
                 </ul>
             </nav>
         </div>
-        
-        <div class="head__modal-menu">
+        <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+        <div class="head__modal-menu head__mobile-menu_bloger">
             <div class="head__wrap">
                 <div class="head__container head__modal-container">
                     <ul class="modal-menu__list modal-menu__list_user">
@@ -74,10 +74,10 @@
                     <ul class="modal-menu__list modal-menu__list_bloger">
                         <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active"><sup>2</sup></span></li>
                         <li class="modal-menu__list-item">Настройки</li>
-                        <li class="modal-menu__list-item">Опубликованные <span><sup>0</sup></span></li>
-                        <li class="modal-menu__list-item">Черновики <span class="modal-menu__list-item_active"><sup>3</sup></span></li>
+                        <li class="modal-menu__list-item"><a href="public-page.html">Опубликованные <span><sup>0</sup></span></a></li>
+                        <li class="modal-menu__list-item"><a href="draft-page.html">Черновики <span class="modal-menu__list-item_active"><sup>3</sup></span></a></li>
                         <li class="modal-menu__list-item">
-                            <button>Добавить событие</button>
+                            <button><a href="add-event-page.html">Добавить событие</a></button>
                         </li>
                     </ul>
                     <ul class="modal-menu__list_no-login modal-menu__list">

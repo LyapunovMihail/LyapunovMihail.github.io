@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/my_event-page.css">
-    <link rel="stylesheet" href="css/my_event-media.css">
+    <link rel="stylesheet" href="css/draft-page.css">
+    <link rel="stylesheet" href="css/draft-media.css">
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/common.js"></script>
@@ -30,23 +30,23 @@
                 </ul>
             </nav>
         </div>
-        <div class="head__account">
+        <div class="head__account"> <!-- head__account_hide -->
             <div class="head__container">
                 <ul class="head__point-user">
                     <li class="head__point-user-item">Мне интересно <span class="head__point-user-counter head__point-user-counter_active">3</span></li> <!--head__point-user-counter_active-->
                     <li class="head__point-user-item"><a href="user-page.html">Настройки</a></li>
                 </ul>
-                <ul class="head__point-bloger head__account_hide">
-                    <li class="head__point-bloger-item">Опубликованные<span class="head__point-bloger-counter">0</span></li> <!--head__point-bloger-counter_active-->
+                <ul class="head__point-bloger ">
+                    <li class="head__point-bloger-item"><a href="public-page.html">Опубликованные<span class="head__point-bloger-counter head__point-bloger-counter_active"> 12</span></a></li> <!--head__point-bloger-counter_active-->
                     <li class="head__point-bloger-item">Черновики<span class="head__point-bloger-counter head__point-bloger-counter_active">3</span></li>
                     <li class="head__point-bloger-item">
-                        <button>Добавить событие</button>
+                        <button><a href="add-event-page.html">Добавить событие</a></button>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
-    <header class="head head__mobile"> <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+    <header class="head head__mobile"> 
         <div class="head__wrap">
             <nav class="head__container">
                 <ul class="head__navigate">
@@ -60,7 +60,7 @@
             </nav>
         </div>
         <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
-        <div class="head__modal-menu head__mobile-menu_user">
+        <div class="head__modal-menu head__mobile-menu_bloger">
             <div class="head__wrap">
                 <div class="head__container head__modal-container">
                     <ul class="modal-menu__list modal-menu__list_user">
@@ -88,21 +88,41 @@
 
     <main class="main">
         <div class="main__container">
-            <ul class="main__head">
-                <li class="main__head-item main__head-item_active">Ожидаемые</li>
-                <li class="main__head-item"><a href="my_event-page-past.html">Прошедшие</a></li>
-            </ul>
+            <div class="main__head">
+                <h1 class="main__head-title">Черновики</h1>
+            </div>
         </div>
         <hr class="main__line">
         <div class="main__container">
             <div class="main__snippet">
+                <p class="main__snippet-info_empty">У вас нет сохраненных черновиков.</p>
                 <div class="main__snippet-wrap">
                     <a href="#" class="main__snippet-item">
                         <div class="snippet-item__head">
-                            <div class="snippet-item__head-avatar"><img src="img/avatar.jpg" alt="avatar"></div>
-                            <div class="snippet-item__head-name">
-                                <p>Констанция Длиннофамильная</p>
-                                <p>@ceramicsking</p>
+                            <button class="snippet-item__head-public">
+                                <span>Опубликовать</span>
+                                <span>Опубл.</span>
+                            </button>
+                            <div class="snippet-item__head-wrap">
+                                <button class="snippet-item__head-edit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#7F7F7F" d="M3.322 9.093l7.588-7.577a2 2 0 0 1 2.924.105L16.92 5.18a2 2 0 0 1-.168 2.793l-7.658 6.93-5.773-5.81z"/>
+                                            <path stroke="#7F7F7F" d="M3.521 10.003L.837 17.342l7.35-2.643-4.666-4.696z"/>
+                                            <path stroke="#FFF" d="M9.759 2.307l5.926 6.78"/>
+                                            <path fill="#7F7F7F" d="M2.029 14.02l2.185 2.191-3.382 1.163z"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="snippet-item__head-del">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19" viewBox="0 0 17 19">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#7F7F7F" d="M1 4h15l-.876 13.133A2 2 0 0 1 13.13 19H3.87a2 2 0 0 1-1.995-1.867L1 4z"/>
+                                            <path stroke="#FFF" d="M8.5 8v7M11.5 8v7M5.5 8v7"/>
+                                            <path fill="#7F7F7F" d="M5 0h7v2H5zM0 2h17v1H0z"/>
+                                        </g>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <div class="snippet-item__image">
@@ -110,9 +130,11 @@
                         </div>
                         <div class="snippet-item__descr">
                             <p class="snippet-item__descr-format live">Прямой эфир</p>
-                            <h3 class="snippet-item__descr-title">
-                                Как стать популярным дизайнером и самому выбирать клиентов, с которыми работать…
-                            </h3>
+                            <div class="snippet-item__descr-title-wrap">
+                                <h3 class="snippet-item__descr-title">
+                                    Как стать популярным дизайнером и самому выбирать клиентов, с которыми работать…
+                                </h3>
+                            </div>
                             <div class="snippet-item__tags">
                                 <p class="snippet-item__tags-item">Дизайн</p>
                                 <p class="snippet-item__tags-item">Бизнес</p>
@@ -123,16 +145,36 @@
                                 13 Сентрября, Ср <span>20:00</span>
                             </p>
                             <p class="snippet-item__time-price-item snippet-item__time-price-money">
-                                1600 p.
+                                2 600 p.
                             </p>
                         </div>
                     </a>
                     <a href="#" class="main__snippet-item">
                         <div class="snippet-item__head">
-                            <div class="snippet-item__head-avatar"><img src="img/avatar.jpg" alt="avatar"></div>
-                            <div class="snippet-item__head-name">
-                                <p>Констанция Длиннофамильная</p>
-                                <p>@ceramicsking</p>
+                            <button class="snippet-item__head-public">
+                                <span>Опубликовать</span>
+                                <span>Опубл.</span>
+                            </button>
+                            <div class="snippet-item__head-wrap">
+                                <button class="snippet-item__head-edit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#7F7F7F" d="M3.322 9.093l7.588-7.577a2 2 0 0 1 2.924.105L16.92 5.18a2 2 0 0 1-.168 2.793l-7.658 6.93-5.773-5.81z"/>
+                                            <path stroke="#7F7F7F" d="M3.521 10.003L.837 17.342l7.35-2.643-4.666-4.696z"/>
+                                            <path stroke="#FFF" d="M9.759 2.307l5.926 6.78"/>
+                                            <path fill="#7F7F7F" d="M2.029 14.02l2.185 2.191-3.382 1.163z"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="snippet-item__head-del">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19" viewBox="0 0 17 19">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#7F7F7F" d="M1 4h15l-.876 13.133A2 2 0 0 1 13.13 19H3.87a2 2 0 0 1-1.995-1.867L1 4z"/>
+                                            <path stroke="#FFF" d="M8.5 8v7M11.5 8v7M5.5 8v7"/>
+                                            <path fill="#7F7F7F" d="M5 0h7v2H5zM0 2h17v1H0z"/>
+                                        </g>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <div class="snippet-item__image">
@@ -140,9 +182,11 @@
                         </div>
                         <div class="snippet-item__descr">
                             <p class="snippet-item__descr-format live">Прямой эфир</p>
-                            <h3 class="snippet-item__descr-title">
-                                Как стать популярным дизайнером и самому выбирать клиентов, с которыми работать…
-                            </h3>
+                            <div class="snippet-item__descr-title-wrap">
+                                <h3 class="snippet-item__descr-title">
+                                    Творчество современных художников
+                                </h3>
+                            </div>
                             <div class="snippet-item__tags">
                                 <p class="snippet-item__tags-item">Дизайн</p>
                                 <p class="snippet-item__tags-item">Бизнес</p>
@@ -153,16 +197,36 @@
                                 13 Сентрября, Ср <span>20:00</span>
                             </p>
                             <p class="snippet-item__time-price-item snippet-item__time-price-money">
-                                1600 p.
+                                Бесплатно
                             </p>
                         </div>
                     </a>
                     <a href="#" class="main__snippet-item">
                         <div class="snippet-item__head">
-                            <div class="snippet-item__head-avatar"><img src="img/avatar.jpg" alt="avatar"></div>
-                            <div class="snippet-item__head-name">
-                                <p>Констанция Длиннофамильная</p>
-                                <p>@ceramicsking</p>
+                            <button class="snippet-item__head-public">
+                                <span>Опубликовать</span>
+                                <span>Опубл.</span>
+                            </button>
+                            <div class="snippet-item__head-wrap">
+                                <button class="snippet-item__head-edit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#7F7F7F" d="M3.322 9.093l7.588-7.577a2 2 0 0 1 2.924.105L16.92 5.18a2 2 0 0 1-.168 2.793l-7.658 6.93-5.773-5.81z"/>
+                                            <path stroke="#7F7F7F" d="M3.521 10.003L.837 17.342l7.35-2.643-4.666-4.696z"/>
+                                            <path stroke="#FFF" d="M9.759 2.307l5.926 6.78"/>
+                                            <path fill="#7F7F7F" d="M2.029 14.02l2.185 2.191-3.382 1.163z"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="snippet-item__head-del">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19" viewBox="0 0 17 19">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill="#7F7F7F" d="M1 4h15l-.876 13.133A2 2 0 0 1 13.13 19H3.87a2 2 0 0 1-1.995-1.867L1 4z"/>
+                                            <path stroke="#FFF" d="M8.5 8v7M11.5 8v7M5.5 8v7"/>
+                                            <path fill="#7F7F7F" d="M5 0h7v2H5zM0 2h17v1H0z"/>
+                                        </g>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <div class="snippet-item__image">
@@ -170,9 +234,11 @@
                         </div>
                         <div class="snippet-item__descr">
                             <p class="snippet-item__descr-format live">Прямой эфир</p>
-                            <h3 class="snippet-item__descr-title">
-                                Как стать популярным дизайнером и самому выбирать клиентов, с которыми работать…
-                            </h3>
+                            <div class="snippet-item__descr-title-wrap">
+                                <h3 class="snippet-item__descr-title">
+                                    Как стать популярным дизайнером и самому выбирать клиентов, с которыми работать…
+                                </h3>
+                            </div>
                             <div class="snippet-item__tags">
                                 <p class="snippet-item__tags-item">Дизайн</p>
                                 <p class="snippet-item__tags-item">Бизнес</p>
