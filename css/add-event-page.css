@@ -1,295 +1,4 @@
-@import url(//hello.myfonts.net/count/394097);body {
-  margin: 0;
-  padding: 0;
-  font-family: "Geometria";
-}
-
-textarea {
-  display: block;
-  background-color: transparent;
-  outline: none;
-  font: 16px/26px 'Geometria';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing: antialiased;
-}
-
-@media (max-width: 729px) {
-  textarea {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-
-a {
-  text-decoration: none;
-  font: inherit;
-  color: inherit;
-}
-
-sup {
-  vertical-align: baseline;
-  position: relative;
-  top: -0.5em;
-}
-
-input {
-  background-color: #fff;
-  outline: none;
-  font: 16px/26px 'Geometria';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing: antialiased;
-}
-
-@media (max-width: 729px) {
-  input {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-
-button {
-  outline: none;
-}
-
-.master-class p:before {
-  background-color: #b26329;
-}
-
-.master-class div {
-  background-color: #b26329;
-}
-
-.intens p:before {
-  background-color: #7f1a40;
-}
-
-.intens div {
-  background-color: #7f1a40;
-}
-
-.curs p:before {
-  background-color: #f8b400;
-}
-
-.curs div {
-  background-color: #f8b400;
-}
-
-.live:before {
-  background: #99b976;
-}
-
-.marafon:before {
-  background: #0092ba;
-}
-
-.vebinar:before {
-  background: #ee003e;
-}
-
-.mast-class:before {
-  background: #b26329;
-}
-
-.lect:before {
-  background: #007f60;
-}
-
-.curs:before {
-  background: #f8b400;
-}
-
-.none-before:before {
-  display: none;
-}
-
-.telegramm {
-  font: 500 20px/30px 'Geometria';
-  color: #333;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing: antialiased;
-  padding: 0 0 0 35px;
-  position: relative;
-}
-
-.telegramm:before {
-  content: '';
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../img/telegram-ic.svg") no-repeat;
-}
-
-@media (max-width: 729px) {
-  .telegramm {
-    font-size: 14px;
-    line-height: 1.43;
-    padding: 0 0 0 30px;
-  }
-  .telegramm:before {
-    width: 20px;
-    height: 20px;
-    top: -3px;
-    background-size: 100%;
-  }
-}
-
-.whatsapp {
-  font: 500 20px/30px 'Geometria';
-  color: #333;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing: antialiased;
-  padding: 0 0 0 35px;
-  position: relative;
-}
-
-.whatsapp:before {
-  content: '';
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../img/whatsapp-ic.svg") no-repeat;
-}
-
-@media (max-width: 729px) {
-  .whatsapp {
-    font-size: 14px;
-    line-height: 1.43;
-    padding: 0 0 0 30px;
-  }
-  .whatsapp:before {
-    width: 20px;
-    height: 20px;
-    top: -2px;
-    background-size: 100%;
-  }
-}
-
-.viber {
-  font: 500 20px/30px 'Geometria';
-  color: #333;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing: antialiased;
-  padding: 0 0 0 35px;
-  position: relative;
-}
-
-.viber:before {
-  content: '';
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../img/viber-ic.svg") no-repeat;
-}
-
-@media (max-width: 729px) {
-  .viber {
-    font-size: 14px;
-    line-height: 1.43;
-    padding: 0 0 0 30px;
-  }
-  .viber:before {
-    width: 20px;
-    height: 20px;
-    top: -2px;
-    background-size: 100%;
-  }
-}
-
-.skype {
-  font: 500 20px/30px 'Geometria';
-  color: #333;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing: antialiased;
-  padding: 0 0 0 35px;
-  position: relative;
-}
-
-.skype:before {
-  content: '';
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../img/skype-ic.svg") no-repeat;
-}
-
-@media (max-width: 729px) {
-  .skype {
-    font-size: 14px;
-    line-height: 1.43;
-    padding: 0 0 0 30px;
-  }
-  .skype:before {
-    width: 20px;
-    height: 20px;
-    top: -2px;
-    background-size: 100%;
-  }
-}
-
-.checkbox {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 1px solid rgba(102, 102, 102, 0.7);
-  border-radius: 2px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.radio {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #d8d8d8;
-  border-radius: 50px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: relative;
-}
-
-.input {
-  width: 100%;
-  max-width: 750px;
-  height: 60px;
-  font: 16px/26px 'Geometria';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -o-font-smoothing: antialiased;
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: none;
-  border: 1px solid #d8d8d8;
-  border-radius: 2px;
-  -webkit-transition: border-color 0.2s linear;
-  transition: border-color 0.2s linear;
-}
-
-.input:hover, .input:focus {
-  border-color: #7f7f7f;
-}
-
-.head {
+@import url(//hello.myfonts.net/count/394097);.head {
   width: 100%;
 }
 
@@ -314,7 +23,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 0 70px;
+  padding: 40px 0 60px;
   position: relative;
 }
 
@@ -322,6 +31,7 @@ button {
   font: 40px/52px "TTDrugsCondensed-Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   margin: 0;
 }
 
@@ -369,6 +79,7 @@ button {
   font: 14px/22px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #000;
   z-index: 1;
 }
@@ -416,15 +127,17 @@ button {
   font: 500 20px/20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 0 30px;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 34px;
 }
 
 .main__format-subtitle {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
-  margin: 30px 0;
+  margin: 27px 0;
 }
 
 .main__format-subtitle span {
@@ -442,6 +155,7 @@ button {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   font-weight: normal;
   margin: 0;
@@ -481,6 +195,7 @@ button {
   font: 12px/14px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   letter-spacing: 1.1px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -531,7 +246,8 @@ button {
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 10px 0 25px;
+  -o-font-smoothing: antialiased;
+  margin: 6px 0 25px;
 }
 
 .main__format-event-name:hover, .main__format-event-name:focus {
@@ -585,14 +301,16 @@ button {
   font: 500 20px/20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 0 30px;
-  margin: 0 0 30px;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 34px;
+  margin: 0 0 34px;
 }
 
 .main__about-subtitle {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   margin: 0 0 6px;
 }
@@ -621,9 +339,10 @@ button {
 
 .main__about-entr {
   resize: none;
+  overflow: hidden;
   width: 100%;
   max-width: 750px;
-  height: 120px;
+  min-height: 120px;
   border: 1px solid #d8d8d8;
   border-radius: 2px;
   -webkit-box-sizing: border-box;
@@ -632,8 +351,9 @@ button {
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+  -o-font-smoothing: antialiased;
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
   outline: none;
 }
 
@@ -673,16 +393,19 @@ button {
   font: 500 20px/20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 0 30px;
-  margin: 60px 0 30px;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 34px;
+  margin: 60px 0 34px;
 }
 
 .main__price-subtitle {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   margin: 0 0 6px;
+  display: block;
 }
 
 .main__price-subtitle span {
@@ -707,13 +430,14 @@ button {
 }
 
 .main__price-checkbox .checkbox {
-  margin: 1px 10px 0 0;
+  margin: 2px 10px 0 0;
 }
 
 .main__price-checkbox .price-checkbox__descr {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   font-weight: normal;
   color: #333;
@@ -754,6 +478,7 @@ button {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
 }
 
@@ -847,6 +572,7 @@ button {
   font: 500 16px/22px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #d6712b;
   position: relative;
   padding: 0 0 0 31px;
@@ -890,9 +616,10 @@ button {
 
 .main__price-entr {
   resize: none;
+  overflow: hidden;
   width: 100%;
   max-width: 750px;
-  height: 120px;
+  min-height: 120px;
   border: 1px solid #d8d8d8;
   border-radius: 2px;
   -webkit-box-sizing: border-box;
@@ -901,8 +628,9 @@ button {
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+  -o-font-smoothing: antialiased;
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
   outline: none;
 }
 
@@ -942,8 +670,9 @@ button {
   font: 500 20px/20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 0 30px;
-  margin: 60px 0 30px;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 34px;
+  margin: 60px 0 34px;
 }
 
 .main__detail-subtitle {
@@ -951,6 +680,7 @@ button {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   margin: 0 0 6px;
 }
@@ -1056,9 +786,10 @@ button {
 
 .main__detail-entr {
   resize: none;
+  overflow: hidden;
   width: 100%;
   max-width: 750px;
-  height: 120px;
+  min-height: 120px;
   border: 1px solid #d8d8d8;
   border-radius: 2px;
   -webkit-box-sizing: border-box;
@@ -1067,8 +798,9 @@ button {
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+  -o-font-smoothing: antialiased;
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
   outline: none;
 }
 
@@ -1108,14 +840,16 @@ button {
   font: 500 20px/20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 0 30px;
-  margin: 60px 0 30px;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 34px;
+  margin: 60px 0 34px;
 }
 
 .main__connect-subtitle {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   margin: 0 0 10px;
 }
@@ -1140,7 +874,7 @@ button {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   max-width: 750px;
-  margin: 0 0 25px;
+  margin: 0 0 30px;
 }
 
 .main__connect-phone:last-child, .main__connect-email:last-child {
@@ -1183,6 +917,7 @@ button {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   max-width: 210px;
   white-space: nowrap;
@@ -1202,6 +937,7 @@ button {
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   margin: 10px 0 25px;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
@@ -1221,6 +957,7 @@ button {
   font: 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   margin: 0 0 10px;
 }
@@ -1240,6 +977,7 @@ button {
   font: 500 16px/22px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1314,6 +1052,7 @@ button {
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1348,14 +1087,16 @@ button {
   font: 500 20px/20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 0 30px;
-  margin: 60px 0 32px;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 34px;
+  margin: 60px 0 34px;
 }
 
 .main__theme-subtitle {
   font: 500 16px/24px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   margin: 0 0 25px;
 }
@@ -1386,6 +1127,7 @@ button {
 
 .main__theme-wrap {
   max-width: 225px;
+  min-width: 209px;
   margin: 0 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1417,6 +1159,7 @@ button {
   font: 16px/22px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #333;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
@@ -1461,6 +1204,7 @@ button {
   font: 14px/20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
@@ -1500,6 +1244,7 @@ button {
   font: 500 20px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   padding: 0 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

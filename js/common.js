@@ -39,7 +39,7 @@ $(document).on('click', '.main__del-title', function() {
     $('.main__del').toggleClass('main__del_open');
 });
 
-// ОТкрытие поля "Узнать больше обо мне" на стр блогера
+// Открытие поля "Узнать больше обо мне" на стр блогера
 
 $(document).on('click', '.about-me__show-more', function() {
 

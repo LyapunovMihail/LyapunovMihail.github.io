@@ -6,7 +6,7 @@ body {
 
 textarea {
   display: block;
-  background-color: transparent;
+  background-color: #fff;
   outline: none;
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
@@ -251,6 +251,8 @@ button {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .radio {
@@ -287,4 +289,36 @@ button {
 
 .input:hover, .input:focus {
   border-color: #7f7f7f;
+}
+
+.g-textarea_high {
+  resize: none;
+  overflow: hidden;
+  width: 100%;
+  max-width: 750px;
+  min-height: 120px;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 14px 20px;
+  font: 16px/26px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  outline: none;
+}
+
+.g-textarea_high:hover, .g-textarea_high:focus {
+  border-color: #7f7f7f;
+}
+
+@media (max-width: 729px) {
+  .g-textarea_high {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 17px 15px;
+  }
 }
