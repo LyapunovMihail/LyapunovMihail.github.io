@@ -309,6 +309,7 @@ button {
   -webkit-transition: border-color 0.2s linear;
   transition: border-color 0.2s linear;
   outline: none;
+  outline: none;
 }
 
 .g-textarea_high:hover, .g-textarea_high:focus {
