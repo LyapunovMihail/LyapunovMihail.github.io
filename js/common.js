@@ -10,10 +10,17 @@ $(document).on('click', '.head__navigate-menu', function() {
             overflow: 'hidden',
             position: 'fixed'
         });
-    } else {$('body').css({
-        overflow: 'visible',
-        position: 'unset'
-    });}
+        $('.head__mobile-menu_bloger').css({
+            'overflow-y': 'scroll',
+            'overflow-x': 'hidden'
+        });
+    } else {
+        $('body').css({
+            overflow: 'visible',
+            position: 'unset'
+        });
+        $('.head__mobile-menu_bloger').css('overflow-y', 'hidden');
+    ;}
 });
 
 // Закрепление кнопки настроек

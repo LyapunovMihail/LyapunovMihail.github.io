@@ -367,7 +367,7 @@
   .head__login-item {
     margin: 0;
   }
-  .head__login-item:last-child {
+  .head__login-item:last-child:not(:first-child) {
     display: none;
   }
   .head__login-item .head__login-avatar_blog {
@@ -474,6 +474,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   .head__mobile-menu_no-login .head__modal-menu {
+    width: calc(100% + 10px);
     display: block;
   }
   .head__mobile-menu_no-login .head__navigate-menu {

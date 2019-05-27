@@ -207,7 +207,8 @@
   .main__contact-messng-item .whatsapp,
   .main__contact-messng-item .skype,
   .main__contact-messng-item .viber,
-  .main__theme-descr {
+  .main__theme-descr,
+  .main__theme-info {
     font-size: 14px;
     line-height: 22px;
   }
