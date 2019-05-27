@@ -7,8 +7,7 @@ $(document).on('click', '.head__navigate-menu', function() {
     if ($('.head__mobile').hasClass('head__mobile-menu_no-login')) {
         
         $('body').css({
-            overflow: 'hidden',
-            position: 'fixed'
+            overflow: 'hidden'
         });
         $('.head__mobile-menu_bloger').css({
             'overflow-y': 'scroll',
@@ -16,8 +15,7 @@ $(document).on('click', '.head__navigate-menu', function() {
         });
     } else {
         $('body').css({
-            overflow: 'visible',
-            position: 'unset'
+            overflow: 'visible'
         });
         $('.head__mobile-menu_bloger').css('overflow-y', 'hidden');
     ;}
