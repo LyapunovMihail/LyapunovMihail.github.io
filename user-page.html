@@ -26,7 +26,16 @@
                     <li class="head__navigate-item"><a href="#">Контакты</a></li>
                 </ul>
                 <ul class="head__login">
-                    <li class="head__login-item"><a href="profile-page.html">Войти</a></li>
+                    <!-- <li class="head__login-item"><a href="profile-page.html">Войти</a></li> -->
+                    <li class="head__login-item">
+                        <div class="head__login-avatar">
+                            <div class="head__login-avatar-wrap">
+                                <div class="head__login-avatar-text">В</div>
+                            </div>
+                        </div>
+                        <p class="head__login-name">Василиса</p>
+                    </li>
+                    <li class="head__login-item"><a href="profile-page.html" class="head__login-item-out">Выйти</a></li>
                 </ul>
             </nav>
         </div>
@@ -59,7 +68,16 @@
                     <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
                 </ul>
                 <ul class="head__login">
-                    <li class="head__login-item"><a href="profile-page.html">Войти</a></li>
+                    <!-- <li class="head__login-item"><a href="profile-page.html">Войти</a></li> -->
+                    <li class="head__login-item">
+                        <div class="head__login-avatar">
+                            <div class="head__login-avatar-wrap">
+                                <div class="head__login-avatar-text">В</div>
+                            </div>
+                        </div>
+                        <p class="head__login-name">Василиса</p>
+                    </li>
+                    <li class="head__login-item"><a href="profile-page.html">Выйти</a></li>
                 </ul>
             </nav>
         </div>
@@ -68,7 +86,7 @@
             <div class="head__wrap">
                 <div class="head__container head__modal-container">
                     <ul class="modal-menu__list modal-menu__list_user">
-                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active">3</span></li>
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active"><sup>3</sup></span></li>
                         <li class="modal-menu__list-item"><a href="#">Настройки</a></li>
                     </ul>
                     <ul class="modal-menu__list modal-menu__list_bloger">
@@ -105,10 +123,10 @@
                 </div>
                 <form action="url" class="main__acc-form">
                     <label for="name" class="acc-form__title">Имя или ник</label>
-                    <div class="acc-form__wrap"><input id="name" type="text" value="Василиса" class="acc-form__item"></div>
+                    <input id="name" type="text" value="Василиса" class="input">
 
                     <label for="email" class="acc-form__title">E-mail</label>
-                    <div class="acc-form__wrap"><input id="email" type="email" value="hello@background.digital" class="acc-form__item"></div>
+                    <input id="email" type="email" value="hello@background.digital" class="input">
                 </form>
                 <button class="main__acc-pass">Изменить пароль</button>
             </div>
@@ -228,11 +246,6 @@
                         <label class="main__mytape-descr" for="his">История</label>
                     </div>
                     <div class="main__mytape-wrap">
-                        <input class="main__mytape-checkbox" id="lit" type="checkbox">
-                        <label for="lit" class="checkbox"><!--  --></label>
-                        <label class="main__mytape-descr" for="lit">Литература</label>
-                    </div>
-                    <div class="main__mytape-wrap">
                         <input class="main__mytape-checkbox" id="sin" type="checkbox">
                         <label for="sin" class="checkbox"><!--  --></label>
                         <label class="main__mytape-descr" for="sin">Кино и сериалы</label>
@@ -246,6 +259,11 @@
                         <input class="main__mytape-checkbox" id="kult" type="checkbox">
                         <label for="kult" class="checkbox"><!--  --></label>
                         <label class="main__mytape-descr" for="kult">Культура и общество</label>
+                    </div>
+                    <div class="main__mytape-wrap">
+                        <input class="main__mytape-checkbox" id="lit" type="checkbox">
+                        <label for="lit" class="checkbox"><!--  --></label>
+                        <label class="main__mytape-descr" for="lit">Литература</label>
                     </div>
                     <div class="main__mytape-wrap">
                         <input class="main__mytape-checkbox" id="med" type="checkbox">

@@ -54,6 +54,13 @@
   .main__head-item:first-child {
     margin-right: 15px;
   }
+  .main__head {
+    margin: 25px 0 15px;
+  }
+  .main__head-title {
+    font-size: 22px;
+    line-height: 22px;
+  }
   .main__snippet-wrap {
     width: 100%;
     max-width: none;

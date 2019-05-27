@@ -53,6 +53,22 @@ button {
   outline: none;
 }
 
+.main {
+  min-height: calc(100vh - 206px);
+}
+
+@media (max-width: 1069px) {
+  .main {
+    min-height: calc(100vh - 150px);
+  }
+}
+
+@media (max-width: 729px) {
+  .main {
+    min-height: calc(100vh - 212px);
+  }
+}
+
 .master-class p:before {
   background-color: #b26329;
 }
@@ -308,7 +324,6 @@ button {
   -o-font-smoothing: antialiased;
   -webkit-transition: border-color 0.2s linear;
   transition: border-color 0.2s linear;
-  outline: none;
   outline: none;
 }
 

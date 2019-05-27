@@ -142,7 +142,7 @@
   font: 500 20px/1.4 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 0 30px;
+  margin: 0 0 34px;
 }
 
 .main__common-item {
@@ -302,7 +302,7 @@
   font: 500 20px/1.4 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 33px 0 30px;
+  margin: 33px 0 34px;
 }
 
 .main__project-info {

@@ -75,7 +75,7 @@
 
 .main__snippet {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1308px;
 }
 
 .main__snippet-wrap {
@@ -112,6 +112,10 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.main__snippet-wrap .main__snippet-item:nth-child(4) {
+  margin-right: 0;
 }
 
 .main__snippet-wrap .main__snippet-item:hover {

@@ -47,6 +47,12 @@
   .main__snippet {
     max-width: calc(100% - 92px);
   }
+  .main__head {
+    margin: 25px 0 15px;
+  }
+  .main__head-item_active:before {
+    bottom: -16px;
+  }
   .main__head-item {
     font-size: 22px;
     line-height: 22px;

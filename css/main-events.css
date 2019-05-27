@@ -335,7 +335,7 @@
   cursor: default;
 }
 
-.main__nav-content-path * {
+.main__nav-content-path h1 {
   font: 30px/30px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -346,12 +346,12 @@
   transition: opacity 0.2s linear;
 }
 
-.main__nav-content-path *:not(.active) {
+.main__nav-content-path h1:not(.active) {
   cursor: pointer;
   opacity: .9;
 }
 
-.main__nav-content-path *:not(.active):hover {
+.main__nav-content-path h1:not(.active):hover {
   opacity: .5;
 }
 
@@ -1210,7 +1210,23 @@
   height: 27px;
   border-radius: 50%;
   background: url("../img/event-soon.svg") center center no-repeat #ff954b;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+
+.main__recomend-slider .recomend-slider__descr-wrap .recomend-slider__img-wrap {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.main__recomend-slider .recomend-slider__descr-wrap .recomend-slider__img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .main__recomend-slider .recomend-slider__descr-wrap .recomend-slider__text {

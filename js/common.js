@@ -6,8 +6,14 @@ $(document).on('click', '.head__navigate-menu', function() {
     $('.head__mobile').toggleClass('head__mobile-menu_no-login');
     if ($('.head__mobile').hasClass('head__mobile-menu_no-login')) {
         
-        $('body').css('overflow', 'hidden');
-    } else {$('body').css('overflow', 'visible');}
+        $('body').css({
+            overflow: 'hidden',
+            position: 'fixed'
+        });
+    } else {$('body').css({
+        overflow: 'visible',
+        position: 'unset'
+    });}
 });
 
 // Закрепление кнопки настроек
@@ -15,7 +21,7 @@ $(document).on('click', '.head__navigate-menu', function() {
 var $width = $(window).width();
     $height = '';
 
-    console.log($height)
+    // console.log($height)
 
 $(window).on('scroll', function() {
 
@@ -35,7 +41,7 @@ $(window).on('scroll', function() {
 
 // Открытие поля "Удалить аккаунт" на стр юзера/блогера
 
-$(document).on('click', '.main__del-title', function() {
+$(document).on('click', '.main__del-wrap', function() {
     $('.main__del').toggleClass('main__del_open');
 });
 
@@ -47,4 +53,3 @@ $(document).on('click', '.about-me__show-more', function() {
     console.log($('.about-me__more-info').length)
     $('.about-me__show-more').css('display', 'none');
 })
-

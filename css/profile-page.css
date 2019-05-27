@@ -112,11 +112,17 @@
   position: relative;
 }
 
+.main__face-descr .face-descr__photo input {
+  display: none;
+}
+
 .main__face-descr .face-descr__photo-wrap {
+  display: block;
   max-width: 145px;
   height: 145px;
   border-radius: 50%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .main__face-descr .face-descr__photo-wrap img {
@@ -127,6 +133,7 @@
 }
 
 .main__face-descr .face-descr__photo-change {
+  display: block;
   border: none;
   outline: none;
   -webkit-user-select: none;
@@ -272,7 +279,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 20px;
+  padding: 0;
   background: transparent;
   cursor: default;
   -webkit-transition: 0.2s linear;
@@ -283,6 +290,16 @@
   -o-font-smoothing: antialiased;
   color: #7f7f7f;
   margin: 0 0 15px;
+}
+
+.main__face-subscr .face-subscr__btn-wrap {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main__face-subscr .face-subscr__btn-subscr, .main__face-subscr .face-subscr__btn-views {
@@ -431,7 +448,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
-  margin: 0 0 30px;
+  margin: 0 0 34px;
 }
 
 .main__common-item {
@@ -596,7 +613,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
-  margin: 0 0 30px;
+  margin: 0 0 34px;
 }
 
 .main__about-info {
@@ -680,7 +697,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
-  margin: 60px 0 30px;
+  margin: 60px 0 34px;
 }
 
 .main__project-info {
@@ -691,6 +708,10 @@
   color: #666;
   max-width: 350px;
   margin: 0;
+}
+
+.main__project-del-btn {
+  display: none;
 }
 
 .main__project-item {
@@ -704,6 +725,33 @@
   border-radius: 2px;
   position: relative;
   margin: 15px 0 0;
+}
+
+.main__project-item:not(:nth-of-type(1)) {
+  margin: 15px 0 0;
+}
+
+.main__project-item:not(:nth-of-type(1)) .main__project-del-btn {
+  display: block;
+  width: 21px;
+  height: 21px;
+  background: none;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  background: url("../img/cls-btn.svg") center no-repeat #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  cursor: pointer;
 }
 
 .main__project-item .project-item__wrap:not(:last-child) {
@@ -787,7 +835,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
-  margin: 60px 0 30px;
+  margin: 60px 0 34px;
 }
 
 .main__contact-item {
@@ -977,7 +1025,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
-  margin: 60px 0 30px;
+  margin: 60px 0 34px;
 }
 
 .main__theme-info {
@@ -1028,10 +1076,11 @@
 
 .main__theme-checkbox:checked + .checkbox {
   background: url("../img/check.svg") 50% 49% no-repeat #ff954b;
+  border-color: #ff954b;
 }
 
 .main__theme .checkbox {
-  margin: 0 10px 3px 0;
+  margin: 1px 10px 3px 0;
 }
 
 .main__theme-descr {

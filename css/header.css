@@ -83,6 +83,9 @@
 
 .head__login {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0;
 }
 
@@ -94,6 +97,18 @@
   cursor: pointer;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
+  margin: 0 15px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head__login-item:last-child {
+  margin: 0;
+  padding: 1px 0 0;
 }
 
 .head__login-item:hover {
@@ -104,6 +119,70 @@
   .head__login-item:hover {
     opacity: 1;
   }
+}
+
+.head__login-item .head__login-avatar {
+  width: 34px;
+  height: 34px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #7f7f7f;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 8px 0 0;
+}
+
+.head__login-item .head__login-avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.head__login-item .head__login-avatar-wrap {
+  width: 28px;
+  height: 28px;
+  background-color: #7f7f7f;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head__login-item .head__login-avatar-text {
+  font: 500 15px/15px 'Geometria';
+  color: #fff;
+}
+
+.head__login-item .head__login-avatar_blog {
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.head__login-item .head__login-avatar_blog img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.head__login-name {
+  margin: 0;
+  padding: 1px 0 0;
 }
 
 .head__account {
@@ -134,7 +213,7 @@
 
 .head__point-user-counter, .head__point-bloger-counter {
   position: absolute;
-  right: -12px;
+  left: calc(100% + 3px);
   top: -5px;
   font: 14px 'Geometria';
   -webkit-font-smoothing: antialiased;
@@ -206,6 +285,9 @@
 }
 
 @media (max-width: 1069px) {
+  .main {
+    margin-top: 50px;
+  }
   .head, .head__mobile {
     display: none;
   }
@@ -214,7 +296,8 @@
   }
   .head__modal-container {
     position: relative;
-    height: calc(100vh - 51px);
+    height: calc(100vh - 50px);
+    min-height: 513px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -234,10 +317,11 @@
     width: 100%;
     height: calc(100vh - 51px);
     position: absolute;
-    top: 51px;
+    top: 50px;
     left: 0;
     background: #000;
     z-index: 99;
+    border-top: 1px solid #fff;
   }
   .head__modal-menu .head__wrap {
     height: auto;
@@ -277,13 +361,42 @@
   .head__modal-container .modal-menu__list_no-login {
     font: 20px/32px 'Geometria';
   }
+  .head__login-name {
+    display: none;
+  }
+  .head__login-item {
+    margin: 0;
+  }
+  .head__login-item:last-child {
+    display: none;
+  }
+  .head__login-item .head__login-avatar_blog {
+    margin: 0;
+  }
+  .head__login-item .head__login-avatar {
+    margin: 0;
+  }
   .head__mobile {
     display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
   }
   .head__mobile-menu_bloger .head__modal-menu,
   .head__mobile-menu_user .head__modal-menu,
   .head__mobile-menu_no-login .head__modal-menu {
     display: block;
+  }
+  .head__mobile-menu_bloger .head__navigate,
+  .head__mobile-menu_user .head__navigate,
+  .head__mobile-menu_no-login .head__navigate {
+    width: auto;
+  }
+  .head__mobile-menu_bloger .head__navigate-item,
+  .head__mobile-menu_user .head__navigate-item,
+  .head__mobile-menu_no-login .head__navigate-item {
+    margin: 0;
   }
   .head__mobile-menu_bloger .head__navigate-menu,
   .head__mobile-menu_user .head__navigate-menu,
@@ -293,10 +406,45 @@
     background: url("../img/close-menu-ic.svg") center no-repeat;
     background-size: 100%;
   }
+  .head__mobile-menu_bloger .head__login,
+  .head__mobile-menu_user .head__login,
+  .head__mobile-menu_no-login .head__login {
+    width: calc(100% - 35px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .head__mobile-menu_bloger .head__navigate-item:last-child,
   .head__mobile-menu_user .head__navigate-item:last-child,
   .head__mobile-menu_no-login .head__navigate-item:last-child {
     display: none;
+  }
+  .head__mobile-menu_bloger .head__login-name,
+  .head__mobile-menu_user .head__login-name,
+  .head__mobile-menu_no-login .head__login-name {
+    display: block;
+  }
+  .head__mobile-menu_bloger .head__login-item,
+  .head__mobile-menu_user .head__login-item,
+  .head__mobile-menu_no-login .head__login-item {
+    margin: 0;
+  }
+  .head__mobile-menu_bloger .head__login-item:last-child,
+  .head__mobile-menu_user .head__login-item:last-child,
+  .head__mobile-menu_no-login .head__login-item:last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .head__mobile-menu_bloger .head__login-item .head__login-avatar_blog,
+  .head__mobile-menu_user .head__login-item .head__login-avatar_blog,
+  .head__mobile-menu_no-login .head__login-item .head__login-avatar_blog {
+    margin: 0 8px 0 0;
+  }
+  .head__mobile-menu_bloger .head__login-item .head__login-avatar,
+  .head__mobile-menu_user .head__login-item .head__login-avatar,
+  .head__mobile-menu_no-login .head__login-item .head__login-avatar {
+    margin: 0 8px 0 0;
   }
   .head__mobile-menu_bloger .modal-menu__list_bloger {
     display: block;
@@ -309,6 +457,9 @@
     font: 500 16px/16px 'Geometria';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  .head__mobile-menu_bloger .modal-menu__list-item button {
+    margin-top: 30px;
   }
   .head__mobile-menu_user .modal-menu__list_user {
     display: block;

@@ -27,7 +27,14 @@
                     <li class="head__navigate-item"><a href="#">Контакты</a></li>
                 </ul>
                 <ul class="head__login">
-                    <li class="head__login-item">Войти</li>
+                    <!-- <li class="head__login-item">Войти</li> -->
+                    <li class="head__login-item">
+                        <div class="head__login-avatar head__login-avatar_blog">
+                            <img src="img/blog2.jpg" alt="miniPhoto">
+                        </div>
+                        <p class="head__login-name">Василиса</p>
+                    </li>
+                    <li class="head__login-item">Выйти</li>
                 </ul>
             </nav>
         </div>
@@ -60,7 +67,14 @@
                     <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
                 </ul>
                 <ul class="head__login">
-                    <li class="head__login-item">Войти</li>
+                    <!-- <li class="head__login-item">Войти</li> -->
+                    <li class="head__login-item">
+                        <div class="head__login-avatar head__login-avatar_blog">
+                            <img src="img/blog2.jpg" alt="miniPhoto">
+                        </div>
+                        <p class="head__login-name">Василиса</p>
+                    </li>
+                    <li class="head__login-item">Выйти</li>
                 </ul>
             </nav>
         </div>
@@ -103,10 +117,11 @@
             <div class="main__face">
                 <div class="main__face-item main__face-descr">
                     <div class="face-descr__photo">
-                        <div class="face-descr__photo-wrap">
+                        <label for="changePhoto" class="face-descr__photo-wrap">
                             <img src="img/blog2.jpg" alt="avatar">
-                        </div>
-                        <button class="face-descr__photo-change"></button>
+                        </label>
+                        <input type="file" name="photo" id="changePhoto" accept="image/jpeg">
+                        <label for="changePhoto" class="face-descr__photo-change"></label>
                     </div>
                     <div class="face-descr__name">
                         <h1 class="face-descr__name-item face-descr__name-title">Василиса Константинопольская</h1>
@@ -116,9 +131,13 @@
                 </div>
                 <div class="main__face-item main__face-subscr">
                     <button class="face-subscr__btn">
-                        <p class="face-subscr__btn-subscr">148</p>
+                        <div class="face-subscr__btn-wrap">
+                            <p class="face-subscr__btn-subscr">148</p>
+                        </div>
                         <div class="face-subscr__btn-line"></div>
-                        <p class="face-subscr__btn-views">250</p>
+                        <div class="face-subscr__btn-wrap">
+                            <p class="face-subscr__btn-views">250</p>
+                        </div>
                     </button>
                     <a href="bloger-page.html" class="face-subscr__my-page">Моя страница на Blogpoint</a>
                 </div>
@@ -129,18 +148,18 @@
             <div class="main__content-nav-wrap">
                 <div class="main__content-nav-scrll">
                     <ul class="main__content-nav">
-                        <li class="main__content-nav-item main__content-nav-item_active">Общая информация</li>
-                        <li class="main__content-nav-item">Расскажите о себе</li>
-                        <li class="main__content-nav-item">Проекты, каналы, соцсети</li>
-                        <li class="main__content-nav-item">Для связи</li>
-                        <li class="main__content-nav-item">Темы блога</li>
+                        <li class="main__content-nav-item main__content-nav-item_active"><a href="#commonInfo">Общая информация</a></li>
+                        <li class="main__content-nav-item"><a href="#aboutYou">Расскажите о себе</a></li>
+                        <li class="main__content-nav-item"><a href="#myProject">Проекты, каналы, соцсети</a></li>
+                        <li class="main__content-nav-item"><a href="#ConnectMe">Для связи</a></li>
+                        <li class="main__content-nav-item"><a href="#myTheme">Темы блога</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="main__container">
             <div class="main__common">
-                <h1 class="main__common-title">Общая информация</h1>
+                <h1 class="main__common-title" id="commonInfo">Общая информация</h1>
 
                 <div class="main__common-item">
                     <label class="main__common-text" for="name">Ваше имя или название<span> *</span></label>
@@ -173,7 +192,7 @@
         </div>
         <div class="main__container">
             <div class="main__about">
-                <h1 class="main__about-title">Расскажите о себе</h1>
+                <h1 class="main__about-title" id="aboutYou">Расскажите о себе</h1>
 
                 <div class="main__about-info-wrap">
                     <p class="main__about-info">О себе</p>
@@ -186,18 +205,18 @@
                     <button class="main__about-btn main__about-btn_pref"></button>
                     <button class="main__about-btn main__about-btn_link"></button>
                 </div>
-                <textarea class="main__about-messg" maxlength="2000" id="about" placeholder="Этот текст будет раскрываться по клику. Максимум 2000 знаков."></textarea>
+                <textarea class="main__about-messg" maxlength="2000" id="about2" placeholder="Этот текст будет раскрываться по клику. Максимум 2000 знаков."></textarea>
             </div>
         </div>
         <div class="main__container">
             <div class="main__project">
-                <h1 class="main__project-title">Мои проекты, каналы и соцсети</h1>
+                <h1 class="main__project-title" id="myProject">Мои проекты, каналы и соцсети</h1>
 
                 <p class="main__project-info">
                     Прикрепите сюда ссылки на свои проекты, блоги, страницы, каналы, если они есть.
                 </p>
                 <div class="main__project-item">
-                    <!-- <button class="main__project-del-btn"></button> -->
+                    <button class="main__project-del-btn"></button>
                     <div class="project-item__wrap project-item__title-wrap">
                         <label for="projectTitle">Заголовок</label>
                         <textarea type="text" id="projectTitle" class="g-textarea_high">Мой канал на Youtube о здоровом образе жизни</textarea>
@@ -208,14 +227,14 @@
                     </div>
                 </div>
                 <div class="main__project-item">
-                    <!-- <button class="main__project-del-btn"></button> -->
+                    <button class="main__project-del-btn"></button>
                     <div class="project-item__wrap project-item__title-wrap">
                         <label for="projectTitle">Заголовок</label>
-                        <textarea type="text" id="projectTitle" class="g-textarea_high">Моя страница VK</textarea>
+                        <textarea type="text" id="projectTitle2" class="g-textarea_high">Моя страница VK</textarea>
                     </div>
                     <div class="project-item__wrap project-item__link-wrap">
                         <label for="projectLink">Ссылка</label>
-                        <textarea type="text" id="projectLink" class="g-textarea_high">https://www.vk.com/msfpjgdifjjsgjdf</textarea>
+                        <textarea type="text" id="projectLink2" class="g-textarea_high">https://www.vk.com/msfpjgdifjjsgjdf</textarea>
                     </div>
                 </div>
 
@@ -224,7 +243,7 @@
         </div>
         <div class="main__container">
             <div class="main__contact">
-                <h1 class="main__contact-title">Для связи</h1>
+                <h1 class="main__contact-title" id="ConnectMe">Для связи</h1>
                 <div class="main__contact-item">
                     <label class="main__contact-text" for="name">Телефон</label>
                     <input type="text" id="name" class="main__contact-name" value="+7 (___) ___-__-__">
@@ -276,7 +295,7 @@
         </div>
         <div class="main__container">
             <div class="main__theme">
-                <h1 class="main__theme-title">Темы вашего блога</h1>
+                <h1 class="main__theme-title" id="myTheme">Темы вашего блога</h1>
                 <p class="main__theme-info">Отметьте темы вашего блога (можно отметить не больше трех тем).<span> *</span></p>
 
                 <div class="main__theme-item">
@@ -362,11 +381,6 @@
                         <label class="main__theme-descr" for="his">История</label>
                     </div>
                     <div class="main__theme-wrap">
-                        <input class="main__theme-checkbox" id="lit" type="checkbox">
-                        <label for="lit" class="checkbox"><!--  --></label>
-                        <label class="main__theme-descr" for="lit">Литература</label>
-                    </div>
-                    <div class="main__theme-wrap">
                         <input class="main__theme-checkbox" id="sin" type="checkbox">
                         <label for="sin" class="checkbox"><!--  --></label>
                         <label class="main__theme-descr" for="sin">Кино и сериалы</label>
@@ -380,6 +394,11 @@
                         <input class="main__theme-checkbox" id="kult" type="checkbox">
                         <label for="kult" class="checkbox"><!--  --></label>
                         <label class="main__theme-descr" for="kult">Культура и общество</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="lit" type="checkbox">
+                        <label for="lit" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="lit">Литература</label>
                     </div>
                     <div class="main__theme-wrap">
                         <input class="main__theme-checkbox" id="med" type="checkbox">
