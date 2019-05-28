@@ -6,6 +6,12 @@
   display: none;
 }
 
+.head__login {
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
+}
+
 .main {
   width: 100%;
   overflow: hidden;

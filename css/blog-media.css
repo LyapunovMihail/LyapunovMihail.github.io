@@ -39,7 +39,7 @@
   }
   .main__list-snippet {
     max-width: 970px;
-    max-height: 820px;
+    max-height: 1240px;
     overflow: hidden;
   }
   .main__recomend {
@@ -305,7 +305,7 @@
   .main__list-snippet {
     max-width: none;
     width: calc(100% - (92px));
-    max-height: 1400px;
+    max-height: 1403px;
     margin-bottom: 35px;
     padding: 0 10px;
   }
