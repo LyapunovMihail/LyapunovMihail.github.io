@@ -257,6 +257,52 @@ button {
   }
 }
 
+.main__content-nav_fixed {
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  width: 100vw;
+  max-width: none;
+  top: 50px;
+  background: #fff;
+  padding: 15px 0 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 99;
+}
+
+.main__content-nav_fixed:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.main__content-nav_fixed .main__content-nav-wrap {
+  margin: 0;
+}
+
+.main__content-nav_fixed .main__content-nav-scrll {
+  width: 100%;
+  max-width: 640px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .checkbox {
   display: inline-block;
   width: 15px;

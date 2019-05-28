@@ -7,7 +7,8 @@
   .main__detail,
   .main__connect,
   .main__theme,
-  .main__submit {
+  .main__submit,
+  .main__content-nav_gradient {
     max-width: 970px;
   }
   .main__content-nav {
@@ -58,31 +59,13 @@
   .head {
     border-bottom: 1px solid #d8d8d8;
   }
+  .main__content-nav_gradient {
+    max-width: 640px;
+  }
   .main__content-nav-wrap {
-    margin: 10px 0 0;
-  }
-  .main__content-nav {
-    position: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .main__content-nav-item {
-    margin: 0 15px 0 0;
-  }
-  .main__content-nav-item:last-child {
-    margin: 0;
-  }
-  .main__content-nav-item_active:before {
-    height: 2px;
     width: 100%;
-    bottom: 0;
-    top: auto;
-    left: 0;
-  }
-  .main__content-nav-wrap {
-    width: 100vw;
     height: 22px;
+    margin: 10px 0 0;
     max-width: none;
     position: relative;
     overflow: hidden;
@@ -112,15 +95,34 @@
     top: 0;
   }
   .main__content-nav-wrap:before {
-    left: 0;
+    left: -45px;
     z-index: 1;
     background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(#ffffff));
     background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
   }
   .main__content-nav-wrap:after {
-    right: 0;
+    right: -45px;
     background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#ffffff));
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+  }
+  .main__content-nav {
+    position: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main__content-nav-item {
+    margin: 0 15px 0 0;
+  }
+  .main__content-nav-item:last-child {
+    margin: 0;
+  }
+  .main__content-nav-item_active:before {
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    top: auto;
+    left: 0;
   }
   .main__format-title {
     margin-top: 48px;
@@ -161,6 +163,10 @@
     top: 10px;
     right: 10px;
   }
+  .main__content-nav_gradient {
+    width: 100vw;
+    max-width: none;
+  }
   .main__content-nav-wrap {
     width: 100vw;
     height: 22px;
@@ -196,6 +202,9 @@
     right: 0;
     background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#ffffff));
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+  }
+  .main .main__content-nav_fixed .main__content-nav-scrll {
+    max-width: none;
   }
   .main__format-title {
     margin-bottom: 20px;

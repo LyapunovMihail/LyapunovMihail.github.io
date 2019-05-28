@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/blank-blog.js"></script>
-    <!-- <script src="js/common.js"></script> -->
+    <script src="js/add-event.js"></script>
 </head>
 <body>
     <header class="head">
@@ -26,23 +26,25 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" data-scrll-media>
         <div class="main__container">
-            <div class="main__content-nav-wrap">
-                <div class="main__content-nav-scrll">
-                    <ul class="main__content-nav">
-                        <li class="main__content-nav-item main__content-nav-item_active"><a href="#name">Название и формат</a></li>
-                        <li class="main__content-nav-item"><a href="#about">О событии</a></li>
-                        <li class="main__content-nav-item"><a href="#price">Стоимость и оплата</a></li>
-                        <li class="main__content-nav-item"><a href="#detail">Детали</a></li>
-                        <li class="main__content-nav-item"><a href="#connect">Для связи</a></li>
-                        <li class="main__content-nav-item"><a href="#theme">Темы события</a></li>
-                    </ul>
+            <div class="main__content-nav_gradient" >
+                <div class="main__content-nav-wrap">
+                    <div class="main__content-nav-scrll">
+                        <ul class="main__content-nav" data-navigate>
+                            <li class="main__content-nav-item main__content-nav-item_active" data-id="name">Название и формат</li>
+                            <li class="main__content-nav-item" data-id="about">О событии</li>
+                            <li class="main__content-nav-item" data-id="price">Стоимость и оплата</li>
+                            <li class="main__content-nav-item" data-id="detail">Детали</li>
+                            <li class="main__content-nav-item" data-id="connect">Для связи</li>
+                            <li class="main__content-nav-item" data-id="theme">Темы события</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="main__container">
-            <div class="main__format">
+            <div class="main__format" data-scrll>
                 <h1 class="main__format-title" id="name">Название и формат</h1>
                 <p class="main__format-subtitle">Выберите формат события<span> *</span></p>
 

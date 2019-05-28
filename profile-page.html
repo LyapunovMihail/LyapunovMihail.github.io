@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="css/profile-media.css">
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="js/blank-blog.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
     <header class="head">
@@ -143,23 +144,27 @@
                 </div>
             </div>
         </div>
-        <hr class="main__line">
+        <hr class="main__line" data-scrll-media>
         <div class="main__container">
-            <div class="main__content-nav-wrap">
-                <div class="main__content-nav-scrll">
-                    <ul class="main__content-nav">
-                        <li class="main__content-nav-item main__content-nav-item_active"><a href="#commonInfo">Общая информация</a></li>
-                        <li class="main__content-nav-item"><a href="#aboutYou">Расскажите о себе</a></li>
-                        <li class="main__content-nav-item"><a href="#myProject">Проекты, каналы, соцсети</a></li>
-                        <li class="main__content-nav-item"><a href="#ConnectMe">Для связи</a></li>
-                        <li class="main__content-nav-item"><a href="#myTheme">Темы блога</a></li>
-                    </ul>
+            <div class="main__content-nav_gradient">
+                <div class="main__content-nav-wrap">
+                    <!-- <div class="main__content-nav_gradient-left"></div> -->
+                    <div class="main__content-nav-scrll">
+                        <ul class="main__content-nav" data-navigate>
+                            <li class="main__content-nav-item main__content-nav-item_active" data-id="commonInfo">Общая информация</li>
+                            <li class="main__content-nav-item" data-id="aboutYou">Расскажите о себе</li>
+                            <li class="main__content-nav-item" data-id="myProject">Проекты, каналы, соцсети</li>
+                            <li class="main__content-nav-item" data-id="ConnectMe">Для связи</li>
+                            <li class="main__content-nav-item" data-id="myTheme">Темы блога</li>
+                        </ul>
+                    </div>
+                    <!-- <div class="main__content-nav_gradient-right"></div> -->
                 </div>
             </div>
         </div>
         <div class="main__container">
             <div class="main__common">
-                <h1 class="main__common-title" id="commonInfo">Общая информация</h1>
+                <h1 class="main__common-title" id="commonInfo" data-scrll>Общая информация</h1>
 
                 <div class="main__common-item">
                     <label class="main__common-text" for="name">Ваше имя или название<span> *</span></label>

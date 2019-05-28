@@ -6,7 +6,8 @@
   .main__about,
   .main__project,
   .main__contact,
-  .main__theme {
+  .main__theme,
+  .main__content-nav_gradient {
     max-width: 970px;
   }
   .main__content-nav {
@@ -54,6 +55,9 @@
   .main__face-descr .face-descr__name-insta {
     margin: 10px 0 6px;
   }
+  .main__content-nav_gradient {
+    max-width: 640px;
+  }
   .main__content-nav-wrap {
     margin: 10px 0 0;
   }
@@ -92,6 +96,13 @@
   .main__contact,
   .main__theme {
     max-width: calc(100% - 92px);
+  }
+  .main__content-nav_gradient {
+    width: 100vw;
+    max-width: none;
+  }
+  .main .main__content-nav_fixed .main__content-nav-scrll {
+    max-width: none;
   }
   .main__head .active:before {
     bottom: -16px;
@@ -159,11 +170,11 @@
     margin-bottom: 7px;
   }
   .main__content-nav-wrap {
-    width: 100vw;
-    height: 30px;
+    width: 100%;
     max-width: none;
-    position: relative;
+    height: 30px;
     overflow: hidden;
+    position: relative;
   }
   .main__content-nav-wrap:before, .main__content-nav-wrap:after {
     content: '';

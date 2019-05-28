@@ -13,6 +13,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- <script src="js/common.js"></script> -->
     <script src="js/blank-blog.js"></script>
+    <script src="js/nav-blank.js"></script>
 </head>
 <body>
     <header class="head">
@@ -32,19 +33,21 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" data-scrll-media>
         <div class="main__container">
             <div class="main__common">
-                <div class="main__content-nav-wrap">
-                    <div class="main__content-nav-scrll">
-                        <ul class="main__content-nav">
-                            <li class="main__content-nav-item main__content-nav-item_active"><a href="#commonInfo">Общая информация</a></li>
-                            <li class="main__content-nav-item"><a href="#project">Проекты, каналы, соцсети</a></li>
-                            <li class="main__content-nav-item"><a href="#theme">Темы блога</a></li>
-                        </ul>
+                <div class="main__content-nav_gradient">
+                    <div class="main__content-nav-wrap">
+                        <div class="main__content-nav-scrll">
+                            <ul class="main__content-nav" data-navigate>
+                                <li class="main__content-nav-item main__content-nav-item_active" data-id="commonInfo">Общая информация</li>
+                                <li class="main__content-nav-item" data-id="project">Проекты, каналы, соцсети</li>
+                                <li class="main__content-nav-item" data-id="theme">Темы блога</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <h1 class="main__common-title" id="commonInfo">Общая информация</h1>
+                <h1 class="main__common-title" id="commonInfo" data-scrll>Общая информация</h1>
 
                 <div class="main__common-item">
                     <label class="main__common-text" for="name">Ваше имя или название<span> *</span></label>
