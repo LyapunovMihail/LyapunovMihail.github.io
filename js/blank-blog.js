@@ -30,8 +30,8 @@ $(document).on('keydown keyup keypress', 'textarea', function() {
 
 function clear(elem) {
 
-    console.log('here')
-    console.log($(elem).val() <= 1)
+    // console.log('here')
+    // console.log($(elem).val() <= 1)
     if ($(elem).val() <= 1) {
         elem.style.height = $(elem).css('min-height');
     }

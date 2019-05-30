@@ -643,17 +643,6 @@
   margin: 0 0 10px;
 }
 
-.main__connect-item a {
-  color: #d6712b;
-  border-bottom: 1px solid #d8d8d8;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-
-.main__connect-item a:hover {
-  opacity: .6;
-}
-
 .main__past {
   border-top: 1px solid rgba(127, 127, 127, 0.6);
   border-bottom: 1px solid rgba(127, 127, 127, 0.6);

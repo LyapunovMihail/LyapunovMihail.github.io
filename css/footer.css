@@ -49,6 +49,9 @@
 
 .footer__link-item {
   font: 15px/15px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #666666;
   margin: 0 20px 0 0;
   height: 15px;
@@ -106,6 +109,9 @@
 }
 
 @media (max-width: 1069px) {
+  .footer {
+    height: 120px;
+  }
   .footer__wrap {
     max-width: 640px;
   }
@@ -124,8 +130,10 @@
 
 @media (max-width: 729px) {
   .footer {
-    height: auto;
+    height: 145px;
     padding: 0 0 17px 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .footer__wrap {
     width: calc(100% - 92px);
@@ -144,7 +152,7 @@
   }
   .footer__link-item:nth-child(1), .footer__link-item:nth-child(2), .footer__link-item:nth-child(3) {
     width: 100%;
-    margin: 20px 0 0;
+    margin: 17px 0 0;
   }
   .footer__link-item:nth-child(1) a:hover, .footer__link-item:nth-child(2) a:hover, .footer__link-item:nth-child(3) a:hover {
     color: #666666;
@@ -153,7 +161,7 @@
     margin: 25px 0 0;
   }
   .footer__link-item:nth-child(4), .footer__link-item:nth-child(5) {
-    margin: 20px 20px 0 0;
+    margin: 17px 20px 0 0;
   }
   .footer__link-item:nth-child(4) a:hover, .footer__link-item:nth-child(5) a:hover {
     color: #666666;

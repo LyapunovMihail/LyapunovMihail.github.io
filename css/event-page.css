@@ -517,18 +517,6 @@
   position: relative;
 }
 
-.main__details-path-paragraf a {
-  color: #d6712b;
-  border-bottom: 1px solid #d8d8d8;
-  cursor: pointer;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-
-.main__details-path-paragraf a:hover {
-  opacity: .6;
-}
-
 .main__details-path-paragraf_span {
   display: inline-block;
   padding: 0 0 0 22px;
@@ -569,24 +557,6 @@
 
 .main__details-list-item {
   margin-bottom: 10px;
-}
-
-.main__details-list-item a {
-  color: #d6712b;
-  border-bottom: 1px solid #d8d8d8;
-  cursor: pointer;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-
-.main__details-list-item a:hover {
-  opacity: .6;
-}
-
-@media (max-width: 729px) {
-  .main__details-list-item a:hover {
-    opacity: 1;
-  }
 }
 
 .main__subscr {

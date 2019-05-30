@@ -21,7 +21,7 @@ $(document).on('click', '.head__navigate-menu', function() {
     ;}
 });
 
-// Закрепление кнопки настроек
+// Закрепление кнопки настроек на Главной(События/Блоги)
 
 var $width = $(window).width();
     $height = '';
@@ -41,7 +41,7 @@ $(window).on('scroll', function() {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn_fixed')
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn');
     }
-    console.log($height)
+    console.log($button)
 });
 
 // Открытие поля "Удалить аккаунт" на стр юзера/блогера
@@ -55,6 +55,35 @@ $(document).on('click', '.main__del-wrap', function() {
 $(document).on('click', '.about-me__show-more', function() {
 
     $('.about-me__more-info').css( 'height', 'auto' );
-    console.log($('.about-me__more-info').length)
+
     $('.about-me__show-more').css('display', 'none');
+})
+
+//Выделение всех тем на странице настроек юзера
+
+$(document).on('click', '[data-all]', function() {
+
+    if($(this).prop('checked')) {
+
+        $('.main__mytape-checkbox').prop('checked', true);
+    } else {
+
+        $('.main__mytape-checkbox').prop('checked', false);
+    }
+})
+
+// Ограничение на кол-во чекбоксов
+
+$(document).ready( function() {
+
+    $('.main__theme-checkbox').click( function() {
+
+        if($('.main__theme-checkbox:checked').length >= 3) {
+
+            $('.main__theme-checkbox').not(':checked').prop('disabled', true);
+        } else { 
+            
+            $('.main__theme-checkbox').prop('disabled', false);
+        }
+    })
 })

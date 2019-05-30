@@ -1,0 +1,50 @@
+@import url(//hello.myfonts.net/count/394097);@media (max-width: 1399px) {
+  .main__content,
+  .main__point {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 1069px) {
+  .main__content,
+  .main__point {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 729px) {
+  .main__content,
+  .main__point {
+    max-width: calc(100% - 92px);
+  }
+  .main__content {
+    margin-top: 30px;
+  }
+  .main__content-title {
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 22px;
+  }
+  .main__content-info {
+    margin-bottom: 23px;
+  }
+  .main__content-info,
+  .main__point-list,
+  .main__point-paragraf {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main__point {
+    margin: 15px 0 50px;
+  }
+  .main__point-list {
+    margin: 7px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .main__content,
+  .main__point {
+    max-width: calc(100% - 40px);
+  }
+}

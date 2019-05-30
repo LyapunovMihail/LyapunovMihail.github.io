@@ -11,8 +11,8 @@ $(window).on('scroll', function() {
         $w1069 = 970,
         $w729 = 729;
 
-    console.log($(window).scrollTop())
-    console.log($navScrll)
+    // console.log($(window).scrollTop())
+    // console.log($navScrll)
     // console.log($('body').width())
     // console.log(($('body').width() - 970) / 2 + 115 + 'px')
 

@@ -1,0 +1,145 @@
+@import url(//hello.myfonts.net/count/394097);.head__navigate-item:nth-child(2) {
+  opacity: .7;
+}
+
+.main {
+  width: 100%;
+}
+
+.main__head {
+  width: 100%;
+  background: url("../img/about_bg.svg") center no-repeat #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__head-container {
+  width: 100%;
+  max-width: 860px;
+  position: relative;
+}
+
+.main__head-title {
+  font: 40px/50px "TTDrugsCondensed-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #fff;
+  max-width: 740px;
+  margin: 160px 0 98px;
+}
+
+.main__head-icon {
+  position: absolute;
+  width: 111px;
+  height: 60px;
+  background: url("../img/about_icon-bear.svg") center bottom no-repeat;
+  background-size: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.main__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__about {
+  width: 100%;
+  max-width: 860px;
+  margin: 80px 0 0;
+}
+
+.main__about-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__about-list:last-child {
+  margin: 0;
+}
+
+.main__about-list .about-list__list-wrap {
+  margin: 0 60px 0 0;
+}
+
+.main__about-list .about-list__list-wrap:last-child {
+  margin: 0;
+}
+
+.main__about-list .about-list__list-title {
+  font: 500 20px/31px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 30px;
+  max-width: 260px;
+  color: #000;
+}
+
+.main__about-list .about-list__list {
+  margin: 0;
+  padding: 0 0 0 20px;
+  max-width: 380px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font: 20px/31px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #333;
+}
+
+.main__about-list .about-list__list-item {
+  margin: 0 0 20px;
+}
+
+.main__about-list .about-list__list-item:last-child {
+  margin: 0;
+}
+
+.main__about-content {
+  margin: 107px 0 130px;
+}
+
+.main__about-content .about-content__title {
+  font: 40px/50px "TTDrugsCondensed-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #000;
+  max-width: 640px;
+  margin: 0 0 63px;
+}
+
+.main__about-content .about-content__info {
+  font: 20px/31px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #333;
+  margin: 0 0 25px;
+  max-width: 640px;
+}
+
+.main__about-content .about-content__info:nth-child(3) {
+  margin: 0 0 40px;
+}
+
+.main__about-content .about-content__login {
+  font: 20px/31px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #333;
+}
