@@ -60,7 +60,7 @@
   transition: opacity 0.2s linear;
 }
 
-.footer__link-item:hover {
+.footer__link-item:hover:not(:first-child) {
   opacity: .7;
 }
 

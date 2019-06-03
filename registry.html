@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogpoint</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/login-page.css">
+    <link rel="stylesheet" href="css/login-media.css">
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <header class="head">
+        <div class="head__container">
+            <div class="head__wrap">
+                <div class="head__logo">
+                    <div class="head__logo-wrap">
+                        <h1 class="head__logo-title"><a href="login-page.html">Вход</a></h1>
+                        <h1 class="head__logo-title head__logo-title_active">Регистрация</h1>
+                    </div>
+                    <a class="head__logo-cls-btn" href="index.html"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <div class="main__wrap-content">
+                <form class="main__login">
+                    <div class="main__login-email">
+                        <p class="main__login-descr">Имя или ник</p>
+                        <input type="text" name="nickname" class="input">
+                    </div>
+                    <div class="main__login-email">
+                        <p class="main__login-descr">E-mail</p>
+                        <input type="text" name="login" class="input">
+                    </div>
+                    <div class="main__login-pass">
+                        <p class="main__login-descr">Пароль</p>
+                        <div class="main__login-input-wrap">
+                            <input type="password" name="password" class="input">
+                            <div class="main__login-show-pass"></div>
+                        </div>
+                    </div>
+                    <div class="main__login-check-wrap">
+                        <input class="main__login-checkbox" id="polit" type="checkbox">
+                        <label for="polit" class="checkbox"><!--  --></label>
+                        <label class="main__login-polit" for="polit">Даю согласие на обработку и хранение моих персональных данных в соответствии с <a href="personal-page.html">Политикой конфиденциальности</a></label>
+                    </div>
+                    <button class="main__login-register">Зарегистрироваться</button>
+                </form>
+                <div class="main__social">
+                    <p class="main__social-descr">Через соцсети:</p>
+                    <div class="main__social-wrap">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="17" viewBox="0 0 26 17">
+                                <defs>
+                                    <path id="a" d="M0 0h30.692v18.933H0z"/>
+                                </defs>
+                                <g fill="none" fill-rule="evenodd" transform="translate(-1 -1)">
+                                    <mask id="b" fill="#fff">
+                                        <use xlink:href="#a"/>
+                                    </mask>
+                                    <path fill="#7F7F7F" d="M25.657 16.69h-3.175c-2.023 0-2.455-.722-4.19-2.454-1.586-1.589-1.875-.722-1.875 1.588 0 .577-.29 1.155-1.012 1.155-2.166 0-4.62.722-7.797-2.888C4.144 10.193 1.256 3.261 1.11 2.54c-.289-.867 0-1.156.722-1.156h3.32c1.012 0 1.012.578 1.3 1.156 1.156 2.743 4.19 9.096 4.911 6.064.432-1.733.432-5.776-1.444-6.209-1.3-.289 1.444-2.021 5.054-1.155 1.298.289 1.298 1.01 1.298 1.877 0 3.466-.433 5.632.435 6.21.865.577 2.888-3.755 4.043-6.643.289-.866.432-1.3 1.298-1.3h3.61c2.455 0 0 3.755-2.166 6.498-1.731 2.31-1.588 2.31.289 4.332 2.454 2.022 4.765 4.476 1.877 4.476" mask="url(#b)"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="24" viewBox="0 0 10 24">
+                                <defs>
+                                    <path id="c" d="M0 0h11v26H0z"/>
+                                </defs>
+                                <g fill="none" fill-rule="evenodd" transform="translate(-1 -1)">
+                                    <mask id="d" fill="#fff">
+                                        <use xlink:href="#c"/>
+                                    </mask>
+                                    <path fill="#7F7F7F" d="M10.598 12.795H7.63v11.841H3.137v-11.84H1V8.633h2.137V5.941C3.137 4.015 3.977 1 7.671 1L11 1.015v4.04H8.585c-.396 0-.953.215-.953 1.134v2.449h3.358l-.392 4.157z" mask="url(#d)"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main class="main main_two">
+        <div class="head__container">
+            <div class="head__wrap">
+                <h1 class="main__title">Завершение регистрации</h1>
+                <p class="main__paragraf">В течение двух минут на указанный <span>e-mail</span> придет письмо от Blogpoint. Для завершения регистрации перейдите, пожалуйста, по ссылке в письме. </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

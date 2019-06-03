@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogpoint</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/modal-page.css">
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <section class="change-pass">
+            <button class="change-pass__cls-btn"></button>
+            <div class="change-pass__wrap">
+                <h1 class="change-pass__title">Изменение пароля</h1>
+                <div class="change-pass__old-pass">
+                    <p class="change-pass__descr">Старый пароль</p>
+                    <div class="change-pass__input-wrap">
+                        <input type="password" name="password" class="input">
+                        <div class="change-pass__show-pass"></div>
+                    </div>
+                </div>
+                <div class="change-pass__new-pass">
+                    <p class="change-pass__descr">Новый пароль</p>
+                    <div class="change-pass__input-wrap">
+                        <input type="password" name="password" class="input">
+                        <div class="change-pass__show-pass"></div>
+                    </div>
+                </div>
+                <button class="change-pass__btn-save">Сохранить</button>
+            </div>
+        </section>
+
+        <hr class="line">
+
+        <section class="info-modal">
+            <button class="info-modal__cls-btn"></button>
+            <div class="info-modal__wrap">
+                <h1 class="info-modal__title">Хотите добавлять свои события в афишу на Blogpoint?</h1>
+                <p class="info-modal__paragraf">
+                    <span class="g-block">Это может делать каждый! </span>
+                    Пройдите модерацию, и вы сможете рассказывать всем о своих событиях, публикуя их в афише. 
+                    Это совсем не сложно. Просто расскажите нам о себе, о своих проектах или планах, чтобы мы 
+                    узнали вас получше. Мы рады всем, кто хочет делиться своими знаниями с другими людьми! 
+                </p>
+                <p class="info-modal__paragraf">
+                    Пожалуйста, перед тем как начать, прочтите <a href="#" class="g-link">правила ресурса</a>, убедитесь, 
+                    что ваша электронная почта подтверждена, и что ваш аккаунт в 
+                    Инстаграме соответствует <a href="#" class="g-link">требованиям</a> Blogpoint.
+                </p>
+                <div class="info-modal__btn-wrap">
+                    <button class="g-btn_white">Я готов!</button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="line">
+
+        <section class="notice-modal">
+            <button class="info-modal__cls-btn"></button>
+            <div class="notice-modal__wrap">
+                <h1 class="notice-modal__title">Мы можем держать вас в курсе событий.</h1>
+                <div class="notice-modal__check-wrap">
+                    <input class="notice-modal__checkbox" id="check1" type="checkbox" checked>
+                    <label for="check1" class="checkbox"><!--  --></label>
+                    <label class="notice-modal__check" for="check1">Напомнить мне о событии по <span>e-mail</span></label>
+                </div>
+                <div class="notice-modal__check-wrap">
+                    <input class="notice-modal__checkbox" id="check2" type="checkbox" checked>
+                    <label for="check2" class="checkbox"><!--  --></label>
+                    <label class="notice-modal__check" for="check2">Уведомить меня, если в дате и времени проведения события произойдут изменения</label>
+                </div>
+
+                <button class="g-btn_orange">Готово</button>
+                <p class="notice-modal__info">Настройки уведомлений вы всегда можете изменить в своем профиле.</p>
+            </div>
+        </section>
+
+        <hr class="line">
+
+        <section class="email-modal">
+            <button class="info-modal__cls-btn"></button>
+            <div class="email-modal__wrap">
+                <p class="email-modal__descr">Укажите ваш e-mail</p>
+                <input type="email" name="email" class="input">
+                <p class="email-modal__info">На ваш e-mail придет письмо от Blogpoint для подтверждения адреса.</p>
+
+                <div class="email-modal__check-wrap">
+                    <input class="email-modal__checkbox" id="polit" type="checkbox" checked>
+                    <label for="polit" class="checkbox"><!--  --></label>
+                    <label class="email-modal__check" for="polit">Даю согласие на обработку и хранение моих персональных данных в соответствии с <a href="personal-page.html">Политикой конфиденциальности</a></label>
+                </div>
+                <button class="g-btn_orange">Готово</button>
+            </div>
+        </section>
+
+        <hr class="line">
+
+        <section class="sucess-modal">
+            <button class="info-modal__cls-btn"></button>
+            <div class="sucess-modal__wrap">
+                <h1 class="sucess-modal__title">Готово!</h1>
+                <p class="sucess-modal__paragraf">Результаты модерации мы пришлем вам на почту в течение 3-5 дней. Будем рады видеть вас на Blogpoint! </p>
+            </div>
+        </section>
+
+        <hr class="line">
+
+        <section class="block-modal">
+            <button class="info-modal__cls-btn"></button>
+            <div class="block-modal__wrap">
+                <h1 class="block-modal__title">Ваш профиль был заблокирован администраторами сайта</h1>
+                <p class="block-modal__paragraf">Вы переведены в режим пользователя. Если вы хотите обжаловать блокировку и вернуть свой профиль, свяжитесь с нами по почте hello@blogpoint.pro</p>
+            </div>
+        </section>
+
+        <hr class="line">
+
+        <div class="hint-modal">
+            <p class="hint-modal__text">Изменения сохранены</p>
+        </div>
+        <div class="hint-modal">
+            <p class="hint-modal__text">Новый пароль сохранен</p>
+        </div>
+        <div class="hint-modal">
+            <p class="hint-modal__text">Вы вернулись в режим пользователя</p>
+        </div>
+        <div class="hint-modal">
+            <p class="hint-modal__text">Вы вернулись в режим блогера</p>
+        </div>
+        <div class="hint-modal">
+            <p class="hint-modal__text">Черновик сохранен</p>
+        </div>
+        <div class="hint-modal">
+            <p class="hint-modal__text">Событие опубликовано</p>
+        </div>
+        <div class="hint-modal">
+            <p class="hint-modal__text">Настройки сохранены</p>
+        </div>
+
+        <hr class="line">
+
+        <div class="notice-help">
+            <button class="notice-help__cls-btn"></button>
+            <h1 class="notice-help__title">Сегодня • <span>14:30</span></h1>
+            <p class="notice-help__format">Лекция</p>
+            <p class="notice-help__paragraf">Тантрическая нумерология для вас. Гармония 10-ти тел</p>
+        </div>
+
+        <div class="notice-help">
+            <button class="notice-help__cls-btn"></button>
+            <p class="notice-help__title">
+                Заполните информацию о себе и добавьте контакты для связи.
+            </p>
+        </div>
+
+        <div class="notice-help">
+            <button class="notice-help__cls-btn"></button>
+            <p class="notice-help__title">
+                На Blogpoint вы можете подписываться на интересные профили, чтобы видеть их события в своей ленте.
+            </p>
+        </div>
+
+        <div class="notice-help">
+            <button class="notice-help__cls-btn"></button>
+            <p class="notice-help__title">
+                Отметьте интересные темы в личном кабинете, и лента будет показывать вам только актуальные события. 
+                <span>Перейти в настройки</span>
+            </p>
+        </div>
+
+        <hr class="lin">
+
+        <section class="change-theme">
+            <div class="change-theme__wrap">
+                <div class="change-theme__container">
+                    <h1 class="change-theme__title">Темы</h1>
+                    <!-- 
+                        Код для раздела "интересно" при разрешении < 1070 он появляется в открываемом окне тем.
+                        Заголок "Все" выделяется жирным и "checked" устрановлен на нем, а пункт "Все темы"
+                        жирным не выделяется и "checked", по умолчанию, не получает
+                     -->
+
+
+                    <!-- <div class="change-theme__intrest">
+                        <h1 class="change-theme__intrest-title">Интересные</h1>
+                    </div>
+                    <div class="change-theme__theme change-theme__theme_intrest">
+                        <div class="change-theme__theme-wrap">
+                            <input type="radio" name="theme" id="i-all" class="change-theme__theme-input" checked>
+                            <label class="change-theme__theme-text change-theme__theme-text_all" for="i-all">Все</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="i-arh" type="radio">
+                            <label class="change-theme__theme-text" for="i-arh">Архитектура</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="i-aut" type="radio">
+                            <label class="change-theme__theme-text" for="i-aut">Авто и транспорт</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="i-bis" type="radio">
+                            <label class="change-theme__theme-text" for="i-bis">Бизнес</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="i-vid" type="radio">
+                            <label class="change-theme__theme-text" for="i-vid">Видео</label>
+                        </div>
+                    </div>
+                    <div class="change-theme__other">
+                        <h1 class="change-theme__other-title">Прочие</h1>
+                    </div> -->
+                    <div class="change-theme__theme">
+                        <div class="change-theme__theme-wrap">
+                            <input type="radio" name="theme" id="all" class="change-theme__theme-input" checked>
+                            <label class="change-theme__theme-text change-theme__theme-text_all" for="all">Все темы</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="arh" type="radio">
+                            <label class="change-theme__theme-text" for="arh">Архитектура</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="aut" type="radio">
+                            <label class="change-theme__theme-text" for="aut">Авто и транспорт</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="bis" type="radio">
+                            <label class="change-theme__theme-text" for="bis">Бизнес</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="vid" type="radio">
+                            <label class="change-theme__theme-text" for="vid">Видео</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="city" type="radio">
+                            <label class="change-theme__theme-text" for="city">Город</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="money" type="radio">
+                            <label class="change-theme__theme-text" for="money">Деньги</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="child" type="radio">
+                            <label class="change-theme__theme-text" for="child">Дети и родители</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="dis" type="radio">
+                            <label class="change-theme__theme-text" for="dis">Дизайн</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="house" type="radio">
+                            <label class="change-theme__theme-text" for="house">Дом</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="food" type="radio">
+                            <label class="change-theme__theme-text" name="theme" for="food">Еда и напитки</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="anim" type="radio">
+                            <label class="change-theme__theme-text" for="anim">Животные</label>
+                        </div>
+                    <!-- 2 -->
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="zog" type="radio">
+                            <label class="change-theme__theme-text" for="zog">ЗОЖ</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="eng" type="radio">
+                            <label class="change-theme__theme-text" for="eng">Иностранные языки</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="int" type="radio">
+                            <label class="change-theme__theme-text" for="int">Интерьер</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="isk" type="radio">
+                            <label class="change-theme__theme-text" for="isk">Искусство</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="his" type="radio">
+                            <label class="change-theme__theme-text" for="his">История</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="sin" type="radio">
+                            <label class="change-theme__theme-text" for="sin">Кино и сериалы</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="beut" type="radio">
+                            <label class="change-theme__theme-text" for="beut">Красота</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="kult" type="radio">
+                            <label class="change-theme__theme-text" for="kult">Культура и общество</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="lit" type="radio">
+                            <label class="change-theme__theme-text" for="lit">Литература</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="med" type="radio">
+                            <label class="change-theme__theme-text" for="med">Медицина</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="mist" type="radio">
+                            <label class="change-theme__theme-text" for="mist">Мистика и эзотерика</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="mod" type="radio">
+                            <label class="change-theme__theme-text" for="mod">Мода и стиль</label>
+                        </div>
+                    <!-- 3 -->
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="mus" type="radio">
+                            <label class="change-theme__theme-text" for="mus">Музыка</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="sic" type="radio">
+                            <label class="change-theme__theme-text" for="sic">Наука</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="obr" type="radio">
+                            <label class="change-theme__theme-text" for="obr">Образование</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="love" type="radio">
+                            <label class="change-theme__theme-text" for="love">Отношения</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="copy" type="radio">
+                            <label class="change-theme__theme-text" for="copy">Писательство и копирайтинг</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="buy" type="radio">
+                            <label class="change-theme__theme-text" for="buy">Покупки</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="pol" type="radio">
+                            <label class="change-theme__theme-text" for="pol">Политика</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="prav" type="radio">
+                            <label class="change-theme__theme-text" for="prav">Право</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="psi" type="radio">
+                            <label class="change-theme__theme-text" for="psi">Психология</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="way" type="radio">
+                            <label class="change-theme__theme-text" for="way">Путешествия</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="work" type="radio">
+                            <label class="change-theme__theme-text" for="work">Работа</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="radio" type="radio">
+                            <label class="change-theme__theme-text" for="radio">Радио и телевидение</label>
+                        </div>
+                    <!-- 4 -->
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="raz" type="radio">
+                            <label class="change-theme__theme-text" for="raz">Развлечения</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="ras" type="radio">
+                            <label class="change-theme__theme-text" for="ras">Растения</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="rek" type="radio">
+                            <label class="change-theme__theme-text" for="rek">Реклама и маркетинг</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="sam" type="radio">
+                            <label class="change-theme__theme-text" for="sam">Саморазвитие</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="soc" type="radio">
+                            <label class="change-theme__theme-text" for="soc">Соцсети и медиа</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="sport" type="radio">
+                            <label class="change-theme__theme-text" for="sport">Спорт</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="dance" type="radio">
+                            <label class="change-theme__theme-text" for="dance">Танцы</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="tvo" type="radio">
+                            <label class="change-theme__theme-text" for="tvo">Творчество</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="teat" type="radio">
+                            <label class="change-theme__theme-text" for="teat">Театр</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="tec" type="radio">
+                            <label class="change-theme__theme-text" for="tec">Техника</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="tech" type="radio">
+                            <label class="change-theme__theme-text" for="tech">Технологии</label>
+                        </div>
+                        <div class="change-theme__theme-wrap">
+                            <input class="change-theme__theme-input" name="theme" id="photo" type="radio">
+                            <label class="change-theme__theme-text" for="photo">Фотография</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="line">
+
+        <secction class="modal-calendar">
+            <div class="modal-calendar__info">
+                <p class="modal-calendar__info-paragraf">
+                    Выберите один день или период, отметив две даты.
+                </p>
+            </div>
+            <div class="modal-calendar__wrap">
+                <div class="modal-calendar__container">
+                    <div class="modal-calendar__change-month">
+                        <div class="modal-calendar__prev-btn"></div>
+    
+                        <div class="modal-calendar__change-month_hide">
+                            <ul class="change-month__list">
+                                <li class="change-month__list-item">Январь</li>
+                                <li class="change-month__list-item">Февраль</li>
+                                <li class="change-month__list-item">Март</li>
+                                <li class="change-month__list-item">Апрель</li>
+                                <li class="change-month__list-item">Май</li>
+                                <li class="change-month__list-item">Июнь</li>
+                                <li class="change-month__list-item">Июль</li>
+                                <li class="change-month__list-item">Август</li>
+                                <li class="change-month__list-item">Сентябрь</li>
+                                <li class="change-month__list-item">Октябрь</li>
+                                <li class="change-month__list-item">Ноябрь</li>
+                                <li class="change-month__list-item">Декабрь</li>
+                            </ul>
+                        </div>
+    
+                        <div class="modal-calendar__next-btn"></div>
+                    </div>
+                    <div class="modal-calendar__change-day">
+                        <ul class="change-day__week">
+                            <li class="change-day__week-item">Пн</li>
+                            <li class="change-day__week-item">Вт</li>
+                            <li class="change-day__week-item">Ср</li>
+                            <li class="change-day__week-item">Чт</li>
+                            <li class="change-day__week-item">Пт</li>
+                            <li class="change-day__week-item">Сб</li>
+                            <li class="change-day__week-item">Вс</li>
+                        </ul>
+                        <ul class="change-day__day">
+                            <li class="change-day__day-item change-day__day_past">1</li>
+                            <li class="change-day__day-item change-day__day_past">2</li>
+                            <li class="change-day__day-item change-day__day_past">3</li>
+                            <li class="change-day__day-item change-day__day_past">4</li>
+                            <li class="change-day__day-item change-day__day_past">5</li>
+                            <li class="change-day__day-item change-day__day_past">6</li>
+                            <li class="change-day__day-item change-day__day_past">7</li>
+                            <li class="change-day__day-item change-day__day_past">8</li>
+                            <li class="change-day__day-item change-day__day_past">9</li>
+                            <li class="change-day__day-item change-day__day_past">10</li>
+                            <li class="change-day__day-item change-day__day_past">11</li>
+                            <li class="change-day__day-item change-day__day_past">12</li>
+                            <li class="change-day__day-item change-day__day_past">13</li>
+                            <li class="change-day__day-item change-day__day_past">14</li>
+                            <li class="change-day__day-item change-day__day_past">15</li>
+                            <li class="change-day__day-item change-day__day_past">16</li>
+                            <li class="change-day__day-item">17</li>
+                            <li class="change-day__day-item">18</li>
+                            <li class="change-day__day-item">19</li>
+                            <li class="change-day__day-item">20</li>
+                            <li class="change-day__day-item">21</li>
+                            <li class="change-day__day-item">22</li>
+                            <li class="change-day__day-item">23</li>
+                            <li class="change-day__day-item">24</li>
+                            <li class="change-day__day-item">25</li>
+                            <li class="change-day__day-item">26</li>
+                            <li class="change-day__day-item">27</li>
+                            <li class="change-day__day-item">28</li>
+                            <li class="change-day__day-item">29</li>
+                            <li class="change-day__day-item">30</li>
+                            <li class="change-day__day-item">31</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </secction>
+
+        <hr class="line">
+
+        <section class="more-filter">
+            <p class="more-filter__title">Еще фильтры</p>
+            <ul class="more-filter__wrapper">
+                <li class="more-filter__item more-filter_free">
+                    <input type="checkbox" value="free" id="free">
+                    <div class="more-filter__checkbox"></div>
+                    <label for="free">
+                        Бесплатные
+                    </label>
+                </li>
+                <li class="more-filter__item more-filter__date-wrap">
+                    <ul class="more-filter__immediate">
+                        <li>
+                            <input type="radio" name="point" value="week" id="week" checked> 
+                            <label for="week">
+                                <span  class="active">Неделя</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="point" value="today" id="today"> 
+                            <label for="today">
+                                <span >Сегодня</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="point" value="weekends" id="weekend"> 
+                            <label for="weekend">
+                                <span >Выходные</span>
+                            </label>
+                        </li>
+                        <li>Выбрать</li>
+                    </ul>
+                </li>
+                <li class="more-filter__calendar modal-calendar">
+                    <div class="modal-calendar__info">
+                        <p class="modal-calendar__info-paragraf">
+                            Выберите один день или период, отметив две даты.
+                        </p>
+                    </div>
+                    <div class="modal-calendar__wrap">
+                        <div class="modal-calendar__container">
+                            <div class="modal-calendar__change-month">
+                                <div class="modal-calendar__prev-btn"></div>
+            
+                                <div class="modal-calendar__change-month_hide">
+                                    <ul class="change-month__list">
+                                        <li class="change-month__list-item">Январь</li>
+                                        <li class="change-month__list-item">Февраль</li>
+                                        <li class="change-month__list-item">Март</li>
+                                        <li class="change-month__list-item">Апрель</li>
+                                        <li class="change-month__list-item">Май</li>
+                                        <li class="change-month__list-item">Июнь</li>
+                                        <li class="change-month__list-item">Июль</li>
+                                        <li class="change-month__list-item">Август</li>
+                                        <li class="change-month__list-item">Сентябрь</li>
+                                        <li class="change-month__list-item">Октябрь</li>
+                                        <li class="change-month__list-item">Ноябрь</li>
+                                        <li class="change-month__list-item">Декабрь</li>
+                                    </ul>
+                                </div>
+            
+                                <div class="modal-calendar__next-btn"></div>
+                            </div>
+                            <div class="modal-calendar__change-day">
+                                <ul class="change-day__week">
+                                    <li class="change-day__week-item">Пн</li>
+                                    <li class="change-day__week-item">Вт</li>
+                                    <li class="change-day__week-item">Ср</li>
+                                    <li class="change-day__week-item">Чт</li>
+                                    <li class="change-day__week-item">Пт</li>
+                                    <li class="change-day__week-item">Сб</li>
+                                    <li class="change-day__week-item">Вс</li>
+                                </ul>
+                                <ul class="change-day__day">
+                                    <li class="change-day__day-item change-day__day_past">1</li>
+                                    <li class="change-day__day-item change-day__day_past">2</li>
+                                    <li class="change-day__day-item change-day__day_past">3</li>
+                                    <li class="change-day__day-item change-day__day_past">4</li>
+                                    <li class="change-day__day-item change-day__day_past">5</li>
+                                    <li class="change-day__day-item change-day__day_past">6</li>
+                                    <li class="change-day__day-item change-day__day_past">7</li>
+                                    <li class="change-day__day-item change-day__day_past">8</li>
+                                    <li class="change-day__day-item change-day__day_past">9</li>
+                                    <li class="change-day__day-item change-day__day_past">10</li>
+                                    <li class="change-day__day-item change-day__day_past">11</li>
+                                    <li class="change-day__day-item change-day__day_past">12</li>
+                                    <li class="change-day__day-item change-day__day_past">13</li>
+                                    <li class="change-day__day-item change-day__day_past">14</li>
+                                    <li class="change-day__day-item change-day__day_past">15</li>
+                                    <li class="change-day__day-item change-day__day_past">16</li>
+                                    <li class="change-day__day-item">17</li>
+                                    <li class="change-day__day-item">18</li>
+                                    <li class="change-day__day-item">19</li>
+                                    <li class="change-day__day-item">20</li>
+                                    <li class="change-day__day-item">21</li>
+                                    <li class="change-day__day-item">22</li>
+                                    <li class="change-day__day-item">23</li>
+                                    <li class="change-day__day-item">24</li>
+                                    <li class="change-day__day-item">25</li>
+                                    <li class="change-day__day-item">26</li>
+                                    <li class="change-day__day-item">27</li>
+                                    <li class="change-day__day-item">28</li>
+                                    <li class="change-day__day-item">29</li>
+                                    <li class="change-day__day-item">30</li>
+                                    <li class="change-day__day-item">31</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="more-filter__item more-filter__main-sub">
+                    <input type="checkbox" value="onlySub" id="subscr">
+                    <div class="more-filter__checkbox"></div>
+                    <label for="subscr">
+                        Только мои подписки
+                    </label>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

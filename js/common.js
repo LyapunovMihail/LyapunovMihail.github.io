@@ -7,7 +7,8 @@ $(document).on('click', '.head__navigate-menu', function() {
     if ($('.head__mobile').hasClass('head__mobile-menu_no-login')) {
         
         $('body').css({
-            overflow: 'hidden'
+            overflow: 'hidden',
+            position: 'fixed'
         });
         $('.head__mobile-menu_bloger').css({
             'overflow-y': 'scroll',
@@ -15,7 +16,8 @@ $(document).on('click', '.head__navigate-menu', function() {
         });
     } else {
         $('body').css({
-            overflow: 'visible'
+            overflow: 'visible',
+            position: ''
         });
         $('.head__mobile-menu_bloger').css('overflow-y', 'hidden');
     ;}
@@ -23,16 +25,14 @@ $(document).on('click', '.head__navigate-menu', function() {
 
 // Закрепление кнопки настроек на Главной(События/Блоги)
 
-var $width = $(window).width();
-    $height = '';
+var $height = '';
 
     // console.log($height)
 
 $(window).on('scroll', function() {
 
-    $height = $(window).height();  // Динамично получаем высоту для правильной фиксации на мобилках
-    var $button = $('.main__show-more-wrap').offset().top + 110; // Где 110 это высота элемента + bottom кнопки с настройками
-        $buttonFix = $('.main__show-more-wrap').children().last().offset().top
+    $height = $(window).height();  // Динамично получаем высоту
+    var $button = $('.main__show-more-wrap').offset().top + 110; // Где 110 это "bottom" элемента
 
     if($button < ( $height + ( $(this).scrollTop() ) ) ) {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn');
@@ -41,7 +41,7 @@ $(window).on('scroll', function() {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn_fixed')
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn');
     }
-    console.log($button)
+    // console.log($(window).scrollTop())
 });
 
 // Открытие поля "Удалить аккаунт" на стр юзера/блогера
@@ -85,5 +85,31 @@ $(document).ready( function() {
             
             $('.main__theme-checkbox').prop('disabled', false);
         }
+    })
+})
+
+// Открытие модалки "Формат" на главной стр
+
+$(document).on('click', '[data-format]', function() {
+
+    $('.main__format').css({
+        display: 'flex',
+        position: 'fixed',
+        'overflow-y': 'scroll',
+        'overflow-x': 'hidden'
+    }); // TODO Добавить стиль display: flex; , доделать остальные модалки на главной и JS
+    $('body').css({
+        overflow: 'hidden'
+    });
+
+    $('.main__format-title').on('click', function() {
+
+        $('.main__format').css({
+            display: 'none',
+            position: ''
+        });
+        $('body').css({
+            overflow: ''
+        });
     })
 })

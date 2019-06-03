@@ -6,6 +6,14 @@
   display: none;
 }
 
+.main__format-btn {
+  display: none;
+}
+
+.main__format-title {
+  display: none;
+}
+
 .head__login {
   -webkit-box-pack: end !important;
       -ms-flex-pack: end !important;

@@ -44,7 +44,8 @@ function w1399(scroll) {
             position: 'fixed',
             right: ($('body').width() - 1300) / 2 + 'px',
             top: '50px'
-        })
+        });
+
     } else {
         $('[data-navigate]').css({
             position: '',

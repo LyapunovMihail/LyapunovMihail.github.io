@@ -340,6 +340,7 @@
   resize: none;
   padding: 17px 20px;
   overflow: hidden;
+  min-height: 60px;
 }
 
 .main__project {

@@ -646,6 +646,7 @@
   overflow: hidden;
   margin-bottom: 0;
   height: 84px;
+  min-height: 60px;
 }
 
 .main__about {

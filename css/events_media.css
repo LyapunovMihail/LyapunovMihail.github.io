@@ -121,6 +121,70 @@
   .main__filter {
     display: none;
   }
+  .main__format {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background: #fff;
+    border: none;
+    z-index: 1000;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .main__format-title {
+    display: block;
+    font: 500 16px/28px 'Geometria';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 28px;
+    margin: 20px 0 30px;
+  }
+  .main__format-title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 16px;
+    height: 15px;
+    background: url("../img/cls-btn-black.svg") no-repeat;
+  }
+  .main__format-list {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 20px;
+    padding: 0;
+  }
+  .main__format-list-item {
+    margin: 0 0 10px;
+  }
+  .main__format-btn {
+    display: block;
+  }
+  .main__format .main__format_modal {
+    display: block;
+    max-width: 640px;
+  }
   .main__nav-content_line {
     background-color: #d8d8d8;
     border: none;
@@ -194,6 +258,9 @@
             transform: none;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .main__format .main__format_modal {
+    max-width: calc(100% - 92px);
   }
   .main__snippet {
     position: relative;
@@ -476,6 +543,9 @@
   }
   .main__expected-slider {
     padding: 0 20px 0 20px;
+  }
+  .main__format .main__format_modal {
+    max-width: calc(100% - 40px);
   }
   .main__nav-content {
     width: calc(100% - 40px);
