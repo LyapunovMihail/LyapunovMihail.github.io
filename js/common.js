@@ -7,19 +7,23 @@ $(document).on('click', '.head__navigate-menu', function() {
     if ($('.head__mobile').hasClass('head__mobile-menu_no-login')) {
         
         $('body').css({
-            overflow: 'hidden',
-            position: 'fixed'
+            overflow: 'hidden'//,
+            // position: 'fixed'
         });
         $('.head__mobile-menu_bloger').css({
             'overflow-y': 'scroll',
-            'overflow-x': 'hidden'
+            'overflow-x': 'hidden',
+            position: 'fixed'
         });
     } else {
         $('body').css({
             overflow: 'visible',
+            //position: ''
+        });
+        $('.head__mobile-menu_bloger').css({
+            'overflow-y': 'hidden',
             position: ''
         });
-        $('.head__mobile-menu_bloger').css('overflow-y', 'hidden');
     ;}
 });
 
