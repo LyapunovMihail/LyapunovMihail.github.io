@@ -7,6 +7,8 @@ body {
 textarea {
   display: block;
   background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   outline: none;
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
@@ -35,6 +37,8 @@ sup {
 
 input {
   background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   outline: none;
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
