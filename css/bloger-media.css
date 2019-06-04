@@ -79,6 +79,10 @@
   .main__head-wrap .main__head-photo {
     width: 80px;
   }
+  .main__head-wrap .main__head-photo-wrap {
+    width: 80px;
+    height: 80px;
+  }
   .main__head-wrap .main__head-descr {
     max-width: none;
   }
@@ -129,9 +133,13 @@
     margin-bottom: 10px;
   }
   .main__about-me-wrap .about-me__info,
-  .main__about-me-wrap .about-me__info-min {
+  .main__about-me-wrap .about-me__info-min,
+  .main__about-me-wrap .about-me__info-list {
     font-size: 14px;
     line-height: 1.43;
+  }
+  .main__about-me-wrap .about-me__info:nth-child(3) {
+    margin-bottom: 10px;
   }
   .main__about-me-wrap .about-me__info {
     margin: 0 0 20px;
@@ -141,6 +149,9 @@
   }
   .main__about-me-wrap .about-me__info:last-child {
     margin: 0 0 30px;
+  }
+  .main__about-me-wrap .about-me__tags {
+    margin-top: 30px;
   }
   .main__about-me-wrap .about-me__tags-item {
     margin-bottom: 10px;
@@ -157,7 +168,7 @@
   }
   .main__snippet {
     position: relative;
-    margin-bottom: 110px;
+    margin-bottom: 100px;
     height: 45.406vw;
     min-width: 194px;
     min-height: 144px;
@@ -168,6 +179,7 @@
     background: linear-gradient(to bottom, rgba(51, 51, 51, 0), #333333);
   }
   .main__snippet-style {
+    font-size: 11px;
     position: absolute;
     bottom: 12px;
     left: 10px;
@@ -210,7 +222,7 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 0 45px;
-    margin: 22px 0 25px;
+    margin: 22px 0 17px;
   }
   .main__soon-button {
     display: none;
@@ -350,13 +362,14 @@
     margin: 0;
     overflow-x: scroll;
     position: relative;
+    -webkit-overflow-scrolling: touch;
   }
   .main__past-wrap .main__past-slider {
     width: 185vw;
     max-width: 1310px;
     min-width: 632px;
     padding: 0 45px;
-    margin: 22px 0 25px;
+    margin: 22px 0 17px;
   }
   .main__past-button {
     display: none;
