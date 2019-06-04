@@ -1025,12 +1025,12 @@
 
 @media (max-width: 729px) {
   _:-webkit-full-screen:not(:root:root), .safari_only {
-    max-height: 1376px;
+    max-height: 1410px;
   }
 }
 
 @media (max-width: 729px) {
   _:-webkit-full-screen:not(:root:root), .main__list-snippet {
-    max-height: 1376px;
+    max-height: 1410px;
   }
 }
