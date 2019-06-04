@@ -362,6 +362,11 @@
         -ms-flex-order: 45;
             order: 45;
   }
+  .main__mytape-wrap:nth-child(48) {
+    -webkit-box-ordinal-group: 49;
+        -ms-flex-order: 48;
+            order: 48;
+  }
   .main__mytape-text {
     margin-bottom: 20px;
   }
