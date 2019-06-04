@@ -10,6 +10,7 @@ textarea {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
+  -webkit-appearance: none;
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,6 +41,7 @@ input {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
+  -webkit-appearance: none;
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -1022,15 +1022,3 @@
     box-sizing: border-box;
   }
 }
-
-@media (max-width: 729px) {
-  _:-webkit-full-screen:not(:root:root), .safari_only {
-    height: 1410px;
-  }
-}
-
-@media (max-width: 729px) {
-  _:-webkit-full-screen:not(:root:root), .main__list-snippet {
-    height: 1410px;
-  }
-}
