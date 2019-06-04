@@ -305,9 +305,9 @@
   .main__list-snippet {
     max-width: none;
     width: calc(100% - (92px));
-    height: 1403px;
+    height: 1410px;
     max-height: none;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     padding: 0 10px;
   }
   .main__list-snippet-item {
@@ -518,7 +518,7 @@
     width: calc(100% - 40px);
   }
   _::-webkit-full-page-media, _:future, :root .safari_only {
-    height: 1403px;
+    height: 1410px;
   }
   .main__recomend-wrap .main__recomend-slider {
     padding: 0 20px;
