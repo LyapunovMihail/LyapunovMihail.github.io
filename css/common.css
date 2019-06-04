@@ -70,11 +70,23 @@ button {
 }
 
 .g-error {
-  border-color: #ee003e;
+  border-color: #ee003e !important;
 }
 
 .g-error-text {
+  display: none;
+  font: 14px/1.33 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
   color: #ee003e;
+  margin: 7px 0 0;
+}
+
+@media (max-width: 729px) {
+  .g-error-text {
+    font-size: 12px;
+  }
 }
 
 .g-block {
@@ -218,7 +230,7 @@ button {
   border-radius: 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 14px 20px;
+  padding: 16px 20px;
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

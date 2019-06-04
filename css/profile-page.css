@@ -436,6 +436,27 @@
   top: 0;
 }
 
+.main .main__content-nav_gradient-left,
+.main .main__content-nav_gradient-right {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 36px;
+  top: 0;
+}
+
+.main .main__content-nav_gradient-left {
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#ffffff));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+}
+
+.main .main__content-nav_gradient-right {
+  right: 0;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(#ffffff));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+}
+
 .main .main__content-nav_fixed {
   top: 50px;
   height: 50px;

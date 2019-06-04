@@ -13,6 +13,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/blank-blog.js"></script>
     <script src="js/add-event.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
     <header class="head">
@@ -85,7 +86,8 @@
 
                 <div class="main__format-name">
                     <label for="nameEvent" class="main__format-subtitle">Введите название события<span> *</span></label>
-                    <input type="text" id="nameEvent" class="main__format-event-name"> 
+                    <input type="text" id="nameEvent" class="main__format-event-name">
+                    <p class="g-error-text">Заполните это поле.</p>
                 </div>
 
                 <div class="main__format-image">
@@ -104,6 +106,7 @@
                     <textarea name="about" id="about" class="g-textarea_high"></textarea>
                     <button class="main__about-btn main__about-bullit"></button>
                     <button class="main__about-btn main__about-link"></button>
+                    <p class="g-error-text">Заполните это поле.</p>
                 </div>
                 <div class="main__about-wrap">
                     <p class="main__about-subtitle">Что узнают участники</p>
@@ -151,6 +154,7 @@
                         <div class="price-size__entr-wrap">
                             <label for="price" class="main__price-subtitle">Цена<span> *</span></label>
                             <input type="text" name="price" id="price" class="price-size__entr" placeholder="Цена или вилка цен">
+                            <p class="g-error-text">Заполните это поле.</p>
                         </div>
                         <button class="price-size__btn-add">Добавить скидку</button>
                         <div class="price-size__sale-wrap">
@@ -184,6 +188,7 @@
                     <textarea name="about" id="about" class="main__price-entr"></textarea>
                     <button class="main__price-btn main__price-bullit"></button>
                     <button class="main__price-btn main__price-link"></button>
+                    <p class="g-error-text">Заполните это поле.</p>
                 </div>
             </div>
 
@@ -197,6 +202,7 @@
                             <input type="text" class="detail-date__input detail-date__input_date">
                             <img src="img/kalendar.svg" alt="date">
                         </div>
+                        <p class="g-error-text">Заполните это поле.</p>
                     </div>
                     <div class="main__detail-time">
                         <label for="time" class="main__detail-subtitle detail-date__descr">Время</label>

@@ -110,3 +110,26 @@ $(document).on('click', '.main__content-nav-item', function() {
 
 
 // Переключение класса active на навигации при обычной прокрутке
+
+// Появление/Скрытие градиента в навигации
+
+$(document).on('mousedown', '.main__content-nav-scrll', function() {
+
+    console.log($(this).scrollLeft())
+    if ($(this).scrollLeft() > 0) {
+
+        console.log('tut2')
+        scrllLft();
+    } else { scrllLft($('.main__content-nav_gradient-left'))}
+});
+
+function scrllLft(el) {
+
+    $('.main__content-nav_gradient-left').css('display', 'block');
+
+    el.css('display', 'none');
+}
+function scrllRght() {
+
+    $('.main__content-nav_gradient-right').css('display', 'block');
+}

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/blank-media.css">
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    <!-- <script src="js/common.js"></script> -->
+    <script src="js/common.js"></script>
     <script src="js/blank-blog.js"></script>
     <script src="js/nav-blank.js"></script>
 </head>
@@ -52,6 +52,7 @@
                 <div class="main__common-item">
                     <label class="main__common-text" for="name">Ваше имя или название<span> *</span></label>
                     <input type="text" id="name" class="main__common-name" required>
+                    <p class="g-error-text">Заполните это поле.</p>
                 </div>
                 <div class="main__common-item main__common-item_sex">
                     <span class="main__common-text main__common-text_sex" for="#">Пол</span>
@@ -71,6 +72,7 @@
                 <div class="main__common-item">
                     <label class="main__common-text" for="spec">Специальность<span> *</span></label>
                     <textarea id="spec" class="g-textarea_small" placeholder="Психолог, психотерапевт..." required></textarea>
+                    <p class="g-error-text">Заполните это поле.</p>
                 </div>
             </div>
         </div>
@@ -355,6 +357,7 @@
                     <button class="footer__about-btn footer__about-btn_link"></button>
                 </div>
                 <textarea class="g-textarea_high" id="about" placeholder="Максимум 1500 знаков"></textarea>
+                <p class="g-error-text">Заполните это поле.</p>
             </div>
         </div>
         <div class="footer__container">

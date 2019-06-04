@@ -276,6 +276,10 @@
   color: #d6712b;
 }
 
+.main__format-name {
+  margin: 0 0 25px;
+}
+
 .main__format-event-name {
   display: block;
   width: 100%;
@@ -293,7 +297,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
-  margin: 6px 0 25px;
+  margin: 6px 0 0;
 }
 
 .main__format-event-name:hover, .main__format-event-name:focus {

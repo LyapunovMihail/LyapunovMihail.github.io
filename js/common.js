@@ -29,7 +29,14 @@ $(document).on('click', '.head__navigate-menu', function() {
 
 // Закрепление кнопки настроек на Главной(События/Блоги)
 
-var $height = '';
+var $height = '',
+    $width = $(window).width();
+
+// $(window).load( function() {
+
+
+// });
+
 
     // console.log($height)
 
@@ -101,7 +108,7 @@ $(document).on('click', '[data-format]', function() {
         position: 'fixed',
         'overflow-y': 'scroll',
         'overflow-x': 'hidden'
-    }); // TODO Добавить стиль display: flex; , доделать остальные модалки на главной и JS
+    });
     $('body').css({
         overflow: 'hidden'
     });

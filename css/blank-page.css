@@ -204,10 +204,11 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  margin: 0 0 25px;
 }
 
-.main__common-item_sex {
-  margin: 0 0 25px;
+.main__common-item .g-textarea_small {
+  margin: 6px 0 0;
 }
 
 .main__common-text {
@@ -238,7 +239,7 @@
   font: 16px/26px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 6px 0 25px;
+  margin: 6px 0 0;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
