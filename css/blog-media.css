@@ -139,11 +139,14 @@
   .main__filter-wrapper input {
     display: none;
   }
-  .main__filter-wrapper input[type='checkbox']:checked + .main__filter-checkbox {
-    background: url("../img/check.svg") center no-repeat #ff954b;
-    background-size: 80%;
-  }
   .main__filter-wrapper-item:hover {
+    opacity: 1;
+  }
+  .main__filter-wrapper input[type='checkbox']:checked + .checkbox {
+    background: url("../img/check.svg") 50% 49% no-repeat #ff954b;
+    border-color: #ff954b;
+  }
+  .main__filter-wrapper input[type='checkbox']:checked + .checkbox:hover {
     opacity: 1;
   }
   .main__list-snippet {
@@ -518,7 +521,7 @@
     width: calc(100% - 40px);
   }
   _::-webkit-full-page-media, _:future, :root .safari_only {
-    height: 1452px;
+    height: 1450px;
   }
   .main__recomend-wrap .main__recomend-slider {
     padding: 0 20px;

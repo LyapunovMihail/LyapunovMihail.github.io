@@ -593,6 +593,8 @@
   background: #d6712b;
   margin: 0 0 40px;
   padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   cursor: pointer;
 }
@@ -641,18 +643,27 @@
   margin: 0;
 }
 
-.notice-help__title span {
+.notice-help__sub-title {
+  font: 500 14px/24px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #fff;
+  margin: 0;
+}
+
+.notice-help__sub-title span {
   border-bottom: 1px solid #d8d8d8;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
-.notice-help__title span:hover {
+.notice-help__sub-title span:hover {
   opacity: .6;
 }
 
 @media (max-width: 729px) {
-  .notice-help__title span:hover {
+  .notice-help__sub-title span:hover {
     opacity: 1;
   }
 }
@@ -856,7 +867,6 @@
   .change-theme {
     width: 100vw;
     min-height: 100vh;
-    position: absolute;
     background: #fff;
     top: 0;
     left: 0;

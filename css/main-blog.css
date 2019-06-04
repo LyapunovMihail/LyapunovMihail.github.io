@@ -490,7 +490,7 @@
   display: none;
 }
 
-.main__filter input[type='checkbox']:checked + .main__filter-checkbox {
+.main__filter input[type='checkbox']:checked + .checkbox {
   background: url("../img/check.svg") 50% 49% no-repeat #ff954b;
   border-color: #ff954b;
 }
@@ -536,6 +536,7 @@
 }
 
 .main__filter-wrapper-item label {
+  margin: 3px 0 0;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
@@ -543,6 +544,16 @@
 .main__filter-wrapper-item:hover label {
   opacity: .7;
   cursor: pointer;
+}
+
+@media (max-width: 729px) {
+  .main__filter-wrapper-item:hover label {
+    opacity: 1;
+  }
+}
+
+.main__filter-wrapper-item .checkbox {
+  margin: 0 10px 0 0;
 }
 
 .main__filter-wrapper-item:first-child {
