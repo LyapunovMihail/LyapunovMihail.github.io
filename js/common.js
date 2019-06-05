@@ -42,7 +42,7 @@ var $height = '',
 
 $(window).on('scroll', function() {
 
-    $height = $(window).height();  // Динамично получаем высоту
+    $height = $(window).outerHeight();  // Динамично получаем высоту
     var $button = $('.main__show-more-wrap').offset().top + 110; // Где 110 это "bottom" элемента
 
     if($button < ( $height + ( $(this).scrollTop() ) ) ) {
@@ -52,7 +52,10 @@ $(window).on('scroll', function() {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn_fixed')
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn');
     }
-    // console.log($(window).scrollTop())
+    console.log($(window).outerHeight(true))
+    console.log($(window).innerHeight())
+    console.log($(window).height())
+    // console.log(window.screen.availHeight)
 });
 
 // Открытие поля "Удалить аккаунт" на стр юзера/блогера

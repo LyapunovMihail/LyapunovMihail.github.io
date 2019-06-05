@@ -9,7 +9,7 @@ var $heightElem = '',
 $(document).on('keydown keyup keypress', 'textarea', function nameM() {
     
     $heightElem = $(this).outerHeight(); // Получаем высоту элемента
-    $lineHight = Number($(this).css('line-height').substr(0, 2)); // Получаем высоту строки, обрезаем "px" и преобразуем в число
+    $lineHight = Number($(this).css('line-height').slice(0, -2)); // Получаем высоту строки, обрезаем "px" и преобразуем в число
 
     if (this.scrollHeight > $heightElem) {
 
@@ -39,7 +39,7 @@ $(document).ready( function () {
     
         for(var i = 0; i < $textarea.length; i++){
 
-            autosizeSec($textarea[i], $($textarea[i]));
+            autosize($textarea[i], $($textarea[i]));
         }
     }, 500)
 
@@ -54,11 +54,13 @@ function autosize(js, jq) {
     jq.css('height', (lineH * Math.floor(scrH / lineH) + padd) ); // Получаю примерное кол-во строк путем деления scrollHeight на line-height + padding(top, bottom) и выставляю это значение в виде высоты textarea
 
     autosizeSec(js, jq); // вызываю другую функцию для выравниваня высот textarea
+
+    console.log(Math.floor(scrH / lineH) )
 }
 
 function sum(el, style) { // Возвращает число обрезая "рх"
 
-    return Number(el.css(style).substr(0, 2))
+    return Number(el.css(style).slice(0, -2))
 }
 
 function autosizeSec(js, jq) {
