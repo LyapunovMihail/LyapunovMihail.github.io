@@ -1085,9 +1085,7 @@
   position: fixed;
   right: 30px;
   top: auto;
-  bottom: 10px;
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  bottom: 60px;
 }
 
 .main__show-more-wrap .main__settings-btn_fixed:hover {
