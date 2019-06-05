@@ -43,18 +43,19 @@ var $height = '',
 $(window).on('scroll resize', function() {
 
     $height = $(window).outerHeight();  // Динамично получаем высоту
-    var $button = $('.main__show-more-wrap').offset().top + 110; // Где 110 это "bottom" элемента
+    var $button = $('.main__show-more-wrap').offset().top; // Где 110 это "bottom" элемента
+    var $fixBtn = $('.main__show-more-wrap').children().last().offset().top;
 
-    if($button < ( $height + ( $(this).scrollTop() ) ) ) {
+    if($button < $fixBtn ) {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn');
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn_fixed');
-    } else { 
+    } else if( ($button + 110) > ($height + $(this).scrollTop()) ) { 
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn_fixed')
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn');
     }
-    console.log($(window).outerHeight(true))
-    console.log($(window).innerHeight())
-    console.log($(window).height())
+    console.log($button)
+    console.log(($height + $(this).scrollTop()))
+    // console.log($(window).height())
     // console.log(window.screen.availHeight)
 });
 
