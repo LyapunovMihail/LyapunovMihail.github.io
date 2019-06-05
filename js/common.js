@@ -40,7 +40,7 @@ var $height = '',
 
     // console.log($height)
 
-$(window).on('scroll', function() {
+$(window).on('scroll resize', function() {
 
     $height = $(window).outerHeight();  // Динамично получаем высоту
     var $button = $('.main__show-more-wrap').offset().top + 110; // Где 110 это "bottom" элемента
