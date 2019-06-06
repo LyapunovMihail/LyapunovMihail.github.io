@@ -40,6 +40,9 @@
   .main__content-nav_gradient {
     margin: 10px 0 55px;
   }
+  .main__content-nav-scrll {
+    -webkit-overflow-scrolling: touch;
+  }
   .main__content-nav {
     position: unset;
     display: -webkit-box;

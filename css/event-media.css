@@ -69,6 +69,9 @@
     height: 25px;
     max-width: 640px;
   }
+  .main__content-nav-scrll {
+    -webkit-overflow-scrolling: touch;
+  }
   .main__description-nav {
     position: unset;
     display: -webkit-box;

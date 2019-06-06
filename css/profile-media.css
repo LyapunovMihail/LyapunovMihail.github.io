@@ -82,6 +82,9 @@
     left: 0;
     bottom: -5px;
   }
+  .main__content-nav-scrll {
+    -webkit-overflow-scrolling: touch;
+  }
   .main__common {
     margin-top: 55px;
   }
