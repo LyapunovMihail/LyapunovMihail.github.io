@@ -163,6 +163,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-appearance: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .main__format {

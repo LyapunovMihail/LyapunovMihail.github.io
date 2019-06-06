@@ -82,6 +82,7 @@
     max-width: 640px;
     height: 50px;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
   }
   .main__content-nav-wrap .main__content-nav-scrll .main__content-nav {
     width: 642px;
@@ -179,6 +180,7 @@
     height: 50px;
     padding: 0 45px;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
   }
   .main__content-nav-wrap .main__content-nav-scrll .main__content-nav {
     width: 642px;

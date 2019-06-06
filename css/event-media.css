@@ -224,6 +224,7 @@
     height: 50px;
     padding: 0 45px;
     overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
   }
   .main__description-nav-wrap .main__description-nav-scrll .main__description-nav {
     width: 617px;
@@ -250,6 +251,7 @@
   }
   .main__description .main__content-nav_fixed .main__description-nav-scrll {
     padding: 0 46px;
+    -webkit-overflow-scrolling: touch;
   }
   .main__price {
     max-width: calc(100% - 92px);

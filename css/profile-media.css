@@ -103,6 +103,7 @@
   }
   .main .main__content-nav_fixed .main__content-nav-scrll {
     max-width: none;
+    -webkit-overflow-scrolling: touch;
   }
   .main__head .active:before {
     bottom: -16px;
