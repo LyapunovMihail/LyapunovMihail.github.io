@@ -143,3 +143,10 @@ $(document).on('click', '.main__login-show-pass', function() {
         $(this).removeClass('main__login-show-pass_open');
     }
 });
+
+// Подъем вверх
+
+$(document).on('click', '[data-up]', function() {
+
+    $(window).scrollTop(0);
+});

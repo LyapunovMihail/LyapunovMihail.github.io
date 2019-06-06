@@ -17,18 +17,22 @@ $(window).on('scroll', function() {
     // console.log(($('body').width() - 970) / 2 + 115 + 'px')
 
     if ($('body').width() > 1399) {
+        
+        btnUp($navScrll)
         if ($heightNav >= $navScrll) {
             w1399($navScrll)
         } else {w1399($navScrll)}
     }
     if ($('body').width() < 1400 && $('body').width() > 1069) {
-
+        
+        btnUp($navScrll)
         if ($heightNav >= $navScrll) {
             w1399m($navScrll)
         } else {w1399m($navScrll)}
     }
     if ($('body').width() < 1069) {
-
+        
+        btnUp($navScrllMedia)
         if ($heightNav >= $navScrllMedia) {
             w729($navScrllMedia)
         } else {w729($navScrllMedia)}
@@ -180,3 +184,16 @@ function scrllPointPrev(el) {
 }
 
 // Появление/Скрытие градиента в навигации
+
+// Кнопка "наверх"
+
+function btnUp(el) {
+
+    if ($(window).scrollTop() > el) {
+
+        $('[data-up]').css('display', 'block');
+    } else if($(window).scrollTop() < el) {
+        
+        $('[data-up]').css('display', 'none'); 
+    }
+}
