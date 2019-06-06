@@ -143,7 +143,7 @@
   .main__content-nav_fixed .main__content-nav-scrll {
     overflow-x: scroll;
     position: relative;
-    padding: 0 45px;
+    padding: 0 46px;
     max-width: none;
     height: 50px;
   }

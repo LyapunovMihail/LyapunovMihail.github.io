@@ -131,7 +131,7 @@
   width: 100vw;
   max-width: none;
   background: #fff;
-  padding: 15px 0 0;
+  padding: 10px 0 0;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
@@ -167,6 +167,7 @@
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 .main .main__content-nav_fixed .main__content-nav-scrll .main__content-nav {

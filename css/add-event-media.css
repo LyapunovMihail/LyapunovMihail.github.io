@@ -236,8 +236,11 @@
   .main__connect-title {
     margin: 40px 0 20px;
   }
+  .main__price-checkbox {
+    margin-bottom: 18px;
+  }
   .main__price-size {
-    margin: 20px 0 25px;
+    margin: 0 0 25px;
   }
   .main__price-size .price-size__wrap {
     -webkit-box-orient: vertical;

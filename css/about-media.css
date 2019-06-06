@@ -14,7 +14,7 @@
     max-width: 640px;
   }
   .main__head {
-    background-size: calc(100% - 130px);
+    background-size: 905px;
     background-position: center top;
   }
   .main__head-title {

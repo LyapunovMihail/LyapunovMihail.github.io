@@ -152,6 +152,12 @@
   cursor: pointer;
 }
 
+.main__login-show-pass_open {
+  height: 14px;
+  top: calc(50% - 4px);
+  background: url("../img/show_pass_open.svg") center no-repeat;
+}
+
 .main__login-remember {
   font: 16px/24px 'Geometria';
   color: #7f7f7f;
@@ -161,10 +167,11 @@
   margin: 15px 0 0;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  max-width: 130px;
 }
 
 .main__login-remember:hover {
-  opacity: .6;
+  opacity: .71;
 }
 
 @media (max-width: 729px) {
@@ -294,6 +301,7 @@
 
 .main__social-wrap div:hover {
   background: #000;
+  border-color: #000;
 }
 
 .main__social-wrap div:hover svg path {

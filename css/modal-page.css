@@ -503,7 +503,7 @@
 }
 
 .block-modal__title {
-  font: 30px/30px 'Geometria';
+  font: 30px/42px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
@@ -592,7 +592,7 @@
   border-radius: 4px;
   background: #d6712b;
   margin: 0 0 40px;
-  padding: 15px;
+  padding: 15px 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -644,7 +644,7 @@
 }
 
 .notice-help__sub-title {
-  font: 500 14px/24px 'Geometria';
+  font: 500 14px/19px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
@@ -788,7 +788,10 @@
 
 .change-theme__theme-wrap {
   width: 216px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 0 18px;
+  padding: 0 10px 0 0;
 }
 
 .change-theme__theme-wrap:nth-child(10), .change-theme__theme-wrap:nth-child(20) {
@@ -800,7 +803,7 @@
 }
 
 .change-theme__theme-text {
-  font: 14px/22px 'Geometria';
+  font: 15px/22px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
@@ -812,12 +815,12 @@
 }
 
 .change-theme__theme-text:hover:not(:checked) {
-  opacity: .6;
+  color: #d6712b;
 }
 
 @media (max-width: 729px) {
   .change-theme__theme-text:hover:not(:checked) {
-    opacity: 1;
+    color: #333;
   }
 }
 
@@ -854,7 +857,6 @@
   }
   .change-theme__theme-wrap {
     max-width: 146px;
-    padding: 0 10px 0 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -902,6 +904,9 @@
   }
   .change-theme__theme-wrap:nth-child(10), .change-theme__theme-wrap:nth-child(20) {
     margin: 0 0 10px;
+  }
+  .change-theme__theme-text {
+    font-size: 14px;
   }
 }
 

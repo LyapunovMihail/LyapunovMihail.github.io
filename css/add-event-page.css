@@ -127,7 +127,7 @@
   width: 100vw;
   max-width: none;
   background: #fff;
-  padding: 15px 0 0;
+  padding: 10px 0 0;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
@@ -162,6 +162,7 @@
   max-width: 640px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-appearance: none;
 }
 
 .main__format {
@@ -473,6 +474,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 0 25px;
 }
 
 .main__price-checkbox .price-checkbox__item {
@@ -521,7 +523,7 @@
 }
 
 .main__price-size {
-  margin: 25px 0 30px;
+  margin: 0 0 30px;
 }
 
 .main__price-size .price-size__subtitle {

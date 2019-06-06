@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/event-media.css">
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/nav-event.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
@@ -55,7 +56,7 @@
                     </li>
                     <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
                 </ul>
-                <ul class="head__login">
+                <ul class="head__login no-login">
                     <li class="head__login-item">Войти</li>
                 </ul>
             </nav>
@@ -87,7 +88,7 @@
         </div>
     </header>
 
-    <main class="main" id="aboutEvent">
+    <main class="main">
         <div class="main__container">
             <section class="main__head">
                 <div class="main__head-author">
@@ -136,20 +137,22 @@
                 </div>
             </section>
         </div>
-        <hr class="event-page__line event-page__line_media">
+        <hr class="event-page__line event-page__line_media" data-scrll-media>
         <div class="main__container">
-            <section class="main__description">
-                <div class="main__description-nav-wrap">
-                    <div class="main__description-nav-scrll">
-                        <ul class="main__description-nav">
-                            <li class="active"><a href="#aboutEvent">О событии</a></li>
-                            <li><a href="#priceSize">Стоимость и оплата</a></li>
-                            <li><a href="#detailEvent">Детали</a></li>
-                        </ul>
+            <section class="main__description" id="aboutEvent">
+                <div class="main__description-nav_gradient">
+                    <div class="main__description-nav-wrap">
+                        <div class="main__description-nav-scrll">
+                            <ul class="main__description-nav" data-navigate>
+                                <li class="main__description-nav-item active" data-id="aboutEvent">О событии</li>
+                                <li class="main__description-nav-item" data-id="priceSize">Стоимость и оплата</a></li>
+                                <li class="main__description-nav-item" data-id="detailEvent">Детали</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <section class="main__description-about">
-                    <article class="description__article">
+                    <article class="description__article" data-scrll>
                         <p>Цель вебинара — повысить грамотность собственников и руководителей СМБ, занятых оптимизацией своего бизнеса. На вебинаре мы разберем системный подход к совершенствованию бизнеса, проанализируем несколько кейсов с характерными ошибками и проработаем ваши конкретные запросы в эфире.</p>
                         <p>Допустим, вы решили оптимизировать бизнес. Что вы будете делать? Делегируете или возьметесь сами? Как решите, какой процесс оптимизировать? </p>
                         

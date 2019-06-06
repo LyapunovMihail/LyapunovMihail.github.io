@@ -325,6 +325,7 @@
   .main__nav-content-path h1 {
     font-size: 22px;
     line-height: 22px;
+    margin: 0 18px 0 0;
   }
   .main__list-snippet-item_today {
     -webkit-box-shadow: none;
@@ -536,7 +537,10 @@
 
 @media (max-width: 425px) {
   .main__title {
-    width: calc(100% - 40px);
+    width: 290px;
+  }
+  .main__title-item_span {
+    display: block;
   }
   .main__expected-slider-wrap {
     margin: 0;

@@ -6,12 +6,6 @@
   display: none;
 }
 
-.head__login {
-  -webkit-box-pack: end !important;
-      -ms-flex-pack: end !important;
-          justify-content: flex-end !important;
-}
-
 .main {
   width: 100%;
 }
@@ -373,26 +367,11 @@
   margin: 0;
 }
 
-.main__nav-content-search-item {
-  width: 420px;
-  height: 44px;
-  border: 1px solid #d8d8d8;
-  border-radius: 2px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px 15px;
+.main__nav-content-search-wrap {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
 }
 
-.main__nav-content-search-item:after {
+.main__nav-content-search-wrap:after {
   content: '';
   width: 16px;
   height: 15px;
@@ -404,39 +383,44 @@
           transform: translateY(-50%);
 }
 
-.main__nav-content-search-item:hover {
-  border-color: #7f7f7f;
-}
-
-.main__nav-content-search-item input {
-  width: calc(100% - 30px);
-  border: none;
-  outline: none;
-  background: none;
+.main__nav-content-search-item {
+  width: 420px;
+  height: 44px;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 45px 10px 15px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
   font: 14px/18px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #000;
 }
 
-.main__nav-content-search-item input::-webkit-input-placeholder {
+.main__nav-content-search-item::-webkit-input-placeholder {
   color: #000;
   opacity: .5;
 }
 
-.main__nav-content-search-item input::-moz-placeholder {
+.main__nav-content-search-item::-moz-placeholder {
   color: #000;
   opacity: .5;
 }
 
-.main__nav-content-search-item input::-ms-input-placeholder {
+.main__nav-content-search-item::-ms-input-placeholder {
   color: #000;
   opacity: .5;
 }
 
-.main__nav-content-search-item input::placeholder {
+.main__nav-content-search-item::placeholder {
   color: #000;
   opacity: .5;
+}
+
+.main__nav-content-search-item:hover, .main__nav-content-search-item:focus {
+  border-color: #7f7f7f;
 }
 
 .main__nav-theme {

@@ -127,4 +127,19 @@ $(document).on('click', '[data-format]', function() {
             overflow: ''
         });
     })
-})
+});
+
+// Показать/Скрыть пароль в форме входа
+
+$(document).on('click', '.main__login-show-pass', function() {
+
+    if ($(this).prev().attr('type') == 'password') {
+
+        $(this).prev().attr('type', 'text');
+        $(this).addClass('main__login-show-pass_open');
+    } else {
+
+        $(this).prev().attr('type', 'password');
+        $(this).removeClass('main__login-show-pass_open');
+    }
+});
