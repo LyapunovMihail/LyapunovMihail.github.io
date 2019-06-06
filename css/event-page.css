@@ -694,8 +694,8 @@
           user-select: none;
   background: url("../img/btn-up.svg") center no-repeat #e8e8e8;
   cursor: pointer;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 
 .button-up:hover {

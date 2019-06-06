@@ -40,11 +40,11 @@ var $height = '',
 
     // console.log($height)
 
-$(window).on('scroll resize', function() {
+$(window).on('scroll', function() {
 
     $height = $(window).outerHeight();  // Динамично получаем высоту
-    var $button = $('.main__show-more-wrap').offset().top; // Где 110 это "bottom" элемента
-    var $fixBtn = $('.main__show-more-wrap').children().last().offset().top;
+    var $button = $('.main__show-more-wrap').offset().top; // получ коорд места где должны остановится кнопка
+    var $fixBtn = $('.main__show-more-wrap').children().last().offset().top; // и координаты самой кнопки
 
     if($button < $fixBtn ) {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn');
@@ -53,8 +53,8 @@ $(window).on('scroll resize', function() {
         $('.main__show-more-wrap').children().last().addClass('main__settings-btn_fixed')
         $('.main__show-more-wrap').children().last().removeClass('main__settings-btn');
     }
-    console.log($button)
-    console.log(($height + $(this).scrollTop()))
+    // console.log($button)
+    // console.log(($height + $(this).scrollTop()))
     // console.log($(window).height())
     // console.log(window.screen.availHeight)
 });
@@ -69,12 +69,12 @@ $(document).on('click', '.main__del-wrap', function() {
 
 $(document).on('click', '.about-me__show-more', function() {
 
-    $('.about-me__more-info').css( 'height', 'auto' );
+    $('.about-me__more-info').css('height', 'auto');
 
     $('.about-me__show-more').css('display', 'none');
 })
 
-//Выделение всех тем на странице настроек юзера
+// Выделение всех тем на странице настроек юзера
 
 $(document).on('click', '[data-all]', function() {
 

@@ -11,6 +11,7 @@ $(window).on('scroll', function() {
         $w1069 = 970,
         $w729 = 729;
 
+    stpBtn()
     // console.log($(window).scrollTop())
     // console.log($navScrll)
     // console.log($('body').width())
@@ -195,5 +196,45 @@ function btnUp(el) {
     } else if($(window).scrollTop() < el) {
         
         $('[data-up]').css('display', 'none'); 
+    }
+}
+
+function stpBtn() {
+
+    var $btnStop = $('.main__subscr-button').offset().top + $('.main__subscr-button').height() + 100,
+        $btnStopMedia = $('.main__subscr-button').offset().top + 20,
+        $fixBtn = $('[data-up]').offset().top,
+        $height = $(window).outerHeight();
+
+    if($(window).width() < 730) {
+
+        if ( $(window).scrollTop() + $height > $btnStopMedia) {
+
+            $('[data-up]').css({
+                position: 'absolute',
+                bottom: '110px'
+            })
+        } else { 
+
+            $('[data-up]').css({
+                position: '',
+                bottom: ''
+            })
+        }
+    } else {
+
+        if ( $(window).scrollTop() + $height > $btnStop) {
+
+            $('[data-up]').css({
+                position: 'absolute',
+                bottom: '119px'
+            })
+        } else { 
+
+            $('[data-up]').css({
+                position: '',
+                bottom: ''
+            })
+        }
     }
 }
