@@ -550,9 +550,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   width: 100%;
   max-width: 750px;
   margin: 10px 0 0;
@@ -614,6 +611,7 @@
 }
 
 .main__price-size .price-size__btn-add {
+  margin: 30px 0 0;
   height: 60px;
   border: none;
   background: none;
