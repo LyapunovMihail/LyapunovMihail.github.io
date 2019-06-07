@@ -89,10 +89,33 @@
   color: #666;
 }
 
+.main__acc-form .acc-form__wrap {
+  margin: 0 0 25px;
+}
+
+.main__acc-form .acc-form__wrap .g-error-text {
+  display: block;
+  max-width: 640px;
+  position: relative;
+  padding: 0 0 0 25px;
+  margin: 10px 0 0;
+}
+
+.main__acc-form .acc-form__wrap .g-error-text:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: url("../img/info.svg") center no-repeat #ee003e;
+}
+
 .main__acc-form .input {
   display: block;
   max-width: 640px;
-  margin: 7px 0 25px;
+  margin: 7px 0 0;
   padding: 0 20px;
 }
 
