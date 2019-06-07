@@ -338,3 +338,7 @@
 .main_two .main__paragraf_pass {
   max-width: none;
 }
+
+.main_three {
+  display: none;
+}

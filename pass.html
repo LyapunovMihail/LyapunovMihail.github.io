@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/login-media.css">
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
     <header class="head">
@@ -41,6 +42,23 @@
         <div class="head__container">
             <div class="head__wrap">
                 <p class="main__paragraf main__paragraf_pass">На ваш e-mail отправлена ссылка для изменения пароля.</p>
+            </div>
+        </div>
+    </main>
+    <main class="main main_three">
+        <div class="main__container">
+            <div class="main__wrap-content">
+                <form class="main__login">
+                    <div class="main__login-email main__login-email_pass">
+                        <p class="main__login-descr">Новый пароль</p>
+                        <div class="main__login-input-wrap">
+                            <input type="password" name="password" class="input">
+                            <div class="main__login-show-pass"></div>
+                            <p class="g-error-text"></p>
+                        </div>
+                    </div>
+                    <button class="main__login-btn">Сохранить новый пароль</button>
+                </form>
             </div>
         </div>
     </main>

@@ -1356,6 +1356,7 @@
 }
 
 .main__cnsl-event-title {
+  display: block;
   font: 500 14px/22px 'Geometria';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

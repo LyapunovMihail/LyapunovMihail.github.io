@@ -91,6 +91,11 @@
   .main__acc-title {
     margin-bottom: 20px;
   }
+  .main__acc-form .acc-form__wrap-info {
+    font-size: 12px;
+    line-height: 1.33;
+    margin: 12px 0 0;
+  }
   .main__notice {
     margin-bottom: 42px;
   }

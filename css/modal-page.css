@@ -1711,3 +1711,44 @@
     color: #7f7f7f;
   }
 }
+
+.errors {
+  width: calc(100% - 40px);
+  max-width: 640px;
+}
+
+.errors .g-error-text {
+  display: block;
+  margin: 20px 0 0;
+}
+
+.errors .g-error-text span {
+  white-space: nowrap;
+}
+
+.errors .g-error-email {
+  max-width: 640px;
+  margin: 20px 0 0;
+}
+
+.errors .g-error-email span {
+  white-space: nowrap;
+}
+
+.errors .not-email {
+  font: 14px/20px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #7f7f7f;
+  max-width: 410px;
+  margin: 10px 0 0;
+}
+
+@media (max-width: 729px) {
+  .errors .not-email {
+    font-size: 12px;
+    line-height: 1.33;
+    margin: 12px 0 0;
+  }
+}

@@ -95,6 +95,34 @@ button {
   }
 }
 
+.g-error-email {
+  font: 14px/1.33 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #ee003e;
+  margin: 7px 0 0;
+  padding: 0 0 0 25px;
+  position: relative;
+}
+
+.g-error-email:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: url(../img/info.svg) center no-repeat #ee003e;
+}
+
+@media (max-width: 729px) {
+  .g-error-email {
+    font-size: 12px;
+  }
+}
+
 .g-block {
   display: block;
 }

@@ -94,7 +94,6 @@
 }
 
 .main__acc-form .acc-form__wrap .g-error-text {
-  display: block;
   max-width: 640px;
   position: relative;
   padding: 0 0 0 25px;
@@ -110,6 +109,16 @@
   height: 16px;
   border-radius: 50%;
   background: url("../img/info.svg") center no-repeat #ee003e;
+}
+
+.main__acc-form .acc-form__wrap-info {
+  font: 14px/20px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #7f7f7f;
+  max-width: 410px;
+  margin: 10px 0 0;
 }
 
 .main__acc-form .input {
