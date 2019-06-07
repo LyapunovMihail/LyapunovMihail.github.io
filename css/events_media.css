@@ -584,7 +584,6 @@
   }
   .main__list-snippet {
     width: calc(100% - 40px);
-    max-height: 2114px;
   }
   .main__recomend-wrap .main__recomend-slider {
     padding: 0 20px;
