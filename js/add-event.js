@@ -186,5 +186,11 @@ $(document).on('click', '.main__price-checkbox', function() {
     if ($('.price-checkbox__item').prop('checked')){
 
         $('.main__price-size').css('display', 'none');
-    } else { $('.main__price-size').css('display', ''); }
+        $('.main__price-size').next().css('display', 'none');
+        $('.main__price-wrap_last').css('display', 'none');
+    } else { 
+        $('.main__price-size').css('display', '');
+        $('.main__price-size').next().css('display', '');
+        $('.main__price-wrap_last').css('display', '');
+    }
 })

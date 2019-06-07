@@ -361,11 +361,6 @@
                         <label class="main__theme-descr" for="his">История</label>
                     </div>
                     <div class="main__theme-wrap">
-                        <input class="main__theme-checkbox" id="lit" type="checkbox">
-                        <label for="lit" class="checkbox"><!--  --></label>
-                        <label class="main__theme-descr" for="lit">Литература</label>
-                    </div>
-                    <div class="main__theme-wrap">
                         <input class="main__theme-checkbox" id="sin" type="checkbox">
                         <label for="sin" class="checkbox"><!--  --></label>
                         <label class="main__theme-descr" for="sin">Кино и сериалы</label>
@@ -379,6 +374,11 @@
                         <input class="main__theme-checkbox" id="kult" type="checkbox">
                         <label for="kult" class="checkbox"><!--  --></label>
                         <label class="main__theme-descr" for="kult">Культура и общество</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="lit" type="checkbox">
+                        <label for="lit" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="lit">Литература</label>
                     </div>
                     <div class="main__theme-wrap">
                         <input class="main__theme-checkbox" id="med" type="checkbox">
@@ -533,6 +533,21 @@
                 <div class="main__submit-btn-wrap">
                     <button class="main__submit-btn main__submit-btn_submit">Опубликовать</button>
                     <button class="main__submit-btn main__submit-btn_save">Сохранить черновик</button>
+                </div>
+                <div class="main__cnsl-event">
+                    <button class="main__cnsl-event-title">
+                        Отменить событие
+                    </button>
+                    <p class="main__cnsl-event-info">
+                        Событие будет перемещено в черновики. Все подписчики события получат уведоление о том, что оно отменено.
+                    </p>
+                </div>
+                <div class="main__edit-page">
+                    <button class="g-btn_orange">Сохранить изменения</button>
+                </div>
+                <div class="main__edit-draft">
+                    <button class="g-btn_orange">Сохранить изменения</button>
+                    <button class="g-btn_white">Опубликовать</button>
                 </div>
             </div>
         </div>

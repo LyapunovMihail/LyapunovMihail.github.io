@@ -1,5 +1,6 @@
 @import url(//hello.myfonts.net/count/394097);@media (max-width: 1399px) {
-  .main__title {
+  .main__title,
+  .main__not-found {
     max-width: 970px;
   }
   .main__expected {
@@ -52,7 +53,9 @@
 }
 
 @media (max-width: 1069px) {
-  .main__title {
+  .main__title,
+  .main__not-found,
+  .main__filter {
     max-width: 640px;
   }
   .main__expected {
@@ -78,7 +81,7 @@
             align-items: flex-start;
   }
   .main__nav-content-path {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     position: relative;
   }
   .main__nav-content-path:before {
@@ -86,9 +89,12 @@
     position: absolute;
     width: 200vw;
     left: -250px;
-    bottom: -21px;
+    bottom: -15px;
     height: 1px;
     background-color: #d8d8d8;
+  }
+  .main__nav-content-path .active:before {
+    bottom: -15px;
   }
   .main__nav-content-search {
     width: 100%;
@@ -119,7 +125,7 @@
   }
   .main__nav-theme,
   .main__format,
-  .main__filter {
+  .main__filter-wrapper {
     display: none;
   }
   .main__format {
@@ -191,6 +197,12 @@
     border: none;
     height: 1px;
   }
+  .main__filter {
+    padding: 0;
+  }
+  .main__filter-wrapper_find {
+    padding: 20px 0;
+  }
   .main__list-snippet {
     max-width: 670px;
   }
@@ -216,6 +228,17 @@
     font-size: 20px;
     line-height: 30px;
     margin: 20px 0 25px;
+  }
+  .main__filter {
+    max-width: calc(100% - 92px);
+  }
+  .main__not-found {
+    max-width: calc(100% - 92px);
+    margin-top: 20px;
+  }
+  .main__not-found-info {
+    font-size: 16px;
+    line-height: 1.38;
   }
   .main__expected-title {
     font-size: 11px;
@@ -552,11 +575,16 @@
   .main__format .main__format_modal {
     max-width: calc(100% - 40px);
   }
+  .main__not-found,
+  .main__filter {
+    max-width: calc(100% - 40px);
+  }
   .main__nav-content {
     width: calc(100% - 40px);
   }
   .main__list-snippet {
     width: calc(100% - 40px);
+    max-height: 2114px;
   }
   .main__recomend-wrap .main__recomend-slider {
     padding: 0 20px;

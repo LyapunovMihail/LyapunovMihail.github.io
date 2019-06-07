@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/my_event-page.css">
-    <link rel="stylesheet" href="css/my_event-media.css">
+    <link rel="stylesheet" href="css/404-page.css">
     <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/nav-event.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
@@ -30,13 +30,13 @@
                 </ul>
             </nav>
         </div>
-        <div class="head__account">
+        <div class="head__account head__account_hide">
             <div class="head__container">
                 <ul class="head__point-user">
-                    <li class="head__point-user-item">Мне интересно <span class="head__point-user-counter head__point-user-counter_active">3</span></li> <!--head__point-user-counter_active-->
-                    <li class="head__point-user-item"><a href="user-page.html">Настройки</a></li>
+                    <li class="head__point-user-item">Мне интересно <span class="head__point-user-counter">0</span></li> <!--head__point-user-counter_active-->
+                    <li class="head__point-user-item">Настройки</li>
                 </ul>
-                <ul class="head__point-bloger head__account_hide">
+                <ul class="head__point-bloger">
                     <li class="head__point-bloger-item">Опубликованные<span class="head__point-bloger-counter">0</span></li> <!--head__point-bloger-counter_active-->
                     <li class="head__point-bloger-item">Черновики<span class="head__point-bloger-counter head__point-bloger-counter_active">3</span></li>
                     <li class="head__point-bloger-item">
@@ -46,7 +46,7 @@
             </div>
         </div>
     </header>
-    <header class="head head__mobile">
+    <header class="head head__mobile"> <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
         <div class="head__wrap">
             <nav class="head__container">
                 <ul class="head__navigate">
@@ -54,13 +54,13 @@
                     </li>
                     <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
                 </ul>
-                <ul class="head__login">
+                <ul class="head__login no-login">
                     <li class="head__login-item">Войти</li>
                 </ul>
             </nav>
         </div>
-        <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
-        <div class="head__modal-menu head__mobile-menu_user">
+        
+        <div class="head__modal-menu">
             <div class="head__wrap">
                 <div class="head__container head__modal-container">
                     <ul class="modal-menu__list modal-menu__list_user">
@@ -88,51 +88,13 @@
 
     <main class="main">
         <div class="main__container">
-            <ul class="main__head">
-                <li class="main__head-item"><a href="my_event-page.html">Ожидаемые</a></li>
-                <li class="main__head-item main__head-item_active">Прошедшие</li>
-            </ul>
-        </div>
-        <hr class="main__line">
-        <!-- <div class="main__container">
-            <div class="main__empty">
-                <p class="g-empty-info">У вас нет прошедших событий.</p>
-            </div>
-        </div> -->
-        <div class="main__container">
-            <div class="main__snippet">
-                <div class="main__snippet-past main__snippet-wrap">
-                    <a href="#" class="main__snippet-item">
-                        <div class="snippet-item__head">
-                            <div class="snippet-item__head-avatar"><img src="img/blog2.jpg" alt="avatar"></div>
-                            <div class="snippet-item__head-name">
-                                <p>Оля Панькова</p>
-                                <p>@letiufskjfn</p>
-                            </div>
-                        </div>
-                        <div class="snippet-item__image snippet-item__image_filter">
-                            <img src="img/event5.jpg" alt="превью">
-                        </div>
-                        <div class="snippet-item__descr">
-                            <p class="snippet-item__descr-format curs">Курс</p>
-                            <h3 class="snippet-item__descr-title">
-                                Уход за большими собаками
-                            </h3>
-                            <div class="snippet-item__tags">
-                                <p class="snippet-item__tags-item">Дизайн</p>
-                                <p class="snippet-item__tags-item">Бизнес</p>
-                            </div>
-                        </div>
-                        <div class="snippet-item__time-price snippet-item__time-price_past">
-                            <p class="snippet-item__time-price-item snippet-item__time-price-date">
-                                13 Сентрября, Ср <span>20:00</span>
-                            </p>
-                            <p class="snippet-item__time-price-item snippet-item__time-price-money">
-                                1600 p.
-                            </p>
-                        </div>
-                    </a>
+
+            <div class="main__not-page">
+                <h1 class="main__not-page-title">Страница не найдена.</h1>
+                <div class="main__not-page_wrap">
+                    <p class="g-empty-info">Возможно, вы неправильно написали ссылку, или страница была удалена.</p>
                 </div>
+                <a href="index.html" class="g-link">Перейти на главную</a>
             </div>
         </div>
     </main>

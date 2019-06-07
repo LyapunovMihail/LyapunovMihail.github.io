@@ -84,7 +84,7 @@
     margin-bottom: 20px;
   }
   .main__nav-content-path {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     position: relative;
   }
   .main__nav-content-path:before {
@@ -92,9 +92,12 @@
     position: absolute;
     width: 200vw;
     left: -250px;
-    bottom: -21px;
+    bottom: -15px;
     height: 1px;
     background-color: #d8d8d8;
+  }
+  .main__nav-content-path .active:before {
+    bottom: -15px;
   }
   .main__nav-content-search {
     width: 100%;

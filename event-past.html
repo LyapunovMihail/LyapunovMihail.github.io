@@ -28,17 +28,32 @@
                     <li class="head__navigate-item"><a href="#">Контакты</a></li>
                 </ul>
                 <ul class="head__login">
-                    <li class="head__login-item">Войти</li>
+                    <!-- <li class="head__login-item"><a href="profile-page.html">Войти</a></li> -->
+                    <li class="head__login-item">
+                        <div class="head__login-avatar">
+                            <div class="head__login-avatar-wrap">
+                                <div class="head__login-avatar-text">В</div>
+                            </div>
+                        </div>
+                        <p class="head__login-name">Василиса</p>
+                    </li>
+                    <li class="head__login-item head__login-item_out">
+                        <a href="profile-page.html" class="head__login-item-out">Выйти</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-        <div class="head__account head__account_hide">
+        <div class="head__account">
             <div class="head__container">
                 <ul class="head__point-user">
-                    <li class="head__point-user-item">Мне интересно <span class="head__point-user-counter">0</span></li> <!--head__point-user-counter_active-->
+                    <li class="head__point-user-item">
+                        <a href="my_event-page.html">
+                            Мне интересно <span class="head__point-user-counter head__point-user-counter_active">3</span><!--head__point-user-counter_active-->
+                        </a>
+                    </li> 
                     <li class="head__point-user-item">Настройки</li>
                 </ul>
-                <ul class="head__point-bloger">
+                <ul class="head__point-bloger head__account_hide">
                     <li class="head__point-bloger-item">Опубликованные<span class="head__point-bloger-counter">0</span></li> <!--head__point-bloger-counter_active-->
                     <li class="head__point-bloger-item">Черновики<span class="head__point-bloger-counter head__point-bloger-counter_active">3</span></li>
                     <li class="head__point-bloger-item">
@@ -56,17 +71,26 @@
                     </li>
                     <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
                 </ul>
-                <ul class="head__login no-login">
-                    <li class="head__login-item">Войти</li>
+                <ul class="head__login">
+                    <!-- <li class="head__login-item"><a href="profile-page.html">Войти</a></li> -->
+                    <li class="head__login-item">
+                        <div class="head__login-avatar">
+                            <div class="head__login-avatar-wrap">
+                                <div class="head__login-avatar-text">В</div>
+                            </div>
+                        </div>
+                        <p class="head__login-name">Василиса</p>
+                    </li>
+                    <li class="head__login-item head__login-item_out"><a href="profile-page.html">Выйти</a></li>
                 </ul>
             </nav>
         </div>
-        
-        <div class="head__modal-menu">
+        <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+        <div class="head__modal-menu head__mobile-menu_user">
             <div class="head__wrap">
                 <div class="head__container head__modal-container">
                     <ul class="modal-menu__list modal-menu__list_user">
-                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active">3</span></li>
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active"><sup>3</sup></span></li>
                         <li class="modal-menu__list-item"><a href="#">Настройки</a></li>
                     </ul>
                     <ul class="modal-menu__list modal-menu__list_bloger">
@@ -115,19 +139,19 @@
                 <div class="main__head-other">
                     <div class="head-other__date">
                         <p class="main__head-paragraf">Начало:</p>
-                        <p class="main__head-other-item head-other__date-day">24 декабря, Пн <span>20:00</span></p>
+                        <p class="main__head-other-item head-other__date-day main__head-other-item_past">24 декабря, Пн <span>20:00</span></p>
                     </div>
-                    <div class="head-other__price head-other__price_sale">
-                        <p class="main__head-paragraf">Стоимость:</p>
-                        <span class="main__head-other-item head-other__price-item">22 500 р.</span> 
-                        <span class="main__head-other-item head-other__price-item"> 19 999 р. до 22 сентября</span>
+                    <div class="head-other__price_past">
+                        <p class="head-other__price-item_past">Событие завершено</p>
                     </div>
                     <div class="head-other__subscr">
-                        <button class="head-other__subscr-button">
-                            <div>Это интересно!</div>
-                            <div class="line-button"></div>
-                            <div>
-                                <p>14 223</p>
+                        <button class="g-btn__my-sbscr">
+                            <div class="g-btn__my-sbscr-wrap">
+                                <p class="g-btn__my-sbscr-subscr">148</p>
+                            </div>
+                            <div class="g-btn__my-sbscr-line"></div>
+                            <div class="g-btn__my-sbscr-wrap">
+                                <p class="g-btn__my-sbscr-views">250</p>
                             </div>
                         </button>
                     </div>
@@ -270,22 +294,12 @@
                 </div>
             </div>
         </div>
-        <hr class="event-page__line">
-        <div class="main__container">
-            <div class="main__subscr">
-                <button class="main__subscr-button" data-scrll-btn>
-                    <div>Это интересно!</div>
-                    <div class="line-button"></div>
-                    <div>
-                        <p>14 223</p>
-                    </div>
-                </button>
-                <button class="button-up" data-up></button>
-            </div>
+        <div class="main__btn-wrap">
+            <button class="button-up" data-up-past></button>
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-scrll-past>
         <div class="footer__container">
             <div class="footer__wrap">
                 <ul class="footer__link">

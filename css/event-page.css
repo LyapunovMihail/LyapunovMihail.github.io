@@ -24,6 +24,12 @@
   position: relative;
 }
 
+.main__edit {
+  width: 100%;
+  max-width: 1300px;
+  margin: 25px 0 0;
+}
+
 .main__head {
   width: 100%;
   max-width: 1300px;
@@ -188,6 +194,10 @@
   color: #333333;
 }
 
+.main__head-other-item_past {
+  color: #7f7f7f;
+}
+
 .main__head-other .head-other__date-day span {
   display: inline-block;
   padding: 0 0 0 22px;
@@ -222,6 +232,15 @@
   text-decoration: none;
   color: #d6712b;
   font-weight: 500;
+}
+
+.main__head-other .head-other__price-item_past {
+  font: 500 16px/24px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #d6712b;
+  margin: 7px 0 36px;
 }
 
 .main__head-other .head-other__subscr-button {
@@ -676,6 +695,10 @@
 
 .main__subscr-button:hover {
   background-color: #006154;
+}
+
+.main__btn-wrap {
+  position: relative;
 }
 
 .button-up {

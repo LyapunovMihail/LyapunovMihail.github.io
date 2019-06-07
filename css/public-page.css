@@ -78,6 +78,11 @@
   max-width: 1300px;
 }
 
+.main__empty {
+  width: 100%;
+  max-width: 1300px;
+}
+
 .main__snippet-wrap {
   width: 100%;
   max-width: 1308px;

@@ -796,6 +796,22 @@
   color: #d6712b;
 }
 
+.main__not-found {
+  width: 100%;
+  max-width: 1300px;
+  margin: 30px 0 0;
+}
+
+.main__not-found-info {
+  max-width: 540px;
+  font: 20px/30px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #000;
+  margin: 0;
+}
+
 .main__list-snippet {
   width: 100%;
   max-width: 1330px;

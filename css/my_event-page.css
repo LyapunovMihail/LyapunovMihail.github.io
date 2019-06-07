@@ -78,6 +78,15 @@
   max-width: 1308px;
 }
 
+.main__empty {
+  width: 100%;
+  max-width: 1300px;
+}
+
+.main__empty .g-empty-info {
+  margin: 30px 0 0;
+}
+
 .main__snippet-wrap {
   width: 100%;
   max-width: 1308px;

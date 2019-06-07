@@ -1343,3 +1343,83 @@
     border-color: #d8d8d8;
   }
 }
+
+.main__cnsl-event {
+  margin: 50px 0 0;
+}
+
+.main__cnsl-event-title {
+  font: 500 14px/22px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 9px;
+  position: relative;
+  padding: 0 0 0 29px;
+  color: #666;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.main__cnsl-event-title:hover {
+  opacity: .6;
+}
+
+@media (max-width: 729px) {
+  .main__cnsl-event-title:hover {
+    opacity: 1;
+  }
+}
+
+.main__cnsl-event-title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 19px;
+  height: 19px;
+  background: url("../img/del-ic.svg") no-repeat;
+  background-size: 100%;
+}
+
+.main__cnsl-event-info {
+  max-width: 420px;
+  font: 14px/1.29 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #7f7f7f;
+  margin: 0;
+}
+
+.main__edit-page {
+  margin: 25px 0 0;
+}
+
+.main__edit-page .g-btn_orange {
+  height: 60px;
+  font: 500 20px/22px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+.main__edit-draft {
+  margin: 25px 0 0;
+}
+
+.main__edit-draft .g-btn_orange,
+.main__edit-draft .g-btn_white {
+  height: 60px;
+  font: 500 20px/22px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+.main__edit-draft .g-btn_orange {
+  margin: 0 10px 0 0;
+}

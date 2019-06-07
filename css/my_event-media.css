@@ -1,5 +1,6 @@
 @import url(//hello.myfonts.net/count/394097);@media (max-width: 1399px) {
-  .main__head {
+  .main__head,
+  .main__empty {
     max-width: 970px;
   }
   .main__snippet {
@@ -19,7 +20,8 @@
 }
 
 @media (max-width: 1069px) {
-  .main__head {
+  .main__head,
+  .main__empty {
     max-width: 640px;
   }
   .main__snippet {
@@ -41,7 +43,8 @@
 
 @media (max-width: 729px) {
   .main__head,
-  .main__snippet {
+  .main__snippet,
+  .main__empty {
     max-width: calc(100% - 92px);
   }
   .main__head-item {
@@ -125,7 +128,7 @@
     height: 32px;
   }
   .main__snippet-wrap .main__snippet-item .snippet-item__head-name {
-    width: 80%;
+    width: calc(100% - 39px);
     overflow: hidden;
   }
   .main__show-more-wrap .main__settings-btn, .main__show-more-wrap .main__settings-btn_fixed {
@@ -135,7 +138,8 @@
 
 @media (max-width: 425px) {
   .main__head,
-  .main__snippet {
+  .main__snippet,
+  .main__empty {
     max-width: calc(100% - 40px);
   }
 }

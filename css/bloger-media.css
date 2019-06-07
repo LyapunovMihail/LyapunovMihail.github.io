@@ -40,26 +40,16 @@
 }
 
 @media (max-width: 1069px) {
-  .main__head {
-    max-width: 640px;
-  }
-  .main__about-me {
-    max-width: 640px;
-  }
-  .main__soon-wrap {
+  .main__head,
+  .main__project,
+  .main__about-me,
+  .main__soon-wrap,
+  .main__connect,
+  .main__past-wrap {
     max-width: 640px;
   }
   .main__snippet {
     height: 242px;
-  }
-  .main__project {
-    max-width: 640px;
-  }
-  .main__connect {
-    max-width: 640px;
-  }
-  .main__past-wrap {
-    max-width: 640px;
   }
 }
 
@@ -74,7 +64,7 @@
   .main__head-wrap {
     max-width: none;
     position: relative;
-    padding: 0 0 67px;
+    padding: 0 0 70px;
   }
   .main__head-wrap .main__head-photo {
     width: 80px;
@@ -122,6 +112,19 @@
   }
   .main__head-wrap .main__head-descr .head-descr__subscr:hover {
     background-color: #ff954b;
+  }
+  .main__head-wrap .main__head-descr .g-btn__my-sbscr {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+  }
+  .main__head_bloger-page {
+    margin: 15px 0 25px;
+  }
+  .main__head_bloger-page .g-btn_white {
+    width: 280px;
+    margin: 0 0 15px;
   }
   .main__about-me {
     max-width: calc(100% - 92px);

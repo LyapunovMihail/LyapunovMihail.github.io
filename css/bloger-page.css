@@ -150,6 +150,14 @@
   background-color: #d6712b;
 }
 
+.main__head_bloger-page {
+  margin: 25px 0 51px;
+}
+
+.main__head_bloger-page .g-btn_white {
+  margin: 0 0 33px;
+}
+
 .main__about-me {
   width: 100%;
   max-width: 1300px;

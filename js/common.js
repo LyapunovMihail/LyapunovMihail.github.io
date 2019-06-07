@@ -58,6 +58,16 @@ $(window).on('scroll', function() {
     // console.log($(window).height())
     // console.log(window.screen.availHeight)
 });
+$(document).on('click', '.main__settings-btn_fixed, .main__settings-btn', function() {
+
+    if($width > 1069) {
+        
+        $(window).scrollTop( $('[data-scrll]').offset().top - 20 )
+    } else {
+
+        $(window).scrollTop( $('[data-scrll]').offset().top - 70 )
+    }
+});
 
 // Открытие поля "Удалить аккаунт" на стр юзера/блогера
 

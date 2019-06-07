@@ -11,7 +11,6 @@ $(window).on('scroll', function() {
         $w1069 = 970,
         $w729 = 729;
 
-    stpBtn()
     // console.log($(window).scrollTop())
     // console.log($navScrll)
     // console.log($('body').width())
@@ -20,6 +19,7 @@ $(window).on('scroll', function() {
     if ($('body').width() > 1399) {
         
         btnUp($navScrll)
+        btnUpPast($navScrll)
         if ($heightNav >= $navScrll) {
             w1399($navScrll)
         } else {w1399($navScrll)}
@@ -27,6 +27,7 @@ $(window).on('scroll', function() {
     if ($('body').width() < 1400 && $('body').width() > 1069) {
         
         btnUp($navScrll)
+        btnUpPast($navScrll)
         if ($heightNav >= $navScrll) {
             w1399m($navScrll)
         } else {w1399m($navScrll)}
@@ -34,10 +35,13 @@ $(window).on('scroll', function() {
     if ($('body').width() < 1069) {
         
         btnUp($navScrllMedia)
+        btnUpPast($navScrllMedia)
         if ($heightNav >= $navScrllMedia) {
             w729($navScrllMedia)
         } else {w729($navScrllMedia)}
     }
+    stpBtnPast();
+    // stpBtn();
 });
 
 function w1399(scroll) {
@@ -201,8 +205,8 @@ function btnUp(el) {
 
 function stpBtn() {
 
-    var $btnStop = $('.main__subscr-button').offset().top + $('.main__subscr-button').height() + 100,
-        $btnStopMedia = $('.main__subscr-button').offset().top + 20,
+    var $btnStop = $('[data-scrll-btn]').offset().top + $('[data-scrll-btn]').height() + 100,
+        $btnStopMedia = $('[data-scrll-btn]').offset().top + 20,
         $fixBtn = $('[data-up]').offset().top,
         $height = $(window).outerHeight();
 
@@ -232,6 +236,58 @@ function stpBtn() {
         } else { 
 
             $('[data-up]').css({
+                position: '',
+                bottom: ''
+            })
+        }
+    }
+}
+
+// Остановка кнопки отдельно для стр "Прошедшего события" и стр "Себытие для оргнизатора"
+
+function btnUpPast(el) {
+
+    if ($(window).scrollTop() > el) {
+
+        $('[data-up-past]').css('display', 'block');
+    } else if($(window).scrollTop() < el) {
+        
+        $('[data-up-past]').css('display', 'none'); 
+    }
+}
+
+function stpBtnPast() {
+
+    var $btnStop = $('[data-scrll-past]').offset().top + 100 - 10,
+        $btnStopMedia = $('[data-scrll-past]').offset().top + 50 - 10,
+        $height = $(window).outerHeight();
+
+    if($(window).width() < 730) {
+
+        if ( $(window).scrollTop() + $height > $btnStopMedia) {
+
+            $('[data-up-past]').css({
+                position: 'absolute',
+                bottom: '10px'
+            })
+        } else { 
+
+            $('[data-up-past]').css({
+                position: '',
+                bottom: ''
+            })
+        }
+    } else {
+
+        if ( $(window).scrollTop() + $height > $btnStop) {
+
+            $('[data-up-past]').css({
+                position: 'absolute',
+                bottom: '10px'
+            })
+        } else { 
+
+            $('[data-up-past]').css({
                 position: '',
                 bottom: ''
             })

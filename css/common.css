@@ -99,6 +99,21 @@ button {
   display: block;
 }
 
+.g-empty-info {
+  font: 20px/30px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #000;
+}
+
+@media (max-width: 729px) {
+  .g-empty-info {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+}
+
 .g-link {
   color: #d6712b;
   border-bottom: 1px solid #d8d8d8;
@@ -191,6 +206,97 @@ button {
 
 .g-btn_white:hover {
   opacity: .6;
+}
+
+.g-btn__my-sbscr {
+  width: 180px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  background: transparent;
+  cursor: default;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  font: 500 14px/20px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #7f7f7f;
+}
+
+.g-btn__my-sbscr-wrap {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.g-btn__my-sbscr-subscr, .g-btn__my-sbscr-views {
+  position: relative;
+  margin: 0;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.g-btn__my-sbscr-line {
+  width: 1px;
+  height: 49px;
+  background: #d8d8d8;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.g-btn__my-sbscr-subscr {
+  padding: 0 0 0 22px;
+}
+
+.g-btn__my-sbscr-subscr:before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 16px;
+  top: 2px;
+  left: 0;
+  background: url("../img/follower-grey.svg") center no-repeat;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.g-btn__my-sbscr-views {
+  padding: 0 0 0 26px;
+}
+
+.g-btn__my-sbscr-views:before {
+  width: 18px;
+  height: 11px;
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  background: url("../img/views.svg") center no-repeat;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@media (max-width: 729px) {
+  .g-btn__my-sbscr {
+    width: 280px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .g-textarea_high {
