@@ -32,12 +32,6 @@ $(document).on('click', '.head__navigate-menu', function() {
 var $height = '',
     $width = $(window).width();
 
-// $(window).load( function() {
-
-
-// });
-
-
     // console.log($height)
 
 $(window).on('scroll', function() {

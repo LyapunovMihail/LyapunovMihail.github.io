@@ -452,6 +452,18 @@
   color: #d6712b;
 }
 
+.main__nav-theme-list-item input {
+  display: none;
+}
+
+.main__nav-theme-list-item input:checked + label {
+  color: #d6712b;
+}
+
+.main__nav-theme-list-item label {
+  cursor: pointer;
+}
+
 .main__nav-theme-list-item:first-child {
   margin: 0 35px 0 0;
   font-weight: 500;

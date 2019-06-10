@@ -198,34 +198,92 @@
                         </div>
                         <span>Все темы</span>
                     </li>
-                    <li class="main__nav-theme-list-item">Архитектура</li>
-                    <li class="main__nav-theme-list-item">Авто и транспорт</li>
-                    <li class="main__nav-theme-list-item">Бизнес</li>
-                    <li class="main__nav-theme-list-item">Видео</li>
-                    <li class="main__nav-theme-list-item">Город</li>
-                    <li class="main__nav-theme-list-item">Деньги</li>
-                    <li class="main__nav-theme-list-item">Дети и родители</li>
-                    <li class="main__nav-theme-list-item">Дизайн</li>
-                    <li class="main__nav-theme-list-item">Дом</li>
-                    <li class="main__nav-theme-list-item">Еда и напитки</li>
-                    <li class="main__nav-theme-list-item">Животные</li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="arch">
+                        <label for="arch">Архитектура</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="auto">
+                        <label for="auto">Авто и транспорт</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="bisn">
+                        <label for="bisn">Бизнес</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="video">
+                        <label for="video">Видео</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="city">
+                        <label for="city">Город</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="money">
+                        <label for="money">Деньги</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="child">
+                        <label for="child">Дети и родители</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="disign">
+                        <label for="disign">Дизайн</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="home">
+                        <label for="home">Дом</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="eat">
+                        <label for="eat">Еда и напитки</label>
+                    </li>
+                    <li class="main__nav-theme-list-item">
+                        <input type="radio" name="theme" id="animal">
+                        <label for="animal">Животные</label>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class="main__format">
             <div class="main__container main__format_modal">
                 <p class="main__format-title">Темы</p>
-                <ul class="main__format-list">
+                <div class="main__format-list">
+                    <div>
+                        <input class="main__format-list_input" type="checkbox" name="format" id="live">
+                        <label for="live" class="main__format-list-item">Прямой эфир <span class="format-list-item__count format-list-item__count_live">1</span></label>
+                    </div>
+                    <div>
+                        <input class="main__format-list_input" type="checkbox" name="format" id="lect">
+                        <label for="lect" class="main__format-list-item">Лекция <span class="format-list-item__count format-list-item__count_lect">11</span></label>
+                    </div>
+                    <div>
+                        <input class="main__format-list_input" type="checkbox" name="format" id="master">
+                        <label for="master" class="main__format-list-item">Мастер-класс <span class="format-list-item__count format-list-item__count_mast">21</span></label>
+                    </div>
+                    <div>
+                        <input class="main__format-list_input" type="checkbox" name="format" id="vebin">
+                        <label for="vebin" class="main__format-list-item">Вебинар <span class="format-list-item__count format-list-item__count_vebinar">53</span></label>
+                    </div>
+                    <div>
+                        <input class="main__format-list_input" type="checkbox" name="format" id="intens">
+                        <label for="intens" class="main__format-list-item">Интенсив <span class="format-list-item__count format-list-item__count_intens">9</span></label>
+                    </div>
+                    <div>
+                        <input class="main__format-list_input" type="checkbox" name="format" id="trening">
+                        <label for="trening" class="main__format-list-item">Тренинг <span class="format-list-item__count format-list-item__count_trening">2</span></label>
+                    </div>
+                    <div>
+                        <input class="main__format-list_input" type="checkbox" name="format" id="maraf">
+                        <label for="maraf" class="main__format-list-item">Марафон <span class="format-list-item__count format-list-item__count_marafon">1</span></label>
+                    </div>
+                    <div>
+                        <input class="main__format-list_input" type="checkbox" name="format" id="curs">
+                        <label for="curs" class="main__format-list-item">Курс <span class="format-list-item__count format-list-item__count_curs">105</span></label>
+                    </div>
+
                     <!-- main__format-list-item_filter - Класс, который показывает и красит счетчик статей -->
-                    <li class="main__format-list-item">Прямой эфир <span class="format-list-item__count format-list-item__count_live">1</span></li>
-                    <li class="main__format-list-item">Лекция <span class="format-list-item__count format-list-item__count_lect">11</span></li>
-                    <li class="main__format-list-item">Мастер-класс <span class="format-list-item__count format-list-item__count_mast">21</span></li>
-                    <li class="main__format-list-item">Вебинар <span class="format-list-item__count format-list-item__count_vebinar">53</span></li>
-                    <li class="main__format-list-item">Интенсив <span class="format-list-item__count format-list-item__count_intens">9</span></li>
-                    <li class="main__format-list-item">Тренинг <span class="format-list-item__count format-list-item__count_trening">2</span></li>
-                    <li class="main__format-list-item">Марафон <span class="format-list-item__count format-list-item__count_marafon">1</span></li>
-                    <li class="main__format-list-item">Курс <span class="format-list-item__count format-list-item__count_curs">105</span></li>
-                </ul>
+                </div>
                 <button class="g-btn_orange main__format-btn">Готово</button>
             </div>
         </div>

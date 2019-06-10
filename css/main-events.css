@@ -469,6 +469,18 @@
   color: #d6712b;
 }
 
+.main__nav-theme-list-item input {
+  display: none;
+}
+
+.main__nav-theme-list-item input:checked + label {
+  color: #d6712b;
+}
+
+.main__nav-theme-list-item label {
+  cursor: pointer;
+}
+
 .main__nav-theme-list-item:first-child {
   margin: 0 35px 0 0;
   font-weight: 500;
@@ -479,6 +491,21 @@
 
 .main__nav-theme-list-item:first-child div {
   margin: 0 10px 0 0;
+}
+
+.main__nav-theme-list-item_active {
+  position: relative;
+}
+
+.main__nav-theme-list-item_active:before {
+  content: '';
+  position: absolute;
+  right: -23px;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  background: url("../img/cls-btn.svg") no-repeat;
+  background-size: 100%;
 }
 
 .main__format {
@@ -507,10 +534,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
+}
+
+.main__format-list input {
+  display: none;
+}
+
+.main__format-list .main__format-list_input:checked + .main__format-list-item {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.21);
+          box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.21);
 }
 
 .main__format-list-item {
+  display: block;
   height: 28px;
   border: 1px solid rgba(216, 216, 216, 0.9);
   -webkit-box-sizing: border-box;
@@ -533,6 +570,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .main__format-list-item .format-list-item__count {
