@@ -1,0 +1,211 @@
+.main {
+  padding: 60px 0 0;
+}
+
+.main__head {
+  margin: 0 0 30px;
+}
+
+.main__head-title {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 0 40px;
+}
+
+.main__head-nav {
+  width: 100%;
+  max-width: 1240px;
+}
+
+.main__nav {
+  width: 223px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  font: 500 18px/24px "Museo Sans Cyrl";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #000105;
+  color: rgba(0, 1, 5, 0.7);
+  padding: 0 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 1, 5, 0.3);
+}
+
+.main__nav-item {
+  cursor: pointer;
+}
+
+.main__nav-item_active {
+  color: #000105;
+  position: relative;
+}
+
+.main__nav-item_active:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+  width: 100%;
+  height: 2px;
+  background: #e7490f;
+}
+
+.main__snippet {
+  margin: 0 0 120px;
+}
+
+.main__snippet-wrap {
+  width: 100%;
+  max-width: 1240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.main__snippet-item {
+  width: 287px;
+  margin-bottom: 40px;
+}
+
+.main__snippet-item:not(:nth-child(3n)) {
+  margin: 0 30px 40px 0;
+}
+
+.main__snippet-item:hover .main__snippet-title {
+  color: #e7490f;
+}
+
+.main__snippet-item:first-child, .main__snippet-item:nth-child(6n), .main__snippet-item:nth-child(6n + 1) {
+  width: 606px;
+}
+
+.main__snippet-img {
+  width: 100%;
+  height: 383px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.main__snippet-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main__snippet-img:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+  left: 0;
+  bottom: 0;
+  border-radius: 4px;
+}
+
+.main__snippet-end {
+  min-width: 257px;
+  height: 55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background: #e7490f;
+  opacity: .4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__snippet-end span {
+  font: 16px/24px "Museo Sans Cyrl";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 0 0 0 32px;
+}
+
+.main__snippet-end span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background: url("../img/clock.svg") no-repeat;
+  background-size: 100%;
+}
+
+.main__snippet-descr {
+  margin: 10px 0 0;
+}
+
+.main__snippet-title {
+  font: 500 20px/24px "Museo Sans Cyrl";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #000105;
+  margin: 0 0 10px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.main__snippet-title_stok {
+  position: relative;
+  padding: 0 0 0 33px;
+}
+
+.main__snippet-title_stok:before {
+  content: '';
+  position: absolute;
+  width: 27px;
+  height: 15px;
+  top: 4px;
+  left: 0;
+  background: url("../img/stock-ic.svg") no-repeat;
+}
+
+.main__snippet-text {
+  font: 16px/24px "Museo Sans Cyrl";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #000105;
+  color: rgba(0, 1, 5, 0.8);
+  margin: 0 0 10px;
+}
+
+.main__snippet-date {
+  font: 500 12px/20px "Museo Sans Cyrl";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: rgba(0, 1, 5, 0.6);
+  letter-spacing: .4px;
+}

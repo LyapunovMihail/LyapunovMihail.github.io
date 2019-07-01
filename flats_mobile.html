@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Новотомилино</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/flats-mobile.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/flats.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <section class="header__head">
+                <div class="header__head-sell">
+                    <a href="#" class="g-link_red">Отдел продаж</a>
+                </div>
+                <div class="header__head-logo"></div>
+                <div class="header__head-phone">
+                    <p class="head-phone__paragraf">+7 (495) 137-40-12</p>
+                    <a href="#" class="g-link_red">Заказать звонок</a>
+                </div>
+                <div class="header__head-menu">
+                    <div class="header__head-menu-item"></div>
+                    <div class="header__head-menu-item"></div>
+                    <div class="header__head-menu-item"></div>
+                </div>
+            </section>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-list-item"><a href="#">О ЖК</a></li>
+                    <li class="header__nav-list-item"><a href="#">Расположение</a></li>
+                    <li class="header__nav-list-item"><a href="#">Квартиры</a></li>
+                    <li class="header__nav-list-item"><a href="#">Отделка</a></li>
+                    <li class="header__nav-list-item"><a href="#">Ход строительства</a></li>
+                    <li class="header__nav-list-item"><a href="#">Условия покупки</a></li>
+                    <li class="header__nav-list-item"><a href="#">Новости</a></li>
+                    <li class="header__nav-list-item"><a href="#">Избранное</a></li>
+                </ul>
+
+                <div class="header__nav-footer">
+                    <div class="header__nav-footer-sell">
+                        <a href="#" class="g-link_red">Отдел продаж</a>
+                        <p class="header__nav-footer-phone">+7 (495) 137-40-12</p>
+                    </div>
+                    <div class="header__nav-footer-link">
+                        <ul class="header__nav-footer-list">
+                            <li class="header__nav-footer-list-item">
+                                <a href="#">
+                                    <img src="img/insta_media.svg" alt="i">
+                                </a>
+                            </li>
+                            <li class="header__nav-footer-list-item">
+                                <a href="#">
+                                    <img src="img/vk_media.svg" alt="vk">
+                                </a>
+                            </li>
+                            <li class="header__nav-footer-list-item">
+                                <a href="#">
+                                    <img src="img/fb_media.svg" alt="f">
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="header__nav-footer-descr">Полная версия сайта</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main__filter">
+            <button class="main__filter-show-filter" data-show-filter></button>
+            <button class="main__filter-up" data-btn-up></button>
+
+            <form class="main__filter-options">
+                <div class="filter-options__wrap">
+                    <div class="filter-options__wrap-item filter-options__wrap-room">
+                        <p class="filter-options__title">Комнат</p>
+                        <div class="filter-options__radio-wrap">
+                            <input type="checkbox" name="rooms" id="one" checked>
+                            <label class="filter-options__radio filter-options__radio_one" for="one">1</label>
+                        </div>
+                        <div class="filter-options__radio-wrap">
+                            <input type="checkbox" name="rooms" id="two">
+                            <label class="filter-options__radio filter-options__radio_two" for="two">2</label>
+                        </div>
+                        <div class="filter-options__radio-wrap">
+                            <input type="checkbox" name="rooms" id="three">
+                            <label class="filter-options__radio filter-options__radio_three" for="three">3</label>
+                        </div>
+                        <div class="filter-options__radio-wrap">
+                            <input type="checkbox" name="rooms" id="four">
+                            <label class="filter-options__radio filter-options__radio_three" for="four">4</label>
+                        </div>
+                        <div class="filter-options__radio-wrap">
+                            <input type="checkbox" name="rooms" id="studio">
+                            <label class="filter-options__radio filter-options__radio_stud" for="studio">Студия</label>
+                        </div>
+                    </div>
+                    <div class="filter-options__wrap-item filter-options__wrap-price">
+                        <p class="filter-options__title">Стоимость</p>
+                        <div class="filter-options__range-wrap filter-options__option-wrap">
+                            <p class="filter-options__range-val">3.1 млн Р</p>
+                            <p class="filter-options__range-val">28.8 млн Р</p>
+                            <div class="filter-options__range">
+                                <div class="filter-options__range-line"></div>
+                                <div class="filter-options__range-runner filter-options__range-runner_first"></div>
+                                <div class="filter-options__range-runner filter-options__range-runner_second"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-options__wrap-item filter-options__wrap-square">
+                        <p class="filter-options__title">Площадь, м²</p>
+                        <div class="filter-options__square-wrap filter-options__option-wrap">
+                            <p class="filter-options__square-val">10</p>
+                            <p class="filter-options__square-val">100</p>
+                            <div class="filter-options__range">
+                                <div class="filter-options__range-line"></div>
+                                <div class="filter-options__range-runner filter-options__range-runner_first"></div>
+                                <div class="filter-options__range-runner filter-options__range-runner_second"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-options__wrap-item filter-options__wrap-floor">
+                        <p class="filter-options__title">Этаж</p>
+                        <div class="filter-options__floor-wrap filter-options__option-wrap">
+                            <p class="filter-options__floor-val">1</p>
+                            <p class="filter-options__floor-val">17</p>
+                            <div class="filter-options__range">
+                                <div class="filter-options__range-line"></div>
+                                <div class="filter-options__range-runner filter-options__range-runner_first"></div>
+                                <div class="filter-options__range-runner filter-options__range-runner_second"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-options__wrap-item filter-options__wrap-number">
+                        <p class="filter-options__title">Номер корпуса</p>
+                        <label for="openCorp" class="filter-options__number-sel">
+                            <p>Все корпуса</p>
+                        </label>
+                        <input type="checkbox" name="openM" id="openCorp">
+                        <div class="number-sel__var" data-corpus>
+                            <div class="number-sel__var-wrap">
+                                <div class="number-sel__var-check">
+                                    <input type="checkbox" name="corpus" id="corpusAll" checked data-check>
+                                    <label for="corpusAll" class="g-checkbox"></label>
+                                    <label for="corpusAll" class="number-sel__var-text">Все корпуса</label>
+                                </div>
+                                <div class="number-sel__var-check">
+                                    <input type="checkbox" name="corpus" id="corpusOne" checked data-check>
+                                    <label for="corpusOne" class="g-checkbox"></label>
+                                    <label for="corpusOne" class="number-sel__var-text">Корпус 1</label>
+                                </div>
+                                <div class="number-sel__var-check">
+                                    <input type="checkbox" name="corpus" id="corpusTwo" checked data-check> 
+                                    <label for="corpusTwo" class="g-checkbox"></label>
+                                    <label for="corpusTwo" class="number-sel__var-text">Корпус 2</label>
+                                </div>
+                                <div class="number-sel__var-check">
+                                    <input type="checkbox" name="corpus" id="corpusThree" checked data-check>
+                                    <label for="corpusThree" class="g-checkbox"></label>
+                                    <label for="corpusThree" class="number-sel__var-text">Корпус 3</label>
+                                </div>
+                                <div class="number-sel__var-check">
+                                    <input type="checkbox" name="corpus" id="corpusFour" checked data-check>
+                                    <label for="corpusFour" class="g-checkbox"></label>
+                                    <label for="corpusFour" class="number-sel__var-text">Корпус 4</label>
+                                </div>
+                            </div>
+                            <div class="number-sel__var-wrap">
+                                <svg width="355px" height="94px" viewBox="0 0 355 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Квартиры_адаптив++" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Новотомилино_квартиры_фильтр_выбор-корпуса_1279-768" transform="translate(-353.000000, -271.000000)">
+                                            <g id="Group-20" transform="translate(30.000000, 226.000000)">
+                                                <g id="Group-13-Copy" transform="translate(323.000000, 30.000000)">
+                                                    <g id="Group-12" transform="translate(325.500000, 23.000000) rotate(-15.000000) translate(-325.500000, -23.000000) translate(301.000000, 6.000000)">
+                                                        <g id="Group-11" transform="translate(17.000000, 17.000000) rotate(-270.000000) translate(-17.000000, -17.000000) ">
+                                                            <polygon id="Rectangle-Copy" fill="#767676" opacity="0.601418" transform="translate(17.000000, 17.000000) rotate(-135.000000) translate(-17.000000, -17.000000) " points="5 5 19.1005051 14.8994949 29 29 14.8578644 19.1421356"></polygon>
+                                                            <polygon id="Rectangle" fill="#D5210D" points="17 0 20.0294373 17 17 17"></polygon>
+                                                            <polygon id="Rectangle-Copy-5" fill="#D5210D" transform="translate(15.529437, 8.500000) scale(1, -1) rotate(-180.000000) translate(-15.529437, -8.500000) " points="14.0294373 0 17.0294373 17 14.0294373 17"></polygon>
+                                                        </g>
+                                                        <text id="С" opacity="0.6" transform="translate(41.500000, 17.512748) rotate(-270.000000) translate(-41.500000, -17.512748) " font-family="MuseoSansCyrl-500, Museo Sans Cyrl" font-size="9" font-weight="normal" line-spacing="15" letter-spacing="1" fill="#323232">
+                                                            <tspan x="36.9872521" y="18.0127479">С</tspan>
+                                                        </text>
+                                                    </g>
+                                                    <g id="Group-9" transform="translate(0.000000, 30.238194)">
+                                                        <path d="M16.4765277,0.5 L0.5,0.5 L0.5,56.5 L78.723796,56.5 L78.723796,40.4 L16.4765277,40.4 L16.4765277,0.5 Z" id="Combined-Shape" fill="#E7490F"></path>
+                                                        <text id="Корпус-1" font-family="MuseoSansCyrl-500, Museo Sans Cyrl" font-size="12" font-weight="normal" line-spacing="18" fill="#000105">
+                                                            <tspan x="14" y="73">Корпус 1</tspan>
+                                                        </text>
+                                                        <text id="Корпус-2" font-family="MuseoSansCyrl-500, Museo Sans Cyrl" font-size="12" font-weight="normal" line-spacing="18" fill="#000105">
+                                                            <tspan x="101" y="73">Корпус 2</tspan>
+                                                        </text>
+                                                        <text id="Корпус-3" font-family="MuseoSansCyrl-500, Museo Sans Cyrl" font-size="12" font-weight="normal" line-spacing="18" fill="#000105">
+                                                            <tspan x="192" y="73">Корпус 3</tspan>
+                                                        </text>
+                                                        <text id="Корпус-4" font-family="MuseoSansCyrl-500, Museo Sans Cyrl" font-size="12" font-weight="normal" line-spacing="18" fill="#000105">
+                                                            <tspan x="282" y="73">Корпус 4</tspan>
+                                                        </text>
+                                                        <rect id="Rectangle-Copy-2" fill="#E7490F" x="92.2606232" y="40" width="79.223796" height="17"></rect>
+                                                        <rect id="Rectangle-Copy-3" fill="#E7490F" x="182.515581" y="40" width="79.223796" height="17"></rect>
+                                                        <rect id="Rectangle-Copy-4" fill="#E7490F" x="275" y="40" width="79.223796" height="17"></rect>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-options__wrap filter-options__wrap_space-beetwen">
+                    <div class="filter-options__wrap-contain">
+                        <div class="filter-options__wrap-item filter-options__wrap-checkbox">
+                            <input type="checkbox" name="decoration" id="no">
+                            <label for="no" class="g-checkbox"></label>
+                            <label for="no">Без отделки</label>
+                        </div>
+                        <div class="filter-options__wrap-item filter-options__wrap-checkbox">
+                            <input type="checkbox" name="decoration" id="black">
+                            <label for="black" class="g-checkbox"></label>
+                            <label for="black">Черновая отделка</label>
+                        </div>
+                        <div class="filter-options__wrap-item filter-options__wrap-checkbox">
+                            <input type="checkbox" name="decoration" id="white">
+                            <label for="white" class="g-checkbox"></label>
+                            <label for="white">Чистовая отделка</label>
+                        </div>
+                    </div>
+                    <button class="filter-options__wrap-reset" type="reset">Сбросить фильтры</button>
+                </div>
+            </form>
+            <h1 class="main__filter-title">Подбор квартиры <span>по параметрам</span></h1>
+            <div class="main__filter-result-text">
+                <h1 class="main__filter-subtitle">Найдено 439 квартир</h1>
+    
+                <div class="main__filter-wrap">
+                    <p class="main__filter-wrap-item main__filter-wrap-item_active">По цене</p>
+                    <p class="main__filter-wrap-item">По площади</p>
+                    <p class="main__filter-wrap-item">По этажу</p>
+                </div>
+            </div>
+            <div class="main__filter-result">
+                <div class="filter-result__wrap">
+                    <div class="filter-result__result">
+                        <a href="#" target="_blank" class="filter-result__result-item">
+                            <div class="filter-result__result-item-img">
+                                <img src="img/temp_photo/plan_flats/1-k.svg" alt="flat plan">
+                            </div>
+                            <div class="filter-result__result-item-info">
+                                <p class="filter-result__result-item-room">Студия</p>
+                                <p class="filter-result__result-item-floor">6 этаж</p>
+                                <p class="filter-result__result-item-corp">Корпус 1</p>
+                                <!-- <p class="filter-result__result-item-decor">Черновая отделка</p> -->
+                            </div>
+                            <div class="filter-result__result-item-price">
+                                <p class="filter-result__result-item-squad">34,4 м²</p>
+                                <p>5 205 570 Р</p>
+                                <img src="img/favorite.svg" alt="star">
+                            </div>
+                        </a>
+                        <a href="#" target="_blank" class="filter-result__result-item">
+                            <div class="filter-result__result-item-img">
+                                <img src="img/temp_photo/plan_flats/2-k.svg" alt="flat plan">
+                            </div>
+                            <div class="filter-result__result-item-info">
+                                <p class="filter-result__result-item-room">1 комнатная</p>
+                                <p class="filter-result__result-item-floor">6 этаж</p>
+                                <p class="filter-result__result-item-corp">Корпус 1</p>
+                                <!-- <p class="filter-result__result-item-decor">Черновая отделка</p> -->
+                            </div>
+                            <div class="filter-result__result-item-price">
+                                <p class="filter-result__result-item-squad">34,4 м²</p>
+                                <p>5 205 570 Р</p>
+                                <img src="img/favorite.svg" alt="star">
+                            </div>
+                        </a>
+                        <a href="#" target="_blank" class="filter-result__result-item">
+                            <div class="filter-result__result-item-img">
+                                <img src="img/temp_photo/plan_flats/2-k-b.svg" alt="flat plan">
+                            </div>
+                            <div class="filter-result__result-item-info">
+                                <p class="filter-result__result-item-room">3 комнатная</p>
+                                <p class="filter-result__result-item-floor">6 этаж</p>
+                                <p class="filter-result__result-item-corp">Корпус 1</p>
+                                <!-- <p class="filter-result__result-item-decor">Черновая отделка</p> -->
+                            </div>
+                            <div class="filter-result__result-item-price">
+                                <p class="filter-result__result-item-squad">34,4 м²</p>
+                                <p>5 205 570 Р</p>
+                                <img src="img/favorite.svg" alt="star">
+                            </div>
+                        </a>
+                        <a href="#" target="_blank" class="filter-result__result-item">
+                            <div class="filter-result__result-item-img">
+                                <img src="img/temp_photo/plan_flats/2-k.svg" alt="flat plan">
+                            </div>
+                            <div class="filter-result__result-item-info">
+                                <p class="filter-result__result-item-room">4 комнатная</p>
+                                <p class="filter-result__result-item-floor">6 этаж</p>
+                                <p class="filter-result__result-item-corp">Корпус 1</p>
+                                <!-- <p class="filter-result__result-item-decor">Черновая отделка</p> -->
+                            </div>
+                            <div class="filter-result__result-item-price">
+                                <p class="filter-result__result-item-squad">34,4 м²</p>
+                                <p>5 205 570 Р</p>
+                                <img src="img/favorite.svg" alt="star">
+                            </div>
+                        </a>
+                        <a href="#" target="_blank" class="filter-result__result-item">
+                            <div class="filter-result__result-item-img">
+                                <img src="img/temp_photo/plan_flats/2-k.svg" alt="flat plan">
+                            </div>
+                            <div class="filter-result__result-item-info">
+                                <p class="filter-result__result-item-room">1 комнатная</p>
+                                <p class="filter-result__result-item-floor">6 этаж</p>
+                                <p class="filter-result__result-item-corp">Корпус 1</p>
+                                <!-- <p class="filter-result__result-item-decor">Черновая отделка</p> -->
+                            </div>
+                            <div class="filter-result__result-item-price">
+                                <p class="filter-result__result-item-squad">34,4 м²</p>
+                                <p>5 205 570 Р</p>
+                                <img src="img/favorite.svg" alt="star">
+                            </div>
+                        </a>
+                        <a href="#" target="_blank" class="filter-result__result-item">
+                            <div class="filter-result__result-item-img">
+                                <img src="img/temp_photo/plan_flats/1-k.svg" alt="flat plan">
+                            </div>
+                            <div class="filter-result__result-item-info">
+                                <p class="filter-result__result-item-room">Студия</p>
+                                <p class="filter-result__result-item-floor">6 этаж</p>
+                                <p class="filter-result__result-item-corp">Корпус 1</p>
+                                <!-- <p class="filter-result__result-item-decor">Черновая отделка</p> -->
+                            </div>
+                            <div class="filter-result__result-item-price">
+                                <p class="filter-result__result-item-squad">34,4 м²</p>
+                                <p>5 205 570 Р</p>
+                                <img src="img/favorite.svg" alt="star">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__dev-logo">
+            <a class="footer__dev-logo-link" href="#">
+                <img src="img/3red_new.svg" alt="3red-logo">
+            </a>
+        </div>
+        <a href="#" class="footer__web">
+            <img class="footer__web-img" src="img/watch-ic.svg" alt="live watch">
+            <span href="#" class="footer__web-link">Трансляция с веб-камеры</span>
+        </a>
+        <div class="footer__social">
+            <ul class="footer__social-list">
+                <li class="footer__social-list-item">Мы в соцсетях:</li>
+                <li class="footer__social-list-item">
+                    <a href="#">
+                        <img src="img/insta-ic.svg" alt="i">
+                    </a>
+                </li>
+                <li class="footer__social-list-item">
+                    <a href="#">
+                        <img src="img/facebook-ic.svg" alt="f">
+                    </a>
+                </li>
+                <li class="footer__social-list-item">
+                    <a href="#">
+                        <img src="img/vk-ic.svg" alt="vk">
+                    </a>
+                </li>
+                <li class="footer__social-list-item">
+                    <a href="#">
+                        <img src="img/background-ic.svg" alt="b">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

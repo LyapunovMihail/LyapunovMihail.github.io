@@ -1,0 +1,194 @@
+@media (max-width: 1279px) {
+  .main {
+    margin: 0 0 19px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .main__container_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .main__container_end {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .main__container_start {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .main__head-wrap {
+    width: 100%;
+    max-width: 708px;
+  }
+  .main__head-wrap:not(:last-child) {
+    margin: 0;
+  }
+  .main__head-title {
+    margin: 50px 0 20px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .main__head-descr {
+    margin: 5px 0 0;
+  }
+  .main__choice-type-contain {
+    max-width: 708px;
+  }
+  .main__filter {
+    width: calc(50% + 15px);
+    padding: 0 30px 0 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .main__filter-range, .main__filter-checkbox {
+    width: 339px;
+    display: block;
+  }
+  .main__filter-item {
+    width: 100%;
+  }
+  .main__filter-item:not(:last-child) {
+    margin: 0;
+  }
+  .main__filter-checkbox input:checked + .g-checkbox {
+    background-size: 77%;
+  }
+  .main__filter-checkbox-item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main__filter-checkbox-item .g-checkbox {
+    width: 30px;
+    height: 30px;
+  }
+  .main__filter-checkbox-item:not(:last-child) {
+    margin: 0 0 25px;
+  }
+  .main__filter-checkbox-text {
+    font: 500 18px/24px "Museo Sans Cyrl";
+  }
+  .main__result {
+    width: calc(50% - 15px);
+    margin: 0;
+  }
+  .main__result-progrmm {
+    grid-template: repeat(5, auto)/repeat(1, 339px);
+    gap: 10px;
+    width: auto;
+  }
+  .main__result-title {
+    margin: 0 0 20px;
+  }
+  .main__result-item {
+    display: block;
+    padding: 20px;
+  }
+  .main__result-item .result-item__logo {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main__result-item .result-item__logo-text {
+    display: block;
+  }
+  .main__result-item .result-item__descr {
+    width: 100%;
+  }
+  .main__result-item .result-item__descr-bank {
+    display: none;
+  }
+  .main__result-item .result-item__descr-item:not(:last-child) {
+    margin: 0 30px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    margin: 0 0 50px;
+    display: block;
+  }
+  .main__container_end, .main__container_start {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main__head-title {
+    margin: 30px 0 20px;
+  }
+  .main__head-descr {
+    display: none;
+  }
+  .main__head-wrap {
+    max-width: calc(100% - 30px);
+  }
+  .main__choice-type-contain {
+    max-width: calc(100% - 30px);
+  }
+  .main__filter {
+    width: 100%;
+    padding: 0;
+  }
+  .main__filter-range, .main__filter-checkbox {
+    width: 100%;
+    max-width: calc(100% - 30px);
+  }
+  .main__filter-show-result {
+    display: block;
+  }
+  .main__result {
+    display: none;
+    position: fixed;
+    overflow-y: scroll;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 30px 0 26px;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #fff;
+    z-index: 10;
+    left: 0;
+    top: 0;
+  }
+  .main__result-cls {
+    display: block;
+  }
+  .main__result-title {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 50px 0 0;
+  }
+  .main__result-contain {
+    width: calc(100% - 30px);
+  }
+  .main__result-progrmm {
+    grid-template: repeat(5, auto)/repeat(1, 100%);
+  }
+  .main .main__result-item .result-item__descr-info {
+    width: 100%;
+    max-width: 410px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main .main__result-item .result-item__descr-item:not(:last-child) {
+    margin: 0;
+  }
+}
