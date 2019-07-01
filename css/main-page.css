@@ -143,7 +143,6 @@
   background-position: center;
   -webkit-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
-  z-index: 30;
 }
 
 .main__preview-slider-item-img img {
