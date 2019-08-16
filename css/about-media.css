@@ -1,0 +1,113 @@
+@import url(//hello.myfonts.net/count/394097);@media (max-width: 1399px) {
+  .main__head-container,
+  .main__about {
+    max-width: 805px;
+  }
+}
+
+@media (max-width: 1069px) {
+  .head__navigate-item:nth-child(2) {
+    opacity: 1;
+  }
+  .main__head-container,
+  .main__about {
+    max-width: 640px;
+  }
+  .main__head {
+    background-size: 905px;
+    background-position: center top;
+  }
+  .main__head-title {
+    margin: 70px 0 93px;
+  }
+  .main__about-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .main__about-list .about-list__list-wrap {
+    width: 100%;
+    margin: 0 0 60px;
+  }
+  .main__about-list .about-list__list-wrap:last-child {
+    margin: 0;
+  }
+  .main__about-list .about-list__list {
+    max-width: none;
+  }
+  .main__about-list .about-list__list-item:last-child {
+    margin: 0;
+  }
+}
+
+@media (max-width: 729px) {
+  .main__head-container,
+  .main__about {
+    max-width: calc(100% - 92px);
+  }
+  .main__head {
+    background-size: 730px;
+  }
+  .main__head-container {
+    height: 494px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main__head-title {
+    font-size: 26px;
+    line-height: 32px;
+    max-width: 490px;
+    margin: 0;
+  }
+  .main__about {
+    margin: 40px 0 0;
+  }
+  .main__about-list .about-list__list-wrap {
+    margin-bottom: 30px;
+  }
+  .main__about-list .about-list__list-title,
+  .main__about-list .about-list__list {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .main__about-list .about-list__list-title {
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+  .main__about-list .about-list__list {
+    max-width: 490px;
+  }
+  .main__about-list .about-list__list-item {
+    margin-bottom: 10px;
+  }
+  .main__about-content {
+    margin: 50px 0 61px;
+  }
+  .main__about-content .about-content__title {
+    font-size: 26px;
+    line-height: 32px;
+    max-width: 490px;
+    margin: 0 0 33px;
+  }
+  .main__about-content p {
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 490px;
+    margin: 0 0 10px;
+  }
+  .main__about-content p:nth-child(3) {
+    margin: 0 0 23px;
+  }
+}
+
+@media (max-width: 425px) {
+  .main__head-container,
+  .main__about {
+    max-width: calc(100% - 40px);
+  }
+}

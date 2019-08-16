@@ -1,0 +1,118 @@
+@import url(//hello.myfonts.net/count/394097);.main {
+  width: 100%;
+}
+
+.main__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__personal {
+  width: 100%;
+  max-width: 1300px;
+  margin: 45px 0 150px;
+}
+
+.main__personal * {
+  max-width: 970px;
+}
+
+.main__personal-title {
+  font: 40px/52px "TTDrugsCondensed-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 50px;
+}
+
+.main__personal-paragraf {
+  font: 20px/32px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #333;
+  margin: 0 0 30px;
+}
+
+.main__personal-point {
+  font: 20px/32px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #333;
+  margin: 0 0 45px;
+  padding: 0;
+}
+
+.main__personal-point-item:not(:first-child) {
+  margin: 30px 0 0;
+}
+
+.main__personal-point_level-one {
+  list-style-type: none;
+  counter-reset: li;
+}
+
+.main__personal-point_level-one li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
+.main__personal-point_level-two {
+  padding: 0 0 0 20px;
+  list-style-type: none;
+  counter-reset: li;
+}
+
+.main__personal-point_level-two li {
+  margin: 10px 0 0;
+}
+
+.main__personal-point_level-two li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
+.main__personal-point_level-three {
+  padding: 0 0 0 20px;
+  list-style-type: none;
+  counter-reset: li;
+}
+
+.main__personal-point_level-three li {
+  margin: 10px 0 0;
+}
+
+.main__personal-point_level-three li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
+.main__personal-point_level-circle {
+  padding: 0 0 0 40px;
+  list-style-type: disc;
+  counter-reset: li;
+}
+
+.main__personal-point_level-circle li:before {
+  counter-increment: none;
+  content: '';
+}
+
+.main__personal-info {
+  font: 20px/32px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #333;
+  margin: 0;
+}
+
+.main__personal-info:not(:last-child) {
+  margin: 0 0 15px;
+}

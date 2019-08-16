@@ -1,9 +1,0 @@
-@media (max-width: 1279px) {
-  .main__filter {
-    height: calc(100% - 67px - 50px);
-    top: 67px;
-  }
-  .main__filter-btn {
-    display: none;
-  }
-}
