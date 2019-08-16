@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogpoint</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/modal_event.css">
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/nav-event.js"></script>
+</head>
+<body>
+    <header class="head">
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item"><a href="index.html"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></a></li>
+                    <li class="head__navigate-item"><a href="about-page.html">О проекте</a></li>
+                    <li class="head__navigate-item"><a href="how-add-page.html">Как добавить событие?</a></li>
+                    <li class="head__navigate-item"><a href="contacts-page.html">Контакты</a></li>
+                </ul>
+                <ul class="head__login no-login"> <!-- no-login login -->
+                    <li class="head__login-item"><a href="user-page.html">Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="head__account head__account_hide">
+            <div class="head__container">
+                <ul class="head__point-user">
+                    <li class="head__point-user-item">Мне интересно <span class="head__point-user-counter">0</span></li> <!--head__point-user-counter_active-->
+                    <li class="head__point-user-item">Настройки</li>
+                </ul>
+                <ul class="head__point-bloger">
+                    <li class="head__point-bloger-item">Опубликованные<span class="head__point-bloger-counter">0</span></li> <!--head__point-bloger-counter_active-->
+                    <li class="head__point-bloger-item">Черновики<span class="head__point-bloger-counter head__point-bloger-counter_active">3</span></li>
+                    <li class="head__point-bloger-item">
+                        <button>Добавить событие</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <header class="head head__mobile"> 
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item head__navigate-menu">
+                    </li>
+                    <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
+                </ul>
+                <ul class="head__login no-login">
+                    <li class="head__login-item"><a href="user-page.html">Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+        <div class="head__modal-menu">
+            <div class="head__wrap">
+                <div class="head__container head__modal-container">
+                    <ul class="modal-menu__list modal-menu__list_user">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active">3</span></li>
+                        <li class="modal-menu__list-item"><a href="#">Настройки</a></li>
+                    </ul>
+                    <ul class="modal-menu__list modal-menu__list_bloger">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active"><sup>2</sup></span></li>
+                        <li class="modal-menu__list-item">Настройки</li>
+                        <li class="modal-menu__list-item">Опубликованные <span><sup>0</sup></span></li>
+                        <li class="modal-menu__list-item">Черновики <span class="modal-menu__list-item_active"><sup>3</sup></span></li>
+                        <li class="modal-menu__list-item">
+                            <button>Добавить событие</button>
+                        </li>
+                    </ul>
+                    <ul class="modal-menu__list_no-login modal-menu__list">
+                        <li class="modal-menu__list-item"><a href="about-page.html">О проекте</a></li>
+                        <li class="modal-menu__list-item"><a href="how-add-page.html">Как добавить событие?</a></li>
+                        <li class="modal-menu__list-item"><a href="contacts-page.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="modal">
+        <div class="modal__window modal-event">
+            <button class="modal__window-btn"></button>
+
+            <div class="modal-event__container">
+                <section class="modal-event__head">
+                    <div class="modal-event__head-author">
+                        <p class="modal-event__head-paragraf">Организатор:</p>
+                        <div class="modal-event__head-author-wrap">
+                            <div class="head-author__avatar">
+                                <img src="img/blog1.jpg" alt="avatar">
+                            </div>
+                            <div class="head-author__descr">
+                                <p class="head-author__descr-item head-author__descr-name">Александр Александровскийч</p>
+                                <p class="head-author__descr-item head-author__descr-insta">@jfiedgo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-event__head-title">
+                        <p class="head-title__format lect">Лекция</p>
+                        <h1 class="head-title__title">170 самых популярных фразовых глаголов в английском языке</h1>
+                        <div class="head-title__tags">
+                            <p class="head-title__tags-item">Дизайн</p>
+                            <p class="head-title__tags-item">Бизнес</p>
+                            <p class="head-title__tags-item">Реклама и маркетинг</p>
+                        </div>
+                    </div>
+                    <div class="modal-event__head-other">
+                        <div class="head-other__date">
+                            <p class="modal-event__head-paragraf">Начало:</p>
+                            <p class="modal-event__head-other-item head-other__date-day">24 декабря, Пн <span>20:00</span></p>
+                        </div>
+                        <div class="head-other__price head-other__price_sale">
+                            <p class="modal-event__head-paragraf">Стоимость:</p>
+                            <span class="modal-event__head-other-item head-other__price-item">22 500 р.</span> 
+                            <span class="modal-event__head-other-item head-other__price-item"> 19 999 р. до 22 сентября</span>
+                        </div>
+                        <div class="head-other__subscr">
+                            <button class="head-other__subscr-button">
+                                <div>Это интересно!</div>
+                                <div class="line-button"></div>
+                                <div>
+                                    <p>14 223</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-event__head-img">
+                        <img src="img/event-one.jpg" alt="logo">
+                    </div>
+                </section>
+            </div>
+            <hr class="event-page__line event-page__line_media" data-scrll-media>
+            <div class="modal-event__container">
+                <section class="modal-event__description" id="aboutEvent">
+                    <div class="modal-event__description-nav_gradient">
+                        <div class="modal-event__description-nav-wrap">
+                            <div class="modal-event__description-nav-scrll">
+                                <ul class="modal-event__description-nav" data-navigate>
+                                    <li class="modal-event__description-nav-item active" data-id="aboutEvent">О событии</li>
+                                    <li class="modal-event__description-nav-item" data-id="priceSize">Стоимость и оплата</a></li>
+                                    <li class="modal-event__description-nav-item" data-id="detailEvent">Детали</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="modal-event__description-about">
+                        <article class="description__article" data-scrll>
+                            <p>Цель вебинара — повысить грамотность собственников и руководителей СМБ, занятых оптимизацией своего бизнеса. На вебинаре мы разберем системный подход к совершенствованию бизнеса, проанализируем несколько кейсов с характерными ошибками и проработаем ваши конкретные запросы в эфире.</p>
+                            <p>Допустим, вы решили оптимизировать бизнес. Что вы будете делать? Делегируете или возьметесь сами? Как решите, какой процесс оптимизировать? </p>
+                            
+                            <div class="article__list">
+                                <h1 class="article__list-title">Вы узнаете:</h1>
+                                <ul class="article__list-wrap">
+                                    <li class="article__list-item">Как оптимизировать бизнес при помощи линейки и циркуля без ПО, методологий и прочей зауми</li>
+                                    <li class="article__list-item">Методологии и их совместимость</li>
+                                    <li class="article__list-item">Сначала порежем зарплаты топам… STOP! О приоритетах в оптимизации</li>
+                                    <li class="article__list-item">Почему разваливается машина оптимизации? </li>
+                                    <li class="article__list-item">Надо удерживать в фокусе четыре измерения: собственники, персонал, системы, культура</li>
+                                    <li class="article__list-item">Как избежать саботажа и сохранить ценные кадры? Вовлечение персонала</li>
+                                </ul>
+                            </div>
+    
+                            <div class="article__list">
+                                <h1 class="article__list-title">Вы получите:</h1>
+                                <ul class="article__list-wrap">
+                                    <li class="article__list-item">креативный процесс с огромными рисками, которым приходится заниматься бесплатно</li>
+                                    <li class="article__list-item">простую и удобную рамку для анализа своей траектории развития</li>
+                                    <li class="article__list-item">несколько кейсов с характерными ошибками</li>
+                                </ul>
+                            </div>
+    
+                            <div class="article__path">
+                                <h1 class="article__path-title">Кому будет интересно:</h1>
+                                <p class="article__path-paragraf">
+                                    Бизнесменам, стартаперам и молодым предпринимателям
+                                </p>
+                            </div>
+    
+                            <div class="article__path">
+                                <h1 class="article__path-title">Как будет проходить:</h1>
+                                <p class="article__path-paragraf">
+                                    3 лекции по 2 часа
+                                </p>
+                            </div>
+    
+                            <div class="article__path">
+                                <h1 class="article__path-title">Из чего состоит:</h1>
+                                <p class="article__path-paragraf">
+                                    Совершенствование бизнеса — многофакторный креативный процесс с огромными рисками, которым приходится заниматься бесплатно и параллельно с основной работой. 
+                                </p>
+                            </div>
+                        </article>
+                    </section>
+                </section>
+            </div>
+
+            <hr class="event-page__line">
+            <div class="modal-event__container">
+                <div class="modal-event__price">
+                    <h1 class="modal-event__price-title" id="priceSize">Стоимость и оплата</h1>
+                    
+                    <div class="modal-event__price-list">
+                        <h1 class="modal-event__price-list-title">Цена:</h1>
+                        <ul class="modal-event__price-list-wrap">
+                            <li class="modal-event__price-list-item modal-event__price-list-item_sale">
+                                <span>1500 р.</span> 
+                                <span> 1000 р. до 20 декабря</span>
+                            </li>
+                            <li class="modal-event__price-list-item">2000 р. с проверкой домашнего задания</li>
+                            <li class="modal-event__price-list-item">2500 р. с проверкой домашнего задания и личными консультациями</li>
+                            <li class="modal-event__price-list-item">При оплате до 20 декабря всем участникам — бесплатные обучающие материалы</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-event__price-path">
+                        <h1 class="modal-event__price-path-title">Как оплатить:</h1>
+                        <p class="modal-event__price-path-paragraf">
+                            Карта Сбербанк по номеру телефона 8(904)444-39-57
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="event-page__line">
+            <div class="modal-event__container">
+                <div class="modal-event__details">
+                    <h1 class="modal-event__details-title" id="detailEvent">Детали</h1>
+
+                    <div class="modal-event__details-path">
+                        <h1 class="modal-event__details-path-title">Дата и время:</h1>
+                        <p class="modal-event__details-path-paragraf">
+                            24 декабря, Пн <span class="modal-event__details-path-paragraf_span">20:00</span>
+                        </p>
+                    </div>
+
+                    <div class="modal-event__details-path">
+                        <h1 class="modal-event__details-path-title">Продолжительность:</h1>
+                        <p class="modal-event__details-path-paragraf">
+                            2 ч
+                        </p>
+                    </div>
+
+                    <div class="modal-event__details-path">
+                        <h1 class="modal-event__details-path-title">Место проведения:</h1>
+                        <p class="modal-event__details-path-paragraf">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras feugiat ligula sit amet <a href="#" class="g-link">bhiufdsbhciv.ru/lection</a>
+                        </p>
+                    </div>
+
+                    <div class="modal-event__details-list">
+                        <h1 class="modal-event__details-list-title">Для связи:</h1>
+                        <ul class="modal-event__details-list-wrap">
+                            <li class="modal-event__details-list-item">+7 (999) 788-89-90</li>
+                            <li class="modal-event__details-list-item">email@gmail.com</li>
+                            <li class="modal-event__details-list-item">
+                                <span class="whatsapp">Whatsapp</span> 
+                                <a href="#" class="g-link">wa.me/hello</a>
+                            </li>
+                            <li class="modal-event__details-list-item">
+                                <span class="telegramm">Telegram</span> 
+                                <a href="#" class="g-link">teleg.run/hello</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="event-page__line">
+            <div class="modal-event__container">
+                <div class="modal-event__subscr">
+                    <button class="modal-event__subscr-button" data-scrll-btn>
+                        <div>Это интересно!</div>
+                        <div class="line-button"></div>
+                        <div>
+                            <p>14 223</p>
+                        </div>
+                    </button>
+                    <button class="button-up" data-up></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogpoint</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/profile-page.css">
+    <link rel="stylesheet" href="css/profile-media.css">
+    <link rel="stylesheet" href="css/add-event-page.css">
+    <link rel="stylesheet" href="css/add-event-media.css">
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/blank-blog.js"></script>
+    <script src="js/add-event_modal.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <header class="head">
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item"><a href="index.html"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></a></li>
+                    <li class="head__navigate-item"><a href="#">О проекте</a></li>
+                    <li class="head__navigate-item"><a href="#">Как добавить событие?</a></li>
+                    <li class="head__navigate-item"><a href="#">Контакты</a></li>
+                </ul>
+                <ul class="head__login">
+                    <!-- <li class="head__login-item">Войти</li> -->
+                    <li class="head__login-item">
+                        <div class="head__login-avatar head__login-avatar_blog">
+                            <img src="img/blog2.jpg" alt="miniPhoto">
+                        </div>
+                        <p class="head__login-name">Василиса</p>
+                    </li>
+                    <li class="head__login-item head__login-item_out">Выйти</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="head__account"> <!-- head__account_hide  скрывает авторизованную часть -->
+            <div class="head__container">
+                <ul class="head__point-user">
+                    <li class="head__point-user-item">
+                        <a href="my_event-page.html">
+                            Мне интересно <span class="head__point-user-counter head__point-user-counter_active">3</span><!--head__point-user-counter_active-->
+                        </a>
+                    </li> 
+                    <li class="head__point-user-item">Настройки</li>
+                </ul>
+                <ul class="head__point-bloger">
+                    <li class="head__point-bloger-item"><a href="public-page.html">Опубликованные<span class="head__point-bloger-counter">0</span></a></li> <!--head__point-bloger-counter_active-->
+                    <li class="head__point-bloger-item">Черновики<span class="head__point-bloger-counter head__point-bloger-counter_active">3</span></li>
+                    <li class="head__point-bloger-item">
+                        <button><a href="add-event-page.html">Добавить событие</a></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <header class="head head__mobile"> 
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item head__navigate-menu">
+                    </li>
+                    <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
+                </ul>
+                <ul class="head__login">
+                    <!-- <li class="head__login-item">Войти</li> -->
+                    <li class="head__login-item">
+                        <div class="head__login-avatar head__login-avatar_blog">
+                            <img src="img/blog2.jpg" alt="miniPhoto">
+                        </div>
+                        <p class="head__login-name">Василиса</p>
+                    </li>
+                    <li class="head__login-item head__login-item_out">Выйти</li>
+                </ul>
+            </nav>
+        </div>
+        <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+        <div class="head__modal-menu head__mobile-menu_bloger">
+            <div class="head__wrap">
+                <div class="head__container head__modal-container">
+                    <ul class="modal-menu__list modal-menu__list_user">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active">3</span></li>
+                        <li class="modal-menu__list-item"><a href="#">Настройки</a></li>
+                    </ul>
+                    <ul class="modal-menu__list modal-menu__list_bloger">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active"><sup>2</sup></span></li>
+                        <li class="modal-menu__list-item">Настройки</li>
+                        <li class="modal-menu__list-item"><a href="public-page.html">Опубликованные <span><sup>0</sup></span></a></li>
+                        <li class="modal-menu__list-item"><a href="draft-page.html">Черновики <span class="modal-menu__list-item_active"><sup>3</sup></span></a></li>
+                        <li class="modal-menu__list-item">
+                            <button><a href="add-event-page.html">Добавить событие</a></button>
+                        </li>
+                    </ul>
+                    <ul class="modal-menu__list_no-login modal-menu__list">
+                        <li class="modal-menu__list-item"><a href="#">О проекте</a></li>
+                        <li class="modal-menu__list-item"><a href="#">Как добавить событие?</a></li>
+                        <li class="modal-menu__list-item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <ul class="main__head">
+                <li class="main__head-title active">Профиль</li>
+                <li class="main__head-title"><a href="blog-pref.html">Настройки</a></li>
+            </ul>
+        </div>
+        <hr class="main__line">
+        <div class="main__container">
+            <div class="main__face">
+                <div class="main__face-item main__face-descr">
+                    <div class="face-descr__photo">
+                        <label for="changePhoto" class="face-descr__photo-wrap">
+                            <img src="img/blog2.jpg" alt="avatar">
+                        </label>
+                        <input type="file" name="photo" id="changePhoto" accept="image/jpeg">
+                        <label for="changePhoto" class="face-descr__photo-change"></label>
+                    </div>
+                    <div class="face-descr__name">
+                        <h1 class="face-descr__name-item face-descr__name-title">Василиса Константинопольская</h1>
+                        <a class="face-descr__name-item face-descr__name-insta" href="#" target="_blank">kirg_vasilisa_111</a>
+                        <button class="face-descr__name-item face-descr__name-btn">Привязать другой Instagram</button>
+                    </div>
+                </div>
+                <div class="main__face-item main__face-subscr">
+                    <button class="face-subscr__btn">
+                        <div class="face-subscr__btn-wrap">
+                            <p class="face-subscr__btn-subscr">148</p>
+                        </div>
+                        <div class="face-subscr__btn-line"></div>
+                        <div class="face-subscr__btn-wrap">
+                            <p class="face-subscr__btn-views">250</p>
+                        </div>
+                    </button>
+                    <a href="bloger-page.html" class="face-subscr__my-page">Моя страница на Blogpoint</a>
+                </div>
+            </div>
+        </div>
+        <hr class="main__line" data-scrll-media>
+        <div class="main__container">
+            <div class="main__content-nav_gradient">
+                <div class="main__content-nav-wrap">
+                    <!-- <div class="main__content-nav_gradient-left"></div> -->
+                    <div class="main__content-nav-scrll">
+                        <ul class="main__content-nav" data-navigate>
+                            <li class="main__content-nav-item main__content-nav-item_active" data-id="commonInfo">Общая информация</li>
+                            <li class="main__content-nav-item" data-id="aboutYou">Расскажите о себе</li>
+                            <li class="main__content-nav-item" data-id="myProject">Проекты, каналы, соцсети</li>
+                            <li class="main__content-nav-item" data-id="ConnectMe">Для связи</li>
+                            <li class="main__content-nav-item" data-id="myTheme">Темы блога</li>
+                        </ul> 
+                    </div>
+                    <!-- <div class="main__content-nav_gradient-right"></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="main__container">
+            <div class="main__common">
+                <h1 class="main__common-title" id="commonInfo" data-scrll>Общая информация</h1>
+
+                <div class="main__common-item">
+                    <label class="main__common-text" for="name">Ваше имя или название<span> *</span></label>
+                    <input type="text" id="name" class="main__common-name" value="Василиса Константинопольская" required>
+                </div>
+                <div class="main__common-item">
+                    <label class="main__common-text" for="name">Ник в Instagram<span> *</span></label>
+                    <input type="text" id="name" class="main__common-name" value="kirg_vasilisa_111" required>
+                </div>
+                <div class="main__common-item main__common-item_sex">
+                    <span class="main__common-text main__common-text_sex" for="#">Пол</span>
+                    <div class="main__common-radio-wrap">
+                        <div class="main__common-radio">
+                            <input type="radio" id="male" name="sex" value="male" class="main__common-sex" required>
+                            <label for="male" class="radio"></label>
+                            <label class="main__common-radio-male" for="male">Мужской</label>
+                        </div>
+                        <div class="main__common-radio">
+                            <input type="radio" id="female" name="sex" value="female" class="main__common-sex" checked>
+                            <label for="female" class="radio"></label>
+                            <label class="main__common-radio-female" for="female">Женский</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__common-item">
+                    <label class="main__common-text" for="spec">Специальность<span> *</span></label>
+                    <textarea id="spec" class="main__common-spec" placeholder="Психолог, психотерапевт..." required>Блогер, бизнесмен, Android developer on Java, организатор и куратор он-лайн школы программистов</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="main__container">
+            <div class="main__about">
+                <h1 class="main__about-title" id="aboutYou">Расскажите о себе</h1>
+
+                <div class="main__about-info-wrap">
+                    <p class="main__about-info">О себе</p>
+                    <button class="main__about-btn main__about-btn_pref"></button>
+                    <button class="main__about-btn main__about-btn_link"></button>
+                </div>
+                <textarea class="main__about-messg" maxlength="150" id="about" placeholder="Этот текст будет виден на странице. Максимум 150 знаков. "></textarea>
+                <div class="main__about-info-wrap main__about-more">
+                    <p class="main__about-info">Подробнее о себе</p>
+                    <button class="main__about-btn main__about-btn_pref"></button>
+                    <button class="main__about-btn main__about-btn_link"></button>
+                </div>
+                <textarea class="main__about-messg" maxlength="2000" id="about2" placeholder="Этот текст будет раскрываться по клику. Максимум 2000 знаков."></textarea>
+            </div>
+        </div>
+        <div class="main__container">
+            <div class="main__project">
+                <h1 class="main__project-title" id="myProject">Мои проекты, каналы и соцсети</h1>
+
+                <p class="main__project-info">
+                    Прикрепите сюда ссылки на свои проекты, блоги, страницы, каналы, если они есть.
+                </p>
+                <div class="main__project-item">
+                    <button class="main__project-del-btn"></button>
+                    <div class="project-item__wrap project-item__title-wrap">
+                        <label for="projectTitle">Заголовок</label>
+                        <textarea type="text" id="projectTitle" class="g-textarea_high">Мой канал на Youtube о здоровом образе жизни</textarea>
+                    </div>
+                    <div class="project-item__wrap project-item__link-wrap">
+                        <label for="projectLink">Ссылка</label>
+                        <textarea type="text" id="projectLink" class="g-textarea_high">https://www.youtube.com/msfpjgdifjjsgjdf</textarea>
+                    </div>
+                </div>
+                <div class="main__project-item">
+                    <button class="main__project-del-btn"></button>
+                    <div class="project-item__wrap project-item__title-wrap">
+                        <label for="projectTitle">Заголовок</label>
+                        <textarea type="text" id="projectTitle2" class="g-textarea_high">Моя страница VK</textarea>
+                    </div>
+                    <div class="project-item__wrap project-item__link-wrap">
+                        <label for="projectLink">Ссылка</label>
+                        <textarea type="text" id="projectLink2" class="g-textarea_high">https://www.vk.com/msfpjgdifjjsgjdf</textarea>
+                    </div>
+                </div>
+
+                <button class="main__project-add-btn">Добавить еще</button>
+            </div>
+        </div>
+        <div class="main__container">
+            <div class="main__contact">
+                <h1 class="main__contact-title" id="ConnectMe">Для связи</h1>
+                <div class="main__contact-item">
+                    <label class="main__contact-text" for="name">Телефон</label>
+                    <input type="text" id="name" class="main__contact-name" value="+7 (___) ___-__-__">
+                </div>
+                <div class="main__contact-item">
+                    <label class="main__contact-text" for="name">E-mail</label>
+                    <input type="text" id="name" class="main__contact-name">
+                </div>
+
+                <p class="main__contact-info">Нажмите на иконку мессенджера, чтобы добавить его.</p>
+
+                <div class="main__contact-messng">
+                    <div class="main__contact-messng-item">
+                        <p class="telegramm">Telegram</p>
+                    </div>
+                    <div class="main__contact-messng-item">
+                        <p class="skype">Skype</p>
+                    </div>
+                    <div class="main__contact-messng-item">
+                        <p class="whatsapp">Whatsapp</p>
+                    </div>
+                    <div class="main__contact-messng-item">
+                        <p class="viber">Viber</p>
+                    </div>
+                </div>
+                <div class="main__contact-input">
+                    <div class="main__contact-input-item main__contact-telegr">
+                        <label class="main__contact-text" for="telegr">Telegram</label>
+                        <input id="telegr" type="text" class="main__contact-entr">
+                        <button class="main__contact-cls"></button>
+                    </div>
+                    <div class="main__contact-input-item main__contact-skype">
+                        <label class="main__contact-text" for="skype">Skype</label>
+                        <input id="skype" type="text" class="main__contact-entr">
+                        <button class="main__contact-cls"></button>
+                    </div>
+                    <div class="main__contact-input-item main__contact-whatsapp">
+                        <label class="main__contact-text" for="whatsapp">Whatsapp</label>
+                        <input id="whatsapp" type="text" class="main__contact-entr">
+                        <button class="main__contact-cls"></button>
+                    </div>
+                    <div class="main__contact-input-item main__contact-viber">
+                        <label class="main__contact-text" for="viber">Viber</label>
+                        <input id="viber" type="text" class="main__contact-entr">
+                        <button class="main__contact-cls"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__container">
+            <div class="main__theme">
+                <h1 class="main__theme-title" id="myTheme">Темы вашего блога</h1>
+                <p class="main__theme-info">Отметьте темы вашего блога (можно отметить не больше трех тем).<span> *</span></p>
+
+                <div class="main__theme-item">
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="arh" type="checkbox">
+                        <label for="arh" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="arh">Архитектура</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="aut" type="checkbox">
+                        <label for="aut" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="aut">Авто и транспорт</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="bis" type="checkbox">
+                        <label for="bis" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="bis">Бизнес</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="vid" type="checkbox">
+                        <label for="vid" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="vid">Видео</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="city" type="checkbox">
+                        <label for="city" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="city">Город</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="money" type="checkbox">
+                        <label for="money" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="money">Деньги</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="child" type="checkbox">
+                        <label for="child" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="child">Дети и родители</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="dis" type="checkbox">
+                        <label for="dis" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="dis">Дизайн</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="house" type="checkbox">
+                        <label for="house" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="house">Дом</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="food" type="checkbox">
+                        <label for="food" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="food">Еда и напитки</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="anim" type="checkbox">
+                        <label for="anim" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="anim">Животные</label>
+                    </div>
+                <!-- 2 -->
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="zog" type="checkbox">
+                        <label for="zog" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="zog">ЗОЖ</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="eng" type="checkbox">
+                        <label for="eng" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="eng">Иностранные языки</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="int" type="checkbox">
+                        <label for="int" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="int">Интерьер</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="isk" type="checkbox">
+                        <label for="isk" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="isk">Искусство</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="his" type="checkbox">
+                        <label for="his" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="his">История</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="sin" type="checkbox">
+                        <label for="sin" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="sin">Кино и сериалы</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="beut" type="checkbox">
+                        <label for="beut" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="beut">Красота</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="kult" type="checkbox">
+                        <label for="kult" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="kult">Культура и общество</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="lit" type="checkbox">
+                        <label for="lit" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="lit">Литература</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="med" type="checkbox">
+                        <label for="med" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="med">Медицина</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="mist" type="checkbox">
+                        <label for="mist" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="mist">Мистика и эзотерика</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="mod" type="checkbox">
+                        <label for="mod" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="mod">Мода и стиль</label>
+                    </div>
+                <!-- 3 -->
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="mus" type="checkbox">
+                        <label for="mus" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="mus">Музыка</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="sic" type="checkbox">
+                        <label for="sic" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="sic">Наука</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="obr" type="checkbox">
+                        <label for="obr" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="obr">Образование</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="love" type="checkbox">
+                        <label for="love" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="love">Отношения</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="copy" type="checkbox">
+                        <label for="copy" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="copy">Писательство и копирайтинг</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="buy" type="checkbox">
+                        <label for="buy" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="buy">Покупки</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="pol" type="checkbox">
+                        <label for="pol" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="pol">Политика</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="prav" type="checkbox">
+                        <label for="prav" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="prav">Право</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="psi" type="checkbox">
+                        <label for="psi" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="psi">Психология</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="way" type="checkbox">
+                        <label for="way" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="way">Путешествия</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="work" type="checkbox">
+                        <label for="work" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="work">Работа</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="radio" type="checkbox">
+                        <label for="radio" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="radio">Радио и телевидение</label>
+                    </div>
+                <!-- 4 -->
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="raz" type="checkbox">
+                        <label for="raz" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="raz">Развлечения</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="ras" type="checkbox">
+                        <label for="ras" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="ras">Растения</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="rek" type="checkbox">
+                        <label for="rek" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="rek">Реклама и маркетинг</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="sam" type="checkbox">
+                        <label for="sam" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="sam">Саморазвитие</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="soc" type="checkbox">
+                        <label for="soc" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="soc">Соцсети и медиа</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="sport" type="checkbox">
+                        <label for="sport" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="sport">Спорт</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="dance" type="checkbox">
+                        <label for="dance" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="dance">Танцы</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="tvo" type="checkbox">
+                        <label for="tvo" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="tvo">Творчество</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="teat" type="checkbox">
+                        <label for="teat" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="teat">Театр</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="tec" type="checkbox">
+                        <label for="tec" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="tec">Техника</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="tech" type="checkbox">
+                        <label for="tech" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="tech">Технологии</label>
+                    </div>
+                    <div class="main__theme-wrap">
+                        <input class="main__theme-checkbox" id="photo" type="checkbox">
+                        <label for="photo" class="checkbox"><!--  --></label>
+                        <label class="main__theme-descr" for="photo">Фотография</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__wrap">
+                <ul class="footer__link">
+                    <li class="footer__link-item">© Blogpoint, 2019</li>
+                    <li class="footer__link-item"><a href="#">Правила ресурса</a></li>
+                    <li class="footer__link-item"><a href="#">Политика конфиденциальности</a></li>
+                    <li class="footer__link-item"><a href="#">Контакты</a></li>
+                    <li class="footer__link-item"><a href="#">blogpoint</a></li>
+                    <li>
+                        <a href="#" class="footer__background-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="18" viewBox="0 0 100 18">
+                                <defs>
+                                    <path id="a" d="M0 18h99.707V0H0z"/>
+                                </defs>
+                                <g fill="none" fill-rule="evenodd" opacity=".795">
+                                    <path fill="#666" d="M5.227 11.67c1.33 0 2.412-1.312 2.412-2.817 0-1.561-1.081-2.816-2.412-2.816S2.816 7.292 2.816 8.853c0 1.505 1.08 2.817 2.41 2.817zM2.816 0v5.44c1.003-1.1 2.276-1.447 3.163-1.447 2.489 0 4.475 2.238 4.475 4.86 0 2.644-2.006 4.861-4.475 4.861-.887 0-2.16-.346-3.163-1.447v1.236H0V0h2.816zM16.42 10.474c0-.752-.656-1.234-1.273-1.234a1.21 1.21 0 0 0-1.234 1.195c0 .599.463 1.235 1.234 1.235.713 0 1.273-.501 1.273-1.196zm-4.456-5.979a7.434 7.434 0 0 1 2.759-.502c2.41 0 4.513.887 4.513 3.8v5.71H16.42v-.81c-.617.636-1.466 1.022-2.218 1.022-1.562 0-3.105-1.428-3.105-3.203 0-1.833 1.408-3.318 3.124-3.318.81 0 1.543.271 2.2.888.057-2.006-1.737-2.025-2.257-2.025-.887 0-1.485.116-2.2.386V4.495zM26.872 6.501c-.502-.29-.984-.463-1.524-.463-1.544 0-2.527 1.06-2.527 2.893 0 1.466.733 2.74 2.45 2.74.54 0 1.061-.116 1.601-.386l1.1 1.659c-.83.405-1.95.77-2.991.77-1.736 0-4.976-1.002-4.976-4.763 0-2.817 1.755-4.958 4.976-4.958 1.505 0 2.431.52 2.99.868L26.872 6.5zM28.63 4.184h2.816v4.053l2.566-4.032h2.932L33.78 8.16l3.491 5.342h-2.913l-1.986-3.586-.926 1.079v2.507H28.63zM48.504 4.205h2.814V5.69c.618-1.427 1.931-1.679 2.644-1.697v2.141c-1.292.038-2.218.83-2.644 1.813v5.556h-2.814V4.205zM58.787 11.67c1.331 0 2.392-1.293 2.392-2.817 0-1.58-1.06-2.816-2.392-2.816-1.35 0-2.412 1.255-2.412 2.816 0 1.505 1.043 2.817 2.412 2.817m0-7.677c2.816 0 5.208 2.161 5.208 4.86 0 2.701-2.392 4.861-5.208 4.861-2.854 0-5.226-2.18-5.226-4.86 0-2.682 2.372-4.86 5.226-4.86M73.14 13.503h-2.816v-1.1c-.521.772-1.332 1.311-2.508 1.311-2.912 0-3.01-2.584-3.01-3.915V4.204h2.818V9.51c0 .81.038 2.16 1.292 2.16 1.06 0 1.408-.675 1.408-1.774V4.204h2.815v9.299zM74.742 4.205h2.814v1.12c.832-1.236 2.123-1.332 2.489-1.332 1.487 0 3.03.772 3.03 3.936v5.574h-2.816V8.217c0-1.64-.367-2.18-1.293-2.18-1.39 0-1.41.966-1.41 2.489v4.977h-2.814V4.205zM89.114 6.037c-1.333 0-2.413 1.255-2.413 2.816 0 1.505 1.08 2.817 2.413 2.817 1.33 0 2.41-1.312 2.41-2.817 0-1.561-1.08-2.816-2.41-2.816zm2.41 6.23c-1.003 1.1-2.275 1.447-3.163 1.447-2.468 0-4.475-2.217-4.475-4.86 0-2.623 1.986-4.86 4.475-4.86.888 0 2.16.346 3.163 1.446V0h2.816v13.503h-2.816v-1.235z"/>
+                                    <mask id="b" fill="#fff">
+                                        <use xlink:href="#a"/>
+                                    </mask>
+                                    <path fill="#666" d="M95.766 13.514h3.94v-2.59h-3.94zM41.73 11.67c-1.33 0-2.411-1.312-2.411-2.817 0-1.561 1.08-2.816 2.412-2.816 1.33 0 2.41 1.255 2.41 2.816 0 1.505-1.08 2.817-2.41 2.817zm5.227-7.465h-2.815V5.44c-1.004-1.1-2.276-1.447-3.164-1.447-2.488 0-4.474 2.238-4.474 4.86 0 2.644 2.006 4.861 4.474 4.861.888 0 2.16-.346 3.164-1.447 0 0 .002.605 0 .807l-.002.087c0 1.482-.86 2.596-2.548 2.596-.986 0-2.147-.227-2.992-.977l-1.288 1.828C38.49 17.5 40.286 18 41.817 18c3.115 0 5.144-1.59 5.144-5.073l-.004-8.722z" mask="url(#b)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <form action="#" class="form__add-event">
+        <div class="head-add">
+            <div class="head-add__container">
+                <div class="head-add__wrap">
+                    <div class="head-add__logo">
+                        <h1 class="head-add__logo-title">Новое событие</h1>
+                        <a class="head-add__logo-cls-btn" href="profile-page.html"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-event" data-scrll-media-modal>
+            <div class="add-event__container">
+                <div class="add-event__content-nav_gradient" >
+                    <div class="add-event__content-nav-wrap">
+                        <div class="add-event__content-nav-scrll">
+                            <ul class="add-event__content-nav" data-navigate-modal>
+                                <li class="add-event__content-nav-item add-event__content-nav-item_active" data-id-modal="nameModal">Название и формат</li>
+                                <li class="add-event__content-nav-item" data-id-modal="aboutModal">О событии</li>
+                                <li class="add-event__content-nav-item" data-id-modal="priceModal">Стоимость и оплата</li>
+                                <li class="add-event__content-nav-item" data-id-modal="detailModal">Детали</li>
+                                <li class="add-event__content-nav-item" data-id-modal="connectModal">Для связи</li>
+                                <li class="add-event__content-nav-item" data-id-modal="themeModal">Темы события</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-event__container">
+                <div class="add-event__format" data-scrll-modal>
+                    <h1 class="add-event__format-title" id="nameModal">Название и формат</h1>
+                    <p class="add-event__format-subtitle">Выберите формат события<span> *</span></p>
+
+                    <div class="add-event__format-event">
+                        <div class="format-event__item-wrap">
+                            <input type="radio" name="format" id="live" class="format-event__item_hide">
+                            <label for="live" class="format-event__item">Прямой эфир</label>
+                        </div>
+                        <div class="format-event__item-wrap">
+                            <input type="radio" name="format" id="lect" class="format-event__item_hide">
+                            <label for="lect" class="format-event__item">Лекция</label>
+                        </div>
+                        <div class="format-event__item-wrap">
+                            <input type="radio" name="format" id="mastClass" class="format-event__item_hide">
+                            <label for="mastClass" class="format-event__item">Мастер-класс</label>
+                        </div>
+                        <div class="format-event__item-wrap">
+                            <input type="radio" name="format" id="vbinar" class="format-event__item_hide">
+                            <label for="vbinar" class="format-event__item">Вебинар</label>
+                        </div>
+                        <div class="format-event__item-wrap">
+                            <input type="radio" name="format" id="intens" class="format-event__item_hide">
+                            <label for="intens" class="format-event__item">Интенсив</label>
+                        </div>
+                        <div class="format-event__item-wrap">
+                            <input type="radio" name="format" id="trening" class="format-event__item_hide">
+                            <label for="trening" class="format-event__item">Тренинг</label>
+                        </div>
+                        <div class="format-event__item-wrap">
+                            <input type="radio" name="format" id="marafon" class="format-event__item_hide">
+                            <label for="marafon" class="format-event__item">Марафон</label>
+                        </div>
+                        <div class="format-event__item-wrap">
+                            <input type="radio" name="format" id="curc" class="format-event__item_hide">
+                            <label for="curc" class="format-event__item">Курс</label>
+                        </div>
+                    </div>
+
+                    <div class="add-event__format-name">
+                        <label for="nameEvent" class="add-event__format-subtitle">Введите название события<span> *</span></label>
+                        <input type="text" id="nameEvent" class="add-event__format-event-name">
+                        <p class="g-error-text">Заполните это поле.</p>
+                    </div>
+
+                    <div class="add-event__format-image">
+                        <p class="add-event__format-subtitle">Загрузите изображение<span> *</span></p>
+                        <p class="add-event__format-descr">Файл jpg с соотношением сторон 4:3, вес не более 1 МБ</p>
+                        <div class="add-event__format-image_wrap-file">
+                            <div class="add-event__format-image_wrap-img">
+                                <img src="img/snippet-item-1.jpg" alt="download">
+                            </div>
+                            <input type="file" name="chageImg" id="changeImg" class="format-image__change-img" accept="image/jpeg">
+                            <label for="changeImg" class="format-image__change-btn">Выбрать</label>
+                            <label for="changeImg" class="format-image__change-btn_change"></label>
+                        </div>
+                        <p class="g-error-text">Загрузите изображение для события.</p>
+                    </div>
+                </div>
+
+                <div class="add-event__about">
+                    <h1 class="add-event__about-title" id="aboutModal">О событии</h1>
+
+                    <div class="add-event__about-wrap">
+                        <p class="add-event__about-subtitle">Описание события<span> *</span></p>
+                        <textarea name="about" id="about" class="g-textarea_high"></textarea>
+                        <button class="add-event__about-btn add-event__about-bullit"></button>
+                        <button class="add-event__about-btn add-event__about-link"></button>
+                        <p class="g-error-text">Заполните это поле.</p>
+                    </div>
+                    <div class="add-event__about-wrap">
+                        <p class="add-event__about-subtitle">Что узнают участники</p>
+                        <textarea name="about" id="about" class="add-event__about-entr" placeholder="Кратко перечислите знания, которые дает мероприятие"></textarea>
+                        <button class="add-event__about-btn add-event__about-bullit"></button>
+                        <button class="add-event__about-btn add-event__about-link"></button>
+                    </div>
+                    <div class="add-event__about-wrap">
+                        <p class="add-event__about-subtitle">Что получат участники</p>
+                        <textarea name="about" id="about" class="add-event__about-entr" placeholder="Доступ к материалам, пособия"></textarea>
+                        <button class="add-event__about-btn add-event__about-bullit"></button>
+                        <button class="add-event__about-btn add-event__about-link"></button>
+                    </div>
+                    <div class="add-event__about-wrap">
+                        <p class="add-event__about-subtitle">Кому будет интересно</p>
+                        <textarea name="about" id="about" class="add-event__about-entr"></textarea>
+                        <button class="add-event__about-btn add-event__about-bullit"></button>
+                        <button class="add-event__about-btn add-event__about-link"></button>
+                    </div>
+                    <div class="add-event__about-wrap">
+                        <p class="add-event__about-subtitle">Как будет проходить</p>
+                        <textarea name="about" id="about" class="add-event__about-entr" placeholder="Как организован доступ к материалам и общению с куратором"></textarea>
+                        <button class="add-event__about-btn add-event__about-bullit"></button>
+                        <button class="add-event__about-btn add-event__about-link"></button>
+                    </div>
+                    <div class="add-event__about-wrap add-event__about-wrap_last">
+                        <p class="add-event__about-subtitle">Из чего состоит</p>
+                        <textarea name="about" id="about" class="add-event__about-entr" placeholder="Какие события входят в состав, сколько, тема, ведущий..."></textarea>
+                        <button class="add-event__about-btn add-event__about-bullit"></button>
+                        <button class="add-event__about-btn add-event__about-link"></button>
+                    </div>
+                </div>
+
+                <div class="add-event__price">
+                    <h1 class="add-event__price-title" id="priceModal">Стоимость и оплата</h1>
+
+                    <div class="add-event__price-checkbox">
+                        <input type="checkbox" name="free" class="price-checkbox__item" id="free">
+                        <label for="free" class="checkbox"></label>
+                        <label for="free" class="price-checkbox__descr">Бесплатно</label>
+                    </div>
+
+                    <div class="add-event__price-size">
+                        <div class="price-size__wrap">
+                            <div class="price-size__entr-wrap">
+                                <label for="price" class="add-event__price-subtitle">Цена<span> *</span></label>
+                                <input type="text" name="price" id="price" class="price-size__entr" placeholder="Цена или вилка цен">
+                                <p class="g-error-text">Заполните это поле.</p>
+                            </div>
+                            <button class="price-size__btn-add">Добавить скидку</button>
+                            <div class="price-size__sale-wrap">
+                                <label for="price" class="price-size__subtitle">Цена со скидкой</label>
+                                <input type="text" name="sale" id="sale" class="price-size__sale">
+                            </div>
+                            <div class="price-size__date-wrap">
+                                <label for="price" class="price-size__subtitle">Период действия скидки</label>
+                                <div class="price-size__date-input-wrap price-size__date-input-wrap_active">
+                                    <input type="text" class="price-size__date">
+                                    
+                                    <secction class="modal-calendar modal-calendar_add-event">
+                                        <div class="modal-calendar__info">
+                                            <p class="modal-calendar__info-paragraf">
+                                                Скидка будет действовать до полуночи выбранного дня
+                                            </p>
+                                        </div>
+                                        <div class="modal-calendar__wrap">
+                                            <div class="modal-calendar__container">
+                                                <div class="modal-calendar__change-month">
+                                                    <div class="modal-calendar__prev-btn"></div>
+                                
+                                                    <div class="modal-calendar__change-month_hide">
+                                                        <ul class="change-month__list">
+                                                            <li class="change-month__list-item">Январь</li>
+                                                            <li class="change-month__list-item">Февраль</li>
+                                                            <li class="change-month__list-item">Март</li>
+                                                            <li class="change-month__list-item">Апрель</li>
+                                                            <li class="change-month__list-item">Май</li>
+                                                            <li class="change-month__list-item">Июнь</li>
+                                                            <li class="change-month__list-item">Июль</li>
+                                                            <li class="change-month__list-item">Август</li>
+                                                            <li class="change-month__list-item">Сентябрь</li>
+                                                            <li class="change-month__list-item">Октябрь</li>
+                                                            <li class="change-month__list-item">Ноябрь</li>
+                                                            <li class="change-month__list-item">Декабрь</li>
+                                                        </ul>
+                                                    </div>
+                                
+                                                    <div class="modal-calendar__next-btn"></div>
+                                                </div>
+                                                <div class="modal-calendar__change-day">
+                                                    <ul class="change-day__week">
+                                                        <li class="change-day__week-item">Пн</li>
+                                                        <li class="change-day__week-item">Вт</li>
+                                                        <li class="change-day__week-item">Ср</li>
+                                                        <li class="change-day__week-item">Чт</li>
+                                                        <li class="change-day__week-item">Пт</li>
+                                                        <li class="change-day__week-item">Сб</li>
+                                                        <li class="change-day__week-item">Вс</li>
+                                                    </ul>
+                                                    <ul class="change-day__day">
+                                                        <li class="change-day__day-item change-day__day_past"><span>1</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>2</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>3</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>4</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>5</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>6</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>7</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>8</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>9</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>10</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>11</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>12</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>13</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>14</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>15</span></li>
+                                                        <li class="change-day__day-item change-day__day_past"><span>16</span></li>
+                                                        <li class="change-day__day-item"><span>17</span></li>
+                                                        <li class="change-day__day-item"><span>18</span></li>
+                                                        <li class="change-day__day-item"><span>19</span></li>
+                                                        <li class="change-day__day-item"><span>20</span></li>
+                                                        <li class="change-day__day-item"><span>21</span></li>
+                                                        <li class="change-day__day-item"><span>22</span></li>
+                                                        <li class="change-day__day-item"><span>23</span></li>
+                                                        <li class="change-day__day-item"><span>24</span></li>
+                                                        <li class="change-day__day-item"><span>25</span></li>
+                                                        <li class="change-day__day-item"><span>26</span></li>
+                                                        <li class="change-day__day-item"><span>27</span></li>
+                                                        <li class="change-day__day-item"><span>28</span></li>
+                                                        <li class="change-day__day-item"><span>29</span></li>
+                                                        <li class="change-day__day-item"><span>30</span></li>
+                                                        <li class="change-day__day-item"><span>31</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </secction>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="add-event__price-wrap">
+                        <p class="add-event__price-subtitle">Дополнительные условия</p>
+                        <textarea name="about" id="about" class="add-event__price-entr" placeholder="Например, цена с учетом проверки домашнего задания"></textarea>
+                        <button class="add-event__price-btn add-event__price-bullit"></button>
+                        <button class="add-event__price-btn add-event__price-link"></button>
+                    </div>
+                    <div class="add-event__price-wrap">
+                        <p class="add-event__price-subtitle">Бонус участникам</p>
+                        <textarea name="about" id="about" class="add-event__price-entr"></textarea>
+                        <button class="add-event__price-btn add-event__price-bullit"></button>
+                        <button class="add-event__price-btn add-event__price-link"></button>
+                    </div>
+                    <div class="add-event__price-wrap add-event__price-wrap_last">
+                        <p class="add-event__price-subtitle">Как оплатить<span> *</span></p>
+                        <textarea name="about" id="about" class="add-event__price-entr"></textarea>
+                        <button class="add-event__price-btn add-event__price-bullit"></button>
+                        <button class="add-event__price-btn add-event__price-link"></button>
+                        <p class="g-error-text">Заполните это поле.</p>
+                    </div>
+                </div>
+
+                <div class="add-event__detail">
+                    <h1 class="add-event__detail-title" id="detailModal">Детали</h1>
+
+                    <div class="add-event__detail-wrap">
+                        <div class="add-event__detail-date">
+                            <label for="date" class="add-event__detail-subtitle detail-date__descr">Дата<span> *</span></label>
+                            <div class="detail-date__input-wrap">
+                                <input type="text" class="detail-date__input detail-date__input_date detail-date__input_date_active">
+
+                                <secction class="modal-calendar modal-calendar_add-event">
+                                    <div class="modal-calendar__wrap">
+                                        <div class="modal-calendar__container">
+                                            <div class="modal-calendar__change-month">
+                                                <div class="modal-calendar__prev-btn"></div>
+                            
+                                                <div class="modal-calendar__change-month_hide">
+                                                    <ul class="change-month__list">
+                                                        <li class="change-month__list-item">Январь</li>
+                                                        <li class="change-month__list-item">Февраль</li>
+                                                        <li class="change-month__list-item">Март</li>
+                                                        <li class="change-month__list-item">Апрель</li>
+                                                        <li class="change-month__list-item">Май</li>
+                                                        <li class="change-month__list-item">Июнь</li>
+                                                        <li class="change-month__list-item">Июль</li>
+                                                        <li class="change-month__list-item">Август</li>
+                                                        <li class="change-month__list-item">Сентябрь</li>
+                                                        <li class="change-month__list-item">Октябрь</li>
+                                                        <li class="change-month__list-item">Ноябрь</li>
+                                                        <li class="change-month__list-item">Декабрь</li>
+                                                    </ul>
+                                                </div>
+                            
+                                                <div class="modal-calendar__next-btn"></div>
+                                            </div>
+                                            <div class="modal-calendar__change-day">
+                                                <ul class="change-day__week">
+                                                    <li class="change-day__week-item">Пн</li>
+                                                    <li class="change-day__week-item">Вт</li>
+                                                    <li class="change-day__week-item">Ср</li>
+                                                    <li class="change-day__week-item">Чт</li>
+                                                    <li class="change-day__week-item">Пт</li>
+                                                    <li class="change-day__week-item">Сб</li>
+                                                    <li class="change-day__week-item">Вс</li>
+                                                </ul>
+                                                <ul class="change-day__day">
+                                                    <li class="change-day__day-item change-day__day_past"><span>1</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>2</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>3</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>4</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>5</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>6</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>7</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>8</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>9</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>10</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>11</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>12</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>13</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>14</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>15</span></li>
+                                                    <li class="change-day__day-item change-day__day_past"><span>16</span></li>
+                                                    <li class="change-day__day-item"><span>17</span></li>
+                                                    <li class="change-day__day-item"><span>18</span></li>
+                                                    <li class="change-day__day-item"><span>19</span></li>
+                                                    <li class="change-day__day-item"><span>20</span></li>
+                                                    <li class="change-day__day-item"><span>21</span></li>
+                                                    <li class="change-day__day-item"><span>22</span></li>
+                                                    <li class="change-day__day-item"><span>23</span></li>
+                                                    <li class="change-day__day-item"><span>24</span></li>
+                                                    <li class="change-day__day-item"><span>25</span></li>
+                                                    <li class="change-day__day-item"><span>26</span></li>
+                                                    <li class="change-day__day-item"><span>27</span></li>
+                                                    <li class="change-day__day-item"><span>28</span></li>
+                                                    <li class="change-day__day-item"><span>29</span></li>
+                                                    <li class="change-day__day-item"><span>30</span></li>
+                                                    <li class="change-day__day-item"><span>31</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </secction>
+                            </div>
+                            <p class="g-error-text">Заполните это поле.</p>
+                        </div>
+                        <div class="add-event__detail-time">
+                            <label for="time" class="add-event__detail-subtitle detail-date__descr">Время</label>
+                            <input type="text" class="detail-date__input detail-date__input_time">
+                        </div>
+                        <div class="add-event__detail-long">
+                            <label for="long" class="add-event__detail-subtitle detail-date__descr">Продолжительность<span> *</span></label>
+                            <input type="text" class="detail-date__input detail-date__input_long">
+                        </div>
+                    </div>
+
+                    <div class="add-event__detail-place">
+                        <label for="place" class="add-event__detail-subtitle">Место проведения</label>
+                        <textarea name="place" id="place" class="add-event__detail-entr" placeholder="Напишите, как и когда участники получат доступ к событию или оставьте ссылку"></textarea>
+                        <button class="add-event__detail-btn add-event__detail-bullit"></button>
+                        <button class="add-event__detail-btn add-event__detail-link"></button>
+                    </div>
+                </div>
+
+                <div class="add-event__connect">
+                    <h1 class="add-event__connect-title" id="connectModal">Для связи</h1>
+
+                    <div class="add-event__connect-phone">
+                        <label for="phone" class="add-event__detail-subtitle">Телефон</label>
+                        <input id="phone" type="text" class="connect-phone__input">
+                        <p class="g-error-text">Поле заполнено некорректно, проверьте.</p>
+                    </div>
+                    <div class="add-event__connect-email">
+                        <label for="email" class="add-event__detail-subtitle">E-mail</label>
+                        <input id="email" type="email" class="connect-email__input">
+                    </div>
+
+                    <p class="add-event__connect-info">Нажмите на иконку мессенджера, чтобы добавить его.</p>
+
+                    <div class="add-event__connect-messng">
+                        <div class="add-event__connect-messng-item">
+                            <p class="telegramm">Telegram</p>
+                        </div>
+                        <div class="add-event__connect-messng-item">
+                            <p class="skype">Skype</p>
+                        </div>
+                        <div class="add-event__connect-messng-item">
+                            <p class="whatsapp">Whatsapp</p>
+                        </div>
+                        <div class="add-event__connect-messng-item">
+                            <p class="viber">Viber</p>
+                        </div>
+                    </div>
+                    <div class="add-event__connect-input">
+                        <div class="add-event__connect-input-item add-event__connect-telegr">
+                            <label class="add-event__connect-text" for="telegr">Telegram</label>
+                            <input id="telegr" type="text" class="add-event__connect-entr">
+                            <button class="add-event__connect-cls"></button>
+                        </div>
+                        <div class="add-event__connect-input-item add-event__connect-skype">
+                            <label class="add-event__connect-text" for="skype">Skype</label>
+                            <input id="skype" type="text" class="add-event__connect-entr">
+                            <button class="add-event__connect-cls"></button>
+                        </div>
+                        <div class="add-event__connect-input-item add-event__connect-whatsapp">
+                            <label class="add-event__connect-text" for="whatsapp">Whatsapp</label>
+                            <input id="whatsapp" type="text" class="add-event__connect-entr">
+                            <button class="add-event__connect-cls"></button>
+                        </div>
+                        <div class="add-event__connect-input-item add-event__connect-viber">
+                            <label class="add-event__connect-text" for="viber">Viber</label>
+                            <input id="viber" type="text" class="add-event__connect-entr">
+                            <button class="add-event__connect-cls"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-event__theme">
+                    <h1 class="add-event__theme-title" id="themeModal">Темы события</h1>
+                    <p class="add-event__theme-subtitle">Отметьте темы события (можно отметить не больше трех тем).<span> *</span></p>
+
+                    <div class="add-event__theme-item">
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="arhModal" type="checkbox">
+                            <label for="arhModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="arhModal">Архитектура</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="autModal" type="checkbox">
+                            <label for="autModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="autModal">Авто и транспорт</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="bisModal" type="checkbox">
+                            <label for="bisModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="bisModal">Бизнес</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="vidModal" type="checkbox">
+                            <label for="vidModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="vidModal">Видео</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="cityModal" type="checkbox">
+                            <label for="cityModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="cityModal">Город</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="moneyModal" type="checkbox">
+                            <label for="moneyModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="moneyModal">Деньги</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="childModal" type="checkbox">
+                            <label for="childModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="childModal">Дети и родители</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="disModal" type="checkbox">
+                            <label for="disModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="disModal">Дизайн</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="houseModal" type="checkbox">
+                            <label for="houseModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="houseModal">Дом</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="foodModal" type="checkbox">
+                            <label for="foodModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="foodModal">Еда и напитки</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="animModal" type="checkbox">
+                            <label for="animModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="animModal">Животные</label>
+                        </div>
+                    <!-- 2 -->
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="zogModal" type="checkbox">
+                            <label for="zogModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="zogModal">ЗОЖ</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="engModal" type="checkbox">
+                            <label for="engModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="engModal">Иностранные языки</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="intModal" type="checkbox">
+                            <label for="intModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="intModal">Интерьер</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="iskModal" type="checkbox">
+                            <label for="iskModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="iskModal">Искусство</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="hisModal" type="checkbox">
+                            <label for="hisModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="hisModal">История</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="sinModal" type="checkbox">
+                            <label for="sinModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="sinModal">Кино и сериалы</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="beutModal" type="checkbox">
+                            <label for="beutModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="beutModal">Красота</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="kultModal" type="checkbox">
+                            <label for="kultModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="kultModal">Культура и общество</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="litModal" type="checkbox">
+                            <label for="litModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="litModal">Литература</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="medModal" type="checkbox">
+                            <label for="medModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="medModal">Медицина</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="mistModal" type="checkbox">
+                            <label for="mistModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="mistModal">Мистика и эзотерика</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="modModal" type="checkbox">
+                            <label for="modModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="modModal">Мода и стиль</label>
+                        </div>
+                    <!-- 3 -->
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="musModal" type="checkbox">
+                            <label for="musModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="musModal">Музыка</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="sicModal" type="checkbox">
+                            <label for="sicModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="sicModal">Наука</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="obrModal" type="checkbox">
+                            <label for="obrModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="obrModal">Образование</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="loveModal" type="checkbox">
+                            <label for="loveModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="loveModal">Отношения</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="copyModal" type="checkbox">
+                            <label for="copyModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="copyModal">Писательство и копирайтинг</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="buyModal" type="checkbox">
+                            <label for="buyModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="buyModal">Покупки</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="polModal" type="checkbox">
+                            <label for="polModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="polModal">Политика</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="pravModal" type="checkbox">
+                            <label for="pravModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="pravModal">Право</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="psiModal" type="checkbox">
+                            <label for="psiModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="psiModal">Психология</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="wayModal" type="checkbox">
+                            <label for="wayModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="wayModal">Путешествия</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="workModal" type="checkbox">
+                            <label for="workModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="workModal">Работа</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="radioModal" type="checkbox">
+                            <label for="radioModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="radioModal">Радио и телевидение</label>
+                        </div>
+                    <!-- 4 -->
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="razModal" type="checkbox">
+                            <label for="razModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="razModal">Развлечения</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="rasModal" type="checkbox">
+                            <label for="rasModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="rasModal">Растения</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="rekModal" type="checkbox">
+                            <label for="rekModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="rekModal">Реклама и маркетинг</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="samModal" type="checkbox">
+                            <label for="samModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="samModal">Саморазвитие</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="socModal" type="checkbox">
+                            <label for="socModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="socModal">Соцсети и медиа</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="sportModal" type="checkbox">
+                            <label for="sportModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="sportModal">Спорт</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="danceModal" type="checkbox">
+                            <label for="danceModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="danceModal">Танцы</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="tvoModal" type="checkbox">
+                            <label for="tvoModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="tvoModal">Творчество</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="teatModal" type="checkbox">
+                            <label for="teatModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="teatModal">Театр</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="tecModal" type="checkbox">
+                            <label for="tecModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="tecModal">Техника</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="techModal" type="checkbox">
+                            <label for="techModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="techModal">Технологии</label>
+                        </div>
+                        <div class="add-event__theme-wrap">
+                            <input class="add-event__theme-checkbox" id="photoModal" type="checkbox">
+                            <label for="photoModal" class="checkbox"><!--  --></label>
+                            <label class="add-event__theme-descr" for="photoModal">Фотография</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="add-event__submit">
+                    <div class="add-event__submit-checkbox">
+                        <input class="add-event__submit-item" id="confid" type="checkbox" checked>
+                        <label for="confid" class="checkbox"><!--  --></label>
+                        <label class="add-event__submit-descr" for="confid">
+                            Даю согласие на обработку и хранение моих персональных 
+                            данных в соответствии с <a href="#">Политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <div class="add-event__submit-btn-wrap">
+                        <button class="add-event__submit-btn add-event__submit-btn_submit">Опубликовать</button>
+                        <button class="add-event__submit-btn add-event__submit-btn_save">Сохранить черновик</button>
+                    </div>
+                    <div class="add-event__cnsl-event">
+                        <button class="g-btn_orange">Сохранить изменения</button>
+                        <button class="add-event__cnsl-event-title">
+                            Отменить событие
+                        </button>
+                        <p class="add-event__cnsl-event-info">
+                            Событие будет перемещено в черновики. Все подписчики события получат уведоление о том, что оно отменено.
+                        </p>
+                    </div>
+                    <div class="add-event__edit-draft">
+                        <button class="g-btn_orange">Сохранить изменения</button>
+                        <button class="g-btn_white">Опубликовать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

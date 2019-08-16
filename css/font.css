@@ -1,23 +1,15 @@
-@font-face {
-  font-family: 'Leksa';
-  src: url("../font/Leksa.otf");
-  src: local("Leksa"), local("Leksa"), url("../font/Leksa.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Museo Sans Cyrl';
-  src: url("../font/MuseoSansCyrl_300.otf");
-  src: local("Museo"), local("Museo"), url("../font/MuseoSansCyrl_300.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Museo Sans Cyrl';
-  src: url("../font/MuseoSansCyrl_500.otf");
-  src: local("Museo"), local("Museo"), url("../font/MuseoSansCyrl_500.otf");
+@import url(//hello.myfonts.net/count/394097);@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/Geometria-Medium.eot") format("embedded-opentype");
+  src: local("Geometria-medium"), local("Geometria-medium"), url("../fonts/Geometria-Medium.woff") format("woff"), url("../fonts/Geometria-Medium.ttf") format("truetype");
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url("../fonts/Geometria.eot") format("embedded-opentype");
+  src: local("Geometria"), local("Geometria"), url("../fonts/Geometria.woff") format("woff"), url("../fonts/Geometria.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }

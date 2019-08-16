@@ -1,0 +1,77 @@
+@import url(//hello.myfonts.net/count/394097);.head__navigate-item:nth-child(4) {
+  opacity: .7;
+}
+
+.main {
+  width: 100%;
+}
+
+.main__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.main__line {
+  margin: 0;
+  border: none;
+  height: 1px;
+  background-color: #d8d8d8;
+}
+
+.main__content {
+  width: 100%;
+  max-width: 1300px;
+  margin: 55px 0 0;
+}
+
+.main__content-title {
+  font: 40px/52px "TTDrugsCondensed-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  margin: 0 0 45px;
+}
+
+.main__content-info {
+  font: 20px/30px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  margin: 0 0  43px;
+  color: #333;
+}
+
+.main__point {
+  width: 100%;
+  max-width: 1300px;
+  margin: 28px 0 110px;
+}
+
+.main__point p,
+.main__point ul {
+  font: 20px/32px 'Geometria';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  margin: 0;
+  color: #333;
+  max-width: 740px;
+}
+
+.main__point ul {
+  margin: 10px 0;
+  padding: 0 0 0 20px;
+}
+
+.main__point ul li {
+  margin: 5px 0 0;
+}

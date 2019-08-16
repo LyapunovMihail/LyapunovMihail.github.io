@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogpoint</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/modal_bloger.css">
+    <!-- <link rel="stylesheet" href="css/bloger-page.css"> -->
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/nav-event.js"></script>
+</head>
+<body>
+    <header class="head">
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item"><a href="index.html"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></a></li>
+                    <li class="head__navigate-item"><a href="about-page.html">О проекте</a></li>
+                    <li class="head__navigate-item"><a href="how-add-page.html">Как добавить событие?</a></li>
+                    <li class="head__navigate-item"><a href="contacts-page.html">Контакты</a></li>
+                </ul>
+                <ul class="head__login no-login"> <!-- no-login login -->
+                    <li class="head__login-item"><a href="user-page.html">Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="head__account head__account_hide">
+            <div class="head__container">
+                <ul class="head__point-user">
+                    <li class="head__point-user-item">Мне интересно <span class="head__point-user-counter">0</span></li> <!--head__point-user-counter_active-->
+                    <li class="head__point-user-item">Настройки</li>
+                </ul>
+                <ul class="head__point-bloger">
+                    <li class="head__point-bloger-item">Опубликованные<span class="head__point-bloger-counter">0</span></li> <!--head__point-bloger-counter_active-->
+                    <li class="head__point-bloger-item">Черновики<span class="head__point-bloger-counter head__point-bloger-counter_active">3</span></li>
+                    <li class="head__point-bloger-item">
+                        <button>Добавить событие</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <header class="head head__mobile"> 
+        <div class="head__wrap">
+            <nav class="head__container">
+                <ul class="head__navigate">
+                    <li class="head__navigate-item head__navigate-menu">
+                    </li>
+                    <li class="head__navigate-item"><img src="img/blogpoint-logo.svg" alt="blogpoint-logo"></li>
+                </ul>
+                <ul class="head__login no-login">
+                    <li class="head__login-item"><a href="user-page.html">Войти</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- head__mobile-menu_bloger/head__mobile-menu_user/head__mobile-menu_no-login - навигация блогера/юзера/не вторизованного -->
+        <div class="head__modal-menu">
+            <div class="head__wrap">
+                <div class="head__container head__modal-container">
+                    <ul class="modal-menu__list modal-menu__list_user">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active">3</span></li>
+                        <li class="modal-menu__list-item"><a href="#">Настройки</a></li>
+                    </ul>
+                    <ul class="modal-menu__list modal-menu__list_bloger">
+                        <li class="modal-menu__list-item">Мне интересно <span class="modal-menu__list-item_active"><sup>2</sup></span></li>
+                        <li class="modal-menu__list-item">Настройки</li>
+                        <li class="modal-menu__list-item">Опубликованные <span><sup>0</sup></span></li>
+                        <li class="modal-menu__list-item">Черновики <span class="modal-menu__list-item_active"><sup>3</sup></span></li>
+                        <li class="modal-menu__list-item">
+                            <button>Добавить событие</button>
+                        </li>
+                    </ul>
+                    <ul class="modal-menu__list_no-login modal-menu__list">
+                        <li class="modal-menu__list-item"><a href="about-page.html">О проекте</a></li>
+                        <li class="modal-menu__list-item"><a href="how-add-page.html">Как добавить событие?</a></li>
+                        <li class="modal-menu__list-item"><a href="contacts-page.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="modal">
+        <div class="modal__window modal-bloger">
+            <button class="modal__window-btn"></button>
+
+            <div class="modal-bloger__container">
+                <div class="modal-bloger__head">
+                    <button class="modal-bloger__head-edit">Редактировать</button>
+                    <div class="modal-bloger__head-wrap">
+                        <div class="modal-bloger__head-photo">
+                            <div class="modal-bloger__head-photo-wrap">
+                                <img src="img/blog2.jpg" alt="photo">
+                            </div>
+                        </div>
+                        <div class="modal-bloger__head-descr">
+                            <h1 class="head-descr__name">Александра Константиновна</h1>
+                            <a href="#" class="head-descr__insta">kirg_vasilisa_111</a>
+                            <button class="head-descr__subscr">
+                                <div>Подписаться</div>
+                                <div class="line-button"></div>
+                                <div>
+                                    <p>271</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bloger__container">
+                <div class="modal-bloger__about-me">
+                    <div class="modal-bloger__about-me-wrap">
+                        <div class="about-me__descr">
+                            <h1 class="about-me__title">Графический дизайнер, творческий директор и основатель linii group и неймингового агентства lexica naming</h1>
+                            <p class="about-me__info-min">
+                                Всем привет! Я занимаюсь бизнесом, и делюсь со своей аудиторией историями 
+                                как из своей практики, так и из личной жизни. Мои зрители очень доверяют мне.
+                            </p>
+                        </div>
+                        <div class="about-me__more-info">
+                            <p class="about-me__info">
+                                Разнообразный и богатый опыт реализация намеченных плановых заданий в значительной 
+                                степени обуславливает создание направлений прогрессивного развития. Не следует, однако 
+                                забывать, что начало повседневной работы по формированию позиции способствует подготовки 
+                                и реализации существенных финансовых и административных условий.
+                            </p>
+                            <p class="about-me__info">
+                                Идейные соображения высшего порядка, а также сложившаяся структура организации 
+                                в значительной степени обуславливает создание направлений прогрессивного развития. 
+                                Задача организации, в особенности же постоянный количественный рост и сфера нашей 
+                                активности позволяет выполнять важные задания по разработке существенных финансовых 
+                                и административных условий. Таким образом начало повседневной работы по формированию 
+                                позиции способствует подготовки и реализации новых предложений.</p>
+                            <p class="about-me__info">Я занимаюсь:</p>
+                            <ul class="about-me__info-list">
+                                <li>укрепление и развитие структуры;</li>
+                                <li>участие в формировании существенных финансовых и административных условий;</li>
+                                <li>реализация системы обучения кадров.</li>
+                            </ul>
+                            <div class="about-me__tags">
+                                <p class="about-me__tags-item">Дети и родители</p>
+                                <p class="about-me__tags-item">Отношения</p>
+                                <p class="about-me__tags-item">Психология</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="about-me__show-more">
+                        <span>Подробнее обо мне</span>
+                        <img src="img/about-show-more.svg" alt="arrow">
+                    </button>
+                </div>
+            </div>
+            <div class="modal-bloger__soon">
+                <p class="modal-bloger__soon-title">У меня скоро:</p>
+                <div class="modal-bloger__container">
+                    <div class="modal-bloger__soon-wrap">
+                        <button class="modal-bloger__soon-button modal-bloger__soon-button_back"><!--back--></button>
+                        <button class="modal-bloger__soon-button modal-bloger__soon-button_next"><!--next--></button>
+                        <div class="modal-bloger__soon-slider-wrap">
+                            <div class="modal-bloger__soon-slider">
+                                <a class="modal-bloger__soon-slider-item">
+                                    <div class="modal-bloger__snippet modal-bloger__snippet_1">
+                                        <div class="modal-bloger__snippet-style master-class">
+                                            <p>мастер-класс</p>
+                                        </div>
+                                        <div class="modal-bloger__snippet-descr">
+                                            <div class="modal-bloger__snippet-title-wrap">
+                                                <h1 class="modal-bloger__snippet-title">
+                                                    Учимся делать керамические штуки с нуля до уровня профессионала за две н...
+                                                </h1>
+                                            </div>
+                                            <div class="modal-bloger__snippet-tags">
+                                                <p>Авто и транспорт</p>
+                                                <p>Дети и родители</p>
+                                                <p>Социальные сети и медиа</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="modal-bloger__soon-slider-item">
+                                    <div class="modal-bloger__snippet modal-bloger__snippet_2">
+                                        <div class="modal-bloger__snippet-style intens">
+                                            <p>интенсив</p>
+                                        </div>
+                                        <div class="modal-bloger__snippet-descr">
+                                            <div class="modal-bloger__snippet-title-wrap">
+                                                <h1 class="modal-bloger__snippet-title">
+                                                    Реализация простейшего веб-сервера, развернутого на базе Docker
+                                                </h1>
+                                            </div>
+                                            <div class="modal-bloger__snippet-tags">
+                                                <p>Дизайн</p>
+                                                <p>Бизнес</p>
+                                                <p>Танцы</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bloger__container">
+                <div class="modal-bloger__project">
+                    <h1 class="modal-bloger__project-title">Мои проекты, каналы и соцсети</h1>
+                    <div class="modal-bloger__project-list">
+                        <a href="#" class="project-list__item">
+                            <div class="project-list__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                                        <path d="M1 1h12v12M13 1L1 13"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="project-list__descr">Мой канал на Youtube о здоровом образе жизни</p>
+                        </a>
+                        <a href="#" class="project-list__item">
+                            <div class="project-list__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                                        <path d="M1 1h12v12M13 1L1 13"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="project-list__descr">Моя страница VK</p>
+                        </a>
+                        <a href="#" class="project-list__item">
+                            <div class="project-list__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                                        <path d="M1 1h12v12M13 1L1 13"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="project-list__descr">Мой канал в Telegram о бизнесе и астрономии</p>
+                        </a>
+                        <a href="#" class="project-list__item">
+                            <div class="project-list__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                                        <path d="M1 1h12v12M13 1L1 13"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="project-list__descr">Мой курс по леттерингу на bangbangeducation</p>
+                        </a>
+                        <a href="#" class="project-list__item">
+                            <div class="project-list__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                                        <path d="M1 1h12v12M13 1L1 13"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="project-list__descr">Мой сайт</p>
+                        </a>
+                        <a href="#" class="project-list__item">
+                            <div class="project-list__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2">
+                                        <path d="M1 1h12v12M13 1L1 13"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="project-list__descr">Мой магазин на etsy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-bloger__container">
+                <div class="modal-bloger__connect">
+                    <h1 class="modal-bloger__connect-title">Для связи</h1>
+                    <ul class="modal-bloger__connect-list">
+                        <li class="modal-bloger__connect-item">+7 (999) 788-89-90</li>
+                        <li class="modal-bloger__connect-item">email@gmail.com</li>
+                        <li class="modal-bloger__connect-item">
+                            <span class="whatsapp">Whatsapp</span> 
+                            <a href="#" class="g-link">wa.me/hello</a>
+                        </li>
+                        <li class="modal-bloger__connect-item">
+                            <span class="telegramm">Telegram</span> 
+                            <a href="#" class="g-link">teleg.run/hello</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-bloger__past">
+                <h1 class="modal-bloger__past-title">Прошедшие события</h1>
+                <button class="button-up" data-up></button>
+                <div class="modal-bloger__container">
+                    <div class="modal-bloger__past-wrap">
+                        <button class="modal-bloger__past-button modal-bloger__past-button_back"><!--back--></button>
+                        <button class="modal-bloger__past-button modal-bloger__past-button_next"><!--next--></button>
+                        <div class="modal-bloger__past-slider-wrap">
+                            <div class="modal-bloger__past-slider">
+                                <a href="#" class="modal-bloger__past-slider-item">
+                                    <div class="modal-bloger__snippet modal-bloger__snippet_filter modal-bloger__snippet_1">
+                                        <div class="modal-bloger__snippet-style master-class">
+                                            <p>мастер-класс</p>
+                                        </div>
+                                        <div class="modal-bloger__snippet-descr">
+                                            <div class="modal-bloger__snippet-title-wrap">
+                                                <h1 class="modal-bloger__snippet-title">
+                                                    Учимся делать керамические штуки с нуля до уровня профессионала за две н...
+                                                </h1>
+                                            </div>
+                                            <div class="modal-bloger__snippet-tags">
+                                                <p>Керамика</p>
+                                                <p>Хобби</p>
+                                                <p>Социальные сети и медиа</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="modal-bloger__past-slider-filter"></div> -->
+                                </a>
+                                <a href="#" class="modal-bloger__past-slider-item">
+                                    <div class="modal-bloger__snippet modal-bloger__snippet_filter modal-bloger__snippet_2">
+                                        <div class="modal-bloger__snippet-style intens">
+                                            <p>интенсив</p>
+                                        </div>
+                                        <div class="modal-bloger__snippet-descr">
+                                            <div class="modal-bloger__snippet-title-wrap">
+                                                <h1 class="modal-bloger__snippet-title">
+                                                    Реализация простейшего веб-сервера, развернутого на базе Docker
+                                                </h1>
+                                            </div>
+                                            <div class="modal-bloger__snippet-tags">
+                                                <p>IT</p>
+                                                <p>Социальные сети и медиа</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="modal-bloger__past-slider-filter"></div> -->
+                                </a>
+                                <a href="#" class="modal-bloger__past-slider-item">
+                                    <div class="modal-bloger__snippet modal-bloger__snippet_filter modal-bloger__snippet_3">
+                                        <div class="modal-bloger__snippet-style curs">
+                                            <p>курс</p>
+                                        </div>
+                                        <div class="modal-bloger__snippet-descr">
+                                            <div class="modal-bloger__snippet-title-wrap">
+                                                <h1 class="modal-bloger__snippet-title">
+                                                    Как подготовиться к собеседованию и получить работу мечты?
+                                                </h1>
+                                            </div>
+                                            <div class="modal-bloger__snippet-tags">
+                                                <p>Работа</p>
+                                                <p>Мечта</p>
+                                                <p>Собеседование</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="modal-bloger__past-slider-filter"></div> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,99 @@
+@import url(//hello.myfonts.net/count/394097);@media (max-width: 1399px) {
+  .head__wrap,
+  .main__wrap-content {
+    max-width: 854px;
+  }
+  .main__wrap-content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .main__login {
+    max-width: 393px;
+    margin: 0 103px 0 0;
+  }
+  .main__social {
+    width: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 1069px) {
+  .head__wrap,
+  .main__wrap-content {
+    max-width: 640px;
+  }
+  .main__login {
+    max-width: 365px;
+    margin: 0 75px 0 0;
+  }
+}
+
+@media (max-width: 729px) {
+  .head__wrap,
+  .main__wrap-content {
+    max-width: calc(100% - 92px);
+  }
+  .head__logo {
+    padding: 50px 0 15px;
+    position: unset;
+  }
+  .head__logo-cls-btn {
+    top: 10px;
+    right: 10px;
+  }
+  .main {
+    margin: 30px 0 50px;
+  }
+  .main__social {
+    margin: 40px 0 0;
+  }
+  .main__login {
+    width: 100%;
+    max-width: none;
+  }
+  .main__login .input {
+    padding-left: 15px;
+  }
+  .main__wrap-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .head__logo-title {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .head__logo-title:not(:last-child) {
+    margin: 0 18px 0 0;
+  }
+  .head__logo-title_active:before {
+    bottom: -16px;
+  }
+  .main__login-descr,
+  .main__social-descr,
+  .main_two .main__paragraf {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .main_two .main__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .main__login-remember {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 0 0;
+  }
+  .main__login-btn {
+    margin: 25px 0 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .head__wrap,
+  .main__wrap-content {
+    max-width: calc(100% - 40px);
+  }
+}
