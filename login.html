@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bombus</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,600|IBM+Plex+Sans:400,500|IBM+Plex+Serif:400,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/login.min.css">
+</head>
+
+<body>
+
+    <div class="window-login">
+        <div class="window-login__logo">
+            <img src="img/bombus-logo.svg" alt="logo">
+        </div>
+
+        <h1 class="window-login__title">Добро пожаловать в улей!</h1>
+
+        <div class="window-login__email">
+            <input data-login type="text" placeholder="Email">
+            <p class="window-login__email-error">Неправильный адрес электронной почты</p>
+        </div>
+        <div class="window-login__pass">
+            <input data-pass type="password" placeholder="Пароль">
+            <button class="window-login__pass-show"></button>
+            <p class="window-login__email-error">Неправильный пароль</p>
+        </div>
+
+        <button class="window-login__submit" disabled>войти</button>
+
+        <div class="window-login__social">
+            <a href="#" class="window-login__social-fb"></a>
+            <a href="#" class="window-login__social-vk"></a>
+        </div>
+
+        <a href="#" class="window-login__remmbr-pass">Забыли пароль?</a>
+    </div>
+
+    <div class="window-login window-login_code" style="display: none">
+        <div class="window-login__logo">
+            <img src="img/bombus-logo.svg" alt="logo">
+        </div>
+
+        <h1 class="window-login__title">Введите проверочный код</h1>
+
+        <div class="window-login__email window-login__email_code">
+            <input data-code type="text" placeholder="Введите проверочный код">
+        </div>
+
+        <button class="window-login__submit window-login__submit_code" disabled>продолжить</button>
+
+        <button class="window-login__back">Назад</button>
+    </div>
+
+    <div class="window-login window-login_restore" style="display: none;">
+        <div class="window-login__logo">
+            <img src="img/bombus-logo.svg" alt="logo">
+        </div>
+
+        <h1 class="window-login__title">Восстановить пароль</h1>
+
+        <div class="window-login__email window-login__email_restore incorrect-value">
+            <input data-restore type="text" placeholder="Введите свой email">
+            <p class="window-login__email-error">Такой пользователь не существует</p>
+        </div>
+
+        <button class="window-login__submit window-login__submit_restore" disabled>восстановить пароль</button>
+
+        <button class="window-login__back">Назад</button>
+    </div>
+
+    <script src="js/scripts.min.js"></script>
+</body>
+</html>

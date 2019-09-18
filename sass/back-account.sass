@@ -1,0 +1,90 @@
+
+
+@import "_mixins/mixin"
+
+.personal-account
+    padding: 40px 0 140px
+
+    &__head
+        width: 100%
+        display: flex
+        margin: 0 0 40px
+
+        &-wrap
+            &_for-avatar
+                width: 64px
+                margin-right: 20px
+            &_for-name
+                display: flex
+                flex-flow: column
+                justify-content: center
+
+        &-logo
+            display: block
+            width: 64px
+            height: 64px
+            border-radius: 50%
+            background: url(../img/human.svg) center no-repeat rgba(74, 74, 74, 0.8)
+            background-size: 15px
+            cursor: pointer
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+            input
+                display: none
+        &-name
+            font: 300 24px/32px $font-sans
+            color: rgba(0, 0, 0, 0.87)
+        &-role
+            font: 14px/20px $font-sans
+            color: $col-holder
+    
+
+    &__settings
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+
+        &-title
+            font: 500 20px/28px $font-sans
+            color: $col-75
+            margin: 0 0 15px
+        &-subtitle
+            font: 12px/16px $font-sans
+            color: #6f6a60
+            padding-left: 10px
+            margin: 0 0 5px
+        &-wrap
+            margin: 0 0 19px
+            &:last-child
+                margin: 0
+        &-input
+            width: 360px
+            height: 48px
+            border: none
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+            background-color: #ffffff
+            font: 16px/24px $font-sans
+            color: $col-75
+            padding-left: 10px
+            &:disabled
+                background-color: transparent
+
+        &-common
+            margin: 0 0 40px
+
+        &-btn
+            width: 100%
+        &-save
+            width: 160px
+            height: 44px
+            font: 500 14px/24px $font-sans
+            color: $col-4a
+            text-transform: uppercase
+            letter-spacing: .5px
+            background-color: $col-active
+            border-radius: 3px
+            @include linear(color)
+            &:hover
+                color: $col-headline

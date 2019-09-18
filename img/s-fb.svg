@@ -1,0 +1,15 @@
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M15.035625,13 L15.48,10.104375 L12.7015625,10.104375 L12.7015625,8.2253125 C12.7015625,7.433125 13.0896875,6.6609375 14.3340625,6.6609375 L15.5971875,6.6609375 L15.5971875,4.195625 C15.5971875,4.195625 14.4509375,4 13.355,4 C11.066875,4 9.57125,5.386875 9.57125,7.8975 L9.57125,10.104375 L7.0278125,10.104375 L7.0278125,13 L9.57125,13 L9.57125,20 L12.7015625,20 L12.7015625,13 L15.035625,13 Z" id="path-1"></path>
+    </defs>
+    <g id="Material/Icons-black/s_fb" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Shape" fill="#9C9C9C" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="UI/Color/Flat/Icon-Color" mask="url(#mask-2)" fill="#9C9C9C">
+            <rect id="Base" x="0" y="0" width="24" height="24"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,98 @@
+.admin-main
+    width: 100%
+    padding: 40px 0 0
+
+    &__head
+        display: flex
+        justify-content: space-between
+        margin: 0 0 30px
+        position: relative
+
+        &-search
+            width: 260px
+            height: 48px
+            padding: 0 10px
+            position: relative
+            background-color: #fff
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08)
+            &::before
+                content: ''
+                position: absolute
+                right: 10px
+                top: 12px
+                width: 24px
+                height: 24px
+                background: url(../img/_materials/search.svg) center no-repeat
+                pointer-events: none
+            
+            &_label
+                display: block
+                width: 100%
+                height: 100%
+            
+            input
+                width: calc(100% - 44px)
+                height: 100%
+                font: 16px/24px $font-sans
+                @include font-smoothing
+                color: $col-75
+                border: none
+                box-shadow: none
+                padding: 0
+                &::placeholder
+                    color: $col-holder
+
+        &-add
+            width: 260px
+            height: 44px
+            border-radius: 3px
+            background-color: $col-active
+            font: 500 14px/24px $font-sans
+            @include font-smoothing
+            letter-spacing: .5px
+            color: #6f6a60
+            text-transform: uppercase
+            @include linear (color)
+            &:hover
+                color: $col-headline
+
+        &-create
+            width: 160px
+            height: 48px * 3
+            position: absolute
+            top: calc(100% + 35px)
+            right: 54px
+            background-color: #fff
+            opacity: 0
+            pointer-events: none
+            transform: translateY(-5px)
+            transition: opacity .2s linear, transform .2s linear
+            &::before
+                content: ''
+                position: absolute
+                top: -20px
+                left: 16px
+                width: 0
+                height: 0
+                border-left: 20px solid transparent
+                border-right: 20px solid transparent
+                border-bottom: 20px solid #fff
+            
+            p
+                width: 100%
+                height: 48px
+                font: 16px/24px $font-sans
+                @include font-smoothing
+                color: $col-75
+                display: flex
+                align-items: center
+                padding-left: 10px
+                cursor: pointer
+                transition: background-color .2s linear
+                &:hover
+                    background-color: $col-active
+            
+            &_active
+                opacity: 1
+                transform: translateY(0px)
+                pointer-events: all

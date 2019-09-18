@@ -1,0 +1,66 @@
+
+@import '../libs/reset.css'
+@import '../libs/jquery-ui.css'
+@import '../libs/slick/slick.scss'
+@import "_mixins/mixin"
+
+html
+  box-sizing: border-box
+  -ms-overflow-style: scrollbar
+
+*, *::before, *::after
+  box-sizing: inherit
+
+body
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	font-family: 'IBM Plex Sans', sans-serif
+	font-size: 16px
+	color: #000
+	background-color: #efe9e8
+
+main
+	margin-bottom: auto
+
+img
+	max-width: 100%
+
+a:focus
+	outline: none
+
+button
+	background: none
+	border: none
+	padding: 0
+
+	// new
+textarea
+	background-color: transparent
+	border: none
+
+p,
+a,
+li,
+div,
+span,
+label,
+input,
+button,
+textarea
+	@include font-smoothing
+
+textarea,
+input
+	@include placeholder
+
+@import "typography"
+@import "layout"
+
+@import "header"
+@import "aside"
+@import "footer-admin"
+@import "_page/material"

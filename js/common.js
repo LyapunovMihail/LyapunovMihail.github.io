@@ -1,266 +1,250 @@
 
-// Меню для мобилок
+$(document).on('click', '.window-login__pass-show', function() {
 
-$(document).on('click', '.head__navigate-menu', function() {
-
-    $('.head__mobile').toggleClass('head__mobile-menu_no-login');
-    if ($('.head__mobile').hasClass('head__mobile-menu_no-login')) {
-        
-        $('body').css({
-            overflow: 'hidden'//,
-            // position: 'fixed'
-        });
-        $('.head__mobile-menu_bloger').css({
-            'overflow-y': 'scroll',
-            'overflow-x': 'hidden',
-            position: 'fixed'
-        });
-    } else {
-        $('body').css({
-            overflow: 'visible',
-            //position: ''
-        });
-        $('.head__mobile-menu_bloger').css({
-            'overflow-y': 'hidden',
-            position: ''
-        });
-    ;}
-});
-
-// Закрепление кнопки настроек на Главной(События/Блоги)
-
-var $height = '',
-    $width = $(window).width();
-
-    // console.log($height)
-
-$(window).on('scroll', function() {
-    if($('.main__show-more-wrap').length > 0) {
-
-        $height = $(window).outerHeight();  // Динамично получаем высоту
-        var $button = $('.main__show-more-wrap').offset().top; // получ коорд места где должны остановится кнопка
-        var $fixBtn = $('.main__show-more-wrap').children().last().offset().top; // и координаты самой кнопки
-    
-        if($button < $fixBtn ) {
-            $('.main__show-more-wrap').children().last().addClass('main__settings-btn');
-            $('.main__show-more-wrap').children().last().removeClass('main__settings-btn_fixed');
-        } else if( ($button + 110) > ($height + $(this).scrollTop()) ) { 
-            $('.main__show-more-wrap').children().last().addClass('main__settings-btn_fixed')
-            $('.main__show-more-wrap').children().last().removeClass('main__settings-btn');
-        }
-    } else { false }
-});
-$(document).on('click', '.main__settings-btn_fixed, .main__settings-btn', function() {
-
-    if($width > 1069) {
-        
-        $('html, body').animate({scrollTop: $('[data-scrll]').offset().top - 20 + 'px'});
-    } else {
-
-        $('html, body').animate({scrollTop: $('[data-scrll]').offset().top - 70 + 'px'});
-    }
-});
-
-// Открытие поля "Удалить аккаунт" на стр юзера/блогера
-
-$(document).on('click', '.main__del-wrap', function() {
-    $('.main__del').toggleClass('main__del_open');
-});
-
-// Открытие поля "Узнать больше обо мне" на стр блогера
-
-$(document).on('click', '.about-me__show-more', function() {
-
-    $('.about-me__more-info').css('height', 'auto');
-
-    $('.about-me__show-more').css('display', 'none');
-})
-
-// Выделение всех тем на странице настроек юзера
-
-$(document).on('click', '[data-all]', function() {
-
-    if($(this).prop('checked')) {
-
-        $('.main__mytape-checkbox').prop('checked', true);
-    } else {
-
-        $('.main__mytape-checkbox').prop('checked', false);
-    }
-})
-
-// Ограничение на кол-во чекбоксов
-
-$(document).ready( function() {
-
-    $('.main__theme-checkbox').click( function() {
-
-        if($('.main__theme-checkbox:checked').length >= 3) {
-
-            $('.main__theme-checkbox').not(':checked').prop('disabled', true);
-        } else { 
-            
-            $('.main__theme-checkbox').prop('disabled', false);
-        }
-    })
-})
-
-// Открытие модалки "Формат" на главной стр
-
-$(document).on('click', '[data-format]', function() {
-
-    $('.main__format').css({
-        display: 'flex',
-        position: 'fixed',
-        'overflow-y': 'scroll',
-        'overflow-x': 'hidden'
-    });
-    $('body').css({
-        overflow: 'hidden'
-    });
-
-    $('.main__format-title').on('click', function() {
-
-        $('.main__format').css({
-            display: 'none',
-            position: ''
-        });
-        $('body').css({
-            overflow: ''
-        });
-    })
-});
-
-// Показать/Скрыть пароль в форме входа
-
-$(document).on('click', '.main__login-show-pass, .change-pass__show-pass', function() {
-    
-    var $class = $(this).attr('class'),
-        $classOpen = $class.split(' ')[0];
-    
+    $(this).toggleClass('window-login__pass-show_active')
     if ($(this).prev().attr('type') == 'password') {
 
-        $(this).prev().attr('type', 'text');
-        $(this).addClass($class + '_open');
-    } else {
-        console.log($classOpen)
-        $(this).prev().attr('type', 'password');
-        $(this).removeClass($classOpen + '_open');
-    }
+        $(this).prev().attr('type', 'text')
+    } else { $(this).prev().attr('type', 'password') }
 });
 
-// Подъем вверх
+$(document).on('click', '.window-login__submit', function() {
 
-$(document).on('click', '[data-up]', function() {
-
-    $('html, body').animate({scrollTop: 0 + 'px'});
-});
-$(document).on('click', '[data-up-modal]', function() {
-
-    $('.event-modal').animate({scrollTop: 0 + 'px'});
-});
-$(document).on('click', '[data-up-blog]', function() {
-
-    // $('.modal-blog').scrollTop(0);
-    $('.modal-blog').animate({scrollTop: 0 + 'px'});
-    
-});
-
-// Модальный сниппет
-
-$(document).on('mousemove', '.recomend-slider__logo_today-event', function() {
-
-    var $coordX = $(this).offset().left,
-        $coordY = $(this).offset().top,
-        $elHeight = num($('[data-modal-snippet]').css('height')),
-        $elWidth = num($('.recomend-slider__logo_today-event').css('width'));
-
-    $('[data-modal-snippet]').css({
-        display: 'block',
-        top: $coordY - ($elHeight / 2),
-        left: $coordX + $elWidth + 5
-    });
-});
-$(document).on('mouseleave', '.recomend-slider__logo_today-event', function() {
-
-    $('[data-modal-snippet]').css({
-        display: '',
-        top: '',
-        left: ''
-    });
-});
-
-
-function num(el) { // Перевод строк в числа (обрезая "px")
-    if(el != '0px') {
-        return Number(el.slice(0, -2));
-    } else {
-        return 0
-    }
-}
-
-$(document).on('click', '.change-theme__theme_background', function() {
-
-    $('.change-theme').css('display', 'none');
-    $(this).css('display', 'none');
-});
-
-// Кол-во символов 
-
-$(document).ready( function() {
-
-    var el = $('.main__snippet-title, .snippet-item__descr-title'),
-        lengthArr = el.length;
-
-    if ($('body').width() > 1399) {
-        sbstrDesk(el, lengthArr)
-    } else if ($('body').width() > 1069) {
-        sbstrDeskMedia(el, lengthArr)
-    } else if ($('body').width() > 730) {
-        sbstrMobile(el, lengthArr)
-    } else if ($('body').width() < 730) {
-        sbstrMobileMedia(el, lengthArr)
-    }
-
+    $('.window-login__email, .window-login__pass').addClass('incorrect-value')
 })
-function sbstrDesk(elem, length) {
 
-    for (var i = 0; i < length; i++ ) {
-        var elText = $(elem[i]).text().trim();
+$(document).on('blur', '[data-login], [data-pass], [data-code], [data-restore]', function() {
 
-        if ( elText.length > 65) {
-            console.log(elText.length)
-            $(elem[i]).text( elText.substr(0, 61) + '...' );
-        }
+    var login = $('[data-login]').val(),
+        pass = $('[data-pass]').val(),
+        code = $('[data-code]').val(),
+        restore = $('[data-restore]').val()
+
+    if (login != '' && pass != '' || code != '' || restore != '') {
+
+        $('.window-login__submit').prop('disabled', false)
+    } else { 
+        $('.window-login__submit').prop('disabled', true)
+        $('.window-login__email, .window-login__pass').removeClass('incorrect-value')
     }
-}
-function sbstrDeskMedia (elem, length) {
-    for (var i = 0; i < length; i++ ) {
-        var elText = $(elem[i]).text().trim();
+});
 
-        if ( elText.length > 85) {
-            
-            $(elem[i]).text( elText.substr(0, 82) + '...' );
-        }
-    }
-}
-function sbstrMobile (elem, length) {
-    for (var i = 0; i < length; i++ ) {
-        var elText = $(elem[i]).text().trim();
+//longread
 
-        if ( elText.length > 55) {
-            
-            $(elem[i]).text( elText.substr(0, 50) + '...' );
-        }
-    }
-}
-function sbstrMobileMedia (elem, length) {
-    for (var i = 0; i < length; i++ ) {
-        var elText = $(elem[i]).text().trim();
+$(document).ready(function() {
+    $('.datepicker').each(function() {
 
-        if ( elText.length > 142) {
-            
-            $(elem[i]).text( elText.substr(0, 138) + '...' );
-        }
+        $(this).datepicker({
+            showOtherMonths: true
+        });
+    })
+    
+    $.datepicker.regional['ru'] = {
+        closeText: 'Закрыть',
+        prevText: 'Предыдущий',
+        nextText: 'Следующий',
+        currentText: 'Сегодня',
+        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        monthNamesShort: ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря'],
+        dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+        dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        weekHeader: 'Не',
+        dateFormat: 'dd M yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
+    
+    
+})
+// Открытие/закртие тултипа + смена направления стрелки(chevron)
+$(document).on('click', '[data-tooltip]', function() {
+
+    if ($(this).next().hasClass('tooltip_open')) {
+
+        $(this).next().toggleClass('tooltip_open');
+        $(this).toggleClass('tooltip_rotate');
+    } else {
+        $('[data-tooltip]').next().removeClass('tooltip_open');
+        $(this).next().toggleClass('tooltip_open');
+        $(this).toggleClass('tooltip_rotate');
     }
+});
+
+// закрытие тултипа при клике на пустое место
+$(document).on('click', '.tooltip__cls-area', function() {
+
+    var elClass = $(this).parent().attr('class').replace(/ [\s\S]+/, '');
+
+    $(this).parent().removeClass(elClass + '_open');
+    $('.tooltip').prev().removeClass('tooltip_rotate');
+});
+
+// Появление меню у объекта лонгриа
+$(document).ready( function() {
+    $('.object').hover(function() {
+        
+        $(this).find('.object__content').find('.tooltip').toggleClass('tooltip_open');
+    });
+});
+
+// Увеличение блока с картинкой на стр Лонгрида
+$(document).on('click', '[data-img-size]', function() {
+
+    $(this).closest('.object').toggleClass('object_big-image');
+    $(this).toggleClass('tooltip__image-size_active');
+});
+
+$(document).on('click', '.gallery-item__content-descr', function() {
+
+    $('.gallery-item__descr').toggleClass('gallery-item__descr_active');
+    $(this).toggleClass('gallery-item__content-descr_active');
+});
+
+$(document).on('click', '.longread-social__item-select', function() {
+
+    $(this).next().toggleClass('longread-social__item-material_open');
+})
+
+// Открытие выпадающего меню при клике на кнопку "создать материал" на стр bg-materials
+$(document).on('click', '.longread-content__add-btn', function() {
+
+    $(this).toggleClass('longread-content__add-btn_click');
+    $('.longread-content__add-list').toggleClass('longread-content__add-list_open')
+});
+
+// Счетчик символов в заголовке и описании (Лонгрид, Новость)
+$(document).on('keyup', '[data-count]', function() {
+
+    var strLength = $(this).val().length,
+        maxLength = $(this).attr('maxlength');
+
+    $(this).prev().children('[data-count-title]').text( maxLength - strLength );
+});
+
+// Добавление класса с анимацией загрузки кнопке на стр материалов
+$(document).on('click', '[data-btn-more]', function() {
+
+    var optList = $(this).parent().children('.object__controls-list');
+    
+    $(this).toggleClass('object__controls-btn_active');
+    optList.toggleClass('object__controls-list_show');
+});
+
+// Автоувеличение textarea
+$(document).on('input', '[data-area-autosize]', function(e) {
+
+    $(this).css('min-height', $(this).css('line-height') + 5);
+
+	this.style.height = '1px';
+	this.style.height = (this.scrollHeight) + 'px'; 
+});
+
+// Заполнение полей из "tooltip"
+$(document).on('click', '.tooltip__item, .tooltip__time-item', function() {
+
+    var elem = $(this).parent().prev().children();
+
+    if($(this).hasClass('tooltip__item_checkbox')) {
+
+    } else if ($(this).attr('class') == 'tooltip__time-item' || ($(this).parent().hasClass('tooltip__list'))) {
+        changeTime($(this))
+    } else {
+        elem.text($(this).text().trim());
+        elem.attr('class', elem.attr('class').replace(/ [\s\S]+/, ''));
+        $('.tooltip__cls-area').trigger('click')
+    }
+});
+
+// Заполняем Поля типа "Select"  при клике на пункт
+$(document).on('change', '.tooltip__item_checkbox input', function() {
+
+    console.log('work');
+    var item = $(this),
+        parent = $(this).parent().parent().prev().children();
+
+    if( item.prop('checked') ) {
+        parent.val( parent.val() + (item.parent().text().trim() + '; ') );
+    } else {
+        parent.val( parent.val().replace( (item.parent().text().trim() + '; '), '' ) )
+    }
+});
+
+// Заполняем поля "Время анонса"
+function changeTime(el) {
+    
+    var elem = el.parent().parent().prev().children();
+
+    elem.text(el.text().trim());
+    elem.attr('class', elem.attr('class').replace(/ [\s\S]+/, ''));
+    $('.tooltip__cls-area').trigger('click')
+    errorTime(el)
 }
+// Добавление ошибки на стр релиза
+function errorTime(parent) {
+
+    parent.parent().parent().parent().addClass('incorrect-value');
+}
+
+// slider
+$(document).ready(function() {
+
+    $('.slider').each(function() {
+        var prev = $(this).parent().children('.object__content-gallery-wrap').children('.object__content-gallery-controls').children('.object__content-gallery-btn_prev'),
+            next = $(this).parent().children('.object__content-gallery-wrap').children('.object__content-gallery-controls').children('.object__content-gallery-btn_next'),
+            counter = $(this).parent().children('.object__content-gallery-wrap').children('.object__content-gallery-controls').children('p').children('.slick-count');
+        $(this).slick({
+            prevArrow: prev,
+            nextArrow: next,
+            infinite: false,
+            fade: true,
+            centerMode: true,
+            respondTo: '.slider'
+        });
+        $(this).on('afterChange', function(event, slick, slickCurrentSlide){
+            counter.text(slickCurrentSlide + 1);
+        });
+    })
+});
+
+// Подставляем точки в поля с датой
+var startVal = '',
+    endVal = '';
+
+$(document).on('input', '[data-input-mask]', function() {
+    
+    inputPatter($(this))
+    startVal = $(this).val().length;
+
+    if ($(this).val().length == 2 && startVal > endVal ) {
+
+        $(this).val( $(this).val() + '.' );
+    } else if ($(this).val().length == 5 && startVal > endVal ) {
+
+        $(this).val( $(this).val() + '.' );
+    }
+
+    endVal = $(this).val().length;
+});
+// Заменяем все символы кроме Цифр и точек - пустотой
+function inputPatter(el) {
+
+    el.val( el.val().replace(/[^0-9.]/g, '') )
+}
+
+// Класс для фильтров "От большего к меньшему" и наоборот
+
+$(document).on('click', '[data-MinMax]', function() {
+    
+    var elClass = $(this).attr('class').replace(/ [\s\S]+/, '');
+    $(this).toggleClass( elClass + '_active');
+});
+
+// Открываем меню на стр пользователся
+$(document).on('click', '[data-menu]', function() {
+
+    $(this).next().toggleClass('account-modal_open');
+})

@@ -1,0 +1,304 @@
+
+.cards
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin: 0 0 100px
+
+    &__wrap
+        &_big
+            width: 761px
+        &_small
+            width: 360px
+
+    &__item
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08)
+        border: solid 1px #dddddd
+        background-color: #ffffff
+        position: relative
+        margin: 0 0 40px
+
+        &_big-one
+            width: 761px
+            height: 640px
+        &_big-two
+            width: 360px
+            height: 530px
+        &_small-top
+            width: 360px
+            height: 228px
+            padding: 17px 20px
+        &_big-three
+            width: 300px
+            height: 530px
+        &_big-high
+            width: 560px
+            height: 1040px
+        &_block
+            width: 260px
+            height: 170px
+            margin-right: 20px
+        &_small
+            width: 460px
+            height: 190px
+            transform: translateX(-201px)
+            padding: 19px 20px
+            display: flex
+            margin: 162px 0 0
+        &_small-long
+            width: 1160px
+            height: 120px
+            display: flex
+        &_small-short
+            width: 940px
+            height: 120px
+            display: flex
+        &_more
+            width: 660px
+            height: 199px
+            padding: 0 20px 20px
+
+        &-container
+            width: 100%
+            padding: 0 20px
+        &-block
+            width: 100%
+            height: 234px
+            display: flex
+            padding: 14px 0
+            position: relative
+            border-bottom: 1px solid #ccc
+
+            &_small
+                height: 190px
+                display: flex
+                border: none
+                padding: 20px 0
+        &-wrap
+            &_left
+                width: 50%
+                height: 100%
+                padding-right: 19px
+                border-right: 1px solid #ccc
+                position: relative
+            &_right
+                width: 50%
+                height: 100%
+        // Изображеине
+        &-img
+            width: 100%
+            overflow-y: hidden
+            background: url(../img/_longread/image_72.svg) center no-repeat rgba(60, 60, 60, 0.8)
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+            &_big-one
+                height: 471px
+                background-size: 120px
+            &_big-two
+                height: 265px
+                background-size: 80px
+            &_big-three
+                height: 220px
+            &_big-high
+                height: 426px
+                margin: 0 0 14px
+            &_block
+                width: 260px
+                height: 170px
+                margin-right: 20px
+                background-size: 50px
+            &_small
+                width: 200px
+                height: 152px
+                background-size: 40px
+                margin-right: 20px
+            &_small-long
+                width: 160px
+                height: 100%
+                margin-right: 30px
+                background-size: 40px
+            &_small-short
+                width: 140px
+                height: 100%
+                margin-right: 20px
+                background-size: 30px
+        // /Изображеине
+
+        // Тип-заголовок-подзаголовок-автор-время
+        &-descr
+            width: 100%
+
+            &_big-one
+                height: calc(100% - 471px)
+                padding: 16px 20px 22px
+                display: flex
+            &_big-two
+                width: 100%
+                height: calc(100% - 285px)
+                padding: 20px
+            &_big-three
+                height: calc(100% - 240px)
+                padding: 20px
+
+        &-type
+            width: 178px
+            &_text
+                font: 600 14px/16px $font-mono
+                color: $col-yellow
+                text-transform: uppercase
+            &_big-two
+                width: 100%
+                margin: 0 0 8px
+            &_text-more
+                width: 100%
+                padding: 20px 0 17px
+                border-bottom: 1px solid #ccc
+                margin: 0 0 18px
+        &-content
+            width: calc(100% - 178px)
+            height: 100%
+            position: relative
+            &_big-two
+                width: 100%
+            &_big-high
+                width: 100%
+                height: 170px
+                border-bottom: 1px solid #ccc
+            &_block
+                width: 240px
+                position: static
+            &_small-long
+                width: 516px
+                display: flex
+                flex-flow: column
+                justify-content: center
+                margin-right: 174px
+            &_small-short
+                margin-right: 45px
+            &_more
+                width: 100%
+                height: auto
+        &-info
+            width: 100%
+            display: flex
+            justify-content: space-between
+            position: absolute
+            left: 0
+            bottom: 0
+            &_big-two
+                align-items: center
+            &_big-high
+                bottom: 16px
+            &_small-long
+                width: 280px
+                position: static
+                flex-flow: row wrap
+                justify-content: flex-start
+                padding: 27px 0 25px
+            &_small-short
+                width: 220px
+        // /Тип-заголовок-подзаголовок-автор-время
+
+        // Text
+        &-title
+            font: 600 24px/32px $font-serif
+            color: #423f39
+            margin: 0 0 5px
+            &_small
+                font: 600 18px/22px $font-serif
+                margin: 0 0 9px
+        &-text
+            font: 16px/24px $font-sans
+            color: #423f39
+            &_small
+                font: 14px/19px $font-sans
+            &_more
+                margin: 0 0 12px
+        &-date,
+        &-author,
+        &-time,
+        &-views
+            font: 12px/16px $font-mono
+            color: $col-75
+            &_absolute
+                position: absolute
+                bottom: 16px
+                right: 20px
+            &_small-absolute
+                position: absolute
+                bottom: 0
+                right: 20px
+            &_big-two
+                max-width: 63px
+                text-align: right
+        &-views
+            width: 100%
+            padding-left: 30px
+            position: relative
+            margin-bottom: 8px
+            &::before
+                @include before-circle(20px, 20px)
+                left: 0
+                top: calc(50% - 10px)
+                background: url(../img/visibility-on.svg) center no-repeat $col-active
+                background-size: 12px
+        &-time
+            width: 40px
+            margin-right: 15px
+        &-author
+            position: relative
+            padding-left: 30px
+            &::before
+                @include before-circle(20px, 20px)
+                left: 0
+                top: calc(50% - 10px)
+                background: url(../img/human.svg) center no-repeat rgba(74, 74, 74, 0.8)
+                background-size: 6px
+            &_big-two
+                max-width: 183px
+                padding-left: 42px
+                &::before
+                    width: 30px
+                    height: 30px
+                    top: calc(50% - 15px)
+                    background-size: 8px
+            &_small-long
+                width: 100%
+                height: 20px
+                margin-bottom: 12px
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                padding-top: 2px
+                    
+        // /Text
+
+        // Неделя-месяц-год
+        &-filter
+            width: 100%
+            height: 44px
+            border-bottom: 1px solid #ccc
+            display: flex
+            margin: 0 0 15px
+            &-item
+                width: calc(100% / 3)
+                height: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                font: 500 12px/16px $font-sans
+                text-transform: uppercase
+                color: #777
+                &_active
+                    color: #4a4a4a
+                    position: relative
+                    &::before
+                        content: ''
+                        position: absolute
+                        bottom: -1px
+                        width: 100%
+                        height: 2px
+                        background-color: #1a1a1a
+        // /Неделя-месяц-год

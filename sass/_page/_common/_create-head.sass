@@ -1,0 +1,241 @@
+
+.create-head
+    width: 100%
+    &_padding-top
+        padding-top: 44px
+
+    &__btns
+        display: flex
+        justify-content: space-between
+        margin: 0 0 40px
+    &__editor 
+        display: flex
+
+        &-link
+            font: 24px/32px $font-sans
+            text-decoration: none
+            color: $col-headline
+            &:not(:last-child)
+                margin-right: 30px
+            &_active
+                color: #d5a900
+    &__public
+        display: flex
+        align-items: center
+
+        &-draft
+            font: 20px/28px $font-sans
+            color: $col-75
+            margin-right: 20px
+        &-del
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            background: url(../img/_longread/delete_white.svg) center no-repeat #9b9b9b
+            margin-right: 36px
+            @include linear(box-shadow)
+            &:hover
+                box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)
+        &-upld
+            width: 160px
+            height: 44px
+            border-radius: 3px
+            background-color: $col-active
+            font: 500 14px/24px $font-sans
+            color: #6f6a60
+            letter-spacing: .5px
+            text-transform: uppercase
+            @include linear (color)
+            &:hover
+                color: $col-headline
+    
+
+    &__tags
+        width: 100%
+        display: flex
+        justify-content: space-between
+        margin: 0 0 30px
+
+        &-wrap
+            position: relative
+            &:not(:last-child)
+                margin-right: 20px
+        &-item
+            display: flex
+        &-info
+            height: 48px
+            padding: 0 10px
+            display: flex
+            align-items: center
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08)
+            background-color: #dfdfdf
+            font: 16px/24px $font-sans
+            color: $col-75
+            margin-right: 20px
+            &_author
+                padding-left: 5px
+        &-select
+            width: 200px
+            height: 48px
+            position: relative
+            background-color: #fff
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08)
+            padding: 0 0 0 10px
+            display: flex
+            align-items: center
+            cursor: pointer
+            &::before
+                content: ''
+                position: absolute
+                width: 24px
+                height: 24px
+                top: 12px
+                right: 10px
+                background: url(../img/_materials/show-more.svg) center no-repeat
+            &_date-create,
+            &_time-upload
+                width: 360px
+            
+            &-text
+                width: calc(100% - 44px)
+                font: 16px/24px $font-sans
+                border: none
+                color: $col-75
+                pointer-events: none
+                overflow: hidden
+                text-overflow: ellipsis
+                white-space: nowrap
+                &_placeholder
+                    color: $col-holder
+        &-timeline
+            display: flex
+            align-items: center
+            font: 16px/24px $font-sans
+            color: $col-75
+            cursor: pointer
+            user-select: none
+            input
+                display: none
+                &:checked + .create-head__tags-checkbox
+                    background: url(../img/_materials/check.svg) center no-repeat #fff
+                    background-size: 24px
+        &-checkbox
+            width: 18px
+            height: 18px
+            border: 2px solid #9c9c9c
+            border-radius: 2px
+            margin-right: 11px
+
+    &__author
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+
+        &-wrap
+            position: relative
+            margin-right: 20px
+        &-title
+            width: 100%
+            font: 500 20px/32px $font-sans
+            color: $col-75
+            pointer-events: none
+            margin: 0 0 10px
+        &-change
+            @extend .create-head__tags-select
+            width: 360px
+            &-text
+                @extend .create-head__tags-select-text
+                &_placeholder
+                    color: $col-holder
+        &-add
+            width: 360px
+            height: 48px
+            background-color: #fff
+            border: none
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08)
+            padding: 0 10px
+            font: 16px/24px $font-sans
+            color: $col-75
+            margin-right: 20px
+            &::placeholder
+                color: $col-holder
+        &-photo
+            width: 246px
+            height: 40px
+            padding-left: 32px
+            font: 16px/24px $font-sans
+            color: $col-75
+            display: flex
+            align-items: center
+            background: url(../img/_longread/camera.svg) 0 8px no-repeat
+            cursor: pointer
+            input
+                display: none
+    
+    &__mode
+        width: 201px
+        display: flex
+        justify-content: space-between
+
+        &-item
+            font: 18px/24px $font-sans
+            color: #423f38
+            text-decoration: none
+            &_active
+                color: #d5a900
+    
+    &__release
+        width: 100%
+        display: flex
+        flex-flow: row wrap
+
+        &-title
+            @extend .create-head__author-title
+            margin: 0 0 14px
+
+        &-wrap
+            width: 360px
+            position: relative
+            &:not(:last-child)
+                margin-right: 20px
+            &.incorrect-value
+                .create-head__release-select
+                    border: 1px solid #ea483d 
+                .create-head__release-error
+                    display: block
+        &-select
+            @extend .create-head__tags-select
+            width: 100%
+            &-text
+                @extend .create-head__tags-select-text
+                &_placeholder
+                    color: $col-holder
+            &_time-upload
+                width: 360px
+        &-error
+            display: none
+            font: 12px/16px $font-sans
+            color: #ea483d
+            position: absolute
+            top: 48px + 5px
+            left: 0
+    
+    &__role
+        width: 200px
+        height: 48px
+        background-color: transparent
+        padding-left: 10px
+        display: flex
+        align-items: center
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+
+        &-text
+            font: 16px/24px $font-sans
+            color: $col-holder
+
+
+.incorrect-value
+   .create-head__release-select
+       border: 1px solid #ea483d !important
+   .create-head__release-error
+       display: block !important

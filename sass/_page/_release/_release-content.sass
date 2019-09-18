@@ -1,0 +1,456 @@
+
+
+.release-content
+    padding: 44px 0 0
+    &_preview
+        margin: 44px 0 0
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+        padding: 0
+
+    &__headline
+        width: 100%
+        margin: 0 0 40px
+
+        &-filter
+            width: 100%
+            height: 80px
+            background-color: #dfdfdf
+            padding: 0 28px
+            display: flex
+            align-items: center
+        &-check
+            width: 60px
+            height: 35px
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            transform: translateX(-(60px - 46px))
+            margin-right: 37px
+            &_radio
+                width: auto
+                height: auto
+                justify-content: flex-start
+                font: 13px/15px $font-sans
+                color: #9b9b9b
+                text-transform: uppercase
+                margin-right: 29px
+                input:checked + .release-content__headline-radio
+                    background-color: $col-active
+                    &::before
+                        background: url(../img/visibility_active.svg) center no-repeat
+            input
+                display: none
+                &:checked + .release-content__headline-checkbox
+                    background-color: #9b9b9b
+                    &::before
+                       left: calc( 100% - 17px )
+                       background-color: #777
+                    
+        &-checkbox
+            width: 34px
+            height: 14px
+            background-color: #f0f0f0
+            border-radius: 7px
+            position: relative
+            transition: background-color .2s linear
+            &::before
+                @include before-circle(20px, 20px)
+                top: -3px
+                left: -3px
+                background-color: #f0f0f0
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12)
+                transition: left .2s ease, background-color .2s linear
+        &-radio
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+            background-color: #ffffff
+            position: relative
+            margin-right: 11px
+            &::before
+                content: ''
+                position: absolute
+                top: calc(50% - 12px)
+                left: calc(50% - 12px)
+                width: 24px
+                height: 24px
+                background: url(../img/visibility-on.svg) center no-repeat
+        
+
+        &-theme
+            width: 100%
+            height: 60px
+            display: flex
+            align-items: center
+            background-color: #fff
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08)
+            border: solid 1px #ddd
+            &_for-views
+                display: none
+            &_for-important
+                display: none
+        &-info
+            width: 260px
+            height: 100%
+            background-color: $col-active
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0 33px 0 18px
+            position: relative
+            &::before
+                content: ''
+                position: relative
+                width: 24px
+                height: 24px
+                background: url(../img/visibility_active.svg) center no-repeat
+            &-views,
+            &-name
+                font: 600 14px/16px $font-mono
+                color: $col-4a
+                text-transform: uppercase
+        &-title
+            width: calc( 900px - (87px + 18px) )
+            margin-left: 18px
+            font: 600 18px/22px $font-serif
+            color: $col-headline
+            &_empty
+                color: $col-holder
+        
+        &-add
+            width: 153px
+            height: 60px
+            font: 600 14px/16px $font-mono
+            color: #fff
+            text-transform: uppercase
+            background-color: $col-active
+            &_preview
+                display: flex
+                align-items: center
+                justify-content: center
+
+
+
+    &__snippets
+        width: 100%
+        display: flex
+        justify-content: space-between
+        flex-flow: row wrap
+
+
+.snippet
+    background-color: #fff
+    position: relative
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08)
+    border: solid 1px #ddd
+    margin: 0 0 40px
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+
+    &_disable
+        &::after
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            background-color: #dfdfdf
+            z-index: 30
+
+    &_size2b
+        width: 760px
+        height: 640px
+        .snippet__img
+            height: 471px
+        .snippet__content
+            height: calc(100% - 471px)
+
+    &_size1b
+        width: 360px
+        height: 640px
+        padding: 0 20px
+    &_size1sm
+        width: 360px
+        height: 530px
+        .snippet__img
+            height: 265px
+        .snippet__content
+            height: calc(100% - 265px)
+    &_size2lng
+        width: 560px
+        min-height: 740px
+    
+    &__head
+        width: 100%
+        height: 80px
+        padding: 20px
+        background-color: #dfdfdf
+        &-btn
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+            @include linear(background-color)
+            &:not(:last-child)
+                margin-right: 10px
+            &_full
+                background: url(../img/release/1-sec.svg) center no-repeat #fff
+            &_two
+                background: url(../img/release/2-sec.svg) center no-repeat #fff
+            &_three
+                background: url(../img/release/3-sec.svg) center no-repeat #fff
+            &_four
+                background: url(../img/release/4-sec.svg) center no-repeat #fff
+            &:hover,
+            &_active
+                background-color: $col-active
+    &__img 
+        width: 100%
+        background: url(../img/_longread/image_72.svg) center no-repeat rgba(60, 60, 60, 0.8)
+        &_small
+            min-width: 260px
+            height: 170px
+            margin-right: 20px
+        &_small-next
+            min-width: 260px
+            height: 150px
+            margin-right: 20px
+
+
+    &__content
+        width: 100%
+        position: relative
+        .snippet__block-empty
+            height: 100%
+        &_flex
+            display: flex
+            padding: 16px 20px 0
+        &_padding
+            padding: 20px
+        
+        &-type
+            font: 600 14px/16px $font-mono
+            color: $col-yellow
+            text-transform: uppercase
+            &_block
+                width: 180px
+                padding: 9px 0 0
+            &_normal
+                width: auto
+                margin: 0 0 8px
+        &-wrap
+            width: calc( 100% - 180px )
+            position: relative
+        &-title
+            font: 600 24px/32px $font-serif
+            color: $col-headline
+            margin: 0 0 5px
+            &_small
+                font-size: 18px
+                line-height: 22px
+            &_not-full
+                max-width: 380px
+        &-text
+            font: 16px/24px $font-sans
+            color: $col-headline
+            max-width: 460px
+            &_small
+                font-size: 14px
+                line-height: 19px
+        &-info
+            width: 100%
+            position: absolute
+            bottom: 20px
+            left: 0
+            display: flex
+            justify-content: space-between
+            &_small
+                width: calc(100% - 40px)
+                left: 20px
+            &_bttm
+                bottom: 15px
+        &-author,
+        &-time
+            font: 12px/16px $font-mono
+            color: $col-75
+        &-time
+            &_wrap
+                max-width: 63px
+            &_absolute
+                position: absolute
+                bottom: 12px
+                right: 0
+            &_right
+                right: 20px
+            &_no-bttm-right
+                bottom: 0
+                right: 20px
+            &_zero
+                bottom: 0
+                right: 0
+        &-author
+            position: relative
+            padding-left: 30px
+            &::before
+                @include before-circle(20px, 20px)
+                top: -3px
+                left: 0
+                background: url(../img/human.svg) center no-repeat rgba(74, 74, 74, 0.8)
+                background-size: 6px
+            &_wrap
+                width: 184px
+                padding-left: 42px
+                &::before
+                    width: 30px
+                    height: 30px
+                    top: calc(50% - 15px)
+
+
+
+    &__type
+        width: 100%
+        padding: 20px 20px 0
+        font: 600 14px/16px $font-mono
+        color: #dfdfdf
+        text-transform: uppercase
+
+        &_theme 
+            padding-bottom: 16px
+        &_actual
+            padding: 20px 0 16px
+        &_preview
+            color: $col-yellow
+        &_arrow span
+            display: inline
+            position: relative
+            color: $col-yellow
+            &::before
+                content: ''
+                position: absolute
+                left: calc(100% + 15px)
+                top: -4px
+                width: 24px
+                height: 24px
+                background: url(../img/arrow-forward-yellow.svg) center no-repeat
+    
+    &__block
+        width: 100%
+        position: relative
+
+        &_one
+            height: 100%
+            min-height: 616px
+            max-height: 616px
+            .snippet__block-img
+                height: 426px
+            .snippet__block-empty
+                height: 190px
+        &_triple,
+        &_four
+            padding: 0 20px
+        &_actual
+            height: 142px
+            border-top: 1px solid #dfdfdf
+            padding: 13px 0 0
+            .snippet__block-empty
+                height: 100%
+        &-content
+            height: 190px
+            padding: 20px
+        &-wrap
+            width: 100%
+            position: relative
+            &:not(.snippet__block-wrap_double)
+                border-top: 1px solid #dfdfdf
+            &_first
+                height: 240px
+                padding: 20px 0
+                display: flex
+                .snippet__block-empty
+                    height: 100%
+            &_double-next
+                width: calc(100% - 40px)
+                margin: 0 20px
+            &_next
+                min-height: 190px
+                max-height: 190px
+                padding: 20px 0
+                .snippet__block-empty
+                    height: 100%
+                &-double
+                    display: flex
+            &_double
+                width: 50%
+                // margin: 0 0 20px
+                &:not(:last-child)
+                    border-right: 1px solid #dfdfdf
+                    margin-right: 20px
+            &_pad-mar
+                width: calc( 100% - 40px)
+                padding: 20px 0
+                margin: 0 20px
+            &_flex
+                display: flex
+
+
+        &-empty
+            width: 100%
+            position: absolute
+            left: 0
+            bottom: 0
+            cursor: pointer
+            &::before
+                content: ''
+                position: absolute
+                width: 40px
+                height: 40px
+                top: calc(50% - 20px)
+                left: calc(50% - 20px)
+                border-radius: 50%
+                background: url(../img/release/add.svg) center no-repeat
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+                background-color: #9b9b9b
+
+        &-img
+            width: 100%
+            background: url(../img/_longread/image_72.svg) center no-repeat rgba(60, 60, 60, 0.8)
+
+        // Кнопки разделение новости
+        &-btn
+            width: 100px
+            display: flex
+            justify-content: space-between
+            position: absolute
+            z-index: 2
+            left: -10px
+            top: 10px
+            &-alone
+                width: 48px
+                height: 24px
+                margin-right: 4px
+                span
+                    display: block
+                    height: 100%
+                    border: solid 1px #dfdfdf
+                    background-color: #fff
+                &.snippet__block-btn_active
+                    span
+                        border-color: #9b9b9b
+                        background-color: #9b9b9b
+            &-double
+                width: 48px
+                height: 24px
+                display: flex
+                span
+                    display: block
+                    border: solid 1px #dfdfdf
+                    width: 50%
+                    height: 24px
+                    background-color: #fff
+                    &:not(:last-child)
+                        border-right: none
+                &.snippet__block-btn_active
+                    span
+                        background-color: #9b9b9b
