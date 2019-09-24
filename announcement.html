@@ -268,16 +268,16 @@
                         <div class="create-head__tags-info">Анонс</div>
                         <div class="create-head__tags-info">Создал: <span class="create-head__tags-info_author">Иванов Иван</span></div>
                         
-                        <div class="create-head__tags-wrap">
-                            <label class="create-head__tags-select create-head__tags-select_date-create">
-                                <input class="create-head__tags-select-text datepicker" type="text" name="DatePublic" placeholder="Дата публикации">
+                        <div class="create-head__tags-wrap create-head__tags-wrap_date-create">
+                            <label class="common-input__datepicker">
+                                <input class="common-input__datepicker-input datepicker" type="text" name="DatePublic" placeholder="Дата публикации">
                             </label>
                             <p class="create-head__release-error">Необходимо указать дату размещения</p>
                         </div>
 
-                        <div class="create-head__tags-wrap">
-                            <div class="create-head__release-select create-head__release-select_time-upload" data-tooltip>
-                                <p class="create-head__release-select-text create-head__release-select-text_placeholder">Время публикации</p>
+                        <div class="create-head__tags-wrap create-head__tags-wrap_time-upload">
+                            <div class="common-input__tooltip" data-tooltip>
+                                <p class="common-input__tooltip-text common-input__tooltip-text_placeholder">Время публикации</p>
                             </div>
 
                             <div class="tooltip tooltip_time">
@@ -309,7 +309,7 @@
                                     <div class="tooltip__time-item">00:00</div>
                                 </div>
                             </div>
-                            <p class="create-head__release-error">Необходимо указать время размещения</p>
+                            <!-- <p class="create-head__release-error">Необходимо указать время размещения</p> -->
                             <p class="create-head__release-error">Выбранное время не подходит для размещения</p>
                         </div>
                     </div>
@@ -322,7 +322,9 @@
                 <div class="announcement-create__headline">
                     <div class="announcement-create__title">
                         <p class="announcement-create__title-counter"><span data-count-title>30</span>/30</p>
-                        <textarea data-count data-area-autosize class="announcement-create__title-area" maxlength="30" placeholder="Заголовок"></textarea>
+                        <div>
+                            <textarea data-count data-area-autosize class="announcement-create__title-area" maxlength="30" placeholder="Заголовок"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>

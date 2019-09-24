@@ -43,6 +43,7 @@
                 color: $col-75
                 text-transform: uppercase
                 cursor: pointer
+                user-select: none
                 &_date
                     width: 144px
                     margin-right: 32px
@@ -62,7 +63,7 @@
                     &::before
                         @include before-image(-4px)
                         left: 100%
-                        background: url(../img/materials/show-more.svg) center no-repeat
+                        background: url(../img/materials/arrow-drop-down.svg) center no-repeat
                 &_active
                     .log-user__output-head-text_span::before
                         transform: rotate(180deg)

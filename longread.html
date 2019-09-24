@@ -301,9 +301,10 @@
 
                 <div class="create-head__author">
                     <h1 class="create-head__author-title">Автор текста</h1>
-                    <div class="create-head__author-wrap">
-                        <div class="create-head__author-change create-head__author-change_disabled" data-tooltip>
-                            <p class="create-head__author-change-text create-head__author-change-text_placeholder">Выбрать из пользователей</p>
+                    <div class="create-head__author-wrap create-head__author-wrap_author"> 
+                        <!-- create-head__author-change_disabled - для "отключения поля" -->
+                        <div class="common-input__tooltip" data-tooltip>
+                            <p class="common-input__tooltip-text common-input__tooltip-text_placeholder">Выбрать из пользователей</p>
                         </div>
 
                         <div class="tooltip">
@@ -327,7 +328,9 @@
                             </ul>
                         </div>
                     </div>
-                    <input type="text" class="create-head__author-add" placeholder="Автор">
+                    <div class="create-head__author-wrap create-head__author-wrap_insert-author common-input__text">
+                        <input type="text" placeholder="Автор">
+                    </div>
                     <label class="create-head__author-photo">
                         <input type="file" name="photo">
                         Загрузить фото автора

@@ -253,9 +253,9 @@
                         <div class="create-head__tags-info">Лонгрид</div>
                         <div class="create-head__tags-info">Создал: <span class="create-head__tags-info_author">Иванов Иван</span></div>
                         
-                        <div class="create-head__tags-wrap">
-                            <div class="create-head__tags-select" data-tooltip>
-                                <p class="create-head__tags-select-text create-head__tags-select-text_placeholder">Рубрика</p>
+                        <div class="create-head__tags-wrap create-head__tags-wrap_rubric">
+                            <div class="common-input__tooltip" data-tooltip>
+                                <p class="common-input__tooltip-text common-input__tooltip-text_placeholder">Рубрика</p>
                             </div>
 
                             <div class="tooltip">
@@ -267,9 +267,9 @@
                             </div>
                         </div>
 
-                        <div class="create-head__tags-wrap">
-                            <div class="create-head__tags-select" data-tooltip>
-                                <input class="create-head__tags-select-text" placeholder="Категории" disabled>
+                        <div class="create-head__tags-wrap create-head__tags-wrap_category">
+                            <div class="common-input__checkbox" data-tooltip>
+                                <input class="common-input__checkbox-text" placeholder="Категории" disabled>
                             </div>
 
                             <div class="tooltip">
@@ -320,7 +320,9 @@
                 <div class="longread-image__headline">
                     <div class="longread-image__title">
                         <p class="longread-image__title-counter"><span data-count-title>95</span>/95</p>
-                        <textarea data-count data-area-autosize class="longread-image__title-area longread-image__title-input_news-create" maxlength="95" placeholder="Заголовок"></textarea>
+                        <div>
+                            <textarea data-count data-area-autosize class="longread-image__title-area longread-image__title-input_news-create" maxlength="95" placeholder="Заголовок"></textarea>
+                        </div>
                     </div>
                 </div>
 
