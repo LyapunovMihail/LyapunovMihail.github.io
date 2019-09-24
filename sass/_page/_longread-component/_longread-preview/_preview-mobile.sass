@@ -142,6 +142,8 @@
 
 .object-mobile
     position: relative
+    &_slider
+        width: 100%
 
     &__content
         width: 100%
@@ -150,7 +152,6 @@
         align-items: center
         &_gallery
             width: 320px
-            transform: translateX(-20px)
             overflow: hidden
         &_quote,
         &_flip,
@@ -160,9 +161,9 @@
         &-wrap
             margin: 0 0 16px
             &_gallery
-                width: 100%
+                width: calc(100% - 40px)
                 height: 220px
-                overflow: hidden
+                // overflow: hidden
             &_flip,
             &_number
                 width: calc(100% - 20px)
@@ -303,3 +304,22 @@
             &_text
                 font: 16px/24px $font-sans
                 color: $col-75
+
+
+.slider-mobile
+    width: calc(100% + 10px)
+    height: 100%
+    background: transparent
+    overflow: visible
+    .slider__item
+        min-width: 280px !important
+        width: 280px !important
+        padding-right: 10px
+        background: transparent
+        box-sizing: content-box
+    .slick-track
+        width: 100% !important
+        display: flex
+        overflow: visible
+    .slick-list
+        overflow: visible

@@ -3,9 +3,11 @@
 
 .longread-create
     width: 100%
-    padding: 108px 0 (38px + 40px)
+    padding: 40px 0 (38px + 40px)
 
     &__head
+        margin: 0 0 40px
+    &__announcement
         margin: 0 0 40px
     &__image
         margin: 0 0 (75px - 26px)
@@ -37,10 +39,20 @@
             letter-spacing: .5px
             text-transform: uppercase
             @include linear (color)
+            &:disabled
+                border-radius: 2px
+                border: solid 2px #d8d8d8
+                background-color: transparent
+                color: #d8d8d8
             &:hover
                 color: $col-headline
+            &_ready
+                width: 220px
+                background-color: #fff
+                margin-right: 20px
 
 
+@import "_page/_longread-component/longread-announcement"
 @import "_page/_longread-component/longread-image"
 @import "_page/_longread-component/longread-content"
 @import "_page/_longread-component/longread-social"

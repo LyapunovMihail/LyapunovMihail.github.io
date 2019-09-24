@@ -16,20 +16,34 @@
         position: relative
         
     &__user
-        width: 40px
-        height: 40px
-        border-radius: 50%
+        max-width: calc(100% - 200px)
         display: flex
-        justify-content: center
         align-items: center
-        background: url(../img/human.svg) center no-repeat rgba(74, 74, 74, 0.8)
-        background-size: 8px
-        cursor: pointer
 
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
+        &-name
+            max-width: calc(100% - 57px) // 40px(ширина фото пользователя) + 17px(маргин межну именем и фото)
+            font: 14px/19px $font-sans
+            color: $col-headline
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            margin-right: 17px
+
+        &-img
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            background: url(../img/human.svg) center no-repeat rgba(74, 74, 74, 0.8)
+            background-size: 8px
+            cursor: pointer
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
     
 .account-modal
     display: none

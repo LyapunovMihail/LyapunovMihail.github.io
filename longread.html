@@ -11,8 +11,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,600|IBM+Plex+Sans:400,500|IBM+Plex+Serif:400,600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="stylesheet" href="css/longread.min.css">
 	<link rel="stylesheet" href="css/common-create.min.css">
+	<link rel="stylesheet" href="css/longread.min.css">
 </head>
 
 <body>
@@ -23,7 +23,77 @@
                     <img src="img/bombus-logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="admin-header__user"></div>
+            <div class="admin-header__user" data-menu>
+                <p class="admin-header__user-name">Император Палпатин</p>
+                <div class="admin-header__user-img">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+            <div class="account-modal">
+                <div class="tooltip__cls-area"></div>
+                <div class="account-modal__item account-modal__item_my-material">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="u" d="M18 2a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12zm-1 13H7v2h10v-2zm0-4H7v2h10v-2zm0-4H7v2h10V7z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <mask id="i" fill="#fff">
+                                    <use xlink:href="#u"/>
+                                </mask>
+                                <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#u"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#i)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Мои материалы
+                </div>
+                <div class="account-modal__item account-modal__item_settings">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="ui" d="M18.687 12.877c.036-.288.063-.58.063-.877 0-.297-.027-.59-.063-.877l1.903-1.49a.449.449 0 0 0 .108-.576l-1.8-3.119c-.112-.193-.346-.274-.549-.193l-2.24.904a6.829 6.829 0 0 0-1.522-.886l-.337-2.385A.463.463 0 0 0 13.8 3h-3.6a.454.454 0 0 0-.445.378l-.338 2.385a6.66 6.66 0 0 0-1.521.886l-2.241-.904a.45.45 0 0 0-.549.194l-1.8 3.118a.45.45 0 0 0 .108.576l1.899 1.49c-.036.288-.063.58-.063.877 0 .297.027.59.063.877l-1.899 1.49a.449.449 0 0 0-.108.576l1.8 3.118a.445.445 0 0 0 .549.194l2.241-.904c.464.355.972.657 1.521.886l.338 2.385c.035.212.22.378.445.378h3.6c.225 0 .41-.166.445-.378l.338-2.385a6.66 6.66 0 0 0 1.521-.886l2.241.904a.45.45 0 0 0 .549-.194l1.8-3.118a.45.45 0 0 0-.108-.576l-1.899-1.49zM12 15.15A3.148 3.148 0 0 1 8.85 12 3.148 3.148 0 0 1 12 8.85 3.148 3.148 0 0 1 15.15 12 3.148 3.148 0 0 1 12 15.15z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <mask id="iu" fill="#fff">
+                                    <use xlink:href="#ui"/>
+                                </mask>
+                                <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#ui"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#iu)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Настройки
+                </div>
+                <div class="account-modal__item account-modal__item_logout">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="kj" d="M16.16 6.744l-1.224 1.225L17.675 11H7v2h10.675l-2.74 2.966 1.226 1.225L21 12z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <path class="account-modal__item_hover" fill="#979797" d="M14 22H3V2h11v7H5v6h9v7zm0-9H7v-2h7v2z"/>
+                                <mask id="jk" fill="#fff">
+                                    <use xlink:href="#kj"/>
+                                </mask>
+                                <use fill="#9C9C9C" xlink:href="#kj"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#jk)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Выход
+                </div>
+            </div>
         </div>
     </header>
 
@@ -168,11 +238,12 @@
                     <div class="create-head__editor">
                         <a class="create-head__editor-link create-head__editor-link_active" href="#">Редактор</a>
                         <a class="create-head__editor-link" href="#">Предпросмотр</a>
-                        <a class="create-head__editor-link" href="#">Анонс</a>
+                        <a class="create-head__editor-link" href="#">Карточки</a>
                     </div>
                     <div class="create-head__public">
                         <p class="create-head__public-draft">Черновик</p>
                         <button class="create-head__public-del"></button>
+                        <button data-replace-status class="create-head__public-upld create-head__public-upld_ready">Готов к публикации</button>
                         <button class="create-head__public-upld">Опубликовать</button>
                     </div>
                 </div>
@@ -182,9 +253,9 @@
                         <div class="create-head__tags-info">Лонгрид</div>
                         <div class="create-head__tags-info">Создал: <span class="create-head__tags-info_author">Иванов Иван</span></div>
                         
-                        <div class="create-head__tags-wrap">
-                            <div class="create-head__tags-select" data-tooltip>
-                                <p class="create-head__tags-select-text create-head__tags-select-text_placeholder">Рубрика</p>
+                        <div class="create-head__tags-wrap create-head__tags-wrap_rubric">
+                            <div class="common-input__tooltip" data-tooltip>
+                                <p class="common-input__tooltip-text common-input__tooltip-text_placeholder">Рубрика</p>
                             </div>
 
                             <div class="tooltip">
@@ -196,9 +267,9 @@
                             </div>
                         </div>
 
-                        <div class="create-head__tags-wrap">
-                            <div class="create-head__tags-select" data-tooltip>
-                                <input class="create-head__tags-select-text" placeholder="Категории">
+                        <div class="create-head__tags-wrap create-head__tags-wrap_category">
+                            <div class="common-input__checkbox" data-tooltip>
+                                <input class="common-input__checkbox-text" placeholder="Категории">
                             </div>
 
                             <div class="tooltip">
@@ -226,18 +297,12 @@
                             </div>
                         </div>
                     </div>
-
-                    <label class="create-head__tags-timeline">
-                        <input type="checkbox">
-                        <div class="create-head__tags-checkbox"></div>
-                        Разместить на таймлайне
-                    </label>
                 </div>
 
                 <div class="create-head__author">
                     <h1 class="create-head__author-title">Автор текста</h1>
                     <div class="create-head__author-wrap">
-                        <div class="create-head__author-change" data-tooltip>
+                        <div class="create-head__author-change create-head__author-change_disabled" data-tooltip>
                             <p class="create-head__author-change-text create-head__author-change-text_placeholder">Выбрать из пользователей</p>
                         </div>
 
@@ -269,6 +334,60 @@
                     </label>
                 </div>
             </div>
+
+            <div class="longread-create__announcement longread-announcement longread-announcement_off">
+                
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-announce">
+                    <label class="longread-announcement__turn">
+                        <input type="checkbox" name="active" data-anncounce>
+                        <div class="longread-announcement__turn-checkbox"></div>
+                    </label>
+                    <p class="longread-announcement__text">Анонс</p>
+                    <p class="longread-announcement__text longread-announcement__text_off">Разместить материал на таймлайне</p>
+                    <p class="longread-announcement__text longread-announcement__text_submit">Материал опубликован и размещен на таймлайне</p>
+                </div>
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-date">
+                    <label class="longread-announcement__datepicker">
+                        <input type="text" name="date" class="longread-announcement__datepicker-input datepicker-num" placeholder="Дата анонса">
+                    </label>
+                    <p class="create-head__error">Необходимо указать дату размещения</p>
+                </div>
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-time">
+                    <label class="longread-announcement__time">
+                        <input data-time-mask maxlength="5" type="text" name="time" class="longread-announcement__time-input" placeholder="Время анонса">
+                    </label>
+                    <p class="create-head__error">Необходимо указать время размещения</p>
+                    <!-- <p class="create-head__error">Автоматически добавлен 1 час</p> -->
+                </div>
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-btn">
+                    <button class="longread-announcement__btn-del"></button>
+                    <button class="longread-announcement__btn-upld" disabled>Разместить</button>
+                </div>
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-title">
+                    <p class="longread-announcement__count"><span data-count-title>30</span>/30</p>
+                    <label class="longread-announcement__title">
+                        <input data-count type="text" maxlength="30" class="longread-announcement__title-input" placeholder="Заголовок на таймлайне">
+                    </label>
+                    <p class="create-head__error create-head__error_for-count">Текст превышает допустимую длину</p>
+                </div>
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-timeline">
+                    <p class="longread-announcement__text longread-announcement__text_no-timeline">Анонс не опубликован на таймлайне</p>
+                    <!-- <p class="longread-announcement__text longread-announcement__text_error">
+                        Анонс размещен на <span class="longread-announcement__text_underline">таймлайне</span>, опубликуйте материал
+                        <span class="longread-announcement__text_block">Осталось:  15 минут 55 секунд</span>
+                    </p> -->
+                    <!-- <p class="longread-announcement__text longread-announcement__text_timeline">
+                        Анонс размещен на таймлайне 
+                        <span class="longread-announcement__text_block">Материал будет опубликован как анонсировано</span>
+                        <span class="longread-announcement__text_block">Осталось: 1 день 23 часа 42 минуты 55 секунд</span>
+                    </p> -->
+                </div>
+            </div>
     
             <div class="longread-create__image longread-image">
                 <div class="longread-image__img">
@@ -293,11 +412,15 @@
                 <div class="longread-image__headline">
                     <div class="longread-image__title">
                         <p class="longread-image__title-counter"><span data-count-title>30</span>/30</p>
-                        <input data-count type="text" class="longread-image__title-input" maxlength="30" placeholder="Заголовок">
+                        <div>
+                            <input data-count type="text" class="longread-image__title-input" maxlength="30" placeholder="Заголовок">
+                        </div>
                     </div>
                     <div class="longread-image__subtitle">
                         <p class="longread-image__subtitle-counter"><span data-count-title>100</span>/100</p>
-                        <textarea data-count type="text" class="longread-image__subtitle-input" maxlength="100" placeholder="Лид"></textarea>
+                        <div>
+                            <textarea data-count type="text" class="longread-image__subtitle-input" maxlength="100" placeholder="Лид"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -428,6 +551,16 @@
                     <div class="object__wrap">
                         <div class="object__content">
                             <textarea name="text" class="object__content-text" placeholder="Это текстовый модуль верстки"></textarea>
+
+                            <div class="tooltip tooltip_editor">
+                                <div class="tooltip__item-editor tooltip__item-editor_bold"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_italic"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_line-through"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_ul"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_ol"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_link"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_comment"></div>
+                            </div>
                         </div>
                         <div class="object__controls">
                             <button class="object__controls-btn object__controls-btn_copy"></button>
@@ -564,6 +697,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="longread-content__object object">
                     <div class="object__wrap object__wrap_move">
                         <button class="object__move"></button>
@@ -618,6 +752,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="longread-content__object object">
                     <div class="object__wrap object__wrap_move">
                         <button class="object__move"></button>
@@ -742,95 +877,6 @@
     
             <div class="longread-create__social longread-social">
 
-                <h1 class="longread-social__title">Соцсети</h1>
-
-                <div class="longread-social__item">
-                    <p class="longread-social__item-title">Twitter</p>
-                    <div class="longread-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Сопроводительный текст">
-                        <label class="longread-social__item-select">
-                            <!-- <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Дата анонса</p> -->
-                            <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
-                        </label>
-                    </div>
-                </div>
-                <div class="longread-social__item">
-                    <p class="longread-social__item-title">Заголовок на шер-картинке</p>
-                    <div class="longread-social__item-wrap">
-                        <input type="text" name="twitter-title" placeholder="Заголовок на шер-картинке">
-                        <div class="longread-social__item-wrap_modal">
-                            <div class="longread-social__item-select" data-tooltip>
-                                <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
-                            </div>
-
-                            <div class="tooltip tooltip_time">
-                                <div class="tooltip__cls-area"></div>
-                                <div class="tooltip__time">
-                                    <div class="tooltip__time-item">00:00</div>
-                                    <div class="tooltip__time-item">00:10</div>
-                                    <div class="tooltip__time-item">00:20</div>
-                                    <div class="tooltip__time-item">00:30</div>
-                                    <div class="tooltip__time-item">00:40</div>
-                                    <div class="tooltip__time-item">00:50</div>
-                                    <div class="tooltip__time-item">01:00</div>
-                                    <div class="tooltip__time-item">01:10</div>
-                                    <div class="tooltip__time-item">01:20</div>
-                                    <div class="tooltip__time-item">01:30</div>
-                                    <div class="tooltip__time-item">01:40</div>
-                                    <div class="tooltip__time-item">01:50</div>
-                                    <div class="tooltip__time-item">02:00</div>
-                                    <div class="tooltip__time-item">02:10</div>
-                                    <div class="tooltip__time-item">02:20</div>
-                                    <div class="tooltip__time-item">02:30</div>
-                                    <div class="tooltip__time-item">02:40</div>
-                                    <div class="tooltip__time-item">02:50</div>
-                                    <div class="tooltip__time-item">03:00</div>
-                                    <div class="tooltip__time-item">03:10</div>
-                                    <div class="tooltip__time-item">03:20</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="longread-social__item">
-                    <p class="longread-social__item-title">Facebook</p>
-                    <div class="longread-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Сопроводительный текст">
-                        <div class="longread-social__item-select">
-                            <!-- <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Дата анонса</p> -->
-                            <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
-                        </div>
-                    </div>
-                </div>
-                <div class="longread-social__item">
-                    <p class="longread-social__item-title">Заголовок на шер-картинке</p>
-                    <div class="longread-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
-                        <div class="longread-social__item-select">
-                            <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="longread-social__item">
-                    <p class="longread-social__item-title">Вконтакте</p>
-                    <div class="longread-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Сопроводительный текст">
-                        <div class="longread-social__item-select">
-                            <!-- <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Дата анонса</p> -->
-                            <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
-                        </div>
-                    </div>
-                </div>
-                <div class="longread-social__item">
-                    <p class="longread-social__item-title">Заголовок на шер-картинке</p>
-                    <div class="longread-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
-                        <div class="longread-social__item-select">
-                            <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
-                        </div>
-                    </div>
-                </div>
-
                 <h1 class="longread-social__title">Читайте также</h1>
 
                 <div class="longread-social__item-wrap longread-social__item-wrap_material">
@@ -899,36 +945,127 @@
                         </div>
                     </div>
                 </div>
-                <div class="longread-social__agreement longread-social__agreement_disabled">
-                    <h1 class="longread-social__title longread-social__agreement-title">Согласование материала перед публикацией</h1>
-
-                    <div class="longread-social__item-wrap">
-                        <label class="longread-social__agreement-var">
-                            <input type="checkbox" name="agreement">
-                            <div class="longread-social__agreement-checkbox"></div>
-                            Виза редактора
-                        </label>
-                        <label class="longread-social__agreement-var">
-                            <input type="checkbox" name="agreement">
-                            <div class="longread-social__agreement-checkbox"></div>
-                            Виза визуального редактора
-                        </label>
-                        <label class="longread-social__agreement-var">
-                            <input type="checkbox" name="agreement">
-                            <div class="longread-social__agreement-checkbox"></div>
-                            Виза корректора
-                        </label>
-                        <label class="longread-social__agreement-var">
-                            <input type="checkbox" name="agreement">
-                            <div class="longread-social__agreement-checkbox"></div>
-                            Виза главного редактора
-                        </label>
+                <div class="longread-social__wrap longread-social__wrap_disabled">
+                    <h1 class="longread-social__title">Соцсети</h1>
+    
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Twitter</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <label class="longread-social__item-select">
+                                <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
+                            </label>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter-title" placeholder="Заголовок на шер-картинке">
+                            <div class="longread-social__item-wrap_modal">
+                                <div class="longread-social__item-select" data-tooltip>
+                                    <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
+                                </div>
+    
+                                <div class="tooltip tooltip_time">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__time">
+                                        <div class="tooltip__time-item">00:00</div>
+                                        <div class="tooltip__time-item">00:10</div>
+                                        <div class="tooltip__time-item">00:20</div>
+                                        <div class="tooltip__time-item">00:30</div>
+                                        <div class="tooltip__time-item">00:40</div>
+                                        <div class="tooltip__time-item">00:50</div>
+                                        <div class="tooltip__time-item">01:00</div>
+                                        <div class="tooltip__time-item">01:10</div>
+                                        <div class="tooltip__time-item">01:20</div>
+                                        <div class="tooltip__time-item">01:30</div>
+                                        <div class="tooltip__time-item">01:40</div>
+                                        <div class="tooltip__time-item">01:50</div>
+                                        <div class="tooltip__time-item">02:00</div>
+                                        <div class="tooltip__time-item">02:10</div>
+                                        <div class="tooltip__time-item">02:20</div>
+                                        <div class="tooltip__time-item">02:30</div>
+                                        <div class="tooltip__time-item">02:40</div>
+                                        <div class="tooltip__time-item">02:50</div>
+                                        <div class="tooltip__time-item">03:00</div>
+                                        <div class="tooltip__time-item">03:10</div>
+                                        <div class="tooltip__time-item">03:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Facebook</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <div class="longread-social__item-select">
+                                <!-- <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Дата анонса</p> -->
+                                <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
+                            <div class="longread-social__item-select">
+                                <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Вконтакте</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <div class="longread-social__item-select">
+                                <!-- <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Дата анонса</p> -->
+                                <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
+                            <div class="longread-social__item-select">
+                                <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="longread-social__agreement">
+                        <h1 class="longread-social__title longread-social__agreement-title">Согласование материала перед публикацией</h1>
+    
+                        <div class="longread-social__item-wrap">
+                            <label class="longread-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="longread-social__agreement-checkbox"></div>
+                                Виза редактора
+                            </label>
+                            <label class="longread-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="longread-social__agreement-checkbox"></div>
+                                Виза визуального редактора
+                            </label>
+                            <label class="longread-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="longread-social__agreement-checkbox"></div>
+                                Виза корректора
+                            </label>
+                            <label class="longread-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="longread-social__agreement-checkbox"></div>
+                                Виза главного редактора
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="longread-create__success">
                 <button class="longread-create__success-del"></button>
+                <button class="longread-create__success-upload longread-create__success-upload_ready">Опубликовать</button>
                 <button class="longread-create__success-upload">Опубликовать</button>
             </div>
 
@@ -981,6 +1118,39 @@
                     Загрузить файлы
                 </label>
                 <button class="modal__gallery-btn_save">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal_transparent" style="display: none;">
+        <div class="modal__public public-material">
+            
+            <h1 class="public-material__title">Опубликовать материал</h1>
+            <div class="public-material__wrap">
+                <div class="common-input__tooltip public-material__select" data-tooltip>
+                    <p class="common-input__tooltip-text"></p>
+                </div>
+                <div class="tooltip">
+                    <div class="tooltip__cls-area"></div>
+                    <div data-announce-modal data-id="now" class="tooltip__item">Немедленно</div>
+                    <div data-announce-modal data-id="plan" class="tooltip__item">По плану</div>
+                    <div data-announce-modal data-id="time" class="tooltip__item">Ко времени</div>
+                </div>
+                <p id="now" class="public-material__notice public-material__notice_now">Материал сразу появится на сайте</p>
+                <p id="plan" class="public-material__notice public-material__notice_plan">Материал будет опубликован как анонсировано</p>
+                <p id="time" class="public-material__notice public-material__notice_time">Время в анонсе тоже будет изменено</p>
+            </div>
+            <div class="public-material__wrap public-material__wrap_for-date">
+                <label class="public-material__input">
+                    <input type="text" class="public-material__input-item datepicker-num">
+                </label>
+                <label class="public-material__input public-material__input_for-time">
+                    <input data-time-mask maxlength="5" class="public-material__input-item" type="text">
+                </label>
+            </div>
+            <div class="public-material__wrap public-material__wrap_for-btn">
+                <button class="public-material__btn">нет</button>
+                <button class="public-material__btn">опубликовать</button>
             </div>
         </div>
     </div>

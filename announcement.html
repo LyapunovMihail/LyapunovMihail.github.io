@@ -23,7 +23,77 @@
                     <img src="img/bombus-logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="admin-header__user"></div>
+            <div class="admin-header__user" data-menu>
+                <p class="admin-header__user-name">Император Палпатин</p>
+                <div class="admin-header__user-img">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+            <div class="account-modal">
+                <div class="tooltip__cls-area"></div>
+                <div class="account-modal__item account-modal__item_my-material">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="u" d="M18 2a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12zm-1 13H7v2h10v-2zm0-4H7v2h10v-2zm0-4H7v2h10V7z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <mask id="i" fill="#fff">
+                                    <use xlink:href="#u"/>
+                                </mask>
+                                <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#u"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#i)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Мои материалы
+                </div>
+                <div class="account-modal__item account-modal__item_settings">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="ui" d="M18.687 12.877c.036-.288.063-.58.063-.877 0-.297-.027-.59-.063-.877l1.903-1.49a.449.449 0 0 0 .108-.576l-1.8-3.119c-.112-.193-.346-.274-.549-.193l-2.24.904a6.829 6.829 0 0 0-1.522-.886l-.337-2.385A.463.463 0 0 0 13.8 3h-3.6a.454.454 0 0 0-.445.378l-.338 2.385a6.66 6.66 0 0 0-1.521.886l-2.241-.904a.45.45 0 0 0-.549.194l-1.8 3.118a.45.45 0 0 0 .108.576l1.899 1.49c-.036.288-.063.58-.063.877 0 .297.027.59.063.877l-1.899 1.49a.449.449 0 0 0-.108.576l1.8 3.118a.445.445 0 0 0 .549.194l2.241-.904c.464.355.972.657 1.521.886l.338 2.385c.035.212.22.378.445.378h3.6c.225 0 .41-.166.445-.378l.338-2.385a6.66 6.66 0 0 0 1.521-.886l2.241.904a.45.45 0 0 0 .549-.194l1.8-3.118a.45.45 0 0 0-.108-.576l-1.899-1.49zM12 15.15A3.148 3.148 0 0 1 8.85 12 3.148 3.148 0 0 1 12 8.85 3.148 3.148 0 0 1 15.15 12 3.148 3.148 0 0 1 12 15.15z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <mask id="iu" fill="#fff">
+                                    <use xlink:href="#ui"/>
+                                </mask>
+                                <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#ui"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#iu)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Настройки
+                </div>
+                <div class="account-modal__item account-modal__item_logout">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="kj" d="M16.16 6.744l-1.224 1.225L17.675 11H7v2h10.675l-2.74 2.966 1.226 1.225L21 12z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <path class="account-modal__item_hover" fill="#979797" d="M14 22H3V2h11v7H5v6h9v7zm0-9H7v-2h7v2z"/>
+                                <mask id="jk" fill="#fff">
+                                    <use xlink:href="#kj"/>
+                                </mask>
+                                <use fill="#9C9C9C" xlink:href="#kj"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#jk)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Выход
+                </div>
+            </div>
         </div>
     </header>
 

@@ -124,7 +124,7 @@
                     &::before
                         @include before-image(-4px)
                         left: 100%
-                        background: url(../img/materials/show-more.svg) center no-repeat
+                        background: url(../img/materials/arrow-drop-down.svg) center no-repeat
                 &_active
                     .release-status__output-head-text_span::before
                         transform: rotate(180deg)
@@ -187,7 +187,6 @@
             text-decoration: none
             &:not(:last-child)
                 margin-right: 10px
-
             &_active
                 color: $col-75
 
@@ -199,11 +198,9 @@
         &-status
             width: 183px
             margin-right: 106px
-        &-author
-            width: 336px
-            margin-right: 47px
         &-date
-            width: 341px 
+            width: 341px
+            margin-right: 391px
     &__wrap
         height: 100%
         display: flex
@@ -215,6 +212,6 @@
         &-visible
             background: url(../img/visibility-on.svg) center no-repeat
         &-edit
-            background: url(../img/aside/edit.svg) center no-repeat
+            background: url(../img/edit.svg) center no-repeat
         &-delete
             background: url(../img/longread/delete.svg) center no-repeat

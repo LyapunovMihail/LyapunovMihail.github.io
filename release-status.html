@@ -11,8 +11,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,600|IBM+Plex+Sans:400,500|IBM+Plex+Serif:400,600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="stylesheet" href="css/common-create.min.css">
 	<link rel="stylesheet" href="css/release.min.css">
+	<link rel="stylesheet" href="css/common-create.min.css">
 </head>
 
 <body>
@@ -23,7 +23,12 @@
                     <img src="img/bombus-logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="admin-header__user"></div>
+            <div class="admin-header__user">
+                <p class="admin-header__user-name">Император Палпатин</p>
+                <div class="admin-header__user-img">
+                    <img src="" alt="">
+                </div>
+            </div>
         </div>
     </header>
 
@@ -253,17 +258,14 @@
 
             <div class="release-status__output">
 
-                <div class="release-status__output-count">
-                    <p>Всего записей: <span>100</span></p>
-                    <p><span>100</span> /100</p>
+                <div class="common-count">
+                    <p class="common-count__text">Всего записей: <span>100</span></p>
+                    <p class="common-count__text"><span>100</span> /100</p>
                 </div>
 
                 <div class="release-status__output-head">
                     <p class="release-status__output-head-text release-status__output-head-text_status" data-MinMax>
                         <span class="release-status__output-head-text_span">Статус</span>
-                    </p>
-                    <p class="release-status__output-head-text release-status__output-head-text_author" data-MinMax>
-                        <span class="release-status__output-head-text_span">Опубликовал</span>
                     </p>
                     <p class="release-status__output-head-text release-status__output-head-text_date" data-MinMax>
                         <span class="release-status__output-head-text_span">Дата публикации</span>
@@ -273,7 +275,6 @@
                 <div class="release-status__output-wrap">
                     <div class="release-status__output-item release-object">
                         <p class="release-object__text release-object__text-status">Готов к публикации</p>
-                        <p class="release-object__text release-object__text-author">Иван Иванов</p>
                         <p class="release-object__text release-object__text-date">05.05.2019</p>
                         
                         <div class="release-object__wrap">
@@ -284,7 +285,6 @@
                     </div>
                     <div class="release-status__output-item release-object">
                         <p class="release-object__text release-object__text-status">Опубликован</p>
-                        <p class="release-object__text release-object__text-author">Император Императорович</p>
                         <p class="release-object__text release-object__text-date">21.05.2019</p>
                         
                         <div class="release-object__wrap">
@@ -295,7 +295,6 @@
                     </div>
                     <div class="release-status__output-item release-object">
                         <p class="release-object__text release-object__text-status">Снят с публикации</p>
-                        <p class="release-object__text release-object__text-author">Бум Бумович</p>
                         <p class="release-object__text release-object__text-date">18.01.2019</p>
                         
                         <div class="release-object__wrap">

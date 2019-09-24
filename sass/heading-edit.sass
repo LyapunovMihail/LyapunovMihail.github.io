@@ -11,3 +11,134 @@
         width: 100%
         height: 56px
         background-color: #fff
+        padding: 0 41px 0 75px
+        display: flex
+        align-items: center
+        border-bottom: 1px solid #9c9c9c
+
+        &-item
+            font: 13px/16px $font-sans
+            color: $col-75
+            text-transform: uppercase
+
+            &_status
+                width: 46px
+                margin-right: 54px
+            &_rubrica   
+                width: 120px
+                margin-right: 30px
+            &_views
+                width: 81px
+                margin-right: 34px
+            &_material
+                width: 79px
+                margin-right: 41px
+            &_delete
+                width: 59px
+
+    &__item
+        @extend .heading__head
+        padding: 0 9px
+        &_disabled
+            .heading__item-text
+                color: $col-holder
+        &-wrap
+            width: 48px
+            height: 24px
+            position: relative
+            margin-right: 18px
+        &-btn
+            width: 24px
+            height: 24px
+            position: absolute
+            top: 0
+            &_down
+                background: url(../img/longread/arrow-down.svg) center no-repeat
+                left: 0
+            &_up
+                background: url(../img/longread/arrow-up.svg) center no-repeat
+                right: 0
+        &-switch
+            width: 46px
+            margin-right: 54px
+            display: flex
+            justify-content: center
+            cursor: pointer
+
+            input
+                display: none
+                &:checked + .heading__item-checkbox
+                    background-color: #9b9b9b
+                    &::before
+                        left: 17px
+                        background-color: #777
+        &-checkbox
+            width: 34px
+            height: 14px
+            border-radius: 7px
+            background-color: #f0f0f0
+            position: relative
+            @include linear(background-color)
+            &::before
+                @include before-circle(20px, 20px)
+                left: -3px
+                top: -3px
+                background-color: #f0f0f0
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12)
+                transition: .2s linear background-color, .2s ease left
+
+        &-text
+            font: 13px/15px $font-sans
+            color: rgba(0, 0, 0, .87)
+            text-transform: uppercase
+        &-name
+            width: 120px
+            margin-right: 30px
+        &-views 
+            width: 81px
+            margin-right: 34px
+        &-material
+            width: 79px
+            margin-right: 41px
+        &-del
+            width: 59px
+            height: 100%
+            transform: translateX(-22px)
+            background: url(../img/longread/delete.svg) center no-repeat
+
+
+    &__add-btn
+        padding: 12px 14px
+        font: 13px/15px $font-sans
+        text-transform: uppercase
+        color: rgba(0, 0, 0, .87)
+        position: relative
+        display: flex
+        align-items: center
+        
+        span
+            display: block
+            width: 30px
+            height: 30px
+            border-radius: 50%
+            top: 12px
+            left: 14px
+            background: url(../img/add-category.svg) center no-repeat $col-active
+            background-size: 15px
+            margin-right: 25px
+
+    &__submit-btn
+        width: 160px
+        height: 56px
+        border-radius: 3px
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08)
+        background-color: $col-active
+        font: 500 14px/24px $font-sans
+        text-transform: uppercase
+        color: #6f6a60
+        @include linear(color)
+        margin: (40px - 12px) 0 0
+        &:hover
+            color: $col-headline
+
+@import "_page/heading-modal"

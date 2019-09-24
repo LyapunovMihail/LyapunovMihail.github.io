@@ -7,29 +7,12 @@
         transform: rotate(360deg)
 
 
-
-
 .admin-main
     width: 100%
     padding: 40px 0 0
 
     &__output
         width: 100%
-
-        &-count
-            display: flex
-            justify-content: space-between
-            margin: 0 0 10px
-
-            &_after-result
-                display: flex
-                justify-content: flex-start
-                align-items: center
-
-            p
-                font: 500 20px/28px $font-sans
-                @include font-smoothing
-                color: $col-75
         
         &-head
             width: 100%
@@ -37,83 +20,12 @@
             background-color: #ffffff
             border-bottom: 1px solid #9c9c9c
 
-        &-more
-            width: 100%
-            display: flex
-            justify-content: flex-end
-
-            &_wrap
-                width: calc(50% + 80px)
-                display: flex
-                justify-content: space-between
-        &-btn
-            width: 160px
-            height: 36px
-            font: 500 14px/24px $font-sans
-            @include font-smoothing
-            color: #9b9b9b
-            background-color: #fff
-            border-radius: 2px
-            text-transform: uppercase
-            letter-spacing: .5px
-            transition: box-shadow .2s linear
-            &:hover
-                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18)
-            &_loading
-                width: 170px
-                position: relative
-                padding-left: 30px
-                pointer-events: none
-                &::before
-                    content: ''
-                    position: absolute
-                    width: 20px
-                    height: 20px
-                    top: calc((36px / 2) - 10px)
-                    left: 10px
-                    border-radius: 50%
-                    border: 2px solid $col-active
-                    // border-top-color: transparent
-                    border-right-color: transparent
-                    animation: loading .8s linear infinite
-
-        &-page
-            font: 14px/19px $font-sans
-            @include font-smoothing
-            color: $col-holder
-            display: block
-            text-decoration: none
-            &:not(:last-child)
-                margin-right: 10px
-
-            &_active
-                color: $col-75
-
 
 .materials-filter
     display: flex
     padding: 0 15px
 
     &__item
-        height: 100%
-        display: flex
-        align-items: center
-
-        span
-            font: 13px/16px $font-sans
-            @include font-smoothing
-            color: $col-75
-            position: relative
-            text-transform: uppercase
-            cursor: pointer
-            &::before
-                content: ''
-                position: absolute
-                top: calc(50% - 12px)
-                right: -24px
-                width: 24px
-                height: 24px
-                background: url(../img/materials/arrow-drop-down.svg) center no-repeat
         &_active
             span::before
                 transform: rotate(180deg)
@@ -155,6 +67,10 @@
         font: 13px/15px $font-sans
         @include font-smoothing
         color: rgba(0, 0, 0, 0.87)
+        
+        &_error
+            color: #ff3d00
+            pointer-events: none
 
         &_status
             padding-left: 9px
@@ -176,13 +92,6 @@
                 background-color: #ffee3a
 
     &__item
-        width: 100%
-        height: 57px
-        display: flex
-        padding: 0 18px 0 15px
-        background-color: #fff
-        border-bottom: 1px solid #9c9c9c
-        align-items: center
 
         &-wrap
             height: 100%
