@@ -10,7 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,600|IBM+Plex+Sans:400,500|IBM+Plex+Serif:400,600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/common-create.min.css">
 	<link rel="stylesheet" href="css/cards.min.css">
 </head>
 
@@ -232,24 +233,25 @@
 
         <div class="container">
             
-            <div class="longread-cards__head cards-head">
+            <div class="longread-cards__head create-head">
                 
-                <div class="cards-head__btns">
-                    <div class="cards-head__editor">
-                        <a class="cards-head__editor-link" href="#">Редактор</a>
-                        <a class="cards-head__editor-link" href="#">Предпросмотр</a>
-                        <a class="cards-head__editor-link cards-head__editor-link_active" href="#">Анонс</a>
+                <div class="create-head__btns">
+                    <div class="create-head__editor">
+                        <a class="create-head__editor-link" href="#">Редактор</a>
+                        <a class="create-head__editor-link" href="#">Предпросмотр</a>
+                        <a class="create-head__editor-link create-head__editor-link_active" href="#">Карточки</a>
                     </div>
-                    <div class="cards-head__public">
-                        <p class="cards-head__public-draft">Готов к публикации</p>
-                        <button class="cards-head__public-del"></button>
-                        <button class="cards-head__public-upld">Опубликовать</button>
+                    <div class="create-head__public">
+                        <p class="create-head__public-draft">Черновик</p>
+                        <button class="create-head__public-del"></button>
+                        <button data-replace-status class="create-head__public-upld create-head__public-upld_ready">Готов к публикации</button>
+                        <button class="create-head__public-upld">Опубликовать</button>
                     </div>
                 </div>
 
-                <div class="cards-head__mode">
-                    <a href="" class="cards-head__mode-item">Декстоп</a>
-                    <a href="" class="cards-head__mode-item cards-head__mode-item_active">Мобильный</a>
+                <div class="create-head__mode">
+                    <a href="" class="create-head__mode-item">Декстоп</a>
+                    <a href="" class="create-head__mode-item create-head__mode-item_active">Мобильный</a>
                 </div>
             </div>
 

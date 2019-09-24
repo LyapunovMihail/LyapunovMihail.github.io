@@ -302,6 +302,20 @@
                 </div>
                 <div class="admin-main__filter-wrap">
                     <div class="admin-main__filter-item" data-tooltip>
+                        <span class="admin-main__filter-text admin-main__filter-text_placeholder">Категории</span>
+                    </div>
+
+                    <div class="tooltip">
+                        <div class="tooltip__cls-area"></div>
+                        <p class="tooltip__item">Категории 1</p>
+                        <p class="tooltip__item">Категории 2</p>
+                        <p class="tooltip__item">Категории 3</p>
+                        <p class="tooltip__item">Категории 4</p>
+                        <p class="tooltip__item">Категории 5</p>
+                    </div>
+                </div>
+                <!-- <div class="admin-main__filter-wrap">
+                    <div class="admin-main__filter-item" data-tooltip>
                         <input class="admin-main__filter-text" placeholder="Все авторы" disabled>
                     </div>
 
@@ -328,19 +342,19 @@
                             <p class="tooltip__item-checkbox_name" title="Авдотья Романовская-Плюшкина">Авдотья Романовская-Плюшкина</p>
                         </label>
                     </div>
-                </div>
+                </div> -->
                 <div class="admin-main__filter-wrap">
-                    <div class="admin-main__filter-item admin-main__filter-item_not-empty" data-tooltip>
-                        <span class="admin-main__filter-text admin-main__filter-text_placeholder">Дата создания</span>
+                    <div class="admin-main__filter-item" data-tooltip>
+                        <span class="admin-main__filter-text admin-main__filter-text_placeholder" data-paste>Дата создания</span>
                     </div>
 
                     <div class="tooltip tooltip_date">
                         <div class="tooltip__cls-area"></div>
                         <label for="startDateCreate" class="tooltip__date">
                             с
-                            <input id="startDateCreate" type="text" name="startDateCreate" placeholder="01.01.2019">
+                            <input id="startDateCreate" type="text" maxlength="10" name="startDateCreate" placeholder="01.01.2019" data-input-mask>
                             по
-                            <input type="text" name="finishDateCreate" placeholder="31.12.2019">
+                            <input type="text" maxlength="10" name="finishDateCreate" placeholder="31.12.2019" data-input-mask data-end>
                         </label>
                     </div>
                 </div>
@@ -350,11 +364,12 @@
                     </div>
 
                     <div class="tooltip tooltip_date">
+                        <div class="tooltip__cls-area"></div>
                         <label for="startDateUpload" class="tooltip__date">
                             с
-                            <input id="startDateUpload" type="text" name="startDateUpload" placeholder="01.01.2019">
+                            <input id="startDateUpload" maxlength="10" type="text" name="startDateUpload" placeholder="01.01.2019" data-input-mask>
                             по
-                            <input type="text" name="finishDateUpload" placeholder="31.12.2019">
+                            <input type="text" maxlength="10" name="finishDateUpload" placeholder="31.12.2019" data-input-mask data-end>
                         </label>
                     </div>
                 </div>

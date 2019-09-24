@@ -244,6 +244,7 @@
                     <div class="create-head__public">
                         <p class="create-head__public-draft">Черновик</p>
                         <button class="create-head__public-del"></button>
+                        <button data-replace-status class="create-head__public-upld create-head__public-upld_ready">Готов к публикации</button>
                         <button class="create-head__public-upld">Опубликовать</button>
                     </div>
                 </div>
@@ -340,130 +341,6 @@
 
             <div class="longread-create__social create-social">
 
-                <h1 class="create-social__title">Соцсети</h1>
-
-                <div class="create-social__item">
-                    <p class="create-social__item-title">Twitter</p>
-                    <div class="create-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Сопроводительный текст">
-                        <label class="create-social__item-select">
-                            <input class="create-social__item-select-text datepicker" placeholder="Дата анонса">
-                        </label>
-                    </div>
-                </div>
-                <div class="create-social__item">
-                    <p class="create-social__item-title">Заголовок на шер-картинке</p>
-                    <div class="create-social__item-wrap">
-                        <input type="text" name="twitter-title" placeholder="Заголовок на шер-картинке">
-                        <div class="create-social__item-wrap_modal">
-                            <div class="create-social__item-select" data-tooltip>
-                                <p class="create-social__item-select-text create-social__item-select-text_placeholder">Время анонса</p>
-                            </div>
-
-                            <div class="tooltip tooltip_time">
-                                <div class="tooltip__cls-area"></div>
-                                <div class="tooltip__time">
-                                    <div class="tooltip__time-item">00:00</div>
-                                    <div class="tooltip__time-item">00:10</div>
-                                    <div class="tooltip__time-item">00:20</div>
-                                    <div class="tooltip__time-item">00:30</div>
-                                    <div class="tooltip__time-item">00:40</div>
-                                    <div class="tooltip__time-item">00:50</div>
-                                    <div class="tooltip__time-item">01:00</div>
-                                    <div class="tooltip__time-item">01:10</div>
-                                    <div class="tooltip__time-item">01:20</div>
-                                    <div class="tooltip__time-item">01:30</div>
-                                    <div class="tooltip__time-item">01:40</div>
-                                    <div class="tooltip__time-item">01:50</div>
-                                    <div class="tooltip__time-item">02:00</div>
-                                    <div class="tooltip__time-item">02:10</div>
-                                    <div class="tooltip__time-item">02:20</div>
-                                    <div class="tooltip__time-item">02:30</div>
-                                    <div class="tooltip__time-item">02:40</div>
-                                    <div class="tooltip__time-item">02:50</div>
-                                    <div class="tooltip__time-item">03:00</div>
-                                    <div class="tooltip__time-item">03:10</div>
-                                    <div class="tooltip__time-item">03:20</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="create-social__item">
-                    <p class="create-social__item-title">Facebook</p>
-                    <div class="create-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Сопроводительный текст">
-                        <div class="create-social__item-select">
-                            <input class="create-social__item-select-text datepicker" placeholder="Дата анонса">
-                        </div>
-                    </div>
-                </div>
-                <div class="create-social__item">
-                    <p class="create-social__item-title">Заголовок на шер-картинке</p>
-                    <div class="create-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
-                        <div class="create-social__item-select">
-                            <p class="create-social__item-select-text create-social__item-select-text_placeholder">Время анонса</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="create-social__item">
-                    <p class="create-social__item-title">Вконтакте</p>
-                    <div class="create-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Сопроводительный текст">
-                        <div class="create-social__item-select">
-                            <input class="create-social__item-select-text datepicker" placeholder="Дата анонса">
-                        </div>
-                    </div>
-                </div>
-                <div class="create-social__item">
-                    <p class="create-social__item-title">Заголовок на шер-картинке</p>
-                    <div class="create-social__item-wrap">
-                        <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
-                        <div class="create-social__item-select">
-                            <p class="create-social__item-select-text create-social__item-select-text_placeholder">Время анонса</p>
-                        </div>
-                    </div>
-                </div>
-
-                <h1 class="create-social__title">Добавить новость</h1>
-
-                <div class="create-social__news">
-                    <div class="create-social__news-wrap">
-                        <div class="create-social__news-item_wrap">
-                            <div class="create-social__news-item">
-                                <input type="text" placeholder="Новость">
-                                <button class="create-social__news-clear"></button>
-                            </div>
-                        </div>
-                        <div class="create-social__news-item_wrap">
-                            <div class="create-social__news-item create-social__news-item_created" data-tooltip>
-                                <p class="create-social__item-select-text">Новость</p>
-                            </div>
-
-                            <div class="tooltip">
-                                <div class="tooltip__cls-area"></div>
-                                <div class="tooltip__item">Новость 1</div>
-                                <div class="tooltip__item">Новость 2</div>
-                                <div class="tooltip__item">Новость 3</div>
-                            </div>
-                        </div>
-                        <div class="create-social__news-item_wrap">
-                            <div class="create-social__news-item create-social__news-item_created" data-tooltip>
-                                <p class="create-social__item-select-text">Новость</p>
-                            </div>
-
-                            <div class="tooltip">
-                                <div class="tooltip__cls-area"></div>
-                                <div class="tooltip__item">Новость 1</div>
-                                <div class="tooltip__item">Новость 2</div>
-                                <div class="tooltip__item">Новость 3</div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="create-social__news-submit"></button>
-                </div>
-
                 <h1 class="create-social__title">Читайте также</h1>
 
                 <div class="create-social__item-wrap create-social__item-wrap_material">
@@ -532,31 +409,216 @@
                         </div>
                     </div>
                 </div>
-                <div class="create-social__agreement create-social__agreement_disabled">
-                    <h1 class="create-social__title create-social__agreement-title">Согласование материала перед публикацией</h1>
-
-                    <div class="create-social__item-wrap">
-                        <label class="create-social__agreement-var">
-                            <input type="checkbox" name="agreement">
-                            <div class="create-social__agreement-checkbox"></div>
-                            Виза редактора
-                        </label>
-                        <label class="create-social__agreement-var">
-                            <input type="checkbox" name="agreement">
-                            <div class="create-social__agreement-checkbox"></div>
-                            Виза визуального редактора
-                        </label>
-                        <label class="create-social__agreement-var">
-                            <input type="checkbox" name="agreement">
-                            <div class="create-social__agreement-checkbox"></div>
-                            Виза корректора
-                        </label>
-                        <label class="create-social__agreement-var">
-                            <input type="checkbox" name="agreement">
-                            <div class="create-social__agreement-checkbox"></div>
-                            Виза главного редактора
-                        </label>
+                <div class="create-social__wrap create-social__wrap_disabled">
+                    <h1 class="create-social__title">Соцсети</h1>
+                    
+                    <div class="create-social__item">
+                        <p class="create-social__item-title">Twitter</p>
+                        <div class="create-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <label class="create-social__item-select">
+                                <input class="create-social__item-select-text datepicker" placeholder="Дата анонса">
+                            </label>
+                        </div>
                     </div>
+                    <div class="create-social__item">
+                        <p class="create-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="create-social__item-wrap">
+                            <input type="text" name="twitter-title" placeholder="Заголовок на шер-картинке">
+                            <div class="create-social__item-wrap_modal">
+                                <div class="create-social__item-select" data-tooltip>
+                                    <p class="create-social__item-select-text create-social__item-select-text_placeholder">Время анонса</p>
+                                </div>
+    
+                                <div class="tooltip tooltip_time">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__time">
+                                        <div class="tooltip__time-item">00:00</div>
+                                        <div class="tooltip__time-item">00:10</div>
+                                        <div class="tooltip__time-item">00:20</div>
+                                        <div class="tooltip__time-item">00:30</div>
+                                        <div class="tooltip__time-item">00:40</div>
+                                        <div class="tooltip__time-item">00:50</div>
+                                        <div class="tooltip__time-item">01:00</div>
+                                        <div class="tooltip__time-item">01:10</div>
+                                        <div class="tooltip__time-item">01:20</div>
+                                        <div class="tooltip__time-item">01:30</div>
+                                        <div class="tooltip__time-item">01:40</div>
+                                        <div class="tooltip__time-item">01:50</div>
+                                        <div class="tooltip__time-item">02:00</div>
+                                        <div class="tooltip__time-item">02:10</div>
+                                        <div class="tooltip__time-item">02:20</div>
+                                        <div class="tooltip__time-item">02:30</div>
+                                        <div class="tooltip__time-item">02:40</div>
+                                        <div class="tooltip__time-item">02:50</div>
+                                        <div class="tooltip__time-item">03:00</div>
+                                        <div class="tooltip__time-item">03:10</div>
+                                        <div class="tooltip__time-item">03:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-social__item">
+                        <p class="create-social__item-title">Facebook</p>
+                        <div class="create-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <div class="create-social__item-select">
+                                <input class="create-social__item-select-text datepicker" placeholder="Дата анонса">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-social__item">
+                        <p class="create-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="create-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
+                            <div class="create-social__item-wrap_modal">
+                                <div class="create-social__item-select" data-tooltip>
+                                    <p class="create-social__item-select-text create-social__item-select-text_placeholder">Время анонса</p>
+                                </div>
+    
+                                <div class="tooltip tooltip_time">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__time">
+                                        <div class="tooltip__time-item">00:00</div>
+                                        <div class="tooltip__time-item">00:10</div>
+                                        <div class="tooltip__time-item">00:20</div>
+                                        <div class="tooltip__time-item">00:30</div>
+                                        <div class="tooltip__time-item">00:40</div>
+                                        <div class="tooltip__time-item">00:50</div>
+                                        <div class="tooltip__time-item">01:00</div>
+                                        <div class="tooltip__time-item">01:10</div>
+                                        <div class="tooltip__time-item">01:20</div>
+                                        <div class="tooltip__time-item">01:30</div>
+                                        <div class="tooltip__time-item">01:40</div>
+                                        <div class="tooltip__time-item">01:50</div>
+                                        <div class="tooltip__time-item">02:00</div>
+                                        <div class="tooltip__time-item">02:10</div>
+                                        <div class="tooltip__time-item">02:20</div>
+                                        <div class="tooltip__time-item">02:30</div>
+                                        <div class="tooltip__time-item">02:40</div>
+                                        <div class="tooltip__time-item">02:50</div>
+                                        <div class="tooltip__time-item">03:00</div>
+                                        <div class="tooltip__time-item">03:10</div>
+                                        <div class="tooltip__time-item">03:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-social__item">
+                        <p class="create-social__item-title">Вконтакте</p>
+                        <div class="create-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <div class="create-social__item-select">
+                                <input class="create-social__item-select-text datepicker" placeholder="Дата анонса">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create-social__item">
+                        <p class="create-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="create-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
+                            <div class="create-social__item-wrap_modal">
+                                <div class="create-social__item-select" data-tooltip>
+                                    <p class="create-social__item-select-text create-social__item-select-text_placeholder">Время анонса</p>
+                                </div>
+    
+                                <div class="tooltip tooltip_time">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__time">
+                                        <div class="tooltip__time-item">00:00</div>
+                                        <div class="tooltip__time-item">00:10</div>
+                                        <div class="tooltip__time-item">00:20</div>
+                                        <div class="tooltip__time-item">00:30</div>
+                                        <div class="tooltip__time-item">00:40</div>
+                                        <div class="tooltip__time-item">00:50</div>
+                                        <div class="tooltip__time-item">01:00</div>
+                                        <div class="tooltip__time-item">01:10</div>
+                                        <div class="tooltip__time-item">01:20</div>
+                                        <div class="tooltip__time-item">01:30</div>
+                                        <div class="tooltip__time-item">01:40</div>
+                                        <div class="tooltip__time-item">01:50</div>
+                                        <div class="tooltip__time-item">02:00</div>
+                                        <div class="tooltip__time-item">02:10</div>
+                                        <div class="tooltip__time-item">02:20</div>
+                                        <div class="tooltip__time-item">02:30</div>
+                                        <div class="tooltip__time-item">02:40</div>
+                                        <div class="tooltip__time-item">02:50</div>
+                                        <div class="tooltip__time-item">03:00</div>
+                                        <div class="tooltip__time-item">03:10</div>
+                                        <div class="tooltip__time-item">03:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h1 class="create-social__title">Добавить новость</h1>
+    
+                    <div class="create-social__news">
+                        <div class="create-social__news-wrap">
+                            <div class="create-social__news-item_wrap">
+                                <div class="create-social__news-item">
+                                    <input class="create-social__news-item_input" type="text" placeholder="Новость">
+                                    <button class="create-social__news-clear"></button>
+                                </div>
+                            </div>
+                            <div class="create-social__news-item_wrap">
+                                <div class="create-social__news-item create-social__news-item_created" data-tooltip>
+                                    <p class="create-social__item-select-text">Новость</p>
+                                </div>
+    
+                                <div class="tooltip">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__item">Новость 1</div>
+                                    <div class="tooltip__item">Новость 2</div>
+                                    <div class="tooltip__item">Новость 3</div>
+                                </div>
+                            </div>
+                            <div class="create-social__news-item_wrap">
+                                <div class="create-social__news-item create-social__news-item_created" data-tooltip>
+                                    <p class="create-social__item-select-text">Новость</p>
+                                </div>
+    
+                                <div class="tooltip">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__item">Новость 1</div>
+                                    <div class="tooltip__item">Новость 2</div>
+                                    <div class="tooltip__item">Новость 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="create-social__news-submit"></button>
+                    </div>
+    
+                    <div class="create-social__agreement">
+                        <h1 class="create-social__title create-social__agreement-title">Согласование материала перед публикацией</h1>
+    
+                        <div class="create-social__item-wrap">
+                            <label class="create-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="create-social__agreement-checkbox"></div>
+                                Виза редактора
+                            </label>
+                            <label class="create-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="create-social__agreement-checkbox"></div>
+                                Виза визуального редактора
+                            </label>
+                            <label class="create-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="create-social__agreement-checkbox"></div>
+                                Виза корректора
+                            </label>
+                            <label class="create-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="create-social__agreement-checkbox"></div>
+                                Виза главного редактора
+                            </label>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="longread-create__success">

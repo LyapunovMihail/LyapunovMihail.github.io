@@ -64,9 +64,18 @@ $(document).ready(function() {
         yearSuffix: ''
     };
     $.datepicker.setDefaults($.datepicker.regional['ru']);
+    $.datepicker._checkOffset = function(_, offset){
+        offset.top -= 37
+
+        return offset
+    };
     
     
-})
+});
+function calendar(item) {
+
+
+}
 // Открытие/закртие тултипа + смена направления стрелки(chevron)
 $(document).on('click', '[data-tooltip]', function() {
 
