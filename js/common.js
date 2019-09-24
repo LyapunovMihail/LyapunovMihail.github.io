@@ -35,14 +35,16 @@ $(document).ready(function() {
     $('.datepicker').each(function() {
 
         $(this).datepicker({
-            showOtherMonths: true
+            showOtherMonths: true,
+            minDate: 0
         });
     })
     $('.datepicker-num').each(function() {
 
         $(this).datepicker({
             showOtherMonths: true,
-            dateFormat: 'dd.mm.yy'
+            dateFormat: 'dd.mm.yy',
+            minDate: 0
         });
     })
     
