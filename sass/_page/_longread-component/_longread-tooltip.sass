@@ -13,7 +13,7 @@
     user-select: none
     overflow: hidden
     &_open
-        display: flex
+        display: flex !important
     &_time
         top: 0
     &_date
@@ -38,6 +38,25 @@
             background-color: #fff
             left: 24px
             bottom: -10px
+            z-index: -1
+    &_add-object
+        display: none
+        width: 200px
+        position: absolute
+        left: calc(100% + 40px)
+        top: -13px
+        z-index: 10
+        background-color: #fff
+        overflow: visible
+        &::before
+            content: ''
+            position: absolute
+            width: 20px
+            height: 20px
+            background-color: #fff
+            top: 14px
+            left: -10px
+            transform: rotate(45deg)
             z-index: -1
     
     &__cls-area
@@ -114,6 +133,45 @@
                 background: url(../img/longread/editor/link.svg) center no-repeat
             &_comment
                 background: url(../img/longread/editor/comments.svg) center no-repeat
+        &-add
+            width: 100%
+            height: 46px
+            display: flex
+            align-items: center
+            padding-left: 45px
+            font: 16px/24px $font-sans
+            color: $col-75
+            background-position: 11px 11px
+            background-repeat: no-repeat
+            transition: background-color .2s linear
+            cursor: pointer
+            &:not(:last-child)
+                border-bottom: 1px solid #d8d8d8
+            &:hover
+                background-color: $col-active
+            &_fields
+                background-image: url(../img/longread/add-item-icon/text-fields.svg)
+            &_subtitle
+                background-image: url(../img/longread/add-item-icon/text-subheader.svg)
+            &_img
+                background-image: url(../img/longread/add-item-icon/image.svg)
+            &_gallery
+                background-image: url(../img/longread/add-item-icon/image-gallery.svg)
+            &_video
+                background-image: url(../img/longread/add-item-icon/video.svg)
+            &_quote
+                background-image: url(../img/longread/add-item-icon/quote.svg)
+            &_text
+                background-image: url(../img/longread/add-item-icon/text.svg)
+            &_notifications
+                background-image: url(../img/longread/add-item-icon/notifications.svg)
+            &_flip
+                background-image: url(../img/longread/add-item-icon/flip.svg)
+            &_embed
+                background-image: url(../img/longread/add-item-icon/embed.svg)
+            &_number
+                background-image: url(../img/longread/add-item-icon/number.svg)
+
     &__date
         height: 48px
         display: flex
