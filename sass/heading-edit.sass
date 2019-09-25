@@ -3,7 +3,7 @@
 
 .heading
     width: 100%
-    padding: 60px 0 0
+    padding: 60px 0 140px
 
     &__wrap
         width: 660px
@@ -24,7 +24,7 @@
             &_status
                 width: 46px
                 margin-right: 54px
-            &_rubrica   
+            &_rubrica
                 width: 120px
                 margin-right: 30px
             &_views
@@ -42,6 +42,13 @@
         &_disabled
             .heading__item-text
                 color: $col-holder
+        &:nth-child(2)
+            .heading__item-btn_up
+                display: none
+        &:last-child
+            .heading__item-btn_down
+                display: none
+            
         &-wrap
             width: 48px
             height: 24px
@@ -94,6 +101,7 @@
         &-name
             width: 120px
             margin-right: 30px
+            cursor: pointer
         &-views 
             width: 81px
             margin-right: 34px

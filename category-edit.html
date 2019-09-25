@@ -238,9 +238,9 @@
                     <p class="category__head-item category__head-item_material">материалы</p>
                     <p class="category__head-item category__head-item_delete">Удалить</p>
                 </div>
-                <div class="category__item">
+                <div class="category__item category__item_disabled">
                     <label class="category__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="category__item-checkbox"></div>
                     </label>
                     <div class="category__item-text category__item-name">
@@ -249,9 +249,9 @@
                     <div class="category__item-text category__item-material">42</div>
                     <button class="category__item-del"></button>
                 </div>
-                <div class="category__item">
+                <div class="category__item category__item_disabled">
                     <label class="category__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="category__item-checkbox"></div>
                     </label>
                     <div class="category__item-text category__item-name">
@@ -260,9 +260,9 @@
                     <div class="category__item-text category__item-material">42</div>
                     <button class="category__item-del"></button>
                 </div>
-                <div class="category__item">
+                <div class="category__item category__item_disabled">
                     <label class="category__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="category__item-checkbox"></div>
                     </label>
                     <div class="category__item-text category__item-name">
@@ -271,9 +271,9 @@
                     <div class="category__item-text category__item-material">42</div>
                     <button class="category__item-del"></button>
                 </div>
-                <div class="category__item">
+                <div class="category__item category__item_disabled">
                     <label class="category__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="category__item-checkbox"></div>
                     </label>
                     <div class="category__item-text category__item-name">
@@ -284,7 +284,7 @@
                 </div>
                 <div class="category__item category__item_disabled">
                     <label class="category__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="category__item-checkbox"></div>
                     </label>
                     <div class="category__item-text category__item-name">
@@ -294,8 +294,8 @@
                     <button class="category__item-del"></button>
                 </div>
             </div>
-            <button class="category__add-btn"> <span></span> добавить категорию</button>
-            <button class="category__submit-btn">Применить</button>
+            <button class="category__add-btn" data-add-category> <span></span> добавить категорию</button>
+            <button class="category__submit-btn" data-save>Применить</button>
         </div>
     </div>
 
@@ -308,7 +308,7 @@
 
     <!-- Модальные окна "активировать/деактивировать/удалить категорию/изменить категорию/добавить категорию" -->
 
-    <!-- <div class="modal modal_transparent">
+    <div class="modal modal_active modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title">Активировать</h1>
@@ -317,11 +317,11 @@
             </p>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">да</button>
+                <button class="heading-modal__btn-subm" data-active>да</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_switch-off modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title">Деактивировать</h1>
@@ -330,11 +330,11 @@
             </p>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">да</button>
+                <button class="heading-modal__btn-subm" data-deactivate>да</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_delete modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title">Удалить категорию</h1>
@@ -343,11 +343,11 @@
             </p>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">да</button>
+                <button class="heading-modal__btn-subm" data-delete>да</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_rename modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title heading-modal__title_next-input">Изменить категории</h1>
@@ -355,15 +355,16 @@
                 <p class="heading-modal__name-count"> <span data-count-title>15</span></p> 
                 <label class="heading-modal__name">
                     <input data-count type="text" placeholder="Название категории" maxlength="15">
+                    <p class="heading-modal__name-error">Заполните поле</p>
                 </label>
             </div>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">изменить</button>
+                <button class="heading-modal__btn-subm" data-rename>изменить</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_add modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title heading-modal__title_next-input">Добавить категорию</h1>
@@ -371,14 +372,25 @@
                 <p class="heading-modal__name-count"> <span data-count-title>15</span></p> 
                 <label class="heading-modal__name">
                     <input data-count type="text" placeholder="Название категории" maxlength="15">
+                    <p class="heading-modal__name-error">Заполните поле</p>
                 </label>
             </div>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">добавить</button>
+                <button class="heading-modal__btn-subm" data-create-category>добавить</button>
             </div>
         </div>
-    </div> -->
+    </div>
+    <div class="modal modal_save modal_transparent">
+
+        <div class="heading-modal">
+            <h1 class="heading-modal__title heading-modal__title_next-input">Сохранить изменения?</h1>
+            <div class="heading-modal__btn">
+                <button class="heading-modal__btn-cnsl">нет</button>
+                <button class="heading-modal__btn-subm">Сохранить</button>
+            </div>
+        </div>
+    </div>
 <script src="js/scripts.min.js"></script>
 </body>
 </html>

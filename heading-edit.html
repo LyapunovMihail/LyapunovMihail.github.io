@@ -239,13 +239,14 @@
                     <p class="heading__head-item heading__head-item_material">материалы</p>
                     <p class="heading__head-item heading__head-item_delete">Удалить</p>
                 </div>
-                <div class="heading__item">
+                <!-- heading__item_disabled -->
+                <div class="heading__item heading__item_disabled">
                     <div class="heading__item-wrap">
-                        <button class="heading__item-btn heading__item-btn_down"></button>
-                        <button class="heading__item-btn heading__item-btn_up"></button>
+                        <button class="heading__item-btn heading__item-btn_down" data-down></button>
+                        <button class="heading__item-btn heading__item-btn_up" data-up></button>
                     </div>
                     <label class="heading__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="heading__item-checkbox"></div>
                     </label>
                     <div class="heading__item-text heading__item-name">
@@ -257,13 +258,13 @@
                     <div class="heading__item-text heading__item-material">42</div>
                     <button class="heading__item-del"></button>
                 </div>
-                <div class="heading__item">
+                <div class="heading__item heading__item_disabled">
                     <div class="heading__item-wrap">
-                        <button class="heading__item-btn heading__item-btn_down"></button>
-                        <button class="heading__item-btn heading__item-btn_up"></button>
+                        <button class="heading__item-btn heading__item-btn_down" data-down></button>
+                        <button class="heading__item-btn heading__item-btn_up" data-up></button>
                     </div>
                     <label class="heading__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="heading__item-checkbox"></div>
                     </label>
                     <div class="heading__item-text heading__item-name">
@@ -275,13 +276,13 @@
                     <div class="heading__item-text heading__item-material">42</div>
                     <button class="heading__item-del"></button>
                 </div>
-                <div class="heading__item">
+                <div class="heading__item heading__item_disabled">
                     <div class="heading__item-wrap">
-                        <button class="heading__item-btn heading__item-btn_down"></button>
-                        <button class="heading__item-btn heading__item-btn_up"></button>
+                        <button class="heading__item-btn heading__item-btn_down" data-down></button>
+                        <button class="heading__item-btn heading__item-btn_up" data-up></button>
                     </div>
                     <label class="heading__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="heading__item-checkbox"></div>
                     </label>
                     <div class="heading__item-text heading__item-name">
@@ -293,13 +294,13 @@
                     <div class="heading__item-text heading__item-material">42</div>
                     <button class="heading__item-del"></button>
                 </div>
-                <div class="heading__item">
+                <div class="heading__item heading__item_disabled">
                     <div class="heading__item-wrap">
-                        <button class="heading__item-btn heading__item-btn_down"></button>
-                        <button class="heading__item-btn heading__item-btn_up"></button>
+                        <button class="heading__item-btn heading__item-btn_down" data-down></button>
+                        <button class="heading__item-btn heading__item-btn_up" data-up></button>
                     </div>
                     <label class="heading__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="heading__item-checkbox"></div>
                     </label>
                     <div class="heading__item-text heading__item-name">
@@ -313,11 +314,11 @@
                 </div>
                 <div class="heading__item heading__item_disabled">
                     <div class="heading__item-wrap">
-                        <button class="heading__item-btn heading__item-btn_down"></button>
-                        <button class="heading__item-btn heading__item-btn_up"></button>
+                        <button class="heading__item-btn heading__item-btn_down" data-down></button>
+                        <button class="heading__item-btn heading__item-btn_up" data-up></button>
                     </div>
                     <label class="heading__item-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
                         <div class="heading__item-checkbox"></div>
                     </label>
                     <div class="heading__item-text heading__item-name">
@@ -330,8 +331,8 @@
                     <button class="heading__item-del"></button>
                 </div>
             </div>
-            <button class="heading__add-btn"> <span></span> добавить рубрику</button>
-            <button class="heading__submit-btn">Применить</button>
+            <button class="heading__add-btn" data-add-elem> <span></span> добавить рубрику</button>
+            <button class="heading__submit-btn" data-save>Применить</button>
         </div>
     </div>
 
@@ -344,7 +345,7 @@
 
     <!-- Модальные окна "активировать/деактивировать/удалить рубрику/изменить рубрику/добавить рубрику" -->
 
-    <!-- <div class="modal modal_transparent">
+    <div class="modal modal_active modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title">Активировать</h1>
@@ -353,11 +354,11 @@
             </p>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">да</button>
+                <button class="heading-modal__btn-subm" data-active>да</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_pos modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title">Изменить порядок</h1>
@@ -366,11 +367,11 @@
             </p>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">изменить</button>
+                <button class="heading-modal__btn-subm" data-change-pos>изменить</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_switch-off modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title">Деактивировать</h1>
@@ -379,11 +380,11 @@
             </p>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">да</button>
+                <button class="heading-modal__btn-subm" data-deactivate>да</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_delete modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title">Удалить рубрику</h1>
@@ -392,42 +393,54 @@
             </p>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">да</button>
+                <button class="heading-modal__btn-subm" data-delete>да</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_rename modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title heading-modal__title_next-input">Изменить рубрику</h1>
             <div class="heading-modal__wrap">
                 <p class="heading-modal__name-count"> <span data-count-title>15</span></p> 
                 <label class="heading-modal__name">
-                    <input data-count type="text" placeholder="Название категории" maxlength="15">
+                    <input data-count data-rename-area data-clear type="text" placeholder="Название категории" maxlength="15">
+                    <p class="heading-modal__name-error">Заполните поле</p>
                 </label>
             </div>
             <div class="heading-modal__btn">
                 <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">изменить</button>
+                <button class="heading-modal__btn-subm" data-rename>изменить</button>
             </div>
         </div>
-    </div> -->
-    <!-- <div class="modal modal_transparent">
+    </div>
+    <div class="modal modal_add modal_transparent">
 
         <div class="heading-modal">
             <h1 class="heading-modal__title heading-modal__title_next-input">Добавить рубрику</h1>
             <div class="heading-modal__wrap">
                 <p class="heading-modal__name-count"> <span data-count-title>15</span></p> 
                 <label class="heading-modal__name">
-                    <input data-count type="text" placeholder="Название категории" maxlength="15">
+                    <input data-count data-clear type="text" placeholder="Название категории" maxlength="15">
+                    <p class="heading-modal__name-error">Заполните поле</p>
                 </label>
             </div>
             <div class="heading-modal__btn">
-                <button class="heading-modal__btn-cnsl">нет</button>
-                <button class="heading-modal__btn-subm">добавить</button>
+                <button class="heading-modal__btn-cnsl" data-cls-add>нет</button>
+                <button class="heading-modal__btn-subm" data-create-elem>добавить</button>
             </div>
         </div>
-    </div> -->
+    </div>
+    <div class="modal modal_save modal_transparent">
+
+        <div class="heading-modal">
+            <h1 class="heading-modal__title heading-modal__title_next-input">Сохранить изменения?</h1>
+            <div class="heading-modal__btn">
+                <button class="heading-modal__btn-cnsl">нет</button>
+                <button class="heading-modal__btn-subm">Сохранить</button>
+            </div>
+        </div>
+    </div>
 <script src="js/scripts.min.js"></script>
 </body>
 </html>

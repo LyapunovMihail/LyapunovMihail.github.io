@@ -10,6 +10,7 @@
     overflow-x: hidden
     padding: 60px 0
     background-color: rgba(54, 54, 54, .8)
+    display: none
     &_transparent
         background-color: transparent
 
@@ -74,9 +75,21 @@
             font: 16px/24px $font-sans
             color: $col-75
 
-        &-count
+        &-count,
+        &-error
             font: 12px/16px $font-sans
             color: $col-holder
             position: absolute
             bottom: 0
+            right: 0
+        &-error
+            display: none
             left: 0
+            right: auto
+            color: #e84943
+
+.empty-area
+    input
+        border-color: #e84943 !important
+    .heading-modal__name-error
+        display: block !important
