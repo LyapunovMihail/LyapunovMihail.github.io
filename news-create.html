@@ -345,38 +345,21 @@
     
                 <div class="create-social__news">
                     <div class="create-social__news-wrap">
-                        <div class="create-social__news-item_wrap">
-                            <div class="create-social__news-item">
-                                <input class="create-social__news-item_input" type="text" placeholder="Новость">
-                                <button class="create-social__news-clear"></button>
-                            </div>
-                        </div>
-                        <div class="create-social__news-item_wrap">
+                        <button class="create-social__news-submit" data-add-news></button>
+                        <div class="create-social__news-item_wrap create-social__news-item_hide">
                             <div class="create-social__news-item create-social__news-item_created" data-tooltip>
-                                <p class="create-social__item-select-text">Новость</p>
+                                <input class="create-social__item-select-text" type="text" placeholder="Новость" disabled>
+                                <button class="create-social__news-clear create-social__news-clear_hide" data-del-news></button>
                             </div>
 
                             <div class="tooltip">
                                 <div class="tooltip__cls-area"></div>
-                                <div class="tooltip__item">Новость 1</div>
-                                <div class="tooltip__item">Новость 2</div>
-                                <div class="tooltip__item">Новость 3</div>
-                            </div>
-                        </div>
-                        <div class="create-social__news-item_wrap">
-                            <div class="create-social__news-item create-social__news-item_created" data-tooltip>
-                                <p class="create-social__item-select-text">Новость</p>
-                            </div>
-
-                            <div class="tooltip">
-                                <div class="tooltip__cls-area"></div>
-                                <div class="tooltip__item">Новость 1</div>
-                                <div class="tooltip__item">Новость 2</div>
-                                <div class="tooltip__item">Новость 3</div>
+                                <div class="tooltip__item tooltip__item_add-news">Новость 1</div>
+                                <div class="tooltip__item tooltip__item_add-news">Новость 2</div>
+                                <div class="tooltip__item tooltip__item_add-news">Новость 3</div>
                             </div>
                         </div>
                     </div>
-                    <button class="create-social__news-submit"></button>
                 </div>
                 
                 <h1 class="create-social__title">Читайте также</h1>
@@ -393,19 +376,19 @@
                                 <input type="text" name="material" placeholder="Поиск по материалам">
                             </div>
                             <ul class="tooltip__list tooltip__list_material">
-                                <li class="tooltip__item">
+                                <li class="tooltip__item tooltip__item_news-more">
                                     <p>
                                         В Москве мужчина попытался украть миллион рублей при помощи пакета с картошкой 
                                         <span>Новость,</span> <span>31 декабря 2019</span>
                                     </p>
                                 </li>
-                                <li class="tooltip__item">
+                                <li class="tooltip__item tooltip__item_news-more">
                                     <p>
                                         Кому на Руси жить хорошо? 
                                         <span>Лонгрид,</span> <span>29 декабря 2019</span>
                                     </p>
                                 </li>
-                                <li class="tooltip__item">
+                                <li class="tooltip__item tooltip__item_news-more">
                                     <p>
                                         В Москве мужчина попытался украть миллион рублей при помощи пакета с картошкой 
                                         <span>Новость,</span> <span>31 декабря 2019</span>

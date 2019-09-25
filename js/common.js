@@ -168,12 +168,19 @@ $(document).on('click', '.tooltip__item, .tooltip__time-item', function() {
 
     if($(this).hasClass('tooltip__item_checkbox')) {
 
+    } else if ($(this).hasClass('tooltip__item_news-more')) {
+
+        addNewsStr($(this))
     } else if ($(this).attr('class') == 'tooltip__time-item' || ($(this).parent().hasClass('tooltip__list'))) {
+
         changeTime($(this))
+    } else if ($(this).hasClass('tooltip__item_add-news')) {
+
+        addNews($(this));
     } else {
         elem.text($(this).text().trim());
         elem.attr('class', elem.attr('class').replace(/ [\s\S]+/, ''));
-        $('.tooltip__cls-area').trigger('click')
+        $('.tooltip__cls-area').trigger('click');
     }
 });
 
@@ -355,3 +362,43 @@ $(document).on('click', '[data-announce-modal]', function() {
     $(this).closest('.public-material__wrap').children('p#' + el).css('display', 'block');
     el == 'time' ? $('.public-material__wrap_for-date').css('display', 'block') : $('.public-material__wrap_for-date').css('display', 'none')
 });
+
+// Добавление новости
+
+$(document).on('click', '[data-add-news]', function() {
+
+    var elemClone = $(this).next();
+    elemClone.clone().appendTo('.create-social__news-wrap').removeClass('create-social__news-item_hide').insertBefore($(this));
+});
+$(document).on('click', '[data-del-news]', function() {
+
+    $(this).parent().parent().remove();
+});
+
+function addNews(el) {
+
+    var text = el.text();
+    el.parent().prev().find('input').val(text);
+    el.parent().prev().find('input').next().removeClass('create-social__news-clear_hide');
+    el.parent().prev().removeClass('create-social__news-item_created');
+    el.parent().remove();
+};
+
+// "Читайте так же"
+
+function newsReadMore(el) {
+
+    var from = el.children().html().search('<');
+    
+    // console.log(el.children().html().substring(from, 0))
+    return el.children().html().substring(from, 0)
+
+}
+function addNewsStr(el) {
+
+    var elem = el.parent().parent().prev().children()
+
+    elem.text( newsReadMore(el) );
+    elem.attr('class', elem.attr('class').replace(/ [\s\S]+/, ''));
+    $('.tooltip__cls-area').trigger('click');
+}
