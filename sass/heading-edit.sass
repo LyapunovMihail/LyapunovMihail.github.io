@@ -4,6 +4,8 @@
 .heading
     width: 100%
     padding: 60px 0 140px
+    @media (max-width: 1375px)
+        padding: 60px 0 140px 80px
 
     &__wrap
         width: 660px
@@ -38,7 +40,10 @@
 
     &__item
         @extend .heading__head
+        border-bottom: 0
         padding: 0 9px
+        &:not(:last-child)
+            border-bottom: 1px solid #9c9c9c
         &_disabled
             .heading__item-text
                 color: $col-holder
