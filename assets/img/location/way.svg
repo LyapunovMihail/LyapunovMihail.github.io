@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="28px" viewBox="0 0 26 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 26</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Расположение+-адаптив+" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Видный-берег_расположение_объект_1600" transform="translate(-55.000000, -1002.000000)" stroke="#D45A42">
+            <g id="Group-28" transform="translate(16.000000, 566.000000)">
+                <g transform="translate(40.000000, 435.000000)" id="Group-30">
+                    <g>
+                        <g id="Group-26">
+                            <ellipse id="Oval" cx="18" cy="25.1034483" rx="3" ry="2.89655172"></ellipse>
+                            <path d="M5.33087266,7.14482759 L1.33087266,12.5517241 C-0.873041315,14.8864198 -0.339707982,16.9461899 2.93087266,18.7310345 C4.82918097,19.7669928 17.4224096,10.653087 20.5308727,11.0068966 C21.5261707,11.1201827 24.2935361,12.2690509 23.7308727,15.6413793 C23.6307307,16.2415813 22.8700232,17.4707415 22.1308727,18.7310345 C21.6912692,19.4805829 20.8912692,20.7679392 19.7308727,22.5931034" id="Line" stroke-linecap="square"></path>
+                            <polygon id="Triangle" transform="translate(6.941600, 4.826251) rotate(-325.000000) translate(-6.941600, -4.826251) " points="7.03880916 1.86326243 10.8962217 7.65962637 2.9869775 7.78923915"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
