@@ -320,6 +320,7 @@ $(function() {
             updateURL: false,
             loop: false,
             responsiveFallback: 1440,
+            keyboard: false
         });
     };
 });
