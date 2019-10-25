@@ -1,4 +1,6 @@
 $(function() {
+    var delaySlideMove = 900; // Если менять время тут, то и в файле "_main-floor.sass" строка 31, у класса ".floor"(transition), для равномерной смены слайдов
+    // Отвечает за скорость смены слайдов и скорость переключения анимации
 
     var headerClass = false;
     var footerClass = false;
@@ -40,7 +42,7 @@ $(function() {
                 
                 var elCount = $('.index-main').children().length,
                     removeBlackClass = $(window).height() * ((elCount - 2) * (-1));
-                
+
                 if ($('.index-main').offset().top < (-15) && $('.index-main').offset().top > (removeBlackClass + 100)) {
                     $('.header').addClass('header_black-image');
                     changeNav();
@@ -49,7 +51,7 @@ $(function() {
                     $('.header__nav').css('display', 'none');
                 };
                 navIndexAfter = $('.active').index('.floor');
-            }, 400);
+            }, delaySlideMove);
         };
     });
     function changeNav() {
@@ -315,7 +317,7 @@ $(function() {
         $('.index-main').onepage_scroll({
             sectionContainer: 'section',
             easing: 'ease',
-            animationTime: 700, // Если менять время тут, то и в файле "_main-floor.sass" строка 31, у класса ".floor"(transition), для равномерной смены слайдов
+            animationTime: delaySlideMove,
             pagination: false,
             updateURL: false,
             loop: false,
