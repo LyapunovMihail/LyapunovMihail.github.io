@@ -334,7 +334,7 @@
 		left: calc(50% - 180px)
 		opacity: 0
 		pointer-events: none
-		transition: opacity .2s linear
+		// transition: opacity .2s linear
 		z-index: 2
 		cursor: default
 		&::before
@@ -395,12 +395,15 @@
 			max-height: inherit
 			overflow: hidden 
 			&_scroll
-				width: 100%
+				width: calc(100% + 20px)
 				height: 100%
 				max-height: inherit
-				overflow: hidden auto
-				width: calc(100% + 20px)
+				overflow-x: hidden
+				overflow-y: scroll !important
 				padding: 20px 40px 20px 20px
+				display: flex
+				align-items: flex-start
+				position: relative
 		&-item
 			width: 100%
 			cursor: pointer
