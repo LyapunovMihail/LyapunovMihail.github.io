@@ -399,7 +399,6 @@
 
     $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
       //event.preventDefault();
-      console.log('test wocking');
       
       var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
       if(!$("body").hasClass("disabled-onepage-scroll")) init_scroll(event, delta);
