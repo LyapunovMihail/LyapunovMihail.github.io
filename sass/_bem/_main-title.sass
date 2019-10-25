@@ -1,0 +1,41 @@
+.main-title
+	display: flex
+	
+	&__label
+		display: flex
+		align-items: center
+		padding: 23px 24px 21px 26px
+		width: 160px
+		flex-shrink: 0
+		background-color: #F58220
+		color: #4a4a4a
+
+	&__text
+		display: flex
+		align-items: center
+		padding: 17px 15px 21px 20px
+
++media-breakpoint-down(lg)
+	.main-title
+
+		&__text
+			font-size: 16px
+
++media-breakpoint-down(md)
+	.main-title
+
+		&__label
+			width: 100px
+			padding-left: 15px
+			padding-right: 15px
+
++media-breakpoint-down(xs)
+	.main-title
+		display: block
+
+		&__label
+			width: 100%
+			padding: 17px 26px
+
+		&__text
+			padding: 14px 17px 18px

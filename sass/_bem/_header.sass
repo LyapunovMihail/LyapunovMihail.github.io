@@ -1,0 +1,656 @@
+@keyframes headerScroll
+	0%
+		transform: translateY(-77px)
+	100%
+		transform: translateY(0)
+
+@keyframes navActive
+    0%
+        width: 40px
+    60%
+        width: 220px
+    80%
+        width: 205px
+    100%
+        width: 210px
+
+@keyframes navClose
+    0%
+        width: 210px
+    57%
+        width: 40px
+        background-position: calc(100% - (100% - 8px)) 50%
+    57.1%
+        width: 40px
+        background-position: 50%
+    60%
+        width: 30px
+    80%
+        width: 45px
+    100%
+        width: 40px
+@keyframes lol
+	0%
+		width: 100%
+	100%
+		height: 100%
+
+.header
+	width: 100%
+	height: 83px
+	background-color: transparent
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 99
+	&_black-image
+		// background-color: #f5f2f1
+		.header__logo
+			background: url(../img/bombus-logo-rgb-black.svg) center no-repeat
+			background-size: 100%
+		.header__item_menu
+			span, &::before, &::after
+				background-color: #000
+	&_background
+		background-color: #f5f2f1
+	&_main-page
+		background-color: transparent
+		@media (max-width: 960px)
+			background-color: #f5f2f1
+	&_menu-open
+		pointer-events: all
+		.header__logo
+			background: url(../img/bombus-logo-rgb-white.svg) center no-repeat
+			background-size: 100%
+		.header__item_menu
+			span, &::before, &::after
+				background-color: #fff
+			&::before
+				transform: rotate(45deg)
+				margin-top: 0
+			span
+				opacity: 0
+			&::after
+				transform: rotate(-45deg)
+				margin-top: 0
+	&_fade
+		background: linear-gradient(to bottom, rgba(245, 242, 241, 0.7), rgba(245, 242, 241, 0) )
+
+	&__container
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		@media (max-width: 1200px)
+			width: calc(100% - 40px)
+			max-width: 950px
+			padding: 0
+
+	&__logo
+		display: block
+		width: 203px
+		height: 30px
+		background: url(../img/bombus-logo-rgb-white.svg) center no-repeat
+		background-size: 100%
+		position: relative
+		z-index: 2
+		&_white
+			background: url(../img/bombus-logo-rgb-white.svg) center no-repeat
+	&__nav
+		width: 100px
+		height: (16px * 3) + 10px
+		position: absolute
+		overflow: hidden
+		display: none
+		top: auto
+		left: calc(50% - 50px)
+
+		&-list
+			width: 100%
+			position: absolute
+			top: 42px
+			left: 0
+			transition: top .2s ease
+
+		&-item
+			font: 600 11px/16px $font-mono
+			color: #dfdfdf
+			margin: 0 0 5px
+			text-align: center
+			transition: font-size .2s ease
+			text-transform: uppercase
+
+			&_active
+				font-size: 14px
+				color: $col-active
+
+	&__notice 
+	    width: 210px
+	    padding: 16px
+	    background-color: $col-active
+	    font: 14px/19px $font-sans
+	    color: #fff
+	    position: absolute
+	    top: calc(100% + 24px)
+	    left: calc(50% - 105px)
+	    opacity: 0
+	    pointer-events: none
+	    transition: opacity .2s linear
+	    &::before
+	        content: ''
+	        position: absolute
+	        width: 20px
+	        height: 20px
+	        background-color: $col-active
+	        transform: rotate(45deg)
+	        left: calc(50% - 10px)
+	        top: -10px
+
+	    &-icon
+	        background-size: 20px
+	        word-spacing: 21px
+
+	        &_actual
+	            background: url(../img/main-page/flash_white.svg) center no-repeat
+	        &_views
+	            background: url(../img/main-page/visibility_white.svg) 34% 50% no-repeat no-repeat
+	            word-spacing: 23px
+
+	&__items
+		display: flex
+
+		&-close
+			width: 100%
+			height: 100%
+			position: fixed
+			left: 0
+			top: 0
+			background-color: rgba(0, 0, 0, .7)
+			z-index: 1
+			opacity: 0
+			pointer-events: none
+			transition: opacity .2s linear
+
+			&_open
+				opacity: 1
+				pointer-events: all
+				// Скрываю подсказки во время открытых "актуальных" и "топ просмотров"
+				&+ .header__item .header__notice,
+				&+ .header__item + .header__item .header__notice,
+					display: none
+				&+ .header__item + .header__item + .header__item + .header__item
+					span, &::before, &::after
+						background-color: #fff
+				&+ .header__item,
+				&+ .header__item + .header__item,
+				&+ .header__item + .header__item + .header__item,
+				&+ .header__item + .header__item + .header__item + .header__item
+					pointer-events: all
+
+	&__item
+		width: 40px
+		height: 40px
+		border-radius: 20px
+		background-color: #fff
+		position: relative
+		display: flex
+		align-items: center
+		cursor: pointer
+		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+		transition: width .2s linear, background-color .2s linear
+		z-index: 2
+		&_actual
+			background: url(../img/main-page/flash.svg) calc(100% - (100% - 8px)) 50% no-repeat #fff
+		&_views
+			background: url(../img/main-page/visibility.svg) calc(100% - (100% - 8px)) 50% no-repeat #fff
+		&_search
+			background: url(../img/main-page/search.svg) calc(100% - (100% - 8px)) 50% no-repeat #fff
+		&_menu
+			background-color: transparent
+			box-shadow: none
+			span, &::before, &::after
+				position: absolute
+				top: 50%
+				left: 50%
+				margin-left: -9px
+				width: 18px
+				height: 2px
+				background-color: #fff
+				transition: background-color .2s ease, transform .2s ease, opacity .2s ease
+
+			&::before
+				content: ''
+				margin-top: -6px
+
+			span
+				margin-top: -1px
+
+			&::after
+				content: ''
+				margin-top: 4px
+
+		@media (min-width: 1000px)
+			&:hover
+				background-color: $col-active
+				.header__item-text
+					color: #fff
+				.header__notice
+					opacity: 1
+				&:not(.header__item_views):not(.header__item_search):not(.header__item_menu)
+					background: url(../img/main-page/flash_white.svg) calc(100% - (100% - 8px)) 50% no-repeat $col-active
+
+				&:not(.header__item_actual):not(.header__item_search):not(.header__item_menu)
+					background: url(../img/main-page/visibility_white.svg) calc(100% - (100% - 8px)) 50% no-repeat $col-active
+
+				&:not(.header__item_actual):not(.header__item_views):not(.header__item_menu)
+					background: url(../img/main-page/search_white.svg) calc(100% - (100% - 8px)) 50% no-repeat $col-active
+
+				&:not(.header__item_actual):not(.header__item_views):not(.header__item_search)
+					background-color: transparent
+					span, &::before, &::after
+						background-color: $col-active
+
+		&:not(:last-child)
+			margin-right: 11px
+
+		// Класс "по умолчанию"
+		&_open
+			width: 210px
+			.header__item-text
+				color: $col-active
+				opacity: 1
+		// /Класс "по умолчанию"
+
+		// Класс с анимацией открытия
+		&_active
+		    animation: navActive .5s ease-in-out forwards
+		    .header__item-text
+		        color: $col-active
+		        opacity: 1
+		        &_input
+		            cursor: text
+		// /Класс с анимацией открытия
+
+		// Класс с анимацией закрытия
+		&_not-active
+			animation: navClose .5s ease-in-out forwards
+		// /Класс с анимацией закрытия
+
+		// Класс появления тултипа
+		&_for-tooltip
+			background-color: $col-active
+			pointer-events: all
+			.header__item-text
+				color: #fff
+				&_input
+					display: block
+					pointer-events: all
+			.header__notice
+				opacity: 0
+				pointer-events: none
+			&:not(.header__item_views):not(.header__item_search)
+				background: url(../img/main-page/flash_white.svg) calc(100% - (100% - 8px)) 50% no-repeat $col-active
+			&:not(.header__item_actual):not(.header__item_search)
+				background: url(../img/main-page/visibility_white.svg) calc(100% - (100% - 8px)) 50% no-repeat $col-active
+			&:not(.header__item_actual):not(.header__item_views)
+				background: url(../img/main-page/search_white.svg) calc(100% - (100% - 8px)) 50% no-repeat $col-active
+
+			.header__tooltip
+				background-color: #fff
+				opacity: 1
+				pointer-events: all
+				&::before
+					opacity: 1
+		// /Класс появления тултипа
+	
+		&-wrap
+			width: 100%
+			font: inherit
+			overflow: hidden
+		&-text
+			white-space: nowrap
+			overflow: hidden
+			font: 600 14px/16px $font-sans
+			text-transform: uppercase
+			transition: color .2s linear, opacity .2s linear
+			padding: 0 0 0 40px
+			box-sizing: border-box
+			opacity: 0
+			color: #fff
+			pointer-events: none
+			&_input
+				display: none
+				border: none
+				background-color: transparent
+				cursor: pointer
+
+	&__tooltip
+		width: 360px
+		max-height: calc(100vh - 118px)
+		min-height: 376px
+		position: absolute
+		top: calc(100% + 24px)
+		left: calc(50% - 180px)
+		opacity: 0
+		pointer-events: none
+		transition: opacity .2s linear
+		z-index: 2
+		cursor: default
+		&::before
+			content: ''
+			position: absolute
+			width: 20px
+			height: 20px
+			background-color: #fff
+			transform: rotate(45deg)
+			left: calc(50% - 10px)
+			top: -10px
+			opacity: 0
+			z-index: -1
+		&_actual
+			left: 0
+			&::before
+				left: calc( 210px / 2 - 10px )
+		&_views
+			left: -51px
+			&::before
+				left: calc( (210px / 2 - 10px) + 50px )
+			.header__tooltip-wrapper
+				padding: 64px 0 0
+				&_scroll
+					padding-top: 0
+					padding-bottom: 0
+					max-height: calc(100vh - 186px)
+				&_for-scroll
+					padding: 0 0 20px
+			.header__tooltip-date
+				padding: 0
+				&::before
+					display: none
+		&_search
+			left: -102px
+			&::before
+				left: calc( (210px / 2 - 10px) + 101px )
+
+		&-headline
+			display: none
+			font: 600 14px/16px $font-mono
+			text-transform: uppercase
+			color: $col-active
+			padding: 20px 20px 15px
+		&-cls
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			position: absolute
+			left: 100%
+			top: -32px
+			background: url(../img/close-2.svg) center no-repeat #fff
+			background-size: 18px
+		
+		&-wrapper
+			width: 100%
+			height: 100%
+			max-height: inherit
+			overflow: hidden 
+			&_scroll
+				width: 100%
+				height: 100%
+				max-height: inherit
+				overflow: hidden auto
+				width: calc(100% + 20px)
+				padding: 20px 40px 20px 20px
+		&-item
+			width: 100%
+			cursor: pointer
+			&:not(:last-child)
+				padding: 0 0 20px
+				margin: 0 0 20px
+				border-bottom: 1px solid #dfdfdf
+			
+			&_only-title
+				.header__tooltip-title
+					font-size: 24px
+					line-height: 32px
+			&_longread-all
+				.header__tooltip-date
+					margin: 0 0 7px
+				.header__tooltip-title
+					font-size: 24px
+					line-height: 32px
+					margin: 0 0 13px
+			&_search-longread
+				.header__tooltip-date
+					margin: 0 0 7px
+					padding: 0
+					&::before
+						display: none
+				.header__tooltip-title
+					margin: 0 0 13px
+				.header__tooltip-descr
+					margin: 0
+			&_search-news
+				.header__tooltip-date
+					margin: 0 0 14px
+					padding: 0
+					&::before
+						display: none
+			&_search-news-actual
+				.header__tooltip-date
+					margin: 0 0 14px
+
+
+
+		&-filter
+			width: 100%
+			height: 44px
+			font: 500 12px/16px $font-sans
+			text-transform: uppercase
+			color: #777
+			display: flex
+			padding: 7px 20px 0
+			position: absolute
+			left: 0
+			top: 0
+
+			li
+				width: 33.333%
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				border-bottom: 1px solid #dfdfdf
+				cursor: pointer
+			&_active
+				color: $col-4a
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					height: 2px
+					width: 100%
+					background-color: $col-4a
+					bottom: -1px
+					left: 0
+		&-type
+			font: 600 14px/16px $font-mono
+			text-transform: uppercase
+			color: $col-active
+			margin: 0 0 20px
+		&-date
+			width: 100%
+			position: relative
+			padding-left: 22px
+			margin: 0 0 15px
+			font: 12px/16px $font-mono
+			color: $col-75
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: -2px
+				width: 20px
+				height: 20px
+				background: url(../img/main-page/flash.svg) center no-repeat
+		&-img
+			width: 100%
+			height: 220px
+			overflow: hidden
+			margin: 0 0 13px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-title
+			width: 100%
+			font: 600 18px/24px $font-serif
+			color: $col-headline
+		&-descr
+			font: 16px/24px $font-sans
+			color: $col-headline
+			margin: 0 0 23px
+		&-name
+			@extend .header__tooltip-date
+			margin: 0
+			padding: 0
+			&::before
+				display: none
+		
+		&-search
+			width: 100%
+			display: none
+			position: relative
+			padding: 20px 0 11px
+			border-bottom: 1px solid #646464
+			margin: 0 0 20px
+			input
+				font: 16px/24px $font-sans
+				color: $col-headline
+				padding: 0 59px 0 0
+				border: 0
+			&::before
+				@include before-image(20px)
+				right: 55px - 20px
+				background: url(../img/search.svg) center no-repeat
+				width: 24px
+				height: 24px
+
+@media (max-width: 960px)
+	.header
+		height: 60px
+
+		&__container
+			width: calc(100% - 40px) !important
+			max-width: 560px
+			padding: 0
+	.header__nav
+		display: none
+	.header__logo
+		width: 40px
+		height: 40px
+		background: url(../img/bombus-logo-rgb-black-mobile.svg) center no-repeat !important
+		background-size: 30px
+	.header__items
+		position: relative
+	.header__item
+		&:not(.header__item_menu)
+			position: static
+
+		&_active,
+		&_not-active,
+		&_open
+			width: 40px
+			animation: none
+		&_menu
+			span, &:before, &:after
+				background-color: #000 !important
+	
+	.header__tooltip
+		width: 320px
+		max-height: calc(100vh - 156px)
+		left: auto
+		right: -10px
+
+		&_actual
+			&::before
+				left: 127px
+		&_views
+			&::before
+				left: 178px
+			.header__tooltip-wrapper
+				max-height: calc(100vh - 251px)
+				padding: 23px 0 0
+				&_scroll
+					max-height: calc(100vh - (251px + 23px))
+
+		&_search
+			padding: 0 20px
+			&::before
+				left: 229px
+			.header__tooltip-wrapper
+				max-height: calc(100vh - 232px)
+				&_scroll
+					padding: 0 20px 0 0
+				&_for-scroll
+					padding: 0 0 20px
+			.header__tooltip-cls
+				top: 17px
+		
+		&-headline
+			display: block
+		&-wrapper
+			max-height: calc(100vh - (156px + 51px))
+			box-sizing: border-box
+			&_scroll
+				padding-top: 5px
+				box-sizing: border-box
+		&-cls
+			top: 13px
+			right: 13px
+			left: auto
+		&-filter
+			position: static
+			padding: 0 20px
+		&-search
+			display: block
+
+@media (max-width: 449px)
+	.header
+		background-color: #363636
+
+	.header__item_menu
+		span, &::before, &::after
+			background-color: #fff
+	.header_black-image .header__item_menu
+		span, &::before, &::after
+			background-color: #fff
+
+	.header__tooltip
+		width: 100vw
+		right: -20px
+		max-height: calc(100vh - 70px)
+
+		&_actual,
+		&_views,
+		&_search
+			.header__tooltip-wrapper
+				max-height: 100vh
+			.header__tooltip-wrapper_scroll
+				max-height: 100vh
+
+		&_actual
+			.header__tooltip-wrapper_scroll
+				height: calc(100vh - 125px)
+			&::before
+				left: calc(100% - 204px)
+		&_views
+			.header__tooltip-wrapper_scroll
+				height: calc(100vh - 192px)
+			&::before
+				left: calc(100% - 153px)
+		&_search
+			.header__tooltip-wrapper_scroll
+				height: calc(100vh - 150px)
+			&::before
+				left: calc(100% - 101px)

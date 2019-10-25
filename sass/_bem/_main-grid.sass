@@ -1,0 +1,58 @@
+.main-grid
+	margin-top: 30px
+
+	&__col
+		margin-bottom: 40px
+
+		&--grow
+			flex-grow: 1
+
+	&__row
+		display: flex
+		flex-direction: column
+
+	&__col-button
+		margin-bottom: 40px
+
+	&__telegram
+		margin-bottom: 30px
+
++media-breakpoint-down(lg)
+	.main-grid
+
+		&--section
+
+			.main-grid
+				&__col
+					margin-bottom: 20px
+
+				&__telegram
+					margin-bottom: 20px
+		
+		&__col-button
+			margin-top: 20px
+
++media-breakpoint-down(md)
+	.main-grid
+		margin-top: 20px
+		margin-bottom: 20px
+
+		&__col
+			margin-bottom: 20px
+
+		&__col-button
+			margin-top: 10px
+			margin-bottom: 10px
+
++media-breakpoint-down(xs)
+	.main-grid
+
+		&__col
+
+			&--p0
+				padding-left: 0
+				padding-right: 0
+
+				.box
+					border-right: 0
+					border-left: 0

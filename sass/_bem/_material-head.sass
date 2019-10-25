@@ -1,0 +1,112 @@
+.color-backgorund
+	background-color: #f5f2f1
+	padding: 28px 0 30px
+
+.img-holder-img
+	width: 100% !important
+	height: 100vh !important
+	object-fit: cover !important
+	
+.material-head
+	margin-bottom: 30px
+
+	&__image,
+	&__image_parallax
+		width: 100%
+		height: calc(100vh - 83px)
+		margin-bottom: 28px
+		overflow: hidden
+		position: relative
+
+	&__image
+		display: none
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__top-row
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+
+	&__link
+		text-decoration: none
+		margin-right: 40px
+
+		&:hover
+			text-decoration: underline
+
+	&__photo-author
+		margin-left: auto
+		margin-right: 220px
+
+	&__title
+		margin-bottom: 10px
+
+	&__text
+		font-size: 18px
+		max-width: 700px
+		margin-bottom: 20px
+
+	&__bottom-row
+		display: flex
+		align-items: center
+
+	&__time
+		margin-right: 24px
+
+	&__date
+		margin-right: 24px
+
+	&--without-image
+		margin-top: 50px
+
++media-breakpoint-down(md)
+	.material-head__image_parallax
+		display: none
+
+	.material-head__image
+		display: block
+		height: 50vw
+		min-height: 240px
+
+	// .img-holder-img
+	// 	height: calc(50vw + (100vh - 50vw)) !important
+	// 	min-height: calc(240px + (100vh - 240px)) !important
+		// parallax изображения работает корректно только при высоте картинки во весь экран (100vh)
+		// Поэтому, при изменении высоты прибавляем остаточную часть (100vh - "высота картинки"),
+		// выглядит аналогично обычной картинки с "object-fit: cover"
+
+	.material-head
+
+		&__photo-author
+			margin-right: 0
+
++media-breakpoint-down(xs)
+	.material-head
+
+		&__link
+			margin-right: 18px
+
+		&__photo-author
+			display: none
+		
+		&__title
+			font-size: 24px
+			line-height: 32px
+
+		&__text
+			font-size: 16px
+
+		&__bottom-row
+			flex-wrap: wrap
+
+		&__author
+			order: -1
+			width: 100%
+			margin-bottom: 10px
+
+		&__date
+			margin-right: 0
+

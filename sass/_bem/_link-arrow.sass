@@ -1,0 +1,25 @@
+.link-arrow
+	font-family: 'IBM Plex Mono', monospace
+	font-weight: 600
+	text-transform: uppercase
+	font-size: 14px
+	line-height: 16px
+	color: #F58220
+	text-decoration: none
+	display: inline-flex
+	align-items: center
+
+	&::after
+		content: ''
+		margin-left: 7px
+		transition: 0.2s
+		width: 24px
+		height: 24px
+		background: url('../img/arrow-forward.svg') no-repeat
+		background-size: 100%
+		background-position: center
+
+	&:hover, &:focus
+
+		&::after
+			transform: translateX(5px)

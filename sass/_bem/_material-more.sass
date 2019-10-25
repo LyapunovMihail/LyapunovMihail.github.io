@@ -1,0 +1,66 @@
+.material-more
+	margin-bottom: 40px
+
+	&__box
+		padding-bottom: 30px
+
+	&__head-link
+		text-decoration: none
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 14px 20px 14px 28px
+
+		&::after
+			content: ''
+			margin-left: 7px
+			transition: 0.2s
+			width: 24px
+			height: 24px
+			background: url('../img/arrow-forward.svg') no-repeat
+			background-size: 100%
+			background-position: center
+
+		&:hover, &:focus
+
+			&::after
+				transform: translateX(5px)
+
+	&__image
+		height: 220px
+		margin: -1px -1px 22px
+
+	&__content
+		padding-left: 28px
+		padding-right: 28px
+
+	&__title
+		margin-bottom: 9px
+
+	&__desc
+		margin-bottom: 15px
+
++media-breakpoint-down(md)
+	.material-more
+
+		&__col
+
+			&:last-child
+				display: none
+
+		&__title
+			font-size: 18px
+			line-height: 22px
+
+		&__desc
+			font-size: 14px
+			line-height: 19px
+
++media-breakpoint-down(xs)
+	.material-more
+
+		&__col
+			display: none
+
+			&:first-child
+				display: block

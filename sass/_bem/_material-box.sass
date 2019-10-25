@@ -1,0 +1,130 @@
+.material-box
+	display: flex
+	flex-direction: column
+
+	&__info-row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: auto
+		min-height: 20px
+
+	&__author
+		margin-right: 20px
+
+	&__time
+		text-align: right
+		margin-left: auto
+
+	&--big
+
+		.material-box
+			&__title
+				max-width: 380px
+
+	&--small
+		
+		.material-box
+			&__title
+				margin-bottom: 6px
+
+	&--image-desc
+
+		.material-box
+			&__content-row
+				display: flex
+
+			&__image
+				width: 260px
+				height: 170px
+				margin-right: 20px
+				margin-top: 6px
+				flex-shrink: 0
+
+			&__title
+				margin-bottom: 8px
+
+	&--big-image
+		padding-top: 4px
+		display: flex
+		flex-direction: column
+
+		.material-box
+			&__image
+				height: 426px
+				margin: -1px -1px 0
+
+			&__wrap
+				padding: 14px 0
+				margin: 0 20px
+				flex-grow: 1
+				display: flex
+				flex-direction: column
+				border-bottom: 1px solid #dfdfdf
+
+			&__title
+				max-width: 420px
+				margin-bottom: 7px
+
+			&__desc
+				max-width: 420px
+
+
+	&--big-desc
+
+		.material-box
+			&__title
+				max-width: 420px
+				margin-bottom: 7px
+
+			&__desc
+				max-width: 420px
+
+	&--image
+
+		.material-box
+			&__content-row
+				display: flex
+
+			&__image
+				width: 260px
+				height: 150px
+				margin-right: 20px
+				margin-top: 6px
+				flex-shrink: 0
+				margin-bottom: 2px
+
+			&__content-col
+				display: flex
+				flex-direction: column
+
++media-breakpoint-down(lg)
+	.material-box
+
+		&--image-desc
+
+			.material-box
+				&__image
+					width: 200px
+					height: 152px
+
+				&__title
+					font-size: 18px
+					line-height: 22px
+
+				&__desc
+					font-size: 14px
+					line-height: 19px
+
+		&--small
+
+			.material-box
+				&__info-row
+					min-height: 0
+
+		&--image
+
+			.material-box
+				&__image
+					width: 200px
+					height: 152px

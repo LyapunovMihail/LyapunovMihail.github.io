@@ -1,0 +1,25 @@
+.material-notification
+	display: flex
+	margin-bottom: 30px
+
+	&::before
+		content: ''
+		width: 40px
+		height: 40px
+		border-radius: 20px
+		background:
+			color: #F58220
+			image: url('../img/notifications.svg')
+			repeat: no-repeat
+			position: center
+		flex-shrink: 0
+		margin-right: 20px
+
++media-breakpoint-down(xs)
+	.material-notification
+		flex-direction: column
+		padding-left: 20px
+
+		&::before
+			margin-bottom: 10px
+			margin-left: -20px
