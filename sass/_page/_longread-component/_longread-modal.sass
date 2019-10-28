@@ -1,0 +1,228 @@
+
+.modal
+    width: 100%
+    height: 100%
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow-y: auto
+    overflow-x: hidden
+    padding: 60px 0
+    background-color: rgba(54, 54, 54, .8)
+    &_many-items
+        align-items: flex-start
+    &_transparent
+        background-color: transparent
+
+    &__gallery
+        width: 1000px
+        min-height: 90px
+        padding: 69px 95px 69px 134px
+        background-color: #f5f2f1
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+
+        &-item
+            width: 100%
+            margin: 0 0 20px
+            &:first-child
+                transform: translateY(-30px)
+            &:nth-last-child(2)
+                margin: 0 0 80px
+                
+        &-btn
+            width: 100%
+            display: flex
+            justify-content: flex-end
+
+            &_add,
+            &_save
+                width: 182px
+                height: 44px
+                font: 500 14px/24px $font-sans
+                color: #6f6a60
+                letter-spacing: .5px
+                border-radius: 3px
+                text-transform: uppercase
+                @include linear (color)
+                &:hover
+                    color: $col-headline
+            &_add
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: #fff
+                margin-right: 23px
+                cursor: pointer
+                input
+                    display: none
+                &-empty-items
+                    background-color: $col-active
+            &_save
+                background-color: $col-active
+
+.gallery-item
+
+    &__content
+        display: flex
+        align-items: center
+        // justify-content: space-between
+        margin: 0 0 20px
+
+        &-move
+            width: 24px
+            height: 24px
+            background: url(../img/longread/move.svg) center no-repeat
+            cursor: pointer
+            margin-right: 7px
+        &-img
+            width: 136px
+            height: 90px
+            background: url(../img/longread/image_72.svg) center no-repeat rgba(60, 60, 60, 0.8)
+            background-size: 30px
+            margin-right: 39px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &-name
+            width: 260px
+            font: 13px/15px $font-sans
+            color: rgba(0, 0, 0, 0.87)
+            overflow: hidden
+            text-overflow: ellipsis
+            margin-right: 40px
+        &-replace,
+        &-descr
+            height: 30px
+            font: 13px/15px $font-sans
+            color: rgba(0, 0, 0, 0.87)
+            transition: color .2s linear
+            margin-right: 31px
+            user-select: none
+            display: flex
+            align-items: center
+            justify-content: center
+            &:hover
+                color: $col-active
+            &_active
+                color: $col-active
+            input 
+                display: none
+        &-del
+            width: 24px
+            height: 24px
+            background: url(../img/longread/delete.svg) center no-repeat
+
+    &__descr
+        display: none
+        flex-flow: column nowrap
+        align-items: flex-end
+        &_active
+            display: flex
+
+        &-text,
+        &-credit
+            width: calc(100% - 31px)
+            height: 48px
+            font: 16px/24px $font-sans
+            color: $col-75
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+            border: none
+            margin: 0 0 20px
+            padding-left: 10px 
+        &-copy
+            display: flex
+            align-items: center
+            font: 16px/24px $font-sans
+            color: $col-75
+            cursor: pointer
+            input
+                display: none
+                &:checked + .gallery-item__descr-checkbox
+                    background: url(../img/longread/check.svg) center no-repeat
+        &-checkbox
+            width: 18px
+            height: 18px
+            border: 2px solid #9c9c9c
+            border-radius: 3px
+            margin-right: 11px
+
+
+.public-material
+    width: 360px
+    padding: 32px 27.5px 16px
+    background-color: #fff
+    border-radius: 4px
+    border: solid 1px #dddddd
+
+    &__title
+        font: 500 20px/28px $font-sans
+        color: $col-75
+        margin: 0 0 25px
+    &__wrap
+        width: 100%
+        height: 48px
+        position: relative
+        margin: 0 0 45px
+        &_for-btn
+            height: auto
+            display: flex
+            justify-content: flex-end
+            padding: 8px 0 0
+            margin: 0
+        &_for-date
+            height: auto
+            display: none
+            margin: 0
+    &__notice
+        display: none
+        font: 12px/16px $font-sans
+        color: #6f6a60
+        margin: 4px 0 0
+        position: absolute
+        top: calc(100% + 4px)
+        left: 0
+    &__select
+        box-shadow: none
+        border-bottom: 1px solid #e0e0e0
+        padding-left: 0
+        &::before
+            background: url(../img/longread/arrow-drop-down.svg) center no-repeat
+        
+        .common-input__tooltip-text
+            color: $col-headline
+    &__btn
+        min-width: 88px
+        height: 36px
+        padding: 0 20px
+        font: 500 14px/24px $font-sans
+        color: #6f6a60
+        text-transform: uppercase
+        letter-spacing: .5px
+    
+    &__input
+        width: 100%
+        height: 48px
+        display: flex
+        align-items: center
+        border: 1px solid #979797
+        margin: 0 0 20px
+        padding: 0 50px 0 10px
+        position: relative
+        &:last-child
+            margin: 0 0 2px
+        &::before
+            @include before-image(calc(50% - 12px))
+            right: 13px
+            background: url(../img/materials/show-more.svg) center no-repeat
+        &_for-time
+            padding: 0 13px
+            &::before
+                display: none
+
+        &-item
+            width: 100%
+            font: 16px/24px $font-sans
+            color: $col-75
+            border: none

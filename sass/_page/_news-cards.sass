@@ -1,0 +1,117 @@
+
+.cards-news
+    width: 1000px
+    display: flex
+    flex-flow: row wrap
+    align-items: flex-start
+    padding: 67px 0 100px
+
+    &__snippet
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.06)
+        padding: 20px
+        margin: 0 0 40px
+
+        &-image
+            overflow: hidden
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &-date
+            font: 12px/16px $font-mono
+            color: $col-75
+            position: relative
+
+            &_actual
+                padding-left: 35px
+                &::before
+                    @include before-image(0)
+                    background: url(../img/longread/flash.svg) center no-repeat
+                    left: 0
+        &-title
+            font: 600 18px/22px $font-serif
+            color: $col-headline
+        
+
+        // .cards-news__snippet-image
+        // .cards-news__snippet-title
+        // .cards-news__snippet-date
+        &_big-full
+            width: 100%
+            display: flex
+
+            .cards-news__snippet-wrap
+                width: calc(100% - (460px + 40px))
+            .cards-news__snippet-image
+                width: 460px
+                height: 305px
+                margin-right: 40px
+            .cards-news__snippet-title
+                font-size: 40px
+                line-height: 42px
+            .cards-news__snippet-date
+                margin: 0 0 22px
+        &_title-in-image
+            width: 500px
+            position: relative
+            margin-right: 40px
+
+            .cards-news__snippet-date
+                margin: 0 0 21px
+            .cards-news__snippet-image
+                position: relative
+                width: 459px
+                height: 292px
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    width: 100%
+                    height: 173px
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0))
+            .cards-news__snippet-title
+                position: absolute
+                left: 40px
+                bottom: 46px
+                width: calc(100% - 80px)
+                color: #fff
+        
+        &_only-title
+            width: 460px
+
+            .cards-news__snippet-date
+                margin: 0 0 15px
+            .cards-news__snippet-title
+                font-size: 36px
+                line-height: 40px
+
+        &_small-full
+            width: 250px
+            margin-right: 40px
+            
+            .cards-news__snippet-date
+                margin: 0 0 18px
+            .cards-news__snippet-image
+                width: 100%
+                height: 137px
+                margin: 0 0 15px
+
+        &_width-full
+            width: 329px
+            margin-right: 40px
+            
+            .cards-news__snippet-date
+                margin: 0 0 21px
+            .cards-news__snippet-image
+                width: 100%
+                height: 181px
+                margin: 0 0 13px
+
+        &_small-only-title
+            width: 250px
+
+            .cards-news__snippet-date
+                margin: 0 0 14px
+

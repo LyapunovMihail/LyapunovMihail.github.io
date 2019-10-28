@@ -1,0 +1,195 @@
+
+.longread-announcement
+    width: 100%
+    height: 200px
+    background-color: #fff
+    padding: 20px
+    position: relative
+    display: flex
+    flex-flow: row wrap
+    &_off
+        height: 70px
+
+        .longread-announcement__wrap_for-announce
+            width: 414px
+            height: auto
+            margin: 0
+        .longread-announcement__wrap_for-count,
+        .longread-announcement__wrap_for-date,
+        .longread-announcement__wrap_for-time,
+        .longread-announcement__wrap_for-btn,
+        .longread-announcement__wrap_for-title,
+        .longread-announcement__wrap_for-timeline
+            display: none
+        .longread-announcement__text_off
+            display: block
+    &_submit
+        height: 70px
+        padding: 0 20px
+        align-items: center
+        justify-content: space-between
+
+        .longread-announcement__wrap
+            display: none
+        .longread-announcement__wrap_for-announce
+            display: flex
+            width: 521px
+            height: auto
+            margin: 0
+        .longread-announcement__text_submit,
+        .longread-announcement__wrap_for-btn
+            display: block
+            margin: 0
+            width: auto
+        .longread-announcement__btn-upld
+            display: none
+        .longread-announcement__wrap_for-btn
+            height: 40px
+        
+
+
+
+    &__wrap
+        position: relative
+        height: 48px
+        margin: 0 0 40px
+        &_for-announce,
+        &_for-count
+            width: 101px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-right: 30px
+        &_for-date
+            margin-right: 20px
+        &_for-time
+            margin-right: 30px
+        &_for-btn
+            width: 220px
+            display: flex
+            justify-content: space-between
+            button
+                margin: 0
+        &_for-title
+            display: flex
+            margin: 0
+            transform: translateY(-12px)
+        &_for-timeline
+            position: absolute
+            right: 21px
+            bottom: 17px
+            margin: 0
+            height: auto
+    
+    &__turn
+
+        input
+            display: none
+            &:checked + .longread-announcement__turn-checkbox
+                background-color: #9b9b9b
+                &::before
+                    background-color: #777777
+                    transform: translateX(100%)
+        &-checkbox
+            width: 34px
+            height: 14px
+            border-radius: 7px
+            background-color: #f0f0f0
+            position: relative
+            @include ease(background-color)
+            cursor: pointer
+            &::before
+                @include before-circle(20px, 20px)
+                top: -3px
+                left: -3px
+                background-color: #f0f0f0
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12)
+                transition: background-color .2s ease, transform .2s ease
+
+    &__text
+        font: 16px/24px $font-sans
+        color: $col-75
+        &_no-timeline
+            color: #9b9b9b
+            text-align: right
+        &_timeline
+            color: $col-headline
+            text-align: right
+        &_error
+            color: #ff3d00
+            text-align: right
+        &_off,
+        &_submit
+            display: none
+        &_block
+            display: block
+        &_underline
+            text-decoration: underline
+
+    &__datepicker,
+    &__time,
+    &__title
+        width: 358px 
+        height: 48px
+        border: solid 1px #979797
+        position: relative
+        cursor: pointer
+        padding: 0 44px 0 10px
+        display: flex
+        align-items: center
+        &::before
+            @include before-image(12px)
+            right: 10px
+            background: url(../img/materials/show-more.svg) center no-repeat
+        &-input
+            font: 16px/24px $font-sans
+            color: $col-75
+            border: none
+    &__time,
+    &__title
+        &-input
+            width: 100%
+            height: 100%
+        &::before
+            display: none
+    
+    &__btn-del
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        background: url(../img/longread/delete_white.svg) center no-repeat #9b9b9b
+        @include linear(box-shadow)
+        &:hover
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)
+    &__btn-upld
+        width: 160px
+        height: 44px
+        border-radius: 3px
+        background-color: $col-active
+        font: 500 14px/24px $font-sans
+        color: #6f6a60
+        letter-spacing: .5px
+        text-transform: uppercase
+        @include linear (color)
+        &:hover
+            color: $col-headline
+        &:disabled
+            border: 2px solid #d8d8d8
+            background-color: transparent
+            color: #d8d8d8
+        &_for-change
+            border: 1px solid #979797
+            background-color: transparent
+    &__count
+        width: 101px
+        font: 14px/20px $font-sans
+        color: #bbb8b2
+        margin-right: 30px
+        display: flex
+        align-items: center
+        justify-content: flex-end
+    &__title
+        padding: 0 10px
+        cursor: text
+        font: 16px/24px $font-sans
+        color: $col-75

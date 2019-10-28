@@ -169,16 +169,17 @@
 		cursor: pointer
 		&:last-child
 			opacity: .7
-		&:hover
-			opacity: 1 !important
-			height: 132px
-			.category-list__item-type
-				height: 4px
-				color: rgba(255, 255, 255, 0)
-			.category-list__item-subtitle
-				display: block
-				opacity: 1
-				transform: translateY(0)
+		@media (min-width: 960px)
+			&:hover
+				opacity: 1 !important
+				height: 132px
+				.category-list__item-type
+					height: 4px
+					color: rgba(255, 255, 255, 0)
+				.category-list__item-subtitle
+					display: block
+					opacity: 1
+					transform: translateY(0)
 		&_active
 			opacity: 1 !important
 			.category-list__item-type

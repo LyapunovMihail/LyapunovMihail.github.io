@@ -1,0 +1,154 @@
+
+
+@keyframes loading
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+
+.admin-main
+
+    &__output
+        width: 100%
+        
+        &-head
+            width: 100%
+            height: 56px
+            background-color: #ffffff
+            border-bottom: 1px solid #9c9c9c
+
+
+.materials-filter
+    display: flex
+    padding: 0 15px
+
+    &__item
+        &_active
+            span::before
+                transform: rotate(180deg)
+        &_status
+            width: 46px
+            margin-right: 33px
+        &_type
+            width: 26px
+            margin-right: 54px
+        &_title
+            width: 76px
+            margin-right: 172px
+        &_author
+            width: 41px
+            margin-right: 111px
+        &_date-create
+            width: 38px
+            margin-right: 57px
+        &_date-public
+            width: 38px
+            margin-right: 61px
+        &_views
+            width: 81px
+            margin-right: 36px
+        &_vk
+            width: 17px
+            margin-right: 48px
+        &_fb
+            width: 16px
+            margin-right: 49px
+        &_tw
+            width: 20px
+
+
+.materials-result
+    margin: 0 0 31px
+
+    &__text
+        font: 13px/15px $font-sans
+        @include font-smoothing
+        color: rgba(0, 0, 0, 0.87)
+        
+        &_error
+            color: #ff3d00
+            pointer-events: none
+
+        &_status
+            padding-left: 9px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: calc(50% - 3.5px)
+                left: 0
+                width: 7px
+                height: 7px
+                border-radius: 50%
+
+            &-red:before
+                background-color: #ff6262
+            &-green:before
+                background-color: #bdff9d
+            &-yellow:before
+                background-color: #ffee3a
+
+    &__item
+
+        &-wrap
+            height: 100%
+            display: flex
+            align-items: center
+
+            &_status
+                width: 46px
+                margin-right: 33px
+                justify-content: center
+            &_type
+                width: (57px + 27px) - 9px
+                margin-right: 9px
+            &_title
+                width: 239px
+                margin-right: 9px
+            &_author
+                width: (134px + 16px) - 9px
+                margin-right: 9px
+                padding-right: 9px  
+            &_date-create
+                width: 80px + 15px - 9px
+                margin-right: 9px
+            &_date-public
+                width: 80px + 15px - 9px
+                margin-right: 9px
+            &_views
+                width: 81px + 36px - 9px
+                margin-right: 9px
+            &_vk
+                width: (17px + 48px) - 9px
+                margin-right: 9px
+            &_fb
+                width: (16px + 49px) - 9px
+                margin-right: 9px
+            &_tw
+                width: 60px - 9px
+                margin-right: 9px
+            &_log
+                width: (24px + 13px + 30px)
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    width: 24px
+                    height: 24px
+                    background: url(../img/materials/visibility.svg) center no-repeat
+                p
+                    width: 100%
+                    text-align: right
+
+    &__status
+        width: 14px
+        height: 14px
+        border-radius: 50%
+
+        &_green
+            background-color: #bdff9d
+        &_red
+            background-color: #ff6262
+        &_yellow
+            background-color: #ffee3a
