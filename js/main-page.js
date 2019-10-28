@@ -30,9 +30,7 @@ $(function() {
         } else if ($(window).width() > 1440) { $('.floor-footer').css('top', 100 * footerIndex + '%'); };
     };
 
-    // Лого в хедере, переключение навигации
-    var navIndexBefore = '',
-        navIndexAfter = '';
+    // Лого в хедере
     $(document).on('mousewheel DOMMouseScroll MozMousePixelScroll', function() {
         
         if ($(window).width() > 1440) {
