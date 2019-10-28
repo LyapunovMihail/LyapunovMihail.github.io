@@ -67,11 +67,13 @@
 				background-color: #fff
 			&::before
 				transform: rotate(45deg)
+				transform-origin: center
 				margin-top: 0
 			span
 				opacity: 0
 			&::after
 				transform: rotate(-45deg)
+				transform-origin: center
 				margin-top: 0
 	&_fade
 		@media (min-width: 961px)
@@ -344,6 +346,7 @@
 		opacity: 0
 		pointer-events: none
 		transition: opacity .2s linear
+		-webkit-overflow-scrolling: touch
 		z-index: 2
 		cursor: default
 		&::before
@@ -637,8 +640,10 @@
 
 	.header__tooltip
 		width: 100vw
-		right: -20px
 		max-height: calc(100vh - 70px)
+		transform: translateY(128px)
+		right: -20px
+		top: -64px
 
 		&_actual,
 		&_views,
