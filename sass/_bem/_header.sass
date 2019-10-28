@@ -58,7 +58,7 @@
 		@media (max-width: 960px)
 			background-color: #f5f2f1
 	&_menu-open
-		pointer-events: all
+		pointer-events: auto
 		.header__logo
 			background: url(../img/bombus-logo-rgb-white.svg) center no-repeat
 			background-size: 100%
@@ -189,7 +189,7 @@
 
 			&_open
 				opacity: 1
-				pointer-events: all
+				pointer-events: auto
 				// Скрываю подсказки во время открытых "актуальных" и "топ просмотров"
 				&+ .header__item .header__notice,
 				&+ .header__item + .header__item .header__notice,
@@ -201,7 +201,7 @@
 				&+ .header__item + .header__item,
 				&+ .header__item + .header__item + .header__item,
 				&+ .header__item + .header__item + .header__item + .header__item
-					pointer-events: all
+					pointer-events: auto
 
 	&__item
 		width: 40px
@@ -297,12 +297,12 @@
 		// Класс появления тултипа
 		&_for-tooltip
 			background-color: $col-active
-			pointer-events: all
+			pointer-events: auto
 			.header__item-text
 				color: #fff
 				&_input
 					display: block
-					pointer-events: all
+					pointer-events: auto
 			.header__notice
 				opacity: 0
 				pointer-events: none
@@ -316,7 +316,7 @@
 			.header__tooltip
 				background-color: #fff
 				opacity: 1
-				pointer-events: all
+				pointer-events: auto
 				&::before
 					opacity: 1
 		// /Класс появления тултипа
