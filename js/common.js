@@ -27,6 +27,12 @@ $(function() {
 
 		afterElem = $(this);
 	});
+	$('.header__item_menu').on('click', function() {
+		
+		console.log('menu test');
+		console.log($('body').hasClass('.body-fixed'));
+		$('body').hasClass('body-fixed') ? fixedBody() : unFixedBody(Number( $('body').css('top').slice(0, -2) ));
+	});
 
 	function toogleWidth(thisEl, allEl, activeEl, openEl) {
 
@@ -37,12 +43,13 @@ $(function() {
 			
 			firstAndNextClick(thisEl, allEl, activeEl, openEl); // Первый и последующие клики
 		}
-		setTimeout(function() { // удаляю клас not-active после конца анимации
+		setTimeout(function() { // удаляю класс not-active после конца анимации
 			$('header__item_not-active').removeClass('header__item_not-active')
 		}, 650);
 	}
 	$('.header__items-close, .header__tooltip-cls').on('click', function() { // закрытие по клику на темное поле или кнопку
 	
+		unFixedBody(Number( $('body').css('top').slice(0, -2) ));
 		$('.header__item_for-tooltip').removeClass('header__item_for-tooltip');
 		$('.header__items-close').removeClass('header__items-close_open');
 		$('body').removeClass('body-fixed');
@@ -53,6 +60,7 @@ $(function() {
 		thisEl.addClass('header__item_for-tooltip');
 		$('.header__items-close').addClass('header__items-close_open');
 		$('body').addClass('body-fixed');
+		fixedBody();
 	}
 	function firstAndNextClick(thisEl, allEl, activeEl, openEl) {
 
@@ -67,6 +75,7 @@ $(function() {
 
 		thisEl.removeClass('header__item_not-active');
 		thisEl.addClass('header__item_active');
+		fixedBody();
 		setTimeout( function() {
 			$('.header__item_active').addClass('header__item_for-tooltip');
 			$('.header__items-close').addClass('header__items-close_open');
@@ -78,7 +87,37 @@ $(function() {
 
 		$('.header__tooltip-filter li').removeClass('header__tooltip-filter_active');
 		$(this).addClass('header__tooltip-filter_active');
-	})
+	});
+
+    function fixedBody() {
+        var bodyTop = $(window).scrollTop();
+        if ($(window).width() < 960) {
+
+            $('body').css({
+                top: bodyTop * (-1),
+                position: 'fixed',
+                left: '0',
+                right: '0',
+                bottom: '0'
+            })
+        }
+    };
+    function unFixedBody(topBody) {
+
+		console.log(topBody);
+
+        if ($(window).width() < 960) {
+
+            $('body').css({
+                top: '',
+                position: '',
+                left: '',
+                right: '',
+                bottom: ''
+			});
+			$(window).scrollTop(topBody * (-1));
+        }
+    };
 
 // head-box
 	if (desktop && $('.head-box').length > 0) {

@@ -66,13 +66,17 @@
 			span, &::before, &::after
 				background-color: #fff
 			&::before
+				-webkit-transform: rotate(45deg)
 				transform: rotate(45deg)
+				-webkit-transform-origin: center
 				transform-origin: center
 				margin-top: 0
 			span
 				opacity: 0
 			&::after
+				-webkit-transform: rotate(-45deg)
 				transform: rotate(-45deg)
+				-webkit-transform-origin: center
 				transform-origin: center
 				margin-top: 0
 	&_fade
@@ -219,6 +223,8 @@
 			background: url(../img/main-page/search.svg) calc(100% - (100% - 8px)) 50% no-repeat #fff
 		&_menu
 			background-color: transparent
+			-webkit-backface-visibility: hidden
+			backface-visibility: hidden
 			box-shadow: none
 			span, &::before, &::after
 				position: absolute
@@ -346,7 +352,6 @@
 		opacity: 0
 		pointer-events: none
 		transition: opacity .2s linear
-		-webkit-overflow-scrolling: touch
 		z-index: 2
 		cursor: default
 		&::before
@@ -412,6 +417,7 @@
 				max-height: inherit
 				overflow-x: hidden
 				overflow-y: scroll
+				-webkit-overflow-scrolling: touch
 				padding: 20px 40px 20px 20px
 		&-item
 			width: 100%
@@ -420,6 +426,8 @@
 				padding: 0 0 20px
 				margin: 0 0 20px
 				border-bottom: 1px solid #dfdfdf
+			&:last-child
+				padding: 0 0 20px
 			
 			&_only-title
 				.header__tooltip-title

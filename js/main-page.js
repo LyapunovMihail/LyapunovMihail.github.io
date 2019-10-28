@@ -81,7 +81,7 @@ $(function() {
             }
             
         });
-    }
+    };
 
     // Слайдер на "1м этаже"
     $('.floor__slider').on('init', function(e, slick) {
