@@ -199,8 +199,8 @@
                 </div>
 
                 <div class="create-head__mode">
-                    <a href="" class="create-head__mode-item create-head__mode-item_active">Декстоп</a>
-                    <a href="" class="create-head__mode-item">Мобильный</a>
+                    <a href="" class="create-head__mode-item">Декстоп</a>
+                    <a href="" class="create-head__mode-item create-head__mode-item_active">Мобильный</a>
                 </div>
             </div>
         </div>
@@ -210,12 +210,8 @@
             <section class="release-mobile__content">
 
                 <div class="release-mobile__headline">
-                    <div class="release-mobile__image">
-                        <img src="img/about-person.jpg" alt="headline-image">
-                    </div>
-                    <div class="release-mobile__headline-nav">
-                        <div class="release-mobile__headline-btns">
-                            <button class="release-mobile__headline-btn release-mobile__headline_prev">
+                    <div class="release-mobile__headline-btns mobile-dots">
+                        <button class="mobile-dots__btn mobile-dots__btn_prev">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
                                     <defs>
                                         <path id="uz" d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"/>
@@ -227,22 +223,9 @@
                                         <use fill="#F58220" transform="rotate(180 12 12)" xlink:href="#uz"/>
                                     </g>
                                 </svg>   
-                            </button>
-                            <button class="release-mobile__headline-btn release-mobile__headline_next">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-                                    <defs>
-                                        <path id="auz" d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"/>
-                                    </defs>
-                                    <g fill="none" fill-rule="evenodd">
-                                        <mask id="bauz" fill="#fff">
-                                            <use xlink:href="#auz"/>
-                                        </mask>
-                                        <use fill="#F58220" transform="rotate(0 12 12)" xlink:href="#auz"/>
-                                    </g>
-                                </svg>                                
-                            </button>
-                        </div>
-                        <div class="release-mobile__headline-dots mobile-dots">
+                        </button>
+                        
+                        <div class="mobile-dots__nav">
                             <div class="mobile-dots__item mobile-dots__item_active">
                                 <span class="mobile-dots__item-type">Рубрика</span>
                             </div>
@@ -256,22 +239,84 @@
                                 <span class="mobile-dots__item-type">Рубрика</span>
                             </div>
                         </div>
+
+                        <button class="mobile-dots__btn mobile-dots__btn_next">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                                    <defs>
+                                        <path id="auz" d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"/>
+                                    </defs>
+                                    <g fill="none" fill-rule="evenodd">
+                                        <mask id="bauz" fill="#fff">
+                                            <use xlink:href="#auz"/>
+                                        </mask>
+                                        <use fill="#F58220" transform="rotate(0 12 12)" xlink:href="#auz"/>
+                                    </g>
+                                </svg>                                
+                        </button>
                     </div>
-                    <p class="release-mobile__time">2 дня назад</p>
-                    <h1 class="release-mobile__title">Заголовок 30 знаков максимум</h1>
-                    <p class="release-mobile__subtitle">Короткое описание материала максимум 100 знаков может быть в две или несколько строк под заголовком</p>
+
+
+                    <div class="release-mobile__headline-slider headline-slider">
+                        
+                        <div class="headline-slider__item">
+                            <div class="headline-slider__image">
+                                <img src="img/about-person.jpg" alt="headline-image">
+                            </div>
+
+                            <div class="headline-slider__wrap">
+
+                                <p class="headline-slider__time">2 дня назад</p>
+                                <h1 class="headline-slider__title headline-slider__title_preview">Заголовок 30 знаков максимум</h1>
+                                <p class="headline-slider__subtitle">Короткое описание материала максимум 100 знаков может быть в две или несколько строк под заголовком</p>
+                            </div>
+                        </div>
+                        <div class="headline-slider__item">
+                            <div class="headline-slider__image">
+                                <img src="img/event-one.jpg" alt="headline-image">
+                            </div>
+
+                            <div class="headline-slider__wrap">
+
+                                <p class="headline-slider__time">3 дня назад</p>
+                                <h1 class="headline-slider__title headline-slider__title_preview">Заголовок 30 знаков максимум</h1>
+                                <p class="headline-slider__subtitle">Короткое описание материала максимум 100 знаков может быть в две или несколько строк под заголовком</p>
+                            </div>
+                        </div>
+                        <div class="headline-slider__item">
+                            <div class="headline-slider__image">
+                                <img src="img/snippet-item-1.jpg" alt="headline-image">
+                            </div>
+
+                            <div class="headline-slider__wrap">
+
+                                <p class="headline-slider__time">4 дня назад</p>
+                                <h1 class="headline-slider__title headline-slider__title_preview">Заголовок 30 знаков максимум</h1>
+                                <p class="headline-slider__subtitle">Короткое описание материала максимум 100 знаков может быть в две или несколько строк под заголовком</p>
+                            </div>
+                        </div>
+                        <div class="headline-slider__item">
+                            <div class="headline-slider__image">
+                                <img src="img/about-person.jpg" alt="headline-image">
+                            </div>
+
+                            <div class="headline-slider__wrap">
+
+                                <p class="headline-slider__time">5 дня назад</p>
+                                <h1 class="headline-slider__title headline-slider__title_preview">Заголовок 30 знаков максимум</h1>
+                                <p class="headline-slider__subtitle">Короткое описание материала максимум 100 знаков может быть в две или несколько строк под заголовком</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="release-mobile__other">
                     <div class="release-mobile__other-wrap">
-                        <p class="release-mobile__type">Рубрика</p>
+                        <p class="release-mobile__type">Узнать</p>
+                        <p class="release-mobile__time release-mobile__time_actual">1 час назад</p>
                         <div class="release-mobile__image release-mobile__image_not-headline">
                             <img src="img/about-person.jpg" alt="snippet-image">
                         </div>
-                        <p class="release-mobile__time">1 час назад</p>
-                        <h1 class="release-mobile__title">Заголовок 30 знаков максимум</h1>
-                        <p class="release-mobile__subtitle release-mobile__subtitle_not-headline">Короткое описание материала максимум 100 знаков может быть в две или несколько строк под заголовком</p>
-                        <p class="release-mobile__author">Сенатор Палпатин</p>
+                        <h1 class="release-mobile__title">Новость с картинкой у нее длинный заголовок девяносто пять знаков может быть в несколько строк</h1>
                     </div>
                 </div>
 

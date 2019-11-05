@@ -831,10 +831,16 @@
                             <div class="advertising-item__link">
                                 <input type="text">
                             </div>
-                            <input type="file" id="UploadImage" style="display: none;">
-                            <button for="UploadImage" class="advertising-item__upld-image">Загрузить фото</button>
+                            <input type="file" id="UploadImage" style="display: none;" accept="image/*">
+                            <input type="file" id="UploadVideo" style="display: none;" accept="video/*">
+                            <label for="UploadImage" class="advertising-item__upld-image">Загрузить фото</label>
+                            <label for="UploadVideo" class="advertising-item__upld-image">Загрузить видео</label>
                             <!-- <div class="advertising-item__image">
                                 <img src="img/about-person.jpg" alt="about-person">
+                                <video>
+                                    <source src="video.mp4" type="video/mp4">
+                                    <source src="video.webm" type="video/webm">
+                                </video>
                                 <button class="advertising-item__del-btn advertising-item__del-btn_image"></button>
                             </div> -->
                         </div>
