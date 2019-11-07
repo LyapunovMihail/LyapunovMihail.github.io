@@ -1,0 +1,148 @@
+.material // col-4 без модификатора
+	padding-bottom: 27px
+	display: flex
+	flex-direction: column
+	
+	&__image
+		display: block
+		height: 265px
+		margin-top: -1px
+		margin-left: -1px
+		margin-right: -1px
+		margin-bottom: 20px
+
+	&__content
+		padding-left: 20px
+		padding-right: 20px
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
+	&__head-row
+		margin-bottom: 7px
+
+	&__link
+		width: 160px
+		flex-shrink: 0
+		margin-bottom: 8px
+
+		a
+			text-decoration: none
+
+			&:hover, &:focus
+				text-decoration: underline
+
+	&__desc
+		margin-bottom: 20px
+
+	&__info-row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: auto
+
+	&__author
+		margin-right: 20px
+
+	&__time
+		text-align: right
+	
+	&--col8
+		padding-bottom: 20px
+
+		.material
+			&__image
+				height: 470px
+				margin-bottom: 16px
+
+			&__head-row
+				display: flex
+				align-items: center
+				margin-bottom: 5px
+				padding-right: 80px
+
+			&__link
+				margin-bottom: 0
+				margin-right: 20px
+
+			&__desc
+				padding-right: 80px
+				padding-left: 180px
+				margin-bottom: 28px
+
+			&__info-row
+				padding-left: 180px
+
++media-breakpoint-down(lg)
+	.material
+
+		&__image
+			height: 220px
+			margin-bottom: 18px
+
+		&__link
+			margin-bottom: 11px
+
+		&--col8
+
+			.material
+				&__content
+					padding-left: 15px
+					padding-right: 17px
+
+				&__head-row
+					padding-right: 0
+
+				&__link
+					width: 119px
+					margin-right: 28px
+
+				&__desc
+					padding-left: 147px
+					padding-right: 0
+
++media-breakpoint-down(md)
+	.material
+
+		&__image
+			height: 370px
+			margin-bottom: 20px
+
+		&__link
+			margin-bottom: 10px
+
+		&--col8
+
+			.material
+				&__image
+					height: 370px
+					margin-bottom: 20px
+
+				&__content
+					padding-left: 20px
+					padding-right: 30px
+
+				&__head-row
+					display: block
+
+				&__link
+					width: auto
+					margin-bottom: 10px
+
+				&__desc
+					padding-left: 0
+
+				&__info-row
+					padding-left: 0
+
++media-breakpoint-down(xs)
+	.material
+
+		&__image
+			height: 220px
+
+		&--col8
+
+			.material
+				&__image
+					height: 220px

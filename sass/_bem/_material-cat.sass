@@ -1,0 +1,38 @@
+.material-cat
+	padding-left: 60px
+	margin-bottom: 30px
+
+	&__head
+		display: flex
+		margin-bottom: 10px
+
+	&__title
+		font-family: 'IBM Plex Sans', sans-serif
+		font-weight: 500
+		font-size: 20px
+		line-height: 28px
+		color: #6f6a60
+		margin-right: 15px
+
+	&__button
+		width: 30px
+		height: 30px
+		background-color: #fff
+		border-radius: 15px
+		transition: background-color 0.2s
+		background-image: url('../img/arrow-drop-down.svg')
+		background-position: center
+		
+		&:hover
+			background-color: #fff8f8
+
+		&--active
+			transform: scale(-1)
+
+	&__text
+		display: none
+
++media-breakpoint-down(xs)
+	.material-cat
+		padding-left: 30px
+		padding-right: 20px

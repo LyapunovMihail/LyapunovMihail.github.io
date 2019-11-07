@@ -1,0 +1,189 @@
+.head-box
+	margin-top: 18px
+	padding-left: 20px
+	padding-right: 20px
+	position: relative
+
+	&:hover
+		background-color: #fff
+
+	&__triangle
+		position: absolute
+		width: 22px
+		height: 22px
+		background-color: #fff
+		top: -11px
+		transform: rotate(45deg)
+		left: 100px
+		margin-left: -11px
+		transition: background-color 0.2s
+
+		&::before
+			content: ''
+			position: absolute
+			transform: rotate(-45deg)
+			width: 50px
+			height: 20px
+			top: 7px
+			left: -8px
+			background: #fff
+			transition: background-color 0.2s
+
+	&__main-row
+		height: 60px
+		display: flex
+		align-items: center
+
+	&__title
+		font-size: 18px
+		margin-right: 25px
+
+	&__views
+		font-size: 18px
+
+	&__right
+		display: flex
+		align-items: center
+		margin-left: auto
+
+	&__sort-list
+		display: flex
+
+	&__sort-item
+		display: flex
+		align-items: center
+		margin-right: 45px
+
+	&__sort-toggle
+		background: none
+		text-transform: uppercase
+		font-family: 'IBM Plex Sans', sans-serif
+		font-size: 13px
+		line-height: 16px
+		color: #757575
+		transition: 0.2s
+
+		&:hover, &--active
+			color: #F58220
+
+	&__sort-order
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 24px
+		height: 24px
+		
+		&::before
+			content: ''
+			border: 5px solid transparent
+			border-top-color: #9c9c9c
+			border-bottom-color: #9c9c9c
+			border-bottom-width: 0
+			transition: border-color 0.2s
+
+		&--up
+
+			&::before
+				border-top: 0
+				border-bottom-width: 5px
+
+		&:hover:not(:disabled)
+
+			&::before
+				border-top-color: #000
+				border-bottom-color: #000
+
+	&__button-grid
+		margin-right: 16px
+
+	&__button-grid, &__button-list
+
+		.svg-fill
+			transition: 0.2s
+		
+		&:hover, &--active
+			
+			.svg-fill
+				fill: #9c9c9c
+
+	&__author
+		padding-top: 15px
+		padding-bottom: 15px
+		border-bottom: 1px solid #dddddd
+		display: flex
+		align-items: center
+
+	&__author-left
+		display: flex
+		align-items: center
+
+	&__author-image
+		width: 80px
+		height: 80px
+		object-fit: cover
+		border-radius: 40px
+		margin-right: 20px
+
+	&__author-name
+		font-family: 'IBM Plex Sans', sans-serif
+		font-size: 24px
+		line-height: 32px
+		color: #423f39
+		margin-right: 20px
+
+	&__author-desc
+		width: 100%
+		max-width: 510px
+		margin-left: auto
+		margin-right: 13px
+
+	&--search
+
+		.head-box
+			&__triangle
+				left: auto !important
+				right: 77px
+
+			&__title
+				font-family: 'IBM Plex Sans', sans-serif
+				line-height: 24px
+				font-weight: 400
+				color: #423f39
+				margin-right: 30px
+
+			&__sort-list
+				margin-right: 110px - 45px
+
++media-breakpoint-down(md)
+	.head-box
+
+		&__triangle
+			left: auto !important
+			right: 76px
+
+		&__right
+			display: none
+
+		&__author
+			flex-wrap: wrap
+
+		&__author-left
+			margin-bottom: 14px
+
+		&__author-name
+			margin-right: 0
+
+		&__author-desc
+			max-width: none
+			margin-right: 0
+
++media-breakpoint-down(xs)
+	.head-box
+
+		&__author-image
+			width: 50px
+			height: 50px
+
+		&__author-name
+			font-size: 16px
+			line-height: 24px

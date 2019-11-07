@@ -1,0 +1,133 @@
+
+.floor-footer
+    background-color: #363636
+    padding: 120px 0 0
+    &_fixed
+        width: 100%
+        height: 100%
+        position: fixed !important
+        left: 0 !important
+        top: 0 !important
+        overflow: hidden auto
+        z-index: 20
+
+    &__wrap
+        width: 100%
+        display: flex
+        justify-content: space-between
+        padding: 40px 0 0
+
+        &_subscribe
+            width: 1160px
+            max-width: calc(100% - 40px)
+            justify-content: flex-end
+            padding: 0 190px 0 0
+            position: absolute
+            left: 50%
+            top: (560px - 164px) + 120px
+            transform: translateX(-50%)
+            pointer-events: none
+    &__logo
+        display: none
+
+    &__list
+        width: 260px
+        display: flex
+        flex-flow: column nowrap
+        align-items: flex-start
+        padding-right: 20px
+
+        &-item
+            font: 600 14px/16px $font-mono
+            color: #fff
+            text-transform: uppercase
+            margin: 0 0 20px
+            cursor: pointer
+            transition: color .2s linear
+            &:last-child
+                margin: 0
+            &:hover
+                color: $col-active
+        &-title
+            font: 600 24px/32px $font-serif
+            color: $col-active
+            text-transform: none
+            margin: 0 0 51px
+    
+    &__subscribe
+        width: 368px
+        pointer-events: all
+
+        &-wrap
+            width: 100%
+            padding: 15px 0 20px
+
+            input
+                width: 100%
+                height: 24px + 12px
+                border: 0
+                border-bottom: 1px solid #e0e0e0
+                font: 16px/24px $font-sans
+                color: #6f6a60
+                background-color: transparent
+        &-notice
+            font: 12px/16px $font-sans
+            color: #6f6a60
+            margin: 0 0 25px
+        &-success
+            width: 199px
+            height: 56px
+            border-radius: 3px
+            background-color: #f58220
+            font: 500 14px/24px $font-sans
+            text-transform: uppercase
+            color: #fff
+            letter-spacing: .5px
+
+
+@media (max-width: 960px)
+    .floor-footer
+        padding: 0 0 76px
+
+        &__logo
+            display: block
+            padding: 44px 0 35px
+            border-bottom: 1px solid #646464
+
+        &__wrap
+            flex-flow: row wrap
+
+            &_subscribe
+                width: 360px
+                max-width: 100%
+                position: static
+                transform: none
+                padding: 0
+        
+        &__list
+            width: 200px
+            margin: 0 0 40px
+            &:nth-child(1)
+                order: 1
+            &:nth-child(4)
+                order: 2
+                margin: 330px 0 40px -200px
+            &:nth-child(2)
+                order: 3
+            &:nth-child(3)
+                order: 4
+                width: 160px
+            @media (max-width: 580px)
+                &:nth-child(1),
+                &:nth-child(4),
+                &:nth-child(2)
+                    width: 50%
+                &:nth-child(4)
+                    margin-left: -50%
+                    margin-top: 290px
+                &:nth-child(3)
+                    width: 100%
+            
+            &-title
+                @media (max-width: 580px)
+                    margin: 0 0 28px
