@@ -35,10 +35,12 @@
             border-radius: 3px
             background-color: $col-active
             font: 500 14px/24px $font-sans
-            color: $col-btn
+            color: #6f6a60
             letter-spacing: .5px
             text-transform: uppercase
             @include linear (color)
+            &:not(.longread-create__success-upload_ready)
+                color: #f5f2f1
             &:disabled
                 border-radius: 2px
                 border: solid 2px #d8d8d8
@@ -50,6 +52,8 @@
                 width: 220px
                 background-color: #fff
                 margin-right: 20px
+                &:hover
+                    color: #423f39
 
 
 @import "_page/_longread-component/longread-announcement"

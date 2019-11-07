@@ -1,0 +1,126 @@
+
+
+.advertising-item
+    width: 100%
+    display: flex
+    align-items: flex-start
+    position: relative
+    margin: 0 0 20px
+
+    &_off
+        margin: 0
+        .advertising-item__switch
+            margin: 6px 23px 0 0
+
+        .advertising-item__text-off
+            display: block
+
+        .advertising-item__wrap,
+        .advertising-item__del-btn,
+        & + .advertising-item__create-btn
+            display: none !important
+
+    &__text-off
+        display: none
+        font: 16px/24px $font-sans
+        color: $col-headline
+
+    &__switch
+        display: block
+        margin: 17px 23px 0 0
+        cursor: pointer
+        input 
+            display: none
+            &:checked + .advertising-item__switch-box
+                background-color: #9b9b9b
+                &::before
+                    background-color: #777777
+                    left: calc(100% - 17px)
+        &-box
+            width: 34px
+            height: 14px
+            border-radius: 7px
+            background-color: #f0f0f0
+            position: relative
+            transition: background-color .2s linear
+            &::before
+                content: ''
+                position: absolute
+                width: 20px
+                height: 20px
+                top: -3px
+                left: -3px
+                border-radius: 50%
+                background-color: #f0f0f0
+                transition: background-color .2s linear, left .2s ease
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12)
+
+    &__wrap
+        width: 522px
+        display: flex
+        flex-flow: row wrap
+    
+    &__link
+        width: 342px
+        margin-right: 20px
+        height: 48px
+        border: 1px solid #979797
+        input
+            width: 100%
+            height: 100%
+            border: none
+            padding-left: 14px
+    &__upld-image
+        width: 160px
+        height: 48px
+        border-radius: 3px
+        border: 1px solid #979797
+        font: 500 14px/24px $font-sans
+        color: #424242
+        display: flex
+        align-items: center
+        justify-content: center
+        text-transform: uppercase
+
+    &__image
+        width: 342px
+        height: 211px
+        margin: 10px 0 0
+        position: relative
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__del-btn
+        width: 40px
+        height: 40px
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26)
+        border-radius: 50%
+        position: absolute
+
+        &_object
+            right: -5px
+            background: url(../img/longread/delete_white.svg) center no-repeat #9b9b9b
+        &_image
+            top: 5px
+            right: 5px
+            background: url(../img/longread/delete.svg) center no-repeat #fff
+    
+    &__create-btn
+        width: 162px
+        height: 30px
+        padding-left: 55px
+        position: relative
+        margin-left: 56px
+        font: 13px/15px $font-sans
+        color: rgba(0, 0, 0, 0.87)
+        text-transform: uppercase
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 30px
+            height: 30px
+            border-radius: 50%
+            background: url(../img/release/add-36.svg) center no-repeat $col-active

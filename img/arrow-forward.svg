@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
     <defs>
-        <path id="arrow-forward-a" d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"/>
+        <path id="a" d="M12 4l-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20l8-8z"/>
     </defs>
     <g fill="none" fill-rule="evenodd">
-        <mask id="arrow-forward-b" fill="#fff">
-            <use xlink:href="#arrow-forward-a"/>
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
         </mask>
-        <use fill="#F58220" xlink:href="#arrow-forward-a"/>
-        <g fill="#F58220" mask="url(#arrow-forward-b)">
+        <use fill="#9C9C9C" xlink:href="#a"/>
+        <g fill="#9C9C9C" mask="url(#b)">
             <path d="M0 0h24v24H0z"/>
         </g>
     </g>

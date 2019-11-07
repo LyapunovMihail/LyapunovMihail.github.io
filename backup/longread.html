@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bombus</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,600|IBM+Plex+Sans:400,500|IBM+Plex+Serif:400,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main-admin.min.css">
+	<link rel="stylesheet" href="css/common-create.min.css">
+	<link rel="stylesheet" href="css/longread.min.css">
+</head>
+
+<body>
+    <header class="admin-header">
+        <div class="container admin-header__container">
+            <div class="admin-header__logo">
+                <a href="#" class="admin-header__logo-link">
+                    <img src="img/bombus-logo.svg" alt="logo">
+                </a>
+            </div>
+            <div class="admin-header__user" data-menu>
+                <p class="admin-header__user-name">Император Палпатин</p>
+                <div class="admin-header__user-img">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+            <div class="account-modal">
+                <div class="tooltip__cls-area"></div>
+                <div class="account-modal__item account-modal__item_my-material">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="u" d="M18 2a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12zm-1 13H7v2h10v-2zm0-4H7v2h10v-2zm0-4H7v2h10V7z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <mask id="i" fill="#fff">
+                                    <use xlink:href="#u"/>
+                                </mask>
+                                <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#u"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#i)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Мои материалы
+                </div>
+                <div class="account-modal__item account-modal__item_settings">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="ui" d="M18.687 12.877c.036-.288.063-.58.063-.877 0-.297-.027-.59-.063-.877l1.903-1.49a.449.449 0 0 0 .108-.576l-1.8-3.119c-.112-.193-.346-.274-.549-.193l-2.24.904a6.829 6.829 0 0 0-1.522-.886l-.337-2.385A.463.463 0 0 0 13.8 3h-3.6a.454.454 0 0 0-.445.378l-.338 2.385a6.66 6.66 0 0 0-1.521.886l-2.241-.904a.45.45 0 0 0-.549.194l-1.8 3.118a.45.45 0 0 0 .108.576l1.899 1.49c-.036.288-.063.58-.063.877 0 .297.027.59.063.877l-1.899 1.49a.449.449 0 0 0-.108.576l1.8 3.118a.445.445 0 0 0 .549.194l2.241-.904c.464.355.972.657 1.521.886l.338 2.385c.035.212.22.378.445.378h3.6c.225 0 .41-.166.445-.378l.338-2.385a6.66 6.66 0 0 0 1.521-.886l2.241.904a.45.45 0 0 0 .549-.194l1.8-3.118a.45.45 0 0 0-.108-.576l-1.899-1.49zM12 15.15A3.148 3.148 0 0 1 8.85 12 3.148 3.148 0 0 1 12 8.85 3.148 3.148 0 0 1 15.15 12 3.148 3.148 0 0 1 12 15.15z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <mask id="iu" fill="#fff">
+                                    <use xlink:href="#ui"/>
+                                </mask>
+                                <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#ui"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#iu)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Настройки
+                </div>
+                <div class="account-modal__item account-modal__item_logout">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <path id="kj" d="M16.16 6.744l-1.224 1.225L17.675 11H7v2h10.675l-2.74 2.966 1.226 1.225L21 12z"/>
+                            </defs>
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z"/>
+                                <path class="account-modal__item_hover" fill="#979797" d="M14 22H3V2h11v7H5v6h9v7zm0-9H7v-2h7v2z"/>
+                                <mask id="jk" fill="#fff">
+                                    <use xlink:href="#kj"/>
+                                </mask>
+                                <use fill="#9C9C9C" xlink:href="#kj"/>
+                                <g class="account-modal__item_hover" fill="#9C9C9C" mask="url(#jk)">
+                                    <path d="M0 0h24v24H0z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    Выход
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="admin-aside">
+        <div class="admin-aside__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                    <path id="a" d="M3 17.25V21h3.75L17.818 9.933l-3.75-3.75L3 17.249zM20.707 7.042c.39-.39.39-1.025 0-1.415l-2.335-2.335a1.002 1.002 0 0 0-1.415 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"/>
+                    <mask id="b" fill="#fff">
+                        <use xlink:href="#a"/>
+                    </mask>
+                    <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#a"/>
+                    <g class="admin-aside__item_active-svg" fill="#9C9C9C" mask="url(#b)">
+                        <path d="M0 0h24v24H0z"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="admin-aside__item admin-aside__item_active">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                    <path id="c" d="M18 2a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12zm-1 13H7v2h10v-2zm0-4H7v2h10v-2zm0-4H7v2h10V7z"/>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"/>
+                    <mask id="d" fill="#fff">
+                        <use xlink:href="#c"/>
+                    </mask>
+                    <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#c"/>
+                    <g class="admin-aside__item_active-svg" fill="#9C9C9C" mask="url(#d)">
+                        <path d="M0 0h24v24H0z"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="admin-aside__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                    <path id="ab" d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"/>
+                    <mask id="ac" fill="#fff">
+                        <use xlink:href="#ab"/>
+                    </mask>
+                    <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#ab"/>
+                    <g class="admin-aside__item_active-svg"  fill="#9C9C9C" mask="url(#ac)">
+                        <path d="M0 0h24v24H0z"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="admin-aside__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                    <path id="aq" d="M15.636 11.571c1.505 0 2.719-1.248 2.719-2.785C18.355 7.249 17.14 6 15.636 6c-1.504 0-2.727 1.249-2.727 2.786s1.223 2.785 2.727 2.785zm-7.272 0c1.504 0 2.718-1.248 2.718-2.785C11.082 7.249 9.868 6 8.364 6 6.859 6 5.636 7.249 5.636 8.786S6.86 11.57 8.364 11.57zm0 1.858C6.24 13.429 2 14.515 2 16.679V19h12.727v-2.321c0-2.164-4.24-3.25-6.363-3.25zm7.272 0c-.263 0-.559.018-.877.05 1.055.776 1.786 1.82 1.786 3.2V19H22v-2.321c0-2.164-4.24-3.25-6.364-3.25z"/>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"/>
+                    <mask id="bv" fill="#fff">
+                        <use xlink:href="#aq"/>
+                    </mask>
+                    <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#aq"/>
+                    <g class="admin-aside__item_active-svg"  fill="#9C9C9C" mask="url(#bv)">
+                        <path d="M0 0h24v24H0z"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="admin-aside__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                    <path id="af" d="M18.687 12.877c.036-.288.063-.58.063-.877 0-.297-.027-.59-.063-.877l1.903-1.49a.449.449 0 0 0 .108-.576l-1.8-3.119c-.112-.193-.346-.274-.549-.193l-2.24.904a6.829 6.829 0 0 0-1.522-.886l-.337-2.385A.463.463 0 0 0 13.8 3h-3.6a.454.454 0 0 0-.445.378l-.338 2.385a6.66 6.66 0 0 0-1.521.886l-2.241-.904a.45.45 0 0 0-.549.194l-1.8 3.118a.45.45 0 0 0 .108.576l1.899 1.49c-.036.288-.063.58-.063.877 0 .297.027.59.063.877l-1.899 1.49a.449.449 0 0 0-.108.576l1.8 3.118a.445.445 0 0 0 .549.194l2.241-.904c.464.355.972.657 1.521.886l.338 2.385c.035.212.22.378.445.378h3.6c.225 0 .41-.166.445-.378l.338-2.385a6.66 6.66 0 0 0 1.521-.886l2.241.904a.45.45 0 0 0 .549-.194l1.8-3.118a.45.45 0 0 0-.108-.576l-1.899-1.49zM12 15.15A3.148 3.148 0 0 1 8.85 12 3.148 3.148 0 0 1 12 8.85 3.148 3.148 0 0 1 15.15 12 3.148 3.148 0 0 1 12 15.15z"/>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"/>
+                    <mask id="bf" fill="#fff">
+                        <use xlink:href="#af"/>
+                    </mask>
+                    <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#af"/>
+                    <g class="admin-aside__item_active-svg"  fill="#9C9C9C" mask="url(#bf)">
+                        <path d="M0 0h24v24H0z"/>
+                    </g>
+                </g>
+            </svg>                
+        </div>
+        <div class="admin-aside__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                    <path id="ag" d="M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z"/>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"/>
+                    <mask id="bg" fill="#fff">
+                        <use xlink:href="#ag"/>
+                    </mask>
+                    <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#ag"/>
+                    <g class="admin-aside__item_active-svg" fill="#9C9C9C" mask="url(#bg)">
+                        <path d="M0 0h24v24H0z"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="admin-aside__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                    <path id="qw" d="M22 7.92l-1.41-1.41-2.85 3.21C15.68 7.4 12.83 6 9.61 6 6.72 6 4.07 7.16 2 9l1.42 1.42C5.12 8.93 7.27 8 9.61 8c2.74 0 5.09 1.26 6.77 3.24l-2.88 3.24-4-4L2 17.99l1.5 1.5 6-6.01 4 4 4.05-4.55c.75 1.35 1.25 2.9 1.44 4.55H21c-.22-2.3-.95-4.39-2.04-6.14L22 7.92z"/>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                    <path d="M0 0h24v24H0z"/>
+                    <mask id="qe" fill="#fff">
+                        <use xlink:href="#qw"/>
+                    </mask>
+                    <use fill="#9C9C9C" fill-rule="nonzero" xlink:href="#qw"/>
+                    <g class="admin-aside__item_active-svg"  fill="#9C9C9C" mask="url(#qe)">
+                        <path d="M0 0h24v24H0z"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <div class="admin-aside__menu">
+            <div class="admin-aside__menu_cls-area"></div>
+            <ul class="admin-aside__menu-list">
+                <li class="admin-aside__menu-list-title">Новый материал</li>
+                <li class="admin-aside__menu-edit">Лонгрид</li>
+                <li class="admin-aside__menu-edit">Новость</li>
+                <li class="admin-aside__menu-edit">Анонс</li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="longread-create">
+
+        <div class="container">
+
+            <div class="longread-create__head create-head">
+                <div class="create-head__btns">
+                    <div class="create-head__editor">
+                        <a class="create-head__editor-link create-head__editor-link_active" href="#">Редактор</a>
+                        <a class="create-head__editor-link" href="#">Предпросмотр</a>
+                        <a class="create-head__editor-link" href="#">Карточки</a>
+                    </div>
+                    <div class="create-head__public">
+                        <p class="create-head__public-draft">Черновик</p>
+                        <button class="create-head__public-del"></button>
+                        <button data-replace-status class="create-head__public-upld create-head__public-upld_ready">Готов к публикации</button>
+                        <button class="create-head__public-upld">Опубликовать</button>
+                    </div>
+                </div>
+
+                <div class="create-head__tags">
+                    <div class="create-head__tags-item">
+                        <div class="create-head__tags-info">Лонгрид</div>
+                        <div class="create-head__tags-info">Создал: <span class="create-head__tags-info_author">Иванов Иван</span></div>
+                        
+                        <div class="create-head__tags-wrap create-head__tags-wrap_rubric">
+                            <div class="common-input__tooltip" data-tooltip>
+                                <p class="common-input__tooltip-text common-input__tooltip-text_placeholder">Рубрика</p>
+                            </div>
+
+                            <div class="tooltip">
+                                <div class="tooltip__cls-area"></div>
+                                <div class="tooltip__item">Узнать</div>
+                                <div class="tooltip__item">Познать</div>
+                                <div class="tooltip__item">Прознать</div>
+                                <div class="tooltip__item">Дознать</div>
+                            </div>
+                        </div>
+
+                        <div class="create-head__tags-wrap create-head__tags-wrap_category">
+                            <div class="common-input__checkbox" data-tooltip>
+                                <input class="common-input__checkbox-text" placeholder="Категории">
+                            </div>
+
+                            <div class="tooltip">
+                                <div class="tooltip__cls-area"></div>
+                                <label class="tooltip__item tooltip__item_checkbox">
+                                    <input type="checkbox" name="category">
+                                    <div class="tooltip__item-checkbox"></div>
+                                    Общество
+                                </label>
+                                <label class="tooltip__item tooltip__item_checkbox">
+                                    <input type="checkbox" name="category">
+                                    <div class="tooltip__item-checkbox"></div>
+                                    Политика
+                                </label>
+                                <label class="tooltip__item tooltip__item_checkbox">
+                                    <input type="checkbox" name="category">
+                                    <div class="tooltip__item-checkbox"></div>
+                                    Культура
+                                </label>
+                                <label class="tooltip__item tooltip__item_checkbox">
+                                    <input type="checkbox" name="category">
+                                    <div class="tooltip__item-checkbox"></div>
+                                    Наука
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="create-head__tags-timeline">
+                        <input type="checkbox">
+                        <div class="create-head__tags-checkbox"></div>
+                        Важно
+                    </label>
+                </div>
+
+                <div class="create-head__author">
+                    <h1 class="create-head__author-title">Автор текста</h1>
+                    <div class="create-head__author-wrap create-head__author-wrap_author"> 
+                        <!-- create-head__author-change_disabled - для "отключения поля" -->
+                        <div class="common-input__tooltip common-input__tooltip_disabled" data-tooltip>
+                            <p class="common-input__tooltip-text common-input__tooltip-text_placeholder">Выбрать из пользователей</p>
+                        </div>
+
+                        <div class="tooltip">
+                            <div class="tooltip__cls-area"></div>
+                            <div class="tooltip__search">
+                                <input type="text" name="author" placeholder="Поиск по авторам">
+                            </div>
+                            <ul class="tooltip__list tooltip__list_author">
+                                <li class="tooltip__item">Владислав 1</li>
+                                <li class="tooltip__item">Владислав 2</li>
+                                <li class="tooltip__item">Владислав 3</li>
+                                <li class="tooltip__item">Владислав 4</li>
+                                <li class="tooltip__item">Владислав 5</li>
+                                <li class="tooltip__item">Владислав 6</li>
+                                <li class="tooltip__item">Владислав 7</li>
+                                <li class="tooltip__item">Владислав 8</li>
+                                <li class="tooltip__item">Владислав 9</li>
+                                <li class="tooltip__item">Владислав 10</li>
+                                <li class="tooltip__item">Владислав 11</li>
+                                <li class="tooltip__item">Владислав 12</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="create-head__author-wrap create-head__author-wrap_insert-author common-input__text">
+                        <input type="text" placeholder="Автор">
+                    </div>
+                    <label class="create-head__author-photo">
+                        <input type="file" name="photo">
+                        Загрузить фото автора
+                    </label>
+                </div>
+            </div>
+
+            <div class="longread-create__announcement longread-announcement longread-announcement_off">
+                
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-announce">
+                    <label class="longread-announcement__turn">
+                        <input type="checkbox" name="active" data-anncounce>
+                        <div class="longread-announcement__turn-checkbox"></div>
+                    </label>
+                    <p class="longread-announcement__text">Анонс</p>
+                    <p class="longread-announcement__text longread-announcement__text_off">Разместить материал на таймлайне</p>
+                    <p class="longread-announcement__text longread-announcement__text_submit">Материал опубликован и размещен на таймлайне</p>
+                </div>
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-date">
+                    <label class="longread-announcement__datepicker">
+                        <input type="text" name="date" class="longread-announcement__datepicker-input datepicker-num" placeholder="Дата анонса">
+                    </label>
+                    <p class="create-head__error">Необходимо указать дату размещения</p>
+                </div>
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-time">
+                    <label class="longread-announcement__time">
+                        <input data-time-mask maxlength="5" type="text" name="time" class="longread-announcement__time-input" placeholder="Время анонса">
+                    </label>
+                    <p class="create-head__error">Необходимо указать время размещения</p>
+                    <!-- <p class="create-head__error">Автоматически добавлен 1 час</p> -->
+                </div>
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-btn">
+                    <button class="longread-announcement__btn-del"></button>
+                    <button class="longread-announcement__btn-upld" disabled>Разместить</button>
+                </div>
+
+                <!-- <div class="longread-announcement__wrap longread-announcement__wrap_for-title">
+                    <p class="longread-announcement__count"><span data-count-title>30</span>/30</p>
+                    <label class="longread-announcement__title">
+                        <input data-count type="text" maxlength="30" class="longread-announcement__title-input" placeholder="Заголовок на таймлайне">
+                    </label>
+                    <p class="create-head__error create-head__error_for-count">Текст превышает допустимую длину</p>
+                </div> -->
+
+                <div class="longread-announcement__wrap longread-announcement__wrap_for-timeline">
+                    <p class="longread-announcement__text longread-announcement__text_no-timeline">Анонс не опубликован на таймлайне</p>
+                    <!-- <p class="longread-announcement__text longread-announcement__text_error">
+                        Анонс размещен на <span class="longread-announcement__text_underline">таймлайне</span>, опубликуйте материал
+                        <span class="longread-announcement__text_block">Осталось:  15 минут 55 секунд</span>
+                    </p> -->
+                    <!-- <p class="longread-announcement__text longread-announcement__text_timeline">
+                        Анонс размещен на таймлайне 
+                        <span class="longread-announcement__text_block">Материал будет опубликован как анонсировано</span>
+                        <span class="longread-announcement__text_block">Осталось: 1 день 23 часа 42 минуты 55 секунд</span>
+                    </p> -->
+                </div>
+            </div>
+
+            <div class="longread-create__image longread-image">
+                <div class="longread-image__img">
+                    <!-- <img src="" alt="image"> -->
+                    <label class="longread-image__img-add">
+                        <input type="file">
+                    </label>
+                    <label class="longread-image__img-video">
+                        <input type="text" placeholder="Cсылка на видео">
+                        <button></button>
+                    </label>
+                    <label class="longread-image__img-del">
+                        <input type="file">
+                    </label>
+                    <label class="longread-image__img-parallax">
+                        <input type="checkbox" style="display: none;">
+                        <div class="longread-image__img-checkbox"></div>
+                        Зафиксировать изображение при скролле
+                    </label>
+                </div>
+                
+                <div class="longread-image__info">
+                    <div class="longread-image__info-wrap">
+                        <div class="longread-image__info-views-wrap">
+                            <input type="text" class="longread-image__info-views" placeholder="Количество просмотров">
+                        </div>
+                        <input type="text" class="longread-image__info-author" placeholder="Автор фото">
+                    </div>
+                </div>
+    
+                <div class="longread-image__headline">
+                    <div class="longread-image__title">
+                        <p class="longread-image__title-counter"><span data-count-title>30</span>/30</p>
+                        <div>
+                            <input data-count type="text" class="longread-image__title-input" maxlength="30" placeholder="Заголовок">
+                        </div>
+                    </div>
+                    <div class="longread-image__subtitle">
+                        <p class="longread-image__subtitle-counter"><span data-count-title>100</span>/100</p>
+                        <div>
+                            <textarea data-count type="text" class="longread-image__subtitle-input" maxlength="100" placeholder="Лид"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+            <div class="longread-create__content longread-content">
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <!-- <div class="object__content-item">
+                                <input type="text" class="object__content-link" placeholder="Ссылка на видео Youtube, Vimeo">
+                            </div> -->
+                            <div class="object__content-item object__content-item_video">
+                                <div class="object__content-video">
+                                    <iframe width="660" height="440" 
+                                            src="">
+                                    </iframe>
+                                </div>
+                                <textarea data-area-autosize class="object__content-caption" maxlength="50" placeholder="Подпись под видео/фото"></textarea>
+                                <textarea data-area-autosize class="object__content-caption object__content-caption_credit" 
+                                          maxlength="60" placeholder="Photocredit"></textarea>
+                            </div>
+
+                            <div class="tooltip tooltip__image">
+                                <button class="tooltip__image-edit"></button>
+                                <button class="tooltip__image-size" data-img-size></button>
+                                <button class="tooltip__image-gallery"></button>
+                                <button class="tooltip__image-cls"></button>
+                            </div>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <!-- <button class="object__controls-btn object__controls-btn_arrow-up"></button> -->
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <textarea data-area-autosize name="text" class="object__content-subtitle" placeholder="Введите подзаголовок"></textarea>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content object__content_quote">
+                            <textarea name="text" class="object__content-quote" placeholder="Введите текст цитаты"></textarea>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content object__content_flip">
+                            <textarea data-area-autosize name="text" class="object__content-flip object__content-flip_title" placeholder="Подзаголовок ката"></textarea>
+                            <textarea name="text" class="object__content-flip object__content-flip_text" placeholder="Введите текст, который хотите скрыть под кат"></textarea>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <textarea name="text" class="object__content-text" placeholder="Это текстовый модуль верстки"></textarea>
+
+                            <div class="tooltip tooltip_editor">
+                                <div class="tooltip__item-editor tooltip__item-editor_bold"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_italic"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_line-through"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_ul"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_ol"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_link"></div>
+                                <div class="tooltip__item-editor tooltip__item-editor_comment"></div>
+                            </div>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <div class="object__content-insert">
+                                <textarea class="object__content-text object__content-text_insert" name="insert"
+                                          placeholder="Текст"></textarea>
+                                <div class="object__content-insert-wrap">
+                                    <input type="text" name="insert-author" class="object__content-insert-author" placeholder="Название источника">
+                                    <input type="text" name="insert-author-date" class="object__content-insert-date" placeholder="Дата">
+                                </div>
+                                <input type="text" name="author-link" class="object__content-insert-link" placeholder="Ссылка на встраиваемый материал">
+                            </div>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <!-- <button class="object__controls-btn object__controls-btn_arrow-down"></button> -->
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <div class="object__content-img">
+                                <img src="#" alt="name_image">
+                                <label class="longread-image__img-parallax">
+                                    <input type="checkbox" style="display: none;">
+                                    <div class="longread-image__img-checkbox"></div>
+                                    Зафиксировать изображение при скролле
+                                </label>
+                            </div>
+
+                            <div class="tooltip tooltip__image">
+                                <button class="tooltip__image-edit"></button>
+                                <button class="tooltip__image-size" data-img-size></button>
+                                <button class="tooltip__image-gallery"></button>
+                                <button class="tooltip__image-cls"></button>
+                            </div>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <div class="object__content-gallery">
+                                <div class="slider">
+                                    <div class="slider__item">
+                                        <img src="img/about-person.jpg" alt="image-name">
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="img/event-one.jpg" alt="image-name">
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="img/snippet-item-1.jpg" alt="image-name">
+                                    </div>
+                                </div>
+                                <div class="object__content-gallery-wrap">
+                                    <textarea data-area-autosize class="object__content-caption" maxlength="50" placeholder="Подпись под видео/фото"></textarea>
+                                    <div class="object__content-gallery-controls">
+                                        <button class="object__content-gallery-btn object__content-gallery-btn_prev"></button>
+                                        <p class="object__content-gallery-counter">
+                                            <span class="slick-count">1</span>/<span>3</span>
+                                        </p>
+                                        <button class="object__content-gallery-btn object__content-gallery-btn_next"></button>
+                                    </div>
+                                    <textarea data-area-autosize class="object__content-caption object__content-caption_credit" 
+                                              maxlength="60" placeholder="Photocredit"></textarea>
+                                </div>
+
+                                <div class="tooltip tooltip__image">
+                                    <button class="tooltip__image-edit"></button>
+                                    <button class="tooltip__image-size" data-img-size></button>
+                                    <button class="tooltip__image-gallery"></button>
+                                    <button class="tooltip__image-cls"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <div class="object__content-gallery">
+                                <div class="slider">
+                                    <div class="slider__item">
+                                        <img src="img/about-person.jpg" alt="image-name">
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="img/event-one.jpg" alt="image-name">
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="img/snippet-item-1.jpg" alt="image-name">
+                                    </div>
+                                </div>
+                                <div class="object__content-gallery-wrap">
+                                    <textarea data-area-autosize class="object__content-caption" maxlength="50" placeholder="Подпись под видео/фото"></textarea>
+                                    <div class="object__content-gallery-controls">
+                                        <button class="object__content-gallery-btn object__content-gallery-btn_prev"></button>
+                                        <p class="object__content-gallery-counter">
+                                            <span class="slick-count">1</span>/<span>3</span>
+                                        </p>
+                                        <button class="object__content-gallery-btn object__content-gallery-btn_next"></button>
+                                    </div>
+                                    <textarea data-area-autosize class="object__content-caption object__content-caption_credit" 
+                                              maxlength="60" placeholder="Photocredit"></textarea>
+                                </div>
+
+                                <div class="tooltip tooltip__image">
+                                    <button class="tooltip__image-edit"></button>
+                                    <button class="tooltip__image-size" data-img-size></button>
+                                    <button class="tooltip__image-gallery"></button>
+                                    <button class="tooltip__image-cls"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <div class="object__content-gallery">
+                                <div class="slider">
+                                    <div class="slider__item">
+                                        <img src="img/about-person.jpg" alt="image-name">
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="img/event-one.jpg" alt="image-name">
+                                    </div>
+                                    <div class="slider__item">
+                                        <img src="img/snippet-item-1.jpg" alt="image-name">
+                                    </div>
+                                </div>
+                                <div class="object__content-gallery-wrap">
+                                    <textarea data-area-autosize class="object__content-caption" maxlength="50" placeholder="Подпись под видео/фото"></textarea>
+                                    <div class="object__content-gallery-controls">
+                                        <button class="object__content-gallery-btn object__content-gallery-btn_prev"></button>
+                                        <p class="object__content-gallery-counter">
+                                            <span class="slick-count">1</span>/<span>3</span>
+                                        </p>
+                                        <button class="object__content-gallery-btn object__content-gallery-btn_next"></button>
+                                    </div>
+                                    <textarea data-area-autosize class="object__content-caption object__content-caption_credit" 
+                                              maxlength="60" placeholder="Photocredit"></textarea>
+                                </div>
+
+                                <div class="tooltip tooltip__image">
+                                    <button class="tooltip__image-edit"></button>
+                                    <button class="tooltip__image-size" data-img-size></button>
+                                    <button class="tooltip__image-gallery"></button>
+                                    <button class="tooltip__image-cls"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content object__content_number">
+                            <input type="text" class="object__content-number" placeholder="Цифра">
+                            <input type="text" class="object__content-number object__content-number_descr" placeholder="Подпись">
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <!-- <button class="object__controls-btn object__controls-btn_arrow-down"></button> -->
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content object__content_disclaimer">
+                            <textarea name="text" class="object__content-disclaimer object__content-disclaimer_text" placeholder="Введите текст дисклеймера"></textarea>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__add">
+                    <button class="longread-content__add-btn" data-tooltip></button>
+                    <div class="tooltip tooltip_add-object">
+                        <div class="tooltip__cls-area"></div>
+                        <div class="tooltip__item-add tooltip__item-add_fields">Текст</div>
+                        <div class="tooltip__item-add tooltip__item-add_subtitle">Подзаголовок</div>
+                        <div class="tooltip__item-add tooltip__item-add_img">Изображение</div>
+                        <div class="tooltip__item-add tooltip__item-add_gallery">Фотогалерея</div>
+                        <div class="tooltip__item-add tooltip__item-add_video">Видео</div>
+                        <div class="tooltip__item-add tooltip__item-add_quote">Цитата</div>
+                        <div class="tooltip__item-add tooltip__item-add_text">Врез</div>
+                        <div class="tooltip__item-add tooltip__item-add_notifications">Дисклеймер</div>
+                        <div class="tooltip__item-add tooltip__item-add_flip">Кат</div>
+                        <div class="tooltip__item-add tooltip__item-add_embed">Эмбед</div>
+                        <div class="tooltip__item-add tooltip__item-add_number">Цифра</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="longread-create__social longread-social">
+
+                <h1 class="longread-social__title">Читайте также</h1>
+
+                <div class="longread-social__item-wrap longread-social__item-wrap_material">
+                    <div class="longread-social__item-wrap_modal">
+                        <div class="longread-social__item-select longread-social__item-select_material" data-tooltip>
+                            <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Выбрать 1 материал</p>
+                        </div>
+
+                        <div class="tooltip">
+                            <div class="tooltip__cls-area"></div>
+                            <div class="tooltip__search">
+                                <input type="text" name="material" placeholder="Поиск по материалам">
+                            </div>
+                            <ul class="tooltip__list tooltip__list_material">
+                                <li class="tooltip__item tooltip__item_news-more">
+                                    <p>
+                                        В Москве мужчина попытался украть миллион рублей при помощи пакета с картошкой 
+                                        <span>Новость,</span> <span>31 декабря 2019</span>
+                                    </p>
+                                </li>
+                                <li class="tooltip__item tooltip__item_news-more">
+                                    <p>
+                                        Кому на Руси жить хорошо? 
+                                        <span>Лонгрид,</span> <span>29 декабря 2019</span>
+                                    </p>
+                                </li>
+                                <li class="tooltip__item tooltip__item_news-more">
+                                    <p>
+                                        В Москве мужчина попытался украть миллион рублей при помощи пакета с картошкой 
+                                        <span>Новость,</span> <span>31 декабря 2019</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="longread-social__item-wrap_modal">
+                        <div class="longread-social__item-select longread-social__item-select_material" data-tooltip>
+                            <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Выбрать 2 материал</p>
+                        </div>
+
+                        <div class="tooltip">
+                            <div class="tooltip__cls-area"></div>
+                            <div class="tooltip__search">
+                                <input type="text" name="material" placeholder="Поиск по материалам">
+                            </div>
+                            <ul class="tooltip__list tooltip__list_material">
+                                <li class="tooltip__item tooltip__item_news-more">
+                                    <p>
+                                        В Москве мужчина попытался украть миллион рублей при помощи пакета с картошкой 
+                                        <span>Новость,</span> <span>31 декабря 2019</span>
+                                    </p>
+                                </li>
+                                <li class="tooltip__item tooltip__item_news-more">
+                                    <p>
+                                        Кому на Руси жить хорошо? 
+                                        <span>Лонгрид,</span> <span>29 декабря 2019</span>
+                                    </p>
+                                </li>
+                                <li class="tooltip__item tooltip__item_news-more">
+                                    <p>
+                                        В Москве мужчина попытался украть миллион рублей при помощи пакета с картошкой 
+                                        <span>Новость,</span> <span>31 декабря 2019</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- longread-social__wrap_disabled -->
+                <div class="longread-social__wrap longread-social__wrap_disabled">
+                    <h1 class="longread-social__title">Соцсети</h1>
+    
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Twitter</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <label class="longread-social__item-select">
+                                <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
+                            </label>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter-title" placeholder="Заголовок на шер-картинке">
+                            <div class="longread-social__item-wrap_modal">
+                                <div class="longread-social__item-select" data-tooltip>
+                                    <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
+                                </div>
+    
+                                <div class="tooltip tooltip_time">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__time">
+                                        <div class="tooltip__time-item">00:00</div>
+                                        <div class="tooltip__time-item">00:10</div>
+                                        <div class="tooltip__time-item">00:20</div>
+                                        <div class="tooltip__time-item">00:30</div>
+                                        <div class="tooltip__time-item">00:40</div>
+                                        <div class="tooltip__time-item">00:50</div>
+                                        <div class="tooltip__time-item">01:00</div>
+                                        <div class="tooltip__time-item">01:10</div>
+                                        <div class="tooltip__time-item">01:20</div>
+                                        <div class="tooltip__time-item">01:30</div>
+                                        <div class="tooltip__time-item">01:40</div>
+                                        <div class="tooltip__time-item">01:50</div>
+                                        <div class="tooltip__time-item">02:00</div>
+                                        <div class="tooltip__time-item">02:10</div>
+                                        <div class="tooltip__time-item">02:20</div>
+                                        <div class="tooltip__time-item">02:30</div>
+                                        <div class="tooltip__time-item">02:40</div>
+                                        <div class="tooltip__time-item">02:50</div>
+                                        <div class="tooltip__time-item">03:00</div>
+                                        <div class="tooltip__time-item">03:10</div>
+                                        <div class="tooltip__time-item">03:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Facebook</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <div class="longread-social__item-select">
+                                <!-- <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Дата анонса</p> -->
+                                <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
+                            <div class="longread-social__item-wrap_modal">
+                                <div class="longread-social__item-select" data-tooltip>
+                                    <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
+                                </div>
+    
+                                <div class="tooltip tooltip_time">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__time">
+                                        <div class="tooltip__time-item">00:00</div>
+                                        <div class="tooltip__time-item">00:10</div>
+                                        <div class="tooltip__time-item">00:20</div>
+                                        <div class="tooltip__time-item">00:30</div>
+                                        <div class="tooltip__time-item">00:40</div>
+                                        <div class="tooltip__time-item">00:50</div>
+                                        <div class="tooltip__time-item">01:00</div>
+                                        <div class="tooltip__time-item">01:10</div>
+                                        <div class="tooltip__time-item">01:20</div>
+                                        <div class="tooltip__time-item">01:30</div>
+                                        <div class="tooltip__time-item">01:40</div>
+                                        <div class="tooltip__time-item">01:50</div>
+                                        <div class="tooltip__time-item">02:00</div>
+                                        <div class="tooltip__time-item">02:10</div>
+                                        <div class="tooltip__time-item">02:20</div>
+                                        <div class="tooltip__time-item">02:30</div>
+                                        <div class="tooltip__time-item">02:40</div>
+                                        <div class="tooltip__time-item">02:50</div>
+                                        <div class="tooltip__time-item">03:00</div>
+                                        <div class="tooltip__time-item">03:10</div>
+                                        <div class="tooltip__time-item">03:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Вконтакте</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Сопроводительный текст">
+                            <div class="longread-social__item-select">
+                                <!-- <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Дата анонса</p> -->
+                                <input class="longread-social__item-select-text datepicker" placeholder="Дата анонса" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="longread-social__item">
+                        <p class="longread-social__item-title">Заголовок на шер-картинке</p>
+                        <div class="longread-social__item-wrap">
+                            <input type="text" name="twitter" placeholder="Заголовок на шер-картинке">
+                            <div class="longread-social__item-wrap_modal">
+                                <div class="longread-social__item-select" data-tooltip>
+                                    <p class="longread-social__item-select-text longread-social__item-select-text_placeholder">Время анонса</p>
+                                </div>
+    
+                                <div class="tooltip tooltip_time">
+                                    <div class="tooltip__cls-area"></div>
+                                    <div class="tooltip__time">
+                                        <div class="tooltip__time-item">00:00</div>
+                                        <div class="tooltip__time-item">00:10</div>
+                                        <div class="tooltip__time-item">00:20</div>
+                                        <div class="tooltip__time-item">00:30</div>
+                                        <div class="tooltip__time-item">00:40</div>
+                                        <div class="tooltip__time-item">00:50</div>
+                                        <div class="tooltip__time-item">01:00</div>
+                                        <div class="tooltip__time-item">01:10</div>
+                                        <div class="tooltip__time-item">01:20</div>
+                                        <div class="tooltip__time-item">01:30</div>
+                                        <div class="tooltip__time-item">01:40</div>
+                                        <div class="tooltip__time-item">01:50</div>
+                                        <div class="tooltip__time-item">02:00</div>
+                                        <div class="tooltip__time-item">02:10</div>
+                                        <div class="tooltip__time-item">02:20</div>
+                                        <div class="tooltip__time-item">02:30</div>
+                                        <div class="tooltip__time-item">02:40</div>
+                                        <div class="tooltip__time-item">02:50</div>
+                                        <div class="tooltip__time-item">03:00</div>
+                                        <div class="tooltip__time-item">03:10</div>
+                                        <div class="tooltip__time-item">03:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="longread-social__agreement">
+                        <h1 class="longread-social__title longread-social__agreement-title">Согласование материала перед публикацией</h1>
+    
+                        <div class="longread-social__item-wrap">
+                            <label class="longread-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="longread-social__agreement-checkbox"></div>
+                                Виза редактора
+                            </label>
+                            <label class="longread-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="longread-social__agreement-checkbox"></div>
+                                Виза визуального редактора
+                            </label>
+                            <label class="longread-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="longread-social__agreement-checkbox"></div>
+                                Виза корректора
+                            </label>
+                            <label class="longread-social__agreement-var">
+                                <input type="checkbox" name="agreement">
+                                <div class="longread-social__agreement-checkbox"></div>
+                                Виза главного редактора
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="longread-create__success">
+                <button class="longread-create__success-del"></button>
+                <button class="longread-create__success-upload longread-create__success-upload_ready">Готов к публикации</button>
+                <button class="longread-create__success-upload">Опубликовать</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer-admin">
+        <div class="container">
+            <a href="#" class="footer-admin__link">Техническая поддержка</a>
+        </div>
+    </footer>
+
+    <div class="modal" style="display: none;">
+        <!-- 
+            Я создал класс "modal_many-items" - когда высота блока "modal__gallery" превышает высоту блока
+            "modal" - 120px(padding-top + padding-bottom), добавляется класс который меняет "align-items center"
+            на "align-items flex-start", что бы при прокрутке окна оно отображалось корректно
+         -->
+        <div class="modal__gallery">
+            <div class="modal__gallery-item gallery-item">
+                <div class="gallery-item__content">
+                    <div class="gallery-item__content-move"></div>
+                    <div class="gallery-item__content-img">
+                        <img src="#" alt="image-name">
+                    </div>
+                    <p class="gallery-item__content-name"></p>
+                    <label class="gallery-item__content-replace">
+                        <input type="file" name="replace-image">
+                        Заменить изображение
+                    </label>
+                    <button class="gallery-item__content-descr">Текст</button>
+                    <button class="gallery-item__content-del"></button>
+                </div>
+                <div class="gallery-item__descr">
+                    <input class="gallery-item__descr-text" type="text" name="image-description" placeholder="Подпись под фото">
+                    <input class="gallery-item__descr-credit" type="text" name="image-credit" placeholder="Photocredit">
+                    <label class="gallery-item__descr-copy">
+                        <input type="checkbox">
+                        <div class="gallery-item__descr-checkbox"></div>
+                        Копировать Photocredit для всех фото
+                    </label>
+                </div>
+            </div>
+            <div class="modal__gallery-btn">
+                <!-- 
+                    Класс "modal__gallery-btn_add-empty-items" нужен когда не загруженно не одной картинки
+                 -->
+                <label class="modal__gallery-btn_add">
+                    <input type="file" name="upload-image">
+                    Загрузить файлы
+                </label>
+                <button class="modal__gallery-btn_save">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal_transparent" style="display: none;">
+        <div class="modal__public public-material">
+            
+            <h1 class="public-material__title">Опубликовать материал</h1>
+            <div class="public-material__wrap">
+                <div class="common-input__tooltip public-material__select" data-tooltip>
+                    <p class="common-input__tooltip-text"></p>
+                </div>
+                <div class="tooltip">
+                    <div class="tooltip__cls-area"></div>
+                    <div data-announce-modal data-id="now" class="tooltip__item">Немедленно</div>
+                    <div data-announce-modal data-id="plan" class="tooltip__item">По плану</div>
+                    <div data-announce-modal data-id="time" class="tooltip__item">Ко времени</div>
+                </div>
+                <p id="now" class="public-material__notice public-material__notice_now">Материал сразу появится на сайте</p>
+                <p id="plan" class="public-material__notice public-material__notice_plan">Материал будет опубликован как анонсировано</p>
+                <p id="time" class="public-material__notice public-material__notice_time">Время в анонсе тоже будет изменено</p>
+            </div>
+            <div class="public-material__wrap public-material__wrap_for-date">
+                <label class="public-material__input">
+                    <input type="text" class="public-material__input-item datepicker-num">
+                </label>
+                <label class="public-material__input public-material__input_for-time">
+                    <input data-time-mask maxlength="5" class="public-material__input-item" type="text">
+                </label>
+            </div>
+            <div class="public-material__wrap public-material__wrap_for-btn">
+                <button class="public-material__btn">нет</button>
+                <button class="public-material__btn">опубликовать</button>
+            </div>
+        </div>
+    </div>
+
+<script src="js/scripts.min.js"></script>
+</body>
+</html>

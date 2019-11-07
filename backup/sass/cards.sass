@@ -1,0 +1,18 @@
+
+@import "_mixins/mixin"
+
+.longread-cards
+    width: 100%
+    padding: 40px 0 100px
+    @media (max-width: 1375px)
+        padding: 40px 0 100px 80px
+
+    &__head
+        margin: 0 0 35px
+
+
+@import "_page/_longread-component/_longread-cards/cards-head"
+@import "_page/_longread-component/_longread-cards/cards-desktop"
+
+// Mobile    
+@import "_page/_longread-component/_longread-cards/cards-mobile"

@@ -519,7 +519,7 @@
                     </div>
                     <div class="object__wrap">
                         <div class="object__content object__content_quote">
-                            <textarea name="text" class="object__content-quote" placeholder="Введите текст цитаты"></textarea>
+                            <textarea data-area-autosize name="text" class="object__content-quote" placeholder="Введите текст цитаты"></textarea>
                         </div>
                         <div class="object__controls">
                             <button class="object__controls-btn object__controls-btn_copy"></button>
@@ -544,7 +544,7 @@
                     <div class="object__wrap">
                         <div class="object__content object__content_flip">
                             <textarea data-area-autosize name="text" class="object__content-flip object__content-flip_title" placeholder="Подзаголовок ката"></textarea>
-                            <textarea name="text" class="object__content-flip object__content-flip_text" placeholder="Введите текст, который хотите скрыть под кат"></textarea>
+                            <textarea data-area-autosize name="text" class="object__content-flip object__content-flip_text" placeholder="Введите текст, который хотите скрыть под кат"></textarea>
                         </div>
                         <div class="object__controls">
                             <button class="object__controls-btn object__controls-btn_copy"></button>
@@ -568,7 +568,7 @@
                     </div>
                     <div class="object__wrap">
                         <div class="object__content">
-                            <textarea name="text" class="object__content-text" placeholder="Это текстовый модуль верстки"></textarea>
+                            <textarea data-area-autosize name="text" class="object__content-text" placeholder="Это текстовый модуль верстки"></textarea>
 
                             <div class="tooltip tooltip_editor">
                                 <div class="tooltip__item-editor tooltip__item-editor_bold"></div>
@@ -870,6 +870,32 @@
                             <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
                             <button class="object__controls-btn object__controls-btn_arrow-up"></button>
                             <button class="object__controls-btn object__controls-btn_arrow-down"></button>
+
+                            <ul class="object__controls-list">
+                                <li class="object__controls-item object__controls-item_cut">Вырезать</li>
+                                <li class="object__controls-item object__controls-item_copy">Копировать</li>
+                                <li class="object__controls-item object__controls-item_paste">Вставить</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="longread-content__object object">
+                    <div class="object__wrap object__wrap_move">
+                        <button class="object__move"></button>
+                    </div>
+                    <div class="object__wrap">
+                        <div class="object__content">
+                            <div class="object__content-item">
+                                <textarea data-area-autosize type="text" class="object__content-embed" placeholder="Ссылка на видео Youtube, Vimeo"></textarea>
+                            </div>
+                        </div>
+                        <div class="object__controls">
+                            <button class="object__controls-btn object__controls-btn_copy"></button>
+                            <button class="object__controls-btn object__controls-btn_del"></button>
+                            <button class="object__controls-btn object__controls-btn_more" data-btn-more></button>
+                            <button class="object__controls-btn object__controls-btn_arrow-up"></button>
+                            <!-- <button class="object__controls-btn object__controls-btn_arrow-down"></button> -->
 
                             <ul class="object__controls-list">
                                 <li class="object__controls-item object__controls-item_cut">Вырезать</li>

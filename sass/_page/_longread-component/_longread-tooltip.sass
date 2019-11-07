@@ -78,12 +78,12 @@
 
     &__item
         width: 100%
-        height: 48px
+        min-height: 48px
         font: 16px/24px $font-sans
         color: $col-75
         display: flex
         align-items: center
-        padding-left: 8px
+        padding: 12px 30px 12px 10px
         cursor: pointer
         transition: background-color .2s linear
         &:hover
@@ -91,8 +91,8 @@
         p
             font: inherit
             color: inherit
-        span:not(.tooltip__item-checkbox_name)
-            color: #bbb8b2
+        // span:not(.tooltip__item-checkbox_name)
+        //     color: #bbb8b2
         input[type=checkbox]
             display: none
             &:checked + .tooltip__item-checkbox

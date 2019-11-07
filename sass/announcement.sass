@@ -1,0 +1,41 @@
+
+    
+@import "_mixins/mixin" 
+@import "_page/datepicker"
+
+.announcement-create
+    padding: 40px 0 140px
+
+    &__headline
+        width: 100%
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+    &__title,
+    &__subtitle
+        width: 952px
+        display: flex
+        margin: 0 0 10px
+
+        &-counter
+            width: 56px
+            font: 14px/20px $font-sans
+            color: $col-holder
+            margin-right: 40px
+            text-align: right
+        &-input,
+        &-area
+            width: 856px
+            height: 47px
+            border: none
+            background-color: transparent
+            font: 600 40px/47px $font-serif
+            color: $col-headline
+            transform: translateY(-5px)
+            &::placeholder
+                color: $col-holder
+            &_news-create
+                margin: 0 0 67px
+        &-area
+            resize: none
+            min-height: 52px

@@ -1,352 +1,474 @@
+
+$(document).on('click', '.window-login__pass-show', function() {
+
+    $(this).toggleClass('window-login__pass-show_active')
+    if ($(this).prev().attr('type') == 'password') {
+
+        $(this).prev().attr('type', 'text')
+    } else { $(this).prev().attr('type', 'password') }
+});
+
+$(document).on('click', '.window-login__submit', function() {
+
+    $('.window-login__email, .window-login__pass').addClass('incorrect-value')
+})
+
+$(document).on('blur', '[data-login], [data-pass], [data-code], [data-restore]', function() {
+
+    var login = $('[data-login]').val(),
+        pass = $('[data-pass]').val(),
+        code = $('[data-code]').val(),
+        restore = $('[data-restore]').val()
+
+    if (login != '' && pass != '' || code != '' || restore != '') {
+
+        $('.window-login__submit').prop('disabled', false)
+    } else { 
+        $('.window-login__submit').prop('disabled', true)
+        $('.window-login__email, .window-login__pass').removeClass('incorrect-value')
+    }
+});
+
+//longread
+
+$(document).ready(function() {
+    $('.datepicker').each(function() {
+
+        $(this).datepicker({
+            showOtherMonths: true,
+            minDate: 0
+        });
+    })
+    $('.datepicker-num').each(function() {
+
+        $(this).datepicker({
+            showOtherMonths: true,
+            dateFormat: 'dd.mm.yy',
+            minDate: 0
+        });
+    })
+    
+    $.datepicker.regional['ru'] = {
+        closeText: 'Закрыть',
+        prevText: 'Предыдущий',
+        nextText: 'Следующий',
+        currentText: 'Сегодня',
+        monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        monthNamesShort: ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря'],
+        dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+        dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+        dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+        weekHeader: 'Не',
+        dateFormat: 'dd M yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
+    $.datepicker._checkOffset = function(_, offset){
+        offset.top -= 37
+
+        return offset
+    };
+    
+    
+});
+// Открытие/закртие тултипа + смена направления стрелки(chevron)
+$(document).on('click', '[data-tooltip]', function() {
+
+    if ($(this).next().hasClass('tooltip_open')) {
+
+        $(this).next().toggleClass('tooltip_open');
+        $(this).toggleClass('tooltip_rotate');
+    } else {
+        $('[data-tooltip]').next().removeClass('tooltip_open');
+        $(this).next().toggleClass('tooltip_open');
+        $(this).toggleClass('tooltip_rotate');
+    }
+});
+
+// закрытие тултипа при клике на пустое место
+$(document).on('click', '.tooltip__cls-area', function() {
+
+    var elClass = $(this).parent().attr('class').replace(/ [\s\S]+/, '');
+
+    if($(this).parent().hasClass('tooltip_add-object')) {
+
+        $(this).parent().removeClass(elClass + '_open');
+        $(this).parent().prev().removeClass('longread-content__add-btn_click');
+    } else {
+        $(this).parent().removeClass(elClass + '_open');
+        $('.tooltip').prev().removeClass('tooltip_rotate');
+    }
+});
+// закрытие меню создания объекта (лонгрид/новость) при клике по пункут тултипа
+$(document).on('click', '.tooltip__item-add', function() {
+
+    $('.tooltip__cls-area').trigger('click')
+});
+
+// Появление меню у объекта лонгриа
+$(document).ready( function() {
+    $('.object').hover(function() {
+        
+        $(this).find('.object__content').find('.tooltip').toggleClass('tooltip_open');
+    });
+});
+
+// Увеличение блока с картинкой на стр Лонгрида
+$(document).on('click', '[data-img-size]', function() {
+
+    $(this).closest('.object').toggleClass('object_big-image');
+    $(this).toggleClass('tooltip__image-size_active');
+});
+
+$(document).on('click', '.gallery-item__content-descr', function() {
+
+    $('.gallery-item__descr').toggleClass('gallery-item__descr_active');
+    $(this).toggleClass('gallery-item__content-descr_active');
+});
+
+$(document).on('click', '.longread-social__item-select', function() {
+
+    $(this).next().toggleClass('longread-social__item-material_open');
+})
+
+// Открытие выпадающего меню при клике на кнопку "создать материал" на стр bg-materials
+$(document).on('click', '.longread-content__add-btn', function() {
+
+    $(this).toggleClass('longread-content__add-btn_click');
+    $('.longread-content__add-list').toggleClass('longread-content__add-list_open')
+});
+
+// Счетчик символов в заголовке и описании (Лонгрид, Новость)
+$(document).on('keyup', '[data-count]', function() {
+
+    var strLength = $(this).val().length,
+        maxLength = $(this).attr('maxlength');
+
+    $(this).parent().prev().children('[data-count-title]').text( maxLength - strLength );
+});
+
+// Открытие "Выресать/копировать/вставить" у объекта лонгрида
+$(document).on('click', '[data-btn-more]', function() {
+
+    var optList = $(this).parent().children('.object__controls-list');
+    
+    $(this).toggleClass('object__controls-btn_active');
+    optList.toggleClass('object__controls-list_show');
+});
+
+// Автоувеличение textarea
+$(document).on('input', '[data-area-autosize]', function(e) {
+
+    $(this).css('min-height', $(this).css('line-height') + 5);
+
+	this.style.height = '1px';
+	this.style.height = (this.scrollHeight) + 'px'; 
+});
+
+// Заполнение полей из "tooltip"
+$(document).on('click', '.tooltip__item, .tooltip__time-item', function() {
+
+    var elem = $(this).parent().prev().children();
+
+    if($(this).hasClass('tooltip__item_checkbox')) {
+
+    } else if ($(this).hasClass('tooltip__item_news-more')) {
+
+        addNewsStr($(this))
+    } else if ($(this).attr('class') == 'tooltip__time-item' || ($(this).parent().hasClass('tooltip__list'))) {
+
+        changeTime($(this))
+    } else if ($(this).hasClass('tooltip__item_add-news')) {
+
+        addNews($(this));
+    } else {
+        elem.text($(this).text().trim());
+        elem.attr('class', elem.attr('class').replace(/ [\s\S]+/, ''));
+        $('.tooltip__cls-area').trigger('click');
+    }
+});
+
+// Заполняем Поля типа "Select"  при клике на пункт
+$(document).on('change', '.tooltip__item_checkbox input', function() {
+
+    console.log('work');
+    var item = $(this),
+        parent = $(this).parent().parent().prev().children();
+
+    if( item.prop('checked') ) {
+        parent.val( parent.val() + (item.parent().text().trim() + '; ') );
+    } else {
+        parent.val( parent.val().replace( (item.parent().text().trim() + '; '), '' ) )
+    }
+});
+
+// Заполняем поля "Время анонса"
+function changeTime(el) {
+    
+    var elem = el.parent().parent().prev().children();
+
+    elem.text(el.text().trim());
+    elem.attr('class', elem.attr('class').replace(/ [\s\S]+/, ''));
+    $('.tooltip__cls-area').trigger('click')
+    errorTime(el)
+}
+// Добавление ошибки на стр релиза
+function errorTime(parent) {
+
+    parent.parent().parent().parent().addClass('incorrect-value');
+}
+
+// slider
+$(document).ready(function() {
+
+    $('.slider').each(function() {
+        var prev = $(this).parent().parent().find('.object__content-gallery-btn_prev'),
+            next = $(this).parent().parent().find('.object__content-gallery-btn_next'),
+            counter = $(this).parent().parent().find('.slick-count');
+        $(this).slick({
+            prevArrow: prev,
+            nextArrow: next,
+            infinite: false,
+            fade: $(this).hasClass('slider-mobile') ? false : true,
+            // centerMode: true,
+            respondTo: '.slider'
+        });
+        $(this).on('afterChange', function(event, slick, slickCurrentSlide){
+            counter.text(slickCurrentSlide + 1);
+        });
+
+        // $(this).hasClass('slider-mobile') ? $(this).slick({fade: false}) : $(this).slick({fade: true});
+    });
+});
+
+// Подставляем точки в поля с датой
+var startVal = '',
+    endVal = '';
+
+$(document).on('input', '[data-input-mask]', function() {
+    
+    datePatter($(this))
+    startVal = $(this).val().length;
+
+    if ($(this).val().length == 2 && startVal > endVal ) {
+
+        $(this).val( $(this).val() + '.' );
+    } else if ($(this).val().length == 5 && startVal > endVal ) {
+
+        $(this).val( $(this).val() + '.' );
+    }
+
+    endVal = $(this).val().length;
+});
+// Заменяем все символы кроме Цифр и точек - пустотой
+function datePatter(el) {
+
+    el.val( el.val().replace(/[^0-9.]/g, '') )
+}
+
+// Класс для фильтров "От большего к меньшему" и наоборот
+
+$(document).on('click', '[data-MinMax]', function() {
+    
+    var elClass = $(this).attr('class').replace(/ [\s\S]+/, '');
+    $(this).toggleClass( elClass + '_active');
+});
+
+// Открываем меню на стр пользователся
+$(document).on('click', '[data-menu]', function() {
+
+    $(this).next().toggleClass('account-modal_open');
+})
+
+$(document).on('input', '[data-time-mask]', function() {
+    
+    timePatter($(this))
+    startVal = $(this).val().length;
+
+    if ($(this).val().length == 2 && startVal > endVal ) {
+
+        $(this).val( $(this).val() + ':' );
+    } else { false }
+
+    endVal = $(this).val().length;
+});
+function timePatter(el) {
+
+    el.val( el.val().replace(/[^0-9:]/g, '') )
+};
+
+$(document).on('click', '[data-replace-status]', function() {
+
+    $(this).prev().prev().text('Готов к публикации');
+});
+
+
+// Поinказываем подсказку к паролю, стр добавления пользователя
+
+$(document).on('focus', '[data-notice]', function() {
+
+    $(this).parent().next().next().css('display', 'block');
+});
+$(document).on('blur', '[data-notice]', function() {
+
+    $(this).parent().next().next().css('display', 'none');
+});
+
+
+// Показываем ошибки на стр добавить юзера
+
+$(document).on('focus', '[data-error]', function() {
+
+    $(this).parent().parent().addClass('incorrect-value');
+});
+$(document).on('blur', '[data-error]', function() {
+
+    $(this).parent().parent().removeClass('incorrect-value');
+});
+
+// longread-announcement
+// Показываю/скрываю блоки в зависимости от вкл/выкл инпута
+$(document).on('click', '[data-anncounce]', function() {
+
+    $(this).parent().parent().parent().toggleClass('longread-announcement_off');
+});
+
+// Вешаю/убираю disabled с кнопки "разместить" орентируясь на заполнение инпутов
+$(document).on('input', '.longread-announcement__title, .longread-announcement__time-input, .longread-announcement__datepicker-input', function() {
+    
+    var date = $('.longread-announcement__title').val().length,
+        time = $('.longread-announcement__time-input').val().length,
+        title = $('.longread-announcement__datepicker-input').val().length;
+
+    if( date > 0 && time > 0 && title > 0) {
+
+        $('.longread-announcement__btn-upld').prop('disabled', false);
+    } else { $('.longread-announcement__btn-upld').prop('disabled', true); }
+});
+
+// Показ ошибок при фокусе на инпуты
+$(document).on('focus', '.longread-announcement__time-input, .longread-announcement__datepicker-input', function() {
+
+    $(this).parent().parent().addClass('incorrect-value');
+});
+$(document).on('blur', '.longread-announcement__time-input, .longread-announcement__datepicker-input', function() {
+
+    $(this).parent().parent().removeClass('incorrect-value');
+});
+
+// Показ ошибки при вводе больше 30 символов в заголовок аннонса, страница лонгрид
+var clickKey = 0;
+$(document).on('keyup', '.longread-announcement__title-input', function() {
+
+    // $(this).val().length >= clickKey ? clickKey += 1 : clickKey = $(this).val().length;
+    if ($(this).val().length >= clickKey) {
+        clickKey += 1
+    } else if ($(this).val().length < clickKey && $(this).val().length < 30)  {
+        clickKey = $(this).val().length;
+    } else { clickKey += 1; }
+    showErrorAnnounce($(this))
+});
+function showErrorAnnounce(el) {
+
+    if(clickKey > 30) {
+        el.parent().parent().addClass('incorrect-value');
+    } else {
+        el.parent().parent().removeClass('incorrect-value');
+    }
+};
+
+// Открытие поля для вставки видео
+$(document).on('click', '.longread-image__img-video button', function() {
+
+    $('.longread-image__img-video').toggleClass('longread-image__img-video_active');
+})
+
+// Модалка публикации стр лонгрид, смена подсказок и показ/скрытие выбора "даты/вермени"
+$(document).on('click', '[data-announce-modal]', function() {
+
+    var el = $(this).attr('data-id');
+    
+    $(this).closest('.public-material__wrap').children('p').css('display', 'none');
+    $(this).closest('.public-material__wrap').children('p#' + el).css('display', 'block');
+    el == 'time' ? $('.public-material__wrap_for-date').css('display', 'block') : $('.public-material__wrap_for-date').css('display', 'none')
+});
+
+// Добавление новости
+
+$(document).on('click', '[data-add-news]', function() {
+
+    var elemClone = $(this).next();
+    elemClone.clone().appendTo('.create-social__news-wrap').removeClass('create-social__news-item_hide').insertBefore($(this));
+});
+$(document).on('click', '[data-del-news]', function() {
+
+    $(this).parent().parent().remove();
+});
+
+function addNews(el) {
+
+    var text = el.text();
+    el.parent().prev().find('input').val(text);
+    el.parent().prev().find('input').next().removeClass('create-social__news-clear_hide');
+    el.parent().prev().removeClass('create-social__news-item_created');
+    el.parent().remove();
+};
+
+// "Читайте так же"
+
+function newsReadMore(el) {
+
+    var from = el.children().html().search('<');
+    
+    // console.log(el.children().html().substring(from, 0))
+    return el.children().html().substring(from, 0)
+
+}
+function addNewsStr(el) {
+
+    var elem = el.parent().parent().prev().children()
+
+    elem.text( newsReadMore(el) );
+    elem.attr('class', elem.attr('class').replace(/ [\s\S]+/, ''));
+    $('.tooltip__cls-area').trigger('click');
+}
+
+// Релиз, предпросмотр
+
 $(function() {
 
-// общее
-	var desktop = window.matchMedia('(min-width: 960px)').matches;
+    $('.headline-slider').slick({
+        prevArrow: $('.mobile-dots__btn_prev'),
+        nextArrow: $('.mobile-dots__btn_next'),
+        slidesToShow: 1,
+        infinite: false,
+    }).on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+        $('.mobile-dots__item').removeClass('mobile-dots__item_active').eq(nextSlide).addClass('mobile-dots__item_active');
+    });
 
-	var date = new Date();
-	var month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-	month = month[date.getMonth()];
-	var day = String(date.getDate()) + ' ' + month;
-	var hours = String(date.getHours()).replace(/\b(\d{1})\b/g, '0$1');
-	var minutes = String(date.getMinutes()).replace(/\b(\d{1})\b/g, '0$1');
-	var time = String(hours + ':' + minutes);
+    $('.release-slider').slick({
+        prevArrow: $('.release-create__headline-btn_prev'),
+        nextArrow: $('.release-create__headline-btn_next'),
+        slidesToShow: 1,
+        infinite: false,
+        asNavFor: '.slider-title'
+    }).on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+        $('.release-dots__item').removeClass('release-dots__item_active').eq(nextSlide).addClass('release-dots__item_active');
+    });
+    $('.release-dots__item').on('click', function() {
 
-// header
-	var beforeElem,
-		afterElem;
-	$('.header__item').not('.header__item_menu').on('click', function(e) {
+        $('.release-slider').slick('slickGoTo', $(this).index());
+    });
 
-		beforeElem = $(this);
-		afterElem === undefined ? afterElem = 'none' : afterElem = afterElem;
-		var openElem = $('.header__item_open');
-
-		if ($(this).has(e.target).length === 0 ) {
-
-			toogleWidth(beforeElem, $('.header__item'), afterElem, openElem);
-		};
-
-		afterElem = $(this);
-	});
-	$('.header__item_menu').on('click', function() {
-		
-		console.log('menu test');
-		console.log($('body').hasClass('.body-fixed'));
-		$('body').hasClass('body-fixed') ? fixedBody() : unFixedBody(Number( $('body').css('top').slice(0, -2) ));
-	});
-
-	function toogleWidth(thisEl, allEl, activeEl, openEl) {
-
-		if(thisEl.hasClass('header__item_open') || thisEl.hasClass('header__item_active')) {
-	
-			firstClick(thisEl); // Первый клик по дефолтно открытому полю
-		} else if (!thisEl.hasClass('header__item_open') && !thisEl.hasClass('header__item_active')) {
-			
-			firstAndNextClick(thisEl, allEl, activeEl, openEl); // Первый и последующие клики
-		}
-		setTimeout(function() { // удаляю класс not-active после конца анимации
-			$('header__item_not-active').removeClass('header__item_not-active')
-		}, 650);
-	}
-	$('.header__items-close, .header__tooltip-cls').on('click', function() { // закрытие по клику на темное поле или кнопку
-	
-		unFixedBody( Number( $('body').css('top').slice(0, -2) ) );
-		$('.header__item_for-tooltip').removeClass('header__item_for-tooltip');
-		$('.header__items-close').removeClass('header__items-close_open');
-		$('body').removeClass('body-fixed');
-	})
-
-	function firstClick(thisEl) {
-
-		thisEl.addClass('header__item_for-tooltip');
-		$('.header__items-close').addClass('header__items-close_open');
-		$('body').addClass('body-fixed');
-		fixedBody();
-	}
-	function firstAndNextClick(thisEl, allEl, activeEl, openEl) {
-
-		openEl.addClass('header__item_not-active');
-		openEl.removeClass('header__item_open');
-		allEl.removeClass('header__item_for-tooltip');
-		if(activeEl != 'none') { // если это первый клик по элементу то пропускаю шаг с добавлением класса "not-active" ранее активному элементу
-
-			activeEl.addClass('header__item_not-active');
-			activeEl.removeClass('header__item_active');
-		} else {}
-
-		thisEl.removeClass('header__item_not-active');
-		thisEl.addClass('header__item_active');
-		fixedBody();
-		setTimeout( function() {
-			$('.header__item_active').addClass('header__item_for-tooltip');
-			$('.header__items-close').addClass('header__items-close_open');
-			$('body').addClass('body-fixed');
-		}, $(window).width() > 960 ? 650 : 0);
-	}
-
-	$('.header__tooltip-filter li').on('click', function() {
-
-		$('.header__tooltip-filter li').removeClass('header__tooltip-filter_active');
-		$(this).addClass('header__tooltip-filter_active');
-	});
-
-    function fixedBody() {
-        var bodyTop = $(window).scrollTop();
-        if ($(window).width() < 960) {
-
-            $('body').css({
-                top: bodyTop * (-1),
-                position: 'fixed',
-                left: '0',
-                right: '0',
-                bottom: '0'
-            })
-        }
-    };
-    function unFixedBody(topBody) {
-
-		console.log(topBody);
-
-        if ($(window).width() < 960) {
-
-            $('body').css({
-                top: '',
-                position: '',
-                left: '',
-                right: '',
-                bottom: ''
-			});
-			$(window).scrollTop(topBody * (-1));
-        }
-    };
-
-// head-box
-	if (desktop && $('.head-box').length > 0) {
-		let widthLink = $('#currentNavLink').outerWidth(true)/2;
-		let widthLogo = $('.header__logo').width();
-		$('.head-box__triangle').css('left', $('#currentNavLink').position().left + widthLink + widthLogo);
-
-		$(window).on('resize', function() {
-			$('.head-box__triangle').css('left', $('#currentNavLink').position().left + widthLink + widthLogo);
-		});
-	}
-
-	$('.head-box__sort-toggle').click(function() {
-		$('.head-box__sort-toggle').removeClass('head-box__sort-toggle--active');
-		$('.head-box__sort-order').prop('disabled', true);
-		$(this).addClass('head-box__sort-toggle--active');
-		$(this).next().prop('disabled', false);
-	});
-
-	$('.head-box__sort-order').click(function() {
-		$(this).toggleClass('head-box__sort-order--up');
-	});
-
-	$('.head-box__button-grid').click(function() {
-		$('.head-box__button-list').removeClass('head-box__button-list--active');
-		$('.head-box__button-list').prop('disabled', false);
-		$(this).addClass('head-box__button-grid--active');
-		$(this).prop('disabled', true);
-		$('.main-grid').fadeOut(0);
-		$('.main-grid').removeClass('main-grid--list');
-		$('.main-grid').fadeIn();
-	});
-
-	$('.head-box__button-list').click(function() {
-		$('.head-box__button-grid').removeClass('head-box__button-grid--active');
-		$('.head-box__button-grid').prop('disabled', false);
-		$(this).addClass('head-box__button-list--active');
-		$(this).prop('disabled', true);
-		$('.main-grid').fadeOut(0);
-		$('.main-grid').addClass('main-grid--list');
-		$('.main-grid').fadeIn();
-	});
-
-// top-views
-	$('.top-views__list').hide();
-	$('.top-views__list:first').show();
-	$('.top-views__tab:first').addClass('top-views__tab--active');
-	$('.top-views__tab').click(function(event) {
-		event.preventDefault();
-		if (!$(this).hasClass('top-views__tab--active')) {
-			$('.top-views__tab').removeClass('top-views__tab--active');
-			$(this).addClass('top-views__tab--active');
-			$('.top-views__list').hide();
-			var selectTab = $(this).find('a').attr("href");
-			$(selectTab).fadeIn();
-		}
-	});
-
-// tape-time
-	var tapeTimeNow =  $('.tape-time__item--now');
-	var tapeTimeNowIndex = tapeTimeNow.index('.tape-time__item');
-	tapeTimeNowTime = tapeTimeNow.find('.tape-time__item-time');
-	tapeTimeNowTime.data('day', day);
-	tapeTimeNowTime.text(time);
-
-	$('.tape-time__row').slick({
-		prevArrow: $('.tape-time__arrow--prev'),
-		nextArrow: $('.tape-time__arrow--next'),
-		infinite: false,
-		slidesToShow: 5,
-		initialSlide: tapeTimeNowIndex,
-		centerMode: true,
-		swipe: false,
-		responsive: [
-			{
-				breakpoint: 1025,
-				settings: {
-					slidesToShow: 3
-				}
-			}
-		]
-	});
-
-	$('.tape-time__row').on('afterChange', function(event, slick, currentSlide){
-		var timeElem = $('.tape-time__item').eq(currentSlide).find('.tape-time__item-time');
-		$('.header__datetime').text(timeElem.data('day') + ' ' + timeElem.text());
-	});
-
-// material-group
-	$('.material-group').each(function(i, item) {
-		var slider = $(item).find('.material-group__slider');
-		$(item).find('.material-box').each(function(j, jtem) {
-			slider.append($(jtem).clone());
-		});
-	});
-
-	$('.material-group__slider').slick({
-		infinite: false,
-		arrows: false
-	});
-
-// material-slider
-	$('.material-slider').each(function(i, item) {
-		var slider = $(item).find('.material-slider__list');
-		slider.slick({
-			prevArrow: $('.material-slider__arrow--prev'),
-			nextArrow: $('.material-slider__arrow--next'),
-			fade: true,
-			responsive: [
-				{
-					breakpoint: 450,
-					settings: {
-						fade: false
-					}
-				}
-			]
-		});
-
-		$(item).find('.material-slider__counter-all').text($(item).find('.material-slider__item').length);
-
-		/* обработчик для счетчика висит на двух событиях потому что: 
-		1.) обработчик смены слайда работает не сразу, а после
-		2.) обработчик нажатия стрелок не срабатывает при свайпе */
-		$(item).find('.material-slider__arrow').click(function() {
-			$(item).find('.material-slider__counter-current').text(slider.slick('slickCurrentSlide') + 1);
-		});
-
-		$(item).find('.material-slider__list').on('afterChange', function() {
-			$(item).find('.material-slider__counter-current').text(slider.slick('slickCurrentSlide') + 1);
-		});
-	});
-
-// material-cat
-	$('.material-cat__button').click(function() {
-		$(this).toggleClass('material-cat__button--active');
-		$(this).parents('.material-cat').find('.material-cat__text').fadeToggle(200);
-	});
-
-// material-text
-	$('.material-text mark').click(function() {
-		$(this).find('span').toggle()
-	});
-
-// scroll-container
-	function scrollContainer() {
-		var parent = $('.scroll-container');
-		var clickToggle = false;
-
-		$('.scroll-container__toggle').click(function() {
-			parent.toggleClass('scroll-container--social-open');
-			$('.scroll-container__social-list').fadeToggle(200);
-			clickToggle = true;
-		});
-
-		$('.scroll-container__up').click(function() {
-			$('html, body').animate({ scrollTop: 0 }, 1000);
-		});
-
-		var offset = parent.offset().top - 95;
-		var inner = parent.find('.scroll-container__inner');
-		height = inner.height();
-		var max = parent.height() - height;
-		
-		var a = 40; // нижний margin контейнера
-		var b = 95; // top фиксированного блока
-		// $(window).scroll(function() {
-		// 	var x = $(window).scrollTop();
-		// 	var max = parent.height() - height - a; // пришлось получать это значение в обработчике скролла, так как высота родителя высчитывается некорректно при загрузке страницы, так как не загружены виджет твиттера и изображения, проблема не решилась с помощью $(window).load
-		// 	var top = x - offset + b;
-		// 	if (top < 0 + b) {
-		// 		inner.css({
-		// 			'position': 'absolute',
-		// 			'top': 0
-		// 		});
-		// 		if (!clickToggle) {
-		// 			parent.addClass('scroll-container--social-open');
-		// 			$('.scroll-container__social-list').fadeIn(200);
-		// 		}
-		// 	}
-		// 	else if (top > max + b) {
-		// 		inner.css({
-		// 			'position': 'absolute',
-		// 			'top': 'auto',
-		// 			'bottom': a + 'px'
-		// 		});
-		// 		if (!clickToggle) {
-		// 			parent.addClass('scroll-container--social-open');
-		// 			$('.scroll-container__social-list').fadeIn(200);
-		// 		}
-		// 	}
-		// 	else {
-		// 		inner.css({
-		// 			'position': 'fixed',
-		// 			'top': b + 'px',
-		// 			'bottom': 'auto'
-		// 		});
-		// 		if (!clickToggle) {
-		// 			parent.removeClass('scroll-container--social-open');
-		// 			$('.scroll-container__social-list').fadeOut(200);
-		// 		}
-		// 	}
-		// });
-	}
-	
-	if (desktop && $('.scroll-container').length > 0) {
-		scrollContainer();
-	}
-
-// main-grid
-	$('.main-grid__col-button .button').click(function() {
-		$(this).addClass('button--loading').prop('disabled', true);
-	});
-
-// footer
-	$('.footer__submit').click(function() {
-		if ($('.footer__input-email').val() == '') {
-			$('.footer__input-email').addClass('footer__input-email--validate');
-		}
-	});
-
-//paralax
-
-	if( $(window).width() > 960) {
-
-		$('.material-head__image_parallax').imageScroll({
-			coverRatio: 1,
-			holderClass: 'image-Holder',
-			speed: 0
-		});
-	};
-
+    $('.slider-title').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.release-slider',
+        arrows: false,
+        infinite: false,
+        focusOnSelect: true
+    })
 });

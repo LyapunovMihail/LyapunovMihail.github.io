@@ -1,0 +1,62 @@
+
+@import "_mixins/mixin"
+
+.longread-create
+    width: 100%
+    padding: 40px 0 78px
+    @media (max-width: 1375px)
+        padding: 40px 0 78px 80px
+
+    &__head
+        margin: 0 0 40px
+    &__image
+        margin: 0 0 (75px - 26px)
+    &__content
+        padding: 0 0 80px
+    &__social
+        margin: 0 0 48px
+    &__success
+        display: flex
+        justify-content: flex-end
+        margin: 0 0 60px
+
+        &-del
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            background: url(../img/longread/delete_white.svg) center no-repeat #9b9b9b
+            margin-right: 36px
+            @include linear(box-shadow)
+            &:hover
+                box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)
+        &-upload
+            width: 160px
+            height: 44px
+            border-radius: 3px
+            background-color: $col-active
+            font: 500 14px/24px $font-sans
+            color: $col-btn
+            letter-spacing: .5px
+            text-transform: uppercase
+            @include linear (color)
+            &:disabled
+                border-radius: 2px
+                border: solid 2px #d8d8d8
+                background-color: transparent
+                color: #d8d8d8
+            &:hover
+                color: #fff
+            &_ready
+                width: 220px
+                background-color: #fff
+                margin-right: 20px
+
+
+@import "_page/_longread-component/longread-announcement"
+@import "_page/_longread-component/longread-image"
+@import "_page/_longread-component/longread-content"
+@import "_page/_longread-component/longread-social"
+@import "_page/_datepicker"
+
+@import "_page/_longread-component/longread-tooltip"
+@import "_page/_longread-component/longread-modal"
