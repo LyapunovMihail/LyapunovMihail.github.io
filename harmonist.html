@@ -234,7 +234,7 @@
 							<button class="scroll-container__toggle"><span></span></button>
 							<ul class="scroll-container__social-list">
 								<li class="scroll-container__social-item">
-									<a href="#" target="_blank" rel="nofollow" class="scroll-container__social-link">
+									<a href="#" data-social="facebook" target="_blank" rel="nofollow" class="scroll-container__social-link">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
 											<defs>
 												<path id="fb-a" d="M15.036 13l.444-2.896h-2.778V8.225c0-.792.388-1.564 1.632-1.564h1.263V4.196S14.451 4 13.355 4c-2.288 0-3.784 1.387-3.784 3.897v2.207H7.028V13H9.57v7h3.13v-7h2.335z"/>
@@ -251,10 +251,10 @@
 											</g>
 										</svg>
 									</a>
-									<span class="scroll-container__social-label txt-caption">99 999</span>
+									<span data-counter="facebook" class="scroll-container__social-label txt-caption"></span>
 								</li>
 								<li class="scroll-container__social-item">
-									<a href="#" target="_blank" rel="nofollow" class="scroll-container__social-link">
+									<a href="#" data-social="vkontakte" target="_blank" rel="nofollow" class="scroll-container__social-link">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
 											<defs>
 												<path id="vk-a" d="M19.569 10.406c-1.818 2.356-2.015 2.135-.517 3.494 1.444 1.305 1.744 1.936 1.791 2.018 0 0 .6 1.022-.664 1.031l-2.4.037c-.516.1-1.2-.357-1.2-.357-.9-.602-1.743-2.162-2.4-1.962 0 0-.674.21-.656 1.616.01.301-.14.466-.14.466s-.169.173-.496.2h-1.078c-2.371.146-4.461-1.98-4.461-1.98s-2.288-2.3-4.293-6.89c-.13-.3.01-.446.01-.446s.14-.175.533-.175l2.569-.017c.243.036.413.163.413.163s.15.1.224.293a18.26 18.26 0 0 0 .965 1.952c.937 1.88 1.575 2.2 1.94 2.008 0 0 .479-.283.375-2.556-.037-.821-.271-1.194-.271-1.194-.216-.284-.62-.365-.796-.393-.141-.017.092-.346.403-.493.459-.22 1.273-.227 2.238-.22.76.01.975.057 1.265.12.891.21.592 1.013.592 2.947 0 .622-.123 1.488.337 1.771.197.128.684.018 1.883-1.97 0 0 .563-.95 1.003-2.054a.549.549 0 0 1 .235-.283s.149-.082.356-.055l2.699-.019c.815-.1.947.266.947.266.14.373-.3 1.25-1.406 2.682"/>
@@ -271,10 +271,10 @@
 											</g>
 										</svg>
 									</a>
-									<span class="scroll-container__social-label txt-caption">99 999</span>
+									<span data-counter="vkontakte" class="scroll-container__social-label txt-caption"></span>
 								</li>
 								<li class="scroll-container__social-item">
-									<a href="#" target="_blank" rel="nofollow" class="scroll-container__social-link">
+									<a href="#" data-social="telegram" target="_blank" rel="nofollow" class="scroll-container__social-link">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
 											<defs>
 												<path id="tlgrm-a" d="M18.92 5.091L4.748 10.676c-.967.396-.962.948-.177 1.193l3.638 1.161 8.42-5.43c.398-.246.763-.113.464.159l-6.823 6.292h-.002.002l-.25 3.833c.368 0 .53-.173.735-.377l1.767-1.756 3.676 2.776c.677.382 1.166.184 1.334-.642l2.414-11.624c.247-1.012-.378-1.471-1.024-1.17"/>
@@ -291,9 +291,10 @@
 											</g>
 										</svg>
 									</a>
+									<span data-counter="telegram" class="scroll-container__social-label txt-caption"></span>
 								</li>
 								<li class="scroll-container__social-item">
-									<a href="#" target="_blank" rel="nofollow" class="scroll-container__social-link">
+									<a href="#" data-social="twitter" target="_blank" rel="nofollow" class="scroll-container__social-link">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
 											<defs>
 												<path id="tw-a" d="M20 6.543c-.63.27-1.26.44-1.888.508a3.184 3.184 0 0 0 1.442-1.807c-.65.386-1.344.65-2.082.792A3.162 3.162 0 0 0 15.076 5c-.907 0-1.68.32-2.32.96a3.16 3.16 0 0 0-.959 2.32c0 .243.027.493.081.75a9.138 9.138 0 0 1-3.771-1.01A9.297 9.297 0 0 1 5.117 5.6a3.212 3.212 0 0 0-.447 1.655c0 .561.132 1.083.396 1.563s.62.87 1.066 1.168a3.253 3.253 0 0 1-1.482-.417v.04c0 .793.249 1.488.746 2.087.497.6 1.125.976 1.883 1.132a3.397 3.397 0 0 1-.863.112c-.19 0-.396-.017-.62-.05.21.656.597 1.195 1.158 1.619a3.2 3.2 0 0 0 1.909.654 6.42 6.42 0 0 1-4.071 1.401c-.291 0-.555-.013-.792-.04a9.107 9.107 0 0 0 5.036 1.472 9.58 9.58 0 0 0 3.278-.554c1.023-.368 1.896-.862 2.62-1.482a9.919 9.919 0 0 0 1.873-2.137A9.53 9.53 0 0 0 17.98 11.3a9.32 9.32 0 0 0 .375-3.06A6.867 6.867 0 0 0 20 6.542z"/>
@@ -310,9 +311,10 @@
 											</g>
 										</svg>
 									</a>
+									<span data-counter="twitter" class="scroll-container__social-label txt-caption"></span>
 								</li>
 								<li class="scroll-container__social-item">
-									<a href="#" target="_blank" rel="nofollow" class="scroll-container__social-link">
+									<a href="#" data-social="odnoklassniki" target="_blank" rel="nofollow" class="scroll-container__social-link">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
 											<defs>
 												<path id="ok-a" d="M10 8.004a2 2 0 1 0 4-.008 2 2 0 0 0-4 .008m-2 0A4.005 4.005 0 0 1 12 4c2.202 0 4 1.79 4 4.004A4.004 4.004 0 0 1 12 12c-2.203 0-4-1.79-4-3.996m7.74 6.394c-.892.548-2.116.764-2.923.845l.677.648 2.478 2.4c.37.37.37.963 0 1.322l-.112.117c-.38.36-.994.36-1.373 0-.622-.61-1.53-1.493-2.478-2.41l-2.477 2.41a.997.997 0 0 1-1.364 0l-.11-.117a.908.908 0 0 1 0-1.322c.63-.61 1.53-1.493 2.476-2.4l.667-.648c-.797-.08-2.04-.288-2.94-.845-1.058-.665-1.522-1.052-1.114-1.862.243-.457.9-.845 1.773-.18 0 0 1.179.91 3.08.91 1.902 0 3.081-.91 3.081-.91.871-.665 1.53-.277 1.772.18.408.81-.056 1.197-1.114 1.862"/>
@@ -329,13 +331,14 @@
 											</g>
 										</svg>
 									</a>
+									<span data-counter="odnoklassniki" class="scroll-container__social-label txt-caption"></span>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<!-- <div class="col-4 col-xl-3">
+					<div class="col-4 col-xl-3">
 						<div class="scroll-container__right-banner"></div>
-					</div> -->
+					</div>
 				</div>
 			</div>
 
