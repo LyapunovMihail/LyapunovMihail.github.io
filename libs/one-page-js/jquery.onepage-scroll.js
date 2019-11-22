@@ -104,7 +104,7 @@
         'z-index': ''
       })
     }
-    $.fn.customMoveTo = function (page_index, settings) {
+    $.fn.customMoveTo = function (page_index) {
       var mainLength = ($(this).children().length);
       
       for( var i = 0; i < (mainLength - 1); i++) {
