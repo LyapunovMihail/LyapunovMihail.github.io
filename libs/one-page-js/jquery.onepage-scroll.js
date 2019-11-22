@@ -89,7 +89,7 @@
         topPos = 0,
         leftPos = 0,
         lastAnimation = 0,
-        quietPeriod = 1000,
+        quietPeriod = 600,
         paginationList = "";
 
     $.fn.transformSlideDown = function (pos, thisSlide) {
