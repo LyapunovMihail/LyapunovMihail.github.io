@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тройка РЭД - О проекте</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body onload="init();">
+    <div class="container">
+        <button class="button button--del"><img src="../assets/img/projectContent/preview_deleteWhite.svg" alt="cancel"></button>
+        <button class="button button--accept"><img src="../assets/img/projectContent/preview_accept.svg" alt="accept"></button>
+        <h1 class="socials__title">Настройка контента «О проекте»</h1>
+        <div class="socials__info">
+            <h2 class="info-title">Социальные сети</h2>
+            <form class="form">
+                <div class="form-item form-item--pleft form-item--icon1 ">
+                    <input type="text" class="form-input info-input" required>
+                    <label class="form-label info-suptitle  form-label--left">Ссылка</label>
+                </div>
+                <div class="form-item form-item--pleft form-item--icon2">
+                    <input type="text" class="form-input info-input" required>
+                    <label class="form-label info-suptitle form-label--left">Ссылка</label>
+                </div>
+                <div class="form-item form-item--pleft form-item--icon3">
+                    <input type="text" class="form-input info-input" required>
+                    <label class="form-label info-suptitle form-label--left">Ссылка</label>
+                </div>
+            </form>
+        </div>
+        <section class="description">
+            <div class="description__info">
+                <h2 class="description__info-title">Описание проекта</h2>
+                <form class="form">
+                    <div class="form-item  ">
+                        <textarea type="text" class="form-input info-input textarea" id="text" required></textarea>
+                        <label class="form-label info-suptitle ">Описание</label>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="indicators">
+            <h1 class="indicators__title">Технико-экономические показатели</h1>
+            <p class="indicators__text">Указывются только те ТЭПы, которые необходимы</p>
+            <div class="indicators__info">
+                <form class="form">
+                    <div class="form__wrap">
+                        <div class="form-item form-item--inline form-item--mr" >
+                            <input type="text" class="form-input info-input " required>
+                            <label class="form-label info-suptitle">Цены на квартиры</label>
+                        </div>
+                        <div class="form-item form-item--inline">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Общая площадь объекта</label>
+                        </div>
+                    </div>
+
+                    <div class="form__wrap">
+                        <div class="form-item form-item--inline form-item--mr" >
+                            <input type="text" class="form-input info-input " required>
+                            <label class="form-label info-suptitle">Общий строительный объем</label>
+                        </div>
+                        <div class="form-item form-item--inline">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Площадь нежилых помещений</label>
+                        </div>
+                    </div>
+
+                    <div class="form__wrap">
+                        <div class="form-item form-item--inline form-item--mr" >
+                            <input type="text" class="form-input info-input " required>
+                            <label class="form-label info-suptitle">Площадь квартир</label>
+                        </div>
+                        <div class="form-item form-item--inline">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Кол-во этажей</label>
+                        </div>
+                    </div>
+
+                    <div class="form__wrap">
+                        <div class="form-item form-item--inline form-item--mr" >
+                            <input type="text" class="form-input info-input " required>
+                            <label class="form-label info-suptitle">Кол-во квартир</label>
+                        </div>
+                        <div class="form-item form-item--inline">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Кол-во аппартаментов</label>
+                        </div>
+                    </div>
+
+                    <div class="form__wrap">
+                        <div class="form-item form-item--inline form-item--mr" >
+                            <input type="text" class="form-input info-input " required>
+                            <label class="form-label info-suptitle">Кол-во мест в школе</label>
+                        </div>
+                        <div class="form-item form-item--inline">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Кол-во мест в дет. саду</label>
+                        </div>
+                    </div>
+
+                    <div class="form__wrap">
+                        <div class="form-item form-item--inline form-item--mr" >
+                            <input type="text" class="form-input info-input " required>
+                            <label class="form-label info-suptitle">Кол-во машиномест</label>
+                        </div>
+                        <div class="form-item form-item--inline">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Сроки строителства</label>
+                        </div>
+                    </div>  
+                </form>
+                
+            </div>
+        </section>
+        <button class="btn  btn--save">Сохранить и закрыть</button><button class="btn  btn--cancel">Отменить</button>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
