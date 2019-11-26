@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Настройка контента «Галереи» с вкладками</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body onload="init();">
+    <div class="gallery-settings"> 
+        <div class="container">
+            <button class="button button--del"><img src="../assets/img/galleryContent/deleteWhite.svg" alt="cancel"></button>
+            <button class="button button--accept"><img src="../assets/img/galleryContent/accept.svg" alt="accept"></button>
+            <h2 class="gallery-settings__title">Настройка контента «Галереи»</h2>
+            <section class="tabs">
+                <div class="tabs__wrap">
+                    
+                        <h2 class="tabs__title">Изображение 1</h2>
+                        <button class="btn  btn--camera ">Загрузить фото</button>
+                        <div class="wrap">
+                            <button class="button__delete"><img class="tab__img" src="../assets/img/galleryContent/tab_delete.svg" alt="delete"></button>
+                            <img class='bg-img' src="../assets/img/galleryContent/bg_content.jpg" alt="image" width="164" height="108">
+                        </div>
+
+                    <form class="form">
+                        <div class="form-item form-item--option ">
+                            <select type="text" class="form-input info-input" required>
+                                <option value="1">Благоустройство</option>
+                                <option value="2">Архитектура</option>
+                            </select>
+                            <label class="form-label info-suptitle ">Вкладка</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Заголовок</label>
+                        </div>
+                        <div class="form-item">
+                            <textarea type="text" class="form-input info-input textarea" id="text" required></textarea>
+                            <label class="form-label info-suptitle">Описание</label>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="tabs__wrap">
+                    
+                    <h2 class="tabs__title">Изображение 2</h2>
+                    <button class="btn  btn--camera ">Загрузить фото</button>
+                    <div class="wrap">
+                        <button class=" button__delete"><img class="tab__img" src="../assets/img/galleryContent/tab_delete.svg" alt="delete"></button>
+                        <img class='bg-img' src="../assets/img/galleryContent/bg_content.jpg" alt="image" width="164" height="108">
+                    </div>
+
+                <form class="form">
+                    <div class="form-item form-item--option ">
+                            <select type="text" class="form-input info-input " required>
+                                <option value="1">Благоустройство</option>
+                                <option value="2">Архитектура</option>
+                            </select>
+                        <label class="form-label info-suptitle ">Вкладка</label>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="form-input info-input" required>
+                        <label class="form-label info-suptitle">Заголовок</label>
+                    </div>
+                    <div class="form-item">
+                        <textarea type="text" class="form-input info-input textarea"  required></textarea>
+                        <label class="form-label info-suptitle">Описание</label>
+                    </div>
+                </form>
+
+                </div>
+
+                <button class="btn btn--settings">Добавить изображение</button>
+                
+ 
+            </section>
+            <div class="wrapper" >
+                <button class="btn  btn--save">Сохранить и закрыть</button><button class="btn  btn--cancel">Отменить</button>
+            </div>
+        </div>
+    </div>
+        <script src="js/main.js"></script>
+</body>
+</html>
