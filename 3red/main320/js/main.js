@@ -28,7 +28,6 @@ function scroll() {
     prevScrollTop = scrollTop;
 }
 
-
 /// Menu
 let headerMenu = document.querySelector('.header__menu');
 let menu = document.querySelector('.menu');
