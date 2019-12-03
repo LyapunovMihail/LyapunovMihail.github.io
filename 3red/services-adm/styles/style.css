@@ -114,12 +114,42 @@ h6 {
 }
 .intro__container {
   width: 1280px;
-  padding: 157px 88px 80px;
+  padding: 77px 88px 80px;
   margin: auto;
 }
 .intro__wrap {
   display: flex;
   align-items: center;
+}
+.btn {
+  margin: 30px 0 ;
+  padding: 10px 16px ;
+  background: #ee4237;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  font-family: inherit;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #ee534a;
+}
+.btn::before {
+  content: url(../../assets/img/mainPage/content_icon.svg);
+  margin-right: 5px ;
+}
+.btn--settings {
+  background: #454545;
+  margin-right: 8px;
+}
+.btn--settings:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.btn--settings::before {
+  content: url(../../assets/img/mainPage/settings.svg);
+  margin-right: 5px ;
 }
 .intro__text {
   font-size: 48px;

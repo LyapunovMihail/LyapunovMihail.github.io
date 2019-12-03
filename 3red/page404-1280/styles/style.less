@@ -27,7 +27,8 @@ h1, h2, h3, h4, h5, h6 {
 //=======================
 .container {
     width: 1280px;
-    padding: 0px 32px ;
+    padding: 24px 32px;
+    // width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -39,23 +40,22 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     // display: flex;
     // justify-content: space-between;
-    padding: 24px 32px;
     height: 77px;
     background-color: #f5f5f5;
-    z-index: 54;
-    &-fixed {
-        position: fixed !important;
-        top: 0;
-        transform: translateY(0);
-        left: 0;
-        width: 100%;
-        z-index: 51;
-        transition: transform .2s linear;
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        &--hide {
-            transform: translateY(-77px);
-        }
-    }
+    // z-index: 54;
+    // &-fixed {
+    //     position: fixed !important;
+    //     top: 0;
+    //     transform: translateY(0);
+    //     left: 0;
+    //     width: 100%;
+    //     z-index: 51;
+    //     transition: transform .2s linear;
+    //     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    //     &--hide {
+    //         transform: translateY(-77px);
+    //     }
+    // }
     
 }
 .nav__bar {
@@ -90,13 +90,12 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
-
 .nav__link-heart {
     position: relative;
     font-size: 24px;
     color: #000;
     margin-right: 67px;
+    transition: all .3s linear;
     sup {
         font-size: 14px;
        position: absolute;
@@ -121,108 +120,51 @@ h1, h2, h3, h4, h5, h6 {
     color: #ee4237;
     font-size: 24px;
 }
-// Intro===========
-.intro__container {
+
+//Content ============
+
+.page__container {
     width: 1280px;
-    padding: 157px 88px 80px;
     margin: auto;
-   
-}
-.intro__wrap {
+    padding: 0 88px 0;
     display: flex;
     align-items: center;
-}
-
-.intro__text {
-    font-size: 48px;
-    line-height: 56px;
-    color: rgba(0, 0, 0, 0.5);
-    font-family: 'Formular';
-    width: 820px;
-}
-.intro__text-span {
-    color: #000;
-    
-}
-//News===========
-.news__container {
-    width: 1280px;
-    padding: 0px 88px 96px;
-    margin: auto;
-}
-.tabs {
-    // margin-bottom: 16px ;
-    display: flex;
-    
-    li {
-        border-bottom: 1px solid #d8d8d8;
-        padding: 4px 0px 8px ;
-        padding-left: 16px;
-        &:first-child {
-            margin-left: 0;
-            padding-left: 0;
-        }
-    } 
-}
-.tab {
-    color: rgba(0, 0, 0, 0.5);
-    padding: 4px 0px 8px 16px;
-    
-    font-size: 18px;
-    // margin-left: 16px;
-    position: relative;
-    &:first-child {
-        margin-left: 0;
-        padding-left: 0;
-    }
+    justify-content: center;
+    height: 100vh;
    
 }
-.tab--active {
-    color:  #ee4237 !important;
-    border-bottom: 1px solid #ee4237;
+.page__image {
+    width: 446px ;
+    height: 452px;
 }
-.news__item {
-    margin-top: 16px;
-    background: #fff;
-    padding: 32px 48px;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
-    display: block;
-    transition: .2s linear;
-    &:hover {
-        background: #fef5f5;
-    }
+.page__content {
+    margin-left: 24px;
+    // margin-top: 158px;
 }
-.news__item-title {
-    font-size: 36px;
-    line-height: 1.25;
-    color: #000;
+.page__content-title {
+    font-size: 48px;
+    font-family: 'Formular';
+    margin-bottom: 24px;
 }
-.news__item-text {
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.5);
-    margin: 16px 0 24px;
-    width: 680px;
-    line-height: 1.4;
-}
-.news__info-title {
+.page__content-text {
     font-size: 24px;
-    line-height: 1.25;
-    color: #000;
-}
-
-.news__link {
-    color: #ee4237;
-    font-size: 18px;
-    margin-top: 15px;
-    display: block;
+    line-height: 32px;
+    a {
+        color: #ee4237 ;
+    }
 }
 // Footer======================
 .footer {
     background-color: #f5f5f5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:  auto;
 }
 .footer__wrap {
     margin:  auto;
-    padding:  32px ;
+    padding: 35px 32px ;
     width: 1280px;
     display: flex;
     justify-content: space-between;
