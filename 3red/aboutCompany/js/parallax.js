@@ -44,14 +44,16 @@ function showBlueScreen(e) {
  
     let functions = document.querySelector('.functions');
     
-    if(window.pageYOffset >  functions.getBoundingClientRect().top  + functions.getBoundingClientRect().height + 550) {
+    if(window.pageYOffset >  functions.offsetTop  - 77) {
         functions.classList.add('functions--fixed');
         functions.classList.add('functions--fixed');
         helper.style.marginTop = `${functions.getBoundingClientRect().height}px`;
     }
-    if(window.pageYOffset <  functions.getBoundingClientRect().top + functions.getBoundingClientRect().height + 550) {
+    if(window.pageYOffset <  functions.offsetTop + functions.getBoundingClientRect().height + 550  ) {
         functions.classList.remove('functions--fixed');
-        helper.style.marginTop = `${0}px`;
+        // helper.style.marginTop = `${0}px`;
+        console.log(functions.getBoundingClientRect().height);
+        
     }
 }
 

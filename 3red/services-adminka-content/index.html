@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сервис - Настройка контента</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="services-settings">
+        <div class="container">
+            <button class="button button--del"><img src="../assets/img/galleryTabs/deleteWhite.svg" alt="cancel"></button>
+            <button class="button button--accept"><img src="../assets/img/galleryTabs/accept.svg" alt="accept"></button>
+            <h2 class="services-settings__title">Настройка контента «Сервис»</h2>
+
+            <div class="services__intro">
+                <div class="tabs__wrap">
+                    <h2 class="services__title">Заголовок страницы</h2>   
+                    <form class="form">
+                        <div class="services-item">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Черная часть заголовка</label>
+                        </div>
+                    </form>
+                    <form class="form">
+                        <div class="services-item">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Серая часть заголовка</label>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <h2 class="services__title">Управляющие компании</h2> 
+            <section class="tabs">
+                <div class="tabs__wrap">
+                    <div class="tabs__container">
+                        <h2 class="tabs__title">Карточка 1</h2>
+                        <a href="#" class="tabs__nav-link">Удалить</a>
+                    </div>
+                    <form class="form">
+                        <div class="form-item">
+                            <!-- <input type="text" class="form-input info-input" required> -->
+                            <select   class="form-input info-input info-select">
+                                <option value="1">Московская область</option>
+                            </select>
+                            <label class="form-label info-suptitle">Вкладка фильтрации</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Заголовок</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Описание</label>
+                        </div>
+                    </form>
+                    <button class="btn btn--settings btn--complex">Добавить жилой комплекс</button>
+
+                    <form class="form">
+                        <div class="form-item form-item--mr">
+                                <button class=" button__delete button__delete--textarea"><img class="tab__img " src="../assets/img/decorationContent/tab_delete.svg" alt="delete"></button>
+                            <!-- <input type="text" class="form-input info-input" required> -->
+                            <select   class="form-input info-input info-select">
+                                <option value="1">Резиденция Май</option>
+                            </select>
+                            <label class="form-label info-suptitle">Выберите жилой комплекс</label>
+                        </div>
+                        <div class="form-item form-item--mr">
+                                <button class=" button__delete button__delete--textarea"><img class="tab__img " src="../assets/img/decorationContent/tab_delete.svg" alt="delete"></button>
+                            <!-- <input type="text" class="form-input info-input" required> -->
+                            <select   class="form-input info-input info-select info-select--mr">
+                                <option value="1">Город-курорт Май</option>
+                            </select>
+                            <label class="form-label info-suptitle">Выберите жилой комплекс</label>
+                        </div>
+                    </form>
+                    
+                    
+
+                </div>
+                <div class="tabs__wrap">
+                    <div class="tabs__container">
+                        <h2 class="tabs__title">Карточка 2</h2>
+                        <a href="#" class="tabs__nav-link">Удалить</a>
+                    </div>
+                    <form class="form">
+                        <div class="form-item">
+                            <!-- <input type="text" class="form-input info-input" required> -->
+                            <select   class="form-input info-input info-select">
+                                <option value="1">Московская область</option>
+                            </select>
+                            <label class="form-label info-suptitle">Вкладка фильтрации</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Заголовок</label>
+                        </div>
+                        <div class="form-item">
+                            <input type="text" class="form-input info-input" required>
+                            <label class="form-label info-suptitle">Описание</label>
+                        </div>
+                    </form>
+                    <button class="btn btn--settings btn--complex">Добавить жилой комплекс</button>
+
+                </div>
+
+                
+                <button class="btn btn--settings">Добавить карточку</button>
+                
+            </section>
+            <div class="wrapper" >
+                <button class="btn  btn--save">Сохранить и закрыть</button><button class="btn  btn--cancel">Отменить</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
