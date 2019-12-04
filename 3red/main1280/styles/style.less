@@ -273,7 +273,7 @@ font-size: 15px;
     width: 48px;
     height: 48px;
     text-align: center;
-    padding: 12px;
+    padding: 14px 0 10px;
     line-height: 1.25;
     border: 1px solid #d8d8d8;
     border-left: 0;
@@ -353,6 +353,11 @@ font-size: 15px;
     }
 }
 .offer__complex-search--active {
+    &::after {
+        content: url(../assets/img/complex-uparrow.svg);
+    }
+}
+.objects__utilities-search--active {
     &::after {
         content: url(../assets/img/complex-uparrow.svg);
     }
@@ -438,9 +443,14 @@ font-size: 15px;
 .objects-container {
     
     width: 1280px;
-    // min-width: 768px;
+    
     margin: auto;
-    padding: 96px 88px; 
+    padding: 96px 88px 0; 
+}
+.objects-inner {
+    width: 1280px;
+    margin: auto;
+    padding:0 88px 96px; 
 }
 .objects-wrap {
     display: flex;
@@ -547,7 +557,7 @@ font-size: 15px;
     border: 0ch;
     outline: 0;
     font-family: inherit;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #d8d8d8;
     width: 170px;
     line-height: 1.25;
     font-size: 18px;
@@ -564,7 +574,7 @@ font-size: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #d8d8d8;
    
    
 }
@@ -592,6 +602,7 @@ font-size: 15px;
     display: flex;
     display: none;
 }
+
 .objects__map-container {
     width: 350px !important;
 }
@@ -963,6 +974,7 @@ margin-bottom: 2px;
 }
 .info__wrapper {
     display: flex;
+   
 }
 .info__content {
     margin-right: 24px;
@@ -1011,6 +1023,7 @@ margin-bottom: 2px;
 }
 .info__links {
     margin-top: 40px;
+    padding-top: 12px;
     li {
         margin-bottom: 16px;
     }

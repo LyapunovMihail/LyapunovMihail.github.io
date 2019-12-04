@@ -30,7 +30,7 @@ h6 {
   font-weight: normal;
 }
 .container {
-  max-width: 1280px;
+  width: 1280px;
   padding: 0 32px;
   margin: auto;
   display: flex;
@@ -75,6 +75,7 @@ h6 {
 .nav__link {
   font-size: 24px;
   color: #000;
+  transition: all 0.3s linear;
 }
 .nav__link:hover {
   color: #ee4237;
@@ -134,7 +135,7 @@ h6 {
 }
 .project__nav-container {
   height: 55px;
-  max-width: 1280px;
+  width: 1280px;
   padding: 0 32px;
   margin: auto;
   display: flex;
@@ -158,7 +159,7 @@ h6 {
   border-bottom: 1px solid #ee4237 !important;
 }
 .product {
-  max-width: 1280px;
+  width: 1280px;
   padding: 0 88px;
   margin: auto;
   padding-top: 292px ;
@@ -323,19 +324,19 @@ h6 {
   line-height: 20px;
 }
 .functions {
-  max-width: 1280px;
+  width: 1280px;
   padding: 96px 88px;
   margin: auto;
 }
 .functions--fixed {
   position: fixed;
-  top: 80px;
+  top: 77px;
   left: 0;
   right: 0;
   z-index: -1;
 }
 .functions__container {
-  max-width: 725px;
+  width: 725px;
 }
 .functions__title {
   font-size: 36px;
@@ -350,7 +351,7 @@ h6 {
   grid-template-columns: 320px 320px;
   grid-column-gap: 56px;
   grid-row-gap: 40px;
-  max-width: 725px;
+  width: 725px;
   margin-top: 48px;
 }
 .function__title {
@@ -369,7 +370,7 @@ h6 {
 .stage__container {
   margin: auto;
   padding: 96px 88px 140px;
-  max-width: 1280px;
+  width: 1280px;
   color: #fff;
 }
 .stage__title {
@@ -396,7 +397,7 @@ h6 {
   z-index: 1;
 }
 .stage__parallax-wrapper {
-  max-width: 1280px;
+  width: 1280px;
   position: absolute;
   bottom: -15px;
   left: -88px;
@@ -503,7 +504,7 @@ h6 {
 .team {
   margin: auto;
   padding: 96px 88px 0;
-  max-width: 1280px;
+  width: 1280px;
 }
 .team__title {
   font-size: 36px;
@@ -563,7 +564,7 @@ h6 {
 .career__container {
   margin: auto;
   padding: 96px 88px 96px;
-  max-width: 1280px;
+  width: 1280px;
 }
 .career__title {
   font-size: 36px;
@@ -588,7 +589,7 @@ h6 {
 .news {
   margin: auto;
   padding: 0px 88px 96px;
-  max-width: 1280px;
+  width: 1280px;
 }
 .news__title {
   font-size: 36px;
@@ -709,7 +710,7 @@ h6 {
 .documentation {
   margin: auto;
   padding: 0px 88px 113px;
-  max-width: 1280px;
+  width: 1280px;
 }
 .documentation__title {
   font-size: 36px;
@@ -753,7 +754,7 @@ h6 {
 .footer__wrap {
   margin: auto;
   padding: 35px 32px ;
-  max-width: 1280px;
+  width: 1280px;
   display: flex;
   justify-content: space-between;
   align-items: center;

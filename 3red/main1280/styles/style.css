@@ -253,7 +253,7 @@ h6 {
   width: 48px;
   height: 48px;
   text-align: center;
-  padding: 12px;
+  padding: 14px 0 10px;
   line-height: 1.25;
   border: 1px solid #d8d8d8;
   border-left: 0;
@@ -330,6 +330,9 @@ h6 {
   right: -35px;
 }
 .offer__complex-search--active::after {
+  content: url(../assets/img/complex-uparrow.svg);
+}
+.objects__utilities-search--active::after {
   content: url(../assets/img/complex-uparrow.svg);
 }
 .offer__helper {
@@ -409,7 +412,12 @@ h6 {
 .objects-container {
   width: 1280px;
   margin: auto;
-  padding: 96px 88px;
+  padding: 96px 88px 0;
+}
+.objects-inner {
+  width: 1280px;
+  margin: auto;
+  padding: 0 88px 96px;
 }
 .objects-wrap {
   display: flex;
@@ -511,7 +519,7 @@ h6 {
   border: 0ch;
   outline: 0;
   font-family: inherit;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #d8d8d8;
   width: 170px;
   line-height: 1.25;
   font-size: 18px;
@@ -526,7 +534,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #d8d8d8;
 }
 .objects__nav-list li {
   margin-bottom: 8px;
@@ -914,6 +922,7 @@ h6 {
 }
 .info__links {
   margin-top: 40px;
+  padding-top: 12px;
 }
 .info__links li {
   margin-bottom: 16px;
