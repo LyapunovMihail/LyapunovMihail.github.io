@@ -21,78 +21,78 @@ sliderArrow.addEventListener('click', function() {
 });
 
 
-function nextSlide(e) {
+// function nextSlide(e) {
 
-    e.preventDefault();
+//     e.preventDefault();
 
-    const current = document.querySelector('.show');
-    const activeDot = document.querySelector('.stage__slider-dot--active');
+//     const current = document.querySelector('.show');
+//     const activeDot = document.querySelector('.stage__slider-dot--active');
 
-    current.classList.remove('show');
-    activeDot.classList.remove('stage__slider-dot--active');
+//     current.classList.remove('show');
+//     activeDot.classList.remove('stage__slider-dot--active');
    
   
-    if(current.nextElementSibling) {
+//     if(current.nextElementSibling) {
 
-        slider.forEach(slide => {
+//         slider.forEach(slide => {
 
-            let number = Array.from(slider).indexOf(current.nextElementSibling)  + 1 ;
-                sliderNumber.innerHTML = `${number}/10`;
-                console.log(Array.from(slider).indexOf(current) + 1);
+//             let number = Array.from(slider).indexOf(current.nextElementSibling)  + 1 ;
+//                 sliderNumber.innerHTML = `${number}/10`;
+//                 console.log(Array.from(slider).indexOf(current) + 1);
                  
-            });
+//             });
        
 
-        current.nextElementSibling.classList.add('show');
-        activeDot.nextElementSibling.classList.add('stage__slider-dot--active');
+//         current.nextElementSibling.classList.add('show');
+//         activeDot.nextElementSibling.classList.add('stage__slider-dot--active');
         
        
 
-    } else {
+//     } else {
         
-        sliderFScreen.classList.add('show');
-        sliderControls.style.display = 'none';
+//         sliderFScreen.classList.add('show');
+//         sliderControls.style.display = 'none';
 
-    }
+//     }
     
     
-}
+// }
 
-sliderNext.addEventListener('click', nextSlide);
+// sliderNext.addEventListener('click', nextSlide);
  
-  function prevSlide(e) {
+//   function prevSlide(e) {
     
-    e.preventDefault();
+//     e.preventDefault();
 
-    const current = document.querySelector('.show');
-    const activeDot = document.querySelector('.stage__slider-dot--active');
+//     const current = document.querySelector('.show');
+//     const activeDot = document.querySelector('.stage__slider-dot--active');
 
-    current.classList.remove('show');
-    activeDot.classList.remove('stage__slider-dot--active');
+//     current.classList.remove('show');
+//     activeDot.classList.remove('stage__slider-dot--active');
 
-    if (current.previousElementSibling){
+//     if (current.previousElementSibling){
 
-        slider.forEach(slide => {
+//         slider.forEach(slide => {
 
-            let number = Array.from(slider).indexOf(current)  ;
-                sliderNumber.innerHTML = `${number}/10`;
-                console.log(Array.from(slider).indexOf(current) + 3);
+//             let number = Array.from(slider).indexOf(current)  ;
+//                 sliderNumber.innerHTML = `${number}/10`;
+//                 console.log(Array.from(slider).indexOf(current) + 3);
                  
-            });
+//             });
 
-        current.previousElementSibling.classList.add('show');
-        activeDot.previousElementSibling.classList.add('stage__slider-dot--active');
+//         current.previousElementSibling.classList.add('show');
+//         activeDot.previousElementSibling.classList.add('stage__slider-dot--active');
 
-    } 
-    else   {
+//     } 
+//     else   {
 
-        sliderFScreen.style.display = 'block';
-        sliderControls.style.display = 'none';
-        sliderControls.classList.remove('show');
-        slider[0].classList.remove('show');
-    }
+//         sliderFScreen.style.display = 'block';
+//         sliderControls.style.display = 'none';
+//         sliderControls.classList.remove('show');
+//         slider[0].classList.remove('show');
+//     }
    
     
-}
+// }
 
-sliderPrev.addEventListener('click', prevSlide);
+// sliderPrev.addEventListener('click', prevSlide);

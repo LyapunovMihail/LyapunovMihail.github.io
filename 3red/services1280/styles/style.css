@@ -1,0 +1,241 @@
+@font-face {
+  font-family: 'ProbaPro';
+  src: url(../../fonts/MintType-ProbaProRegular.otf);
+}
+@font-face {
+  font-family: 'Formular';
+  src: url(../../fonts/Formular-Medium.otf);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'ProbaPro';
+  -webkit-font-smoothing: antialiased;
+  background-color: #f5f5f5;
+  z-index: 1;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+.container {
+  width: 1280px;
+  padding: 0px 32px ;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 32px;
+  height: 77px;
+  background-color: #f5f5f5;
+  z-index: 54;
+}
+.header-fixed {
+  position: fixed !important;
+  top: 0;
+  transform: translateY(0);
+  left: 0;
+  width: 100%;
+  z-index: 51;
+  transition: transform 0.2s linear;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.header-fixed--hide {
+  transform: translateY(-77px);
+}
+.nav__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__bar li {
+  padding-right: 24px;
+}
+.nav__bar li:last-child {
+  padding-right: 0;
+}
+.header__logo {
+  margin-right: 41px;
+}
+.nav__link {
+  font-size: 24px;
+  color: #000;
+  transition: all 0.3s linear;
+}
+.nav__link:hover {
+  color: #ee4237;
+}
+.active {
+  color: #ee4237 !important;
+}
+.nav__link-heart {
+  position: relative;
+  font-size: 24px;
+  color: #000;
+  margin-right: 67px;
+}
+.nav__link-heart sup {
+  font-size: 14px;
+  position: absolute;
+  top: -8px;
+  right: -14px;
+}
+.nav__link-heart::before {
+  content: url(../assets/img/header_hearthover.svg);
+  font-size: 14px;
+  position: absolute;
+  top: -4px;
+  right: 0;
+  display: none;
+}
+.nav__link-heart:hover::before {
+  display: block;
+}
+.header__phone {
+  color: #ee4237;
+  font-size: 24px;
+}
+.intro__container {
+  width: 1280px;
+  padding: 157px 88px 80px;
+  margin: auto;
+}
+.intro__wrap {
+  display: flex;
+  align-items: center;
+}
+.intro__text {
+  font-size: 48px;
+  line-height: 56px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Formular';
+  width: 820px;
+}
+.intro__text-span {
+  color: #000;
+}
+.news__container {
+  width: 1280px;
+  padding: 0px 88px 96px;
+  margin: auto;
+}
+.tabs {
+  display: flex;
+}
+.tabs li {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 4px 0px 8px ;
+  padding-left: 16px;
+}
+.tabs li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.tab {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 4px 0px 8px 16px;
+  font-size: 18px;
+  position: relative;
+}
+.tab:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.tab--active {
+  color: #ee4237 !important;
+  border-bottom: 1px solid #ee4237;
+}
+.news__item {
+  margin-top: 16px;
+  background: #fff;
+  padding: 32px 48px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+  display: block;
+  transition: 0.2s linear;
+}
+.news__item:hover {
+  background: #fef5f5;
+}
+.news__item-title {
+  font-size: 36px;
+  line-height: 1.25;
+  color: #000;
+}
+.news__item-text {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 16px 0 24px;
+  width: 680px;
+  line-height: 1.4;
+}
+.news__info-title {
+  font-size: 24px;
+  line-height: 1.25;
+  color: #000;
+}
+.news__link {
+  color: #ee4237;
+  font-size: 18px;
+  margin-top: 15px;
+  display: block;
+}
+.footer {
+  background-color: #f5f5f5;
+}
+.footer__wrap {
+  margin: auto;
+  padding: 32px ;
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+}
+.footer__socials {
+  display: flex;
+}
+.footer__link {
+  display: block;
+  margin-right: 16px;
+}
+.footer__link:last-child {
+  margin-right: 0;
+}
+.footer__link:hover .footer__link-fill {
+  fill: #797878;
+}
+.copyright {
+  font-size: 18px;
+  line-height: 1.25;
+  margin-left: 24px;
+}
+.footer__item2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.footer__credits {
+  color: #000;
+  margin-left: 8px;
+  border-bottom: 1px solid #000;
+}

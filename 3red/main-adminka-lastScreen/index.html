@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тройка РЭД - Главная Админка</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body onload="init();">
+    <div class="container">
+        <button class="button button--del"><img src="../assets/img/previewContent/preview_deleteWhite.svg" alt="cancel"></button>
+        <button class="button button--accept"><img src="../assets/img/previewContent/preview_accept.svg" alt="accept"></button>
+        <h1 class="preview__title">Настройка контента «Главная страница — Последний экран»</h1>
+        <div class="preview__info">
+            <h2 class="info-title">Текстовый блок</h2>
+            <form class="form">
+                <div class="form-item">
+                    <input type="text" class="form-input info-input" required>
+                    <label class="form-label info-suptitle">Заголовок</label>
+                </div>
+                <div class="form-item">
+                    <textarea type="text" class="form-input info-input" id='text' required></textarea>
+                    <label class="form-label info-suptitle">Текст</label>
+                </div>
+                
+            </form>
+                
+        </div>
+        
+        
+        <button class="btn  btn--save">Сохранить и закрыть</button><button class="btn  btn--cancel">Отменить</button>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

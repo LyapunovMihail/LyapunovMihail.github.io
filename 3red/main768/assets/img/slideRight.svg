@@ -7,7 +7,7 @@
         <g id="3red_О-ЖК_1280-(мало-блоков)" transform="translate(-1120.000000, -2075.000000)">
             <g id="галерея" transform="translate(88.000000, 1692.000000)">
                 <g id="Group-3-Copy-2" transform="translate(1032.000000, 383.000000)">
-                    <circle id="Oval-6"  fill="#efefef" cx="24" cy="24" r="24"></circle>
+                    <circle id="Oval-6"  fill="#fff" cx="24" cy="24" r="24"></circle>
                     <polyline id="Rectangle-17" stroke="#000" transform="translate(20.384776, 23.556349) rotate(-45.000000) translate(-20.384776, -23.556349) " points="28.3847763 15.5563492 28.3847763 31.5563492 12.3847763 31.5563492"></polyline>
                 </g>
             </g>
