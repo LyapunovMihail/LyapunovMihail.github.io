@@ -727,7 +727,7 @@ h6 {
   border: 0 !important;
 }
 .menu-link--heart::before {
-  content: url(../assets/img/heart.svg);
+  content: url(../assets/img/header_heart.svg);
   margin-right: 7px;
 }
 .menu__footer {

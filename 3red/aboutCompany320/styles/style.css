@@ -169,17 +169,17 @@ h6 {
   top: 0;
 }
 .product__parallax-item4 img {
-  height: 810px;
+  height: 610px;
 }
 .product__parallax-item5 {
-  margin-bottom: 205px;
-  padding-top: 35px;
+  margin-bottom: 130px;
+  padding-top: 25px;
 }
 .product__parallax-item6 {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 .product__parallax-item7 {
-  margin-bottom: 35px;
+  margin-bottom: 10px;
 }
 @keyframes parallax {
   from {
@@ -265,7 +265,6 @@ h6 {
   font-size: 16px;
   line-height: 22px;
   margin: 16px 0 56px;
-  width: 280px;
 }
 .stage__wrap {
   display: flex;
@@ -413,11 +412,12 @@ h6 {
   background: url(../assets/img/arrow-top.svg) right no-repeat;
 }
 .team__list-image {
-  width: 66%;
+  width: 220px;
   margin-right: 24px;
 }
 .team__list-image img {
   display: block;
+  width: 100%;
 }
 .team__list-name {
   font-size: 16px;
@@ -735,7 +735,7 @@ h6 {
   border: 0 !important;
 }
 .menu-link--heart::before {
-  content: url(../assets/img/heart.svg);
+  content: url(../assets/img/header_heart.svg);
   margin-right: 7px;
 }
 .menu__footer {
