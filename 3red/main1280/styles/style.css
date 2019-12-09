@@ -553,11 +553,49 @@ h6 {
   border-bottom: 1px solid #ee4237;
 }
 .objects__map {
-  display: flex;
   display: none;
 }
+.objects__fade {
+  position: relative;
+  overflow: hidden;
+}
 .objects__map-container {
-  width: 350px !important;
+  width: 360px !important;
+  height: 600px;
+  background: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.objects__fadeUp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 348px;
+  height: 60px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  display: none;
+}
+.objects__fadeUp--active {
+  display: block;
+  animation: myFadeUp 1s;
+}
+@keyframes myFadeUp {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.objects__fadeDown {
+  bottom: 0 ;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  width: 348px;
+  height: 45px;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
 }
 .objects__map-imgwrap {
   width: 70px;
@@ -574,30 +612,25 @@ h6 {
 .objects__map-item {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 8px 24px;
 }
-.objects__map-item:hover {
-  background: #ee4237;
-  color: #fff;
+.objects__map-item:last-child {
+  border: 0;
 }
 .objects__map-item:hover .objects__map-title {
-  color: #fff;
-}
-.objects__map-item:hover .objects__map-status {
-  color: #fff;
+  color: #ee4237;
 }
 .objects__map-title {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.25;
   margin-bottom: 6px;
   color: #000;
 }
 .objects__map-status {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.25;
   color: rgba(0, 0, 0, 0.5);
-}
-.objects__map-item {
-  padding: 0 20px;
 }
 .objects__item-container {
   display: grid;

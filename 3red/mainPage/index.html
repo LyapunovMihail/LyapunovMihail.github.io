@@ -235,12 +235,12 @@
         <div class="decoration__wrap" >
             <input type="checkbox" name="switch" id="decoration1" class="switch">
             <label for="decoration1" class="decoration__label" id="decoration" >Отделка квартир</label>
-
         </div>
+
         <div class="wrap">
                 <a href="../decorationTabs/index.html" class="btn btn--settings">Настройки</a>
                 <a href="../decorationContent/index.html" class="btn">Контент</a>
-        <ul class="tabs">
+            <ul class="tabs">
                 <li>
                     <a href="#" class="tab tab--active ">Жилая комната</a>
                 </li>
@@ -258,51 +258,62 @@
                 </li>
             </ul>
 
-        <div class="decoration__wrapper" >
-            <div class="decoration__slider " >
-                <div class="decoration__slider-wrap">
-                    <a href="#" class="decoration__inner-link decoration__inner-link--active">Классика</a><a href="#" class="decoration__inner-link">Модерн</a>
+            <div class="decoration__wrapper" >
+                <div class="decoration__slider " >
+                    <div class="decoration__slider-wrap">
+                        <a href="#" class="decoration__inner-link decoration__inner-link--active">Классика</a><a href="#" class="decoration__inner-link">Модерн</a>
+                    </div>
+                    <button class="decoration__slider-left" ><img src="../assets/img/mainPage/slideLeft.svg" alt="arrow" ></button>
+                    <button class="decoration__slider-right"><img src="../assets/img/mainPage/slideRight.svg" alt="arrow" ></button>
+                    <div class="slider-dots">
+                        <div class="slider-dot"></div>
+                        <div class="slider-dot"></div>
+                        <div class="slider-dot"></div>
+                        <div class="slider-dot"></div>
+                        <div class="slider-dot"></div>
+                    </div>
+                    <img class="decoration__img-default " src="../assets/img/mainPage/placeholder.png" alt="image">
+                    <img class="decoration__img " src="../assets/img/mainPage/bg_content.jpg" alt="image">
                 </div>
-                <button class="decoration__slider-left" ><img src="../assets/img/mainPage/slideLeft.svg" alt="arrow" ></button>
-                <button class="decoration__slider-right"><img src="../assets/img/mainPage/slideRight.svg" alt="arrow" ></button>
-                <div class="slider-dots">
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
-                </div>
-                <img class="decoration__img-default " src="../assets/img/mainPage/placeholder.png" alt="image">
-                <img class="decoration__img " src="../assets/img/mainPage/bg_content.jpg" alt="image">
-            </div>
-            <div class="decoration__items">
-                <div class="decoration__item">
-                    <img src="../assets/img/mainPage/ceiling.svg" alt="decoration" class="decoration__item-img">
-                    <p class="decoration__item-text">Потолок натяжной виниловый, матовый</p>
-                </div>
-                <div class="decoration__item">
-                    <img src="../assets/img/mainPage/walls.svg" alt="decoration" class="decoration__item-img">
-                    <p class="decoration__item-text">Стены — флизелиновые обои под покраску (без покраски)</p>
-                </div>
-                <div class="decoration__item">
-                    <img src="../assets/img/mainPage/ baseboard.svg" alt="decoration" class="decoration__item-img">
-                    <p class="decoration__item-text">Плинтус напольный ламинированный</p>
-                </div>
-                <div class="decoration__item">
-                    <img src="../assets/img/mainPage/floor.svg" alt="decoration" class="decoration__item-img">
-                    <p class="decoration__item-text">Пол — ламинат 33 класса на звукопоглащающей подложке</p>
-                </div>
-                <div class="decoration__item">
-                    <img src="../assets/img/mainPage/conditioning.svg" alt="decoration" class="decoration__item-img">
-                    <p class="decoration__item-text">Кондиционер</p>
-                </div>
-                <div class="decoration__item">
-                    <img src="../assets/img/mainPage/door.svg" alt="decoration" class="decoration__item-img">
-                    <p class="decoration__item-text">Двери el PORTA. Цвет Cappuccino Veralinga</p>
+                <div class="decoration__items">
+                    <div class="decoration__item">
+                        <img src="../assets/img/mainPage/ceiling.svg" alt="decoration" class="decoration__item-img">
+                        <p class="decoration__item-text">Потолок натяжной виниловый, матовый</p>
+                    </div>
+                    <div class="decoration__item">
+                        <img src="../assets/img/mainPage/walls.svg" alt="decoration" class="decoration__item-img">
+                        <p class="decoration__item-text">Стены — флизелиновые обои под покраску (без покраски)</p>
+                    </div>
+                    <div class="decoration__item">
+                        <img src="../assets/img/mainPage/ baseboard.svg" alt="decoration" class="decoration__item-img">
+                        <p class="decoration__item-text">Плинтус напольный ламинированный</p>
+                    </div>
+                    <div class="decoration__item">
+                        <img src="../assets/img/mainPage/floor.svg" alt="decoration" class="decoration__item-img">
+                        <p class="decoration__item-text">Пол — ламинат 33 класса на звукопоглащающей подложке</p>
+                    </div>
+                    <div class="decoration__item">
+                        <img src="../assets/img/mainPage/conditioning.svg" alt="decoration" class="decoration__item-img">
+                        <p class="decoration__item-text">Кондиционер</p>
+                    </div>
+                    <div class="decoration__item">
+                        <img src="../assets/img/mainPage/door.svg" alt="decoration" class="decoration__item-img">
+                        <p class="decoration__item-text">Двери el PORTA. Цвет Cappuccino Veralinga</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Местоположение -->
+    <section class="location">
+        <div class="location__container">
+            <div class="location__wrap" >
+                <input type="checkbox" name="switch" id="location1" class="switch">
+                <label for="location1" class="location__label" id="location" >Местоположение</label>
+    
+            </div>
+        </div>
+    </section>
 
     <script src="js/link.js"></script>
     <script src="js/nav.js"></script>

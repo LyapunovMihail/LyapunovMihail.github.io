@@ -117,7 +117,7 @@ switch1.addEventListener('change', check);
 ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [55.751574, 37.573856],
-            zoom: 9,
+            zoom: 10,
             controls: ['zoomControl']
         }),
 
@@ -153,14 +153,77 @@ ymaps.ready(function () {
 
         myPlacemarkWithContent.events
         .add('mouseenter', function (e) {
-            // Ссылку на объект, вызвавший событие,
-            // можно получить из поля 'target'.
-            // e.get('target').options.set('preset', 'islands#greenIcon');
+            
             document.querySelector('.img-map').classList.add('img-map--hover');
         })
         .add('mouseleave', function (e) {
             document.querySelector('.img-map').classList.remove('img-map--hover');
         });
+
+        clusterer = new ymaps.Clusterer({
+            
+            preset: 'islands#invertedRedClusterIcons',
+            
+            groupByCoordinates: false,
+            clusterDisableClickZoom: false,
+            clusterHideIconOnBalloonOpen: false,
+            geoObjectHideIconOnBalloonOpen: false
+        }),
+       
+            getPointData = function (index) {
+            return ;
+        },
+        
+            getPointOptions = function () {
+            return {
+                iconLayout: 'default#imageWithContent',
+           
+                iconImageHref: '',
+              
+                iconImageSize: [64, 64],
+               
+                iconImageOffset: [-24, -24],
+                
+                iconContentOffset: [15, 15],
+                
+                iconContentLayout: MyIconContentLayout  
+            };
+        },
+        points = [
+            [55.831903,37.411961], [55.831338,37.411961]
+        ],
+        geoObjects = [];
+
+    
+    for(var i = 0, len = points.length; i < len; i++) {
+        geoObjects[i] = new ymaps.Placemark(points[i], getPointData(i), getPointOptions());
+    }
+
+    clusterer.add(geoObjects);
+    myMap.geoObjects.add(clusterer);
+    
+
 });
    
 
+// Fade при скролле объектов карты
+
+let objectsContainer = document.querySelector('.objects__map-container');
+let fadeUp = document.querySelector('.objects__fadeUp');
+let fadeDown = document.querySelector('.objects__fadeDown');
+
+objectsContainer.addEventListener('scroll', function () {
+  
+    if (objectsContainer.scrollTop > 0 ) {
+        fadeUp.classList.add('objects__fadeUp--active') ;
+    } else {
+        fadeUp.classList.remove('objects__fadeUp--active') ;
+    }
+
+    if ( this.scrollHeight - this.scrollTop === this.clientHeight) {
+        fadeDown.style.display = 'none';
+    } else {
+        fadeDown.style.display = 'block';
+    }
+    
+});

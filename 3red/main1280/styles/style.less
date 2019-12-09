@@ -599,13 +599,51 @@ font-size: 15px;
 
 //Карты 
 .objects__map {
-    display: flex;
+    // display: flex;
     display: none;
 }
-
-.objects__map-container {
-    width: 350px !important;
+.objects__fade {
+    position: relative;
+    overflow: hidden;
 }
+.objects__map-container {
+    width: 360px !important;
+    height: 600px;
+    background: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+.objects__fadeUp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 348px;
+    height: 60px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    // opacity: .4;
+    display: none;
+    &--active {
+        display: block;
+        animation: myFadeUp 1s;
+    }
+}
+@keyframes myFadeUp {
+    from {transform: translateY(-60px);}
+    to {transform: translateY(0);}
+}
+.objects__fadeDown {
+    bottom: 0 ;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    width: 348px;
+    height: 45px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    // opacity: .3;
+}
+
 .objects__map-imgwrap {
     width: 70px;
     height: 70px;
@@ -621,58 +659,42 @@ font-size: 15px;
 .objects__map-item {
     display: flex;
     align-items: center;
-    &:hover {
-        background: #ee4237;
-        color: #fff ;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 8px 24px;
+    &:last-child {
+        border: 0;
     }
+   
 }
 .objects__map-item:hover .objects__map-title  {
-    color: #fff ;
+   
+        color: #ee4237;
+    
 }
-.objects__map-item:hover .objects__map-status  {
-    color: #fff ;
-}
+
 .objects__map-title {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.25;
     margin-bottom: 6px;
     color: #000;
 }
 .objects__map-status {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.25;
     color: rgba(0, 0, 0, 0.5);
 }
 
-.objects__map-item {
-    padding: 0 20px;
-}
 .objects__item-container{
     display: grid;
    grid-template-columns: 1fr 1fr;
    grid-gap: 24px;
 }
-// .objects__map {
-//     position: absolute;
-//     top: 260px;
-//     left: 0;
-//     width: 100%;
-// }
-// .objects {
-//     position: relative;
-//     height: calc(100vh + 336px);
-// }
-
 
 .objects__item {
     position: relative;
-    // margin-bottom: 24px;
     height: 268px;
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
     width: 100%;
-    // height: 100%;
+    
     position: relative;
     &::after {
         content: '';
