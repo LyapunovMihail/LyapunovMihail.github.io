@@ -54,12 +54,31 @@ ymaps.ready(function () {
             iconContentLayout: MyIconContentLayout2
         }
         );
+        polyline = new ymaps.Polyline([
+            [55.673456, 37.859314],
+            [55.673169, 37.860063],
+            [55.673208, 37.860202],
+            [55.672111, 37.862654],
+            [55.671125, 37.865961],
+            [55.670728, 37.866722],
+            [55.670825, 37.866755],
+            [55.670806, 37.867071],
+            [55.670634, 37.867457],
+            [55.671040, 37.868010],
+            [55.669697, 37.870887],
+            [55.669937, 37.871351]
+        ], null, {
+            strokeColor: '#EE473D',
+            strokeWidth: 4,
+            strokeStyle: '1 2'
+        });
 
 
         myMap.behaviors.disable([ 'scrollZoom'])
     myMap.geoObjects
         // .add(myPlacemark)
         .add(myPlacemarkWithContent)
+        .add(polyline)
         .add(myPlacemarkWithContent2);
   
 
