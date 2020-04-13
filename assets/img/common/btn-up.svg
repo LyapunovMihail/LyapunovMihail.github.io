@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="69" viewBox="0 0 38 69">
+    <defs>
+        <path id="prefix__a" d="M0 0.75L38 0.75 38 18.75 0 18.75z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#0061E5" d="M0.634 34.311L19 69.25 37.367 34.311z" transform="matrix(1 0 0 -1 0 70)"/>
+        <path fill="#007EE5" d="M31.405 34.311L19 69.25 37.367 34.311z" transform="matrix(1 0 0 -1 0 70)"/>
+        <path fill="#004BB7" d="M0.634 34.311L19 69.25 6.905 34.311z" transform="matrix(1 0 0 -1 0 70)"/>
+        <g>
+            <g transform="matrix(1 0 0 -1 0 70) translate(0 .25) translate(0 22)">
+                <mask id="prefix__b" fill="#fff">
+                    <use xlink:href="#prefix__a"/>
+                </mask>
+                <path fill="#409BFF" d="M38 9.75c0 4.971-8.507 9-19 9-10.494 0-19-4.029-19-9s8.506-9 19-9c10.493 0 19 4.029 19 9" mask="url(#prefix__b)"/>
+            </g>
+            <path fill="#0061E5" d="M14 2.75v29c0 1.104 2.238 2 5 2 2.761 0 5-.896 5-2v-29H14z" transform="matrix(1 0 0 -1 0 70) translate(0 .25)"/>
+            <path fill="#004BB7" d="M14 31.75c0 .82 1.235 1.522 3 1.831V2.75h-3v29z" transform="matrix(1 0 0 -1 0 70) translate(0 .25)"/>
+            <path fill="#007EE5" d="M21 33.581c1.765-.309 3-1.01 3-1.83v-29h-3v30.83z" transform="matrix(1 0 0 -1 0 70) translate(0 .25)"/>
+            <path fill="#409BFF" d="M24 2.75c0 1.104-2.239 2-5 2-2.762 0-5-.896-5-2s2.238-2 5-2c2.761 0 5 .896 5 2" transform="matrix(1 0 0 -1 0 70) translate(0 .25)"/>
+        </g>
+    </g>
+</svg>
