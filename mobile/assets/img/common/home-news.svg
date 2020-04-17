@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="60" viewBox="0 0 42 60">
+    <defs>
+        <path id="prefix__a" d="M0 0.481L12.6 0.481 12.6 10.149 0 10.149z"/>
+        <path id="prefix__c" d="M0.617 0.419L29.991 0.419 29.991 17.37 0.617 17.37z"/>
+        <path id="prefix__e" d="M0.944 0.83L30 0.83 30 56.959 0.944 56.959z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#0061E5" d="M12.6 39.85v13.02c0 1.268-.655 2.402-1.756 3.032-1.092.63-2.402.638-3.502 0-1.94-1.117-3.141-3.208-3.141-5.45v-5.697l-.042-.025 8.44-4.88z" transform="translate(0 -1)"/>
+        <g transform="translate(0 -1) translate(0 34.581)">
+            <mask id="prefix__b" fill="#fff">
+                <use xlink:href="#prefix__a"/>
+            </mask>
+            <path fill="#409BFF" d="M12.6 0.481L12.6 5.269 4.159 10.149 0 7.763 0 7.755z" mask="url(#prefix__b)"/>
+        </g>
+        <g transform="translate(0 -1) translate(12 .581)">
+            <mask id="prefix__d" fill="#fff">
+                <use xlink:href="#prefix__c"/>
+            </mask>
+            <path fill="#409BFF" d="M29.991 2.83L4.801 17.37 0.617 14.968 25.817 0.419z" mask="url(#prefix__d)"/>
+        </g>
+        <g transform="translate(0 -1) translate(12 2.581)">
+            <mask id="prefix__f" fill="#fff">
+                <use xlink:href="#prefix__e"/>
+            </mask>
+            <path fill="#0061E5" d="M30 .839v34.825c0 2.788-1.445 5.276-3.855 6.67L.945 56.958c2.41-1.386 3.855-3.88 3.855-6.67V15.37L29.991.83l.01.009z" mask="url(#prefix__f)"/>
+        </g>
+        <path fill="#00F025" d="M12.617 15.549l-.018.018V52.87c0 1.269-.655 2.403-1.755 3.033-1.091.63-2.402.638-3.501 0C5.402 54.785 4.2 52.693 4.2 50.45v-5.695l-.043-.025L0 42.345v8.106c0 3.739 2.007 7.215 5.242 9.089 1.21.697 2.527 1.04 3.855 1.04 1.32 0 2.646-.343 3.848-1.04 2.41-1.387 3.855-3.881 3.855-6.67V17.95l-4.184-2.402z" transform="translate(0 -1)"/>
+        <path fill="#FF1787" d="M12.617 15.549L12.6 15.566 12.6 15.541z" transform="translate(0 -1)"/>
+        <path fill="#FFF" d="M37.8 15.296L21 24.992 21 27.902 37.8 18.205zM37.8 23.696L21 33.392 21 36.301 37.8 26.605z" transform="translate(0 -1)"/>
+    </g>
+</svg>
