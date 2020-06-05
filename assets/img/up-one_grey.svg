@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-    <g fill="none" fill-rule="evenodd" opacity=".6">
-        <path stroke="#333" stroke-width="2" d="M10.625 2.625L10.625 10.625 2.625 10.625" transform="rotate(-180 6.5 7) rotate(45 6.625 6.625)"/>
-        <path fill="#333" d="M5.688 1.813H7.688V11.813H5.688z" transform="rotate(-180 6.5 7)"/>
-    </g>
-</svg>
